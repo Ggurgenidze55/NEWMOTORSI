@@ -80,7 +80,7 @@ export default function Header() {
   ]
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
+    <header className="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -119,7 +119,7 @@ export default function Header() {
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="start" className="w-64 bg-white border border-gray-200 shadow-lg z-50">
+              <DropdownMenuContent align="start" className="w-64 bg-white border border-gray-200 shadow-lg z-[60]">
                 <DropdownMenuItem asChild>
                   <Link href="/products" className="text-gray-700 hover:bg-gray-100 focus:bg-gray-100">
                     <span>ყველა პროდუქტი</span>
@@ -133,7 +133,7 @@ export default function Header() {
                           <span>{category.name}</span>
                           <ChevronRight className="h-4 w-4 ml-auto" />
                         </DropdownMenuSubTrigger>
-                        <DropdownMenuSubContent className="bg-white border border-gray-200 shadow-lg">
+                        <DropdownMenuSubContent className="bg-white border border-gray-200 shadow-lg z-[60]">
                           <DropdownMenuItem asChild>
                             <Link href={category.href} className="text-gray-700 hover:bg-gray-100 focus:bg-gray-100">
                               <span>ყველა {category.name}</span>

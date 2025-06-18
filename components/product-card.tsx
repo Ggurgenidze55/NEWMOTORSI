@@ -46,26 +46,22 @@ export default function ProductCard({
         />
       </div>
       <div className="absolute top-2 left-2 z-20 flex flex-col gap-1">
-        {isNew && (
-          <Badge variant="secondary" className="pointer-events-none">
-            {t("new")}
-          </Badge>
-        )}
+        {isNew && <Badge className="pointer-events-none bg-[#00adef] text-white hover:bg-[#00adef]">{t("new")}</Badge>}
         {isSale && (
           <Badge variant="destructive" className="pointer-events-none">
             {t("sale")}
           </Badge>
         )}
       </div>
-      <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background/80 to-background/0">
+      <div className="absolute bottom-0 left-0 right-0 p-4" style={{ backgroundColor: "#00adef" }}>
         <div className="flex items-center justify-between">
           <div>
-            <h3 className="font-medium text-base truncate">{name}</h3>
-            <p className="text-xs text-muted-foreground">{category}</p>
+            <h3 className="font-medium text-base truncate text-white">{name}</h3>
+            <p className="text-xs text-white/90">{category}</p>
             {!hidePrice && (
               <div className="flex items-center gap-2 mt-1">
-                <span className="font-medium">{price.toFixed(2)}₾</span>
-                {oldPrice && <span className="text-sm text-muted-foreground line-through">{oldPrice.toFixed(2)}₾</span>}
+                <span className="font-medium text-white">{price.toFixed(2)}₾</span>
+                {oldPrice && <span className="text-sm text-white/80 line-through">{oldPrice.toFixed(2)}₾</span>}
               </div>
             )}
           </div>
