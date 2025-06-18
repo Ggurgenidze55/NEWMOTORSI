@@ -53,6 +53,8 @@ export const translations = {
     shelfDividerUnit: "სასაწყობე სტელაჟის გამყოფი H300/H450",
     wallGridDisplay: "კედლის ბადე დისპლეი",
     wallGridDisplayUnit: "აქსესუარების კედლის საკიდი H2000*D1000",
+    perforatedWallCover: "პერფორირებული კედელი საბურავით",
+    perforatedWallCoverUnit: "პერფორირებული კედელი საბურავით H1800*D1000",
 
     // Featured Products
     featuredProducts: "პოპულარული პროდუქტები",
@@ -136,6 +138,8 @@ export const translations = {
     red: "წითელი",
     silver: "ვერცხლისფერი",
     aluminum: "ალუმინისფერი",
+    mattBlack: "შავი მატი",
+    matteWhite: "თეთრი მატი",
 
     // Product Names (examples)
     classicTshirt: "კლასიკური მაისური",
@@ -234,6 +238,8 @@ export const translations = {
     shelfDividerUnit: "Warehouse Shelf Divider H300/H450",
     wallGridDisplay: "Wall Grid Display",
     wallGridDisplayUnit: "Wall Grid Display for Accessories H2000*D1000",
+    perforatedWallCover: "Perforated Wall with Cover",
+    perforatedWallCoverUnit: "Perforated Wall with Cover H1800*D1000",
 
     // Featured Products
     featuredProducts: "Featured Products",
@@ -317,6 +323,8 @@ export const translations = {
     red: "Red",
     silver: "Silver",
     aluminum: "Aluminum",
+    mattBlack: "Matte Black",
+    matteWhite: "Matte White",
 
     // Product Names (examples)
     classicTshirt: "Classic T-Shirt",
@@ -415,6 +423,8 @@ export const translations = {
     shelfDividerUnit: "Разделитель складской полки H300/H450",
     wallGridDisplay: "Настенная сетка-дисплей",
     wallGridDisplayUnit: "Настенная сетка для аксессуаров H2000*D1000",
+    perforatedWallCover: "Перфорированная стена с покрытием",
+    perforatedWallCoverUnit: "Перфорированная стена с покрытием H1800*D1000",
 
     // Featured Products
     featuredProducts: "Популярные товары",
@@ -498,6 +508,8 @@ export const translations = {
     red: "Красный",
     silver: "Серебристый",
     aluminum: "Алюминиевый",
+    mattBlack: "Матовый черный",
+    matteWhite: "Матовый белый",
 
     // Product Names (examples)
     classicTshirt: "Классическая футболка",

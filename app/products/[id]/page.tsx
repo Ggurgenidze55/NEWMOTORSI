@@ -955,6 +955,85 @@ Various hooks and accessories can be added.`,
         rating: 4.6,
         reviewCount: 18,
       },
+      "perforated-wall-cover-1": {
+        id: "perforated-wall-cover-1",
+        name: t("perforatedWallCoverUnit"),
+        price: 150.0,
+        description: {
+          ka: `პერფორირებული კედელი საბურავით პროდუქციის ჩამოსაკიდად. მაღალი ხარისხის ლითონისგან დამზადებული, იდეალურია მაღაზიებისა და საგამოფენო სივრცეებისთვის.
+
+**ტექნიკური მახასიათებლები:**
+• ზომა: H1800*D1000 მმ
+• მასალა: ლითონი
+• პერფორაცია: 25მმ ნახვრეტები
+• მონტაჟი: ბორბლებზე მობილური
+• ფერები: თეთრი მატი, შავი მატი
+
+იდეალურია აქსესუარების, ინსტრუმენტების და სხვადასხვა პროდუქტების ორგანიზებული გამოფენისთვის.`,
+          en: `Perforated wall with cover for hanging products. Made from high-quality metal, ideal for stores and exhibition spaces.
+
+**Technical Specifications:**
+• Size: H1800*D1000 mm
+• Material: Metal
+• Perforation: 25mm holes
+• Mounting: Mobile on wheels
+• Colors: Matte white, matte black
+
+Perfect for organized display of accessories, tools and various products.`,
+          ru: `Перфорированная стена с покрытием для подвешивания продукции. Изготовлена из высококачественного металла, идеальна для магазинов и выставочных пространств.
+
+**Технические характеристики:**
+• Размер: H1800*D1000 мм
+• Материал: Металл
+• Перфорация: отверстия 25мм
+• Монтаж: Мобильная на колесах
+• Цвета: Матовый белый, матовый черный
+
+Идеальна для организованной демонстрации аксессуаров, инструментов и различных товаров.`,
+        },
+        features: {
+          ka: [
+            "ზომა: H1800*D1000 მმ",
+            "მასალა: ლითონი",
+            "პერფორაცია: 25მმ ნახვრეტები",
+            "მობილური ბორბლებზე",
+            "მატი ზედაპირი",
+            "კოროზიისგან დაცული",
+            "მარტივი გადაადგილება",
+            "მრავალფუნქციური",
+          ],
+          en: [
+            "Size: H1800*D1000 mm",
+            "Material: Metal",
+            "Perforation: 25mm holes",
+            "Mobile on wheels",
+            "Matte surface",
+            "Corrosion resistant",
+            "Easy mobility",
+            "Multi-functional",
+          ],
+          ru: [
+            "Размер: H1800*D1000 мм",
+            "Материал: Металл",
+            "Перфорация: отверстия 25мм",
+            "Мобильная на колесах",
+            "Матовая поверхность",
+            "Устойчив к коррозии",
+            "Легкая мобильность",
+            "Многофункциональная",
+          ],
+        },
+        images: [
+          "/images/perforated-wall-cover-1.jpg",
+          "/images/perforated-wall-cover-2.jpg",
+          "/images/perforated-wall-cover-3.jpg",
+        ],
+        colors: [t("matteWhite"), t("mattBlack")],
+        sizes: ["H1800*D1000"],
+        category: t("marketAccessories"),
+        rating: 4.7,
+        reviewCount: 13,
+      },
       // Default fallback product
       "1": {
         id: params.id,

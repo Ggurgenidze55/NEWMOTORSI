@@ -1,12 +1,8 @@
 "use client"
 
 import Image from "next/image"
-import Link from "next/link"
-import { ArrowRight, Star, Users, Award, TrendingUp, ChevronDown } from "lucide-react"
+import { Star, Users, Award, TrendingUp } from "lucide-react"
 import { useState, useEffect } from "react"
-
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
 import { useLanguage } from "@/contexts/language-context"
 
 export default function HomePage() {
@@ -55,7 +51,7 @@ export default function HomePage() {
       image: "/images/market-accessories.jpg",
       href: "/categories/market-accessories",
       icon: "🛍️",
-      count: "4 პროდუქტი",
+      count: "5 პროდუქტი",
     },
     {
       id: "pos-materials",
@@ -283,33 +279,29 @@ export default function HomePage() {
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-white/90 leading-relaxed">{getHeroDescription()}</p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                size="lg"
-                className="bg-white text-primary hover:bg-gray-100 px-8 py-4 text-lg font-semibold group"
-                asChild
+              <button
+                className="bg-white text-primary hover:bg-gray-100 px-8 py-4 text-lg font-semibold group rounded-md transition-colors"
+                onClick={() => (window.location.href = "/products")}
               >
-                <Link href="/products">
-                  {getButtonText("viewProducts")}
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </Button>
-              <Button
-                size="lg"
-                className="bg-white text-primary hover:bg-gray-100 px-8 py-4 text-lg font-semibold group"
-                asChild
+                {getButtonText("viewProducts")}
+                <span className="ml-2 inline-block group-hover:translate-x-1 transition-transform">→</span>
+              </button>
+              <button
+                className="bg-white text-primary hover:bg-gray-100 px-8 py-4 text-lg font-semibold group rounded-md transition-colors"
+                onClick={() => (window.location.href = "/contact")}
               >
-                <Link href="/contact">
-                  {getButtonText("consultation")}
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </Button>
+                {getButtonText("consultation")}
+                <span className="ml-2 inline-block group-hover:translate-x-1 transition-transform">→</span>
+              </button>
             </div>
           </div>
         </div>
 
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
-          <ChevronDown className="h-8 w-8" />
+          <div className="h-8 w-8 flex items-center justify-center">
+            <span className="text-2xl">↓</span>
+          </div>
         </div>
       </section>
 
@@ -344,12 +336,12 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {allCategories.map((category, index) => (
-              <Card
+              <div
                 key={category.id}
-                className={`group hover:shadow-2xl transition-all duration-500 border-0 overflow-hidden bg-white ${isVisible ? "animate-fade-in" : "opacity-0"}`}
+                className={`group hover:shadow-2xl transition-all duration-500 border-0 overflow-hidden bg-white rounded-lg border ${isVisible ? "animate-fade-in" : "opacity-0"}`}
                 style={{ animationDelay: `${index * 200}ms` }}
               >
-                <CardContent className="p-0">
+                <div className="p-0">
                   <div className="relative overflow-hidden">
                     <div className="aspect-[4/3] overflow-hidden bg-white p-4">
                       <Image
@@ -376,19 +368,17 @@ export default function HomePage() {
                     <p className="text-gray-600 mb-6 leading-relaxed">{getCategoryDescription(category)}</p>
 
                     <div className="mt-auto">
-                      <Button
-                        asChild
-                        className="w-full bg-primary hover:bg-primary/90 group-hover:shadow-lg transition-all duration-300"
+                      <button
+                        className="w-full bg-primary hover:bg-primary/90 group-hover:shadow-lg transition-all duration-300 text-white px-4 py-2 rounded-md flex items-center justify-center"
+                        onClick={() => (window.location.href = category.href)}
                       >
-                        <Link href={category.href} className="flex items-center justify-center">
-                          {getButtonText("details")}
-                          <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                        </Link>
-                      </Button>
+                        {getButtonText("details")}
+                        <span className="ml-2 inline-block group-hover:translate-x-1 transition-transform">→</span>
+                      </button>
                     </div>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -401,26 +391,20 @@ export default function HomePage() {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">{getSectionTitle("readyToStart")}</h2>
           <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">{getSectionDescription("readyToStart")}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-white text-primary hover:bg-gray-100 px-8 py-4 text-lg font-semibold group"
-              asChild
+            <button
+              className="bg-white text-primary hover:bg-gray-100 px-8 py-4 text-lg font-semibold group rounded-md transition-colors"
+              onClick={() => (window.location.href = "/contact")}
             >
-              <Link href="/contact">
-                {getButtonText("contactUs")}
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </Button>
-            <Button
-              size="lg"
-              className="bg-white text-primary hover:bg-gray-100 px-8 py-4 text-lg font-semibold group"
-              asChild
+              {getButtonText("contactUs")}
+              <span className="ml-2 inline-block group-hover:translate-x-1 transition-transform">→</span>
+            </button>
+            <button
+              className="bg-white text-primary hover:bg-gray-100 px-8 py-4 text-lg font-semibold group rounded-md transition-colors"
+              onClick={() => (window.location.href = "/products")}
             >
-              <Link href="/products">
-                {getButtonText("catalog")}
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </Button>
+              {getButtonText("catalog")}
+              <span className="ml-2 inline-block group-hover:translate-x-1 transition-transform">→</span>
+            </button>
           </div>
         </div>
       </section>

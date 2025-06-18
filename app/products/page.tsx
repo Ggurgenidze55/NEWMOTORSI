@@ -130,6 +130,16 @@ export default function ProductsPage() {
       subcategory: "market-accessories",
       isNew: true,
     },
+    // Perforated wall with cover product
+    {
+      id: "perforated-wall-cover-1",
+      name: t("perforatedWallCoverUnit"),
+      price: 150.0,
+      image: "/images/perforated-wall-cover-1.jpg",
+      category: t("marketAccessories"),
+      subcategory: "market-accessories",
+      isNew: true,
+    },
   ]
 
   const getBannerTitle = () => {

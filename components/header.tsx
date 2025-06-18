@@ -119,9 +119,9 @@ export default function Header() {
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="start" className="w-56 bg-[#00adef] border-[#00adef]">
+              <DropdownMenuContent align="start" className="w-64 bg-white border border-gray-200 shadow-lg z-50">
                 <DropdownMenuItem asChild>
-                  <Link href="/products" className="text-white hover:bg-white/10 focus:bg-white/10">
+                  <Link href="/products" className="text-gray-700 hover:bg-gray-100 focus:bg-gray-100">
                     <span>ყველა პროდუქტი</span>
                   </Link>
                 </DropdownMenuItem>
@@ -129,19 +129,19 @@ export default function Header() {
                   <div key={category.id}>
                     {category.hasSubcategories ? (
                       <DropdownMenuSub>
-                        <DropdownMenuSubTrigger className="text-white hover:bg-white/10 focus:bg-white/10">
+                        <DropdownMenuSubTrigger className="text-gray-700 hover:bg-gray-100 focus:bg-gray-100">
                           <span>{category.name}</span>
                           <ChevronRight className="h-4 w-4 ml-auto" />
                         </DropdownMenuSubTrigger>
-                        <DropdownMenuSubContent className="bg-[#00adef] border-[#00adef]">
+                        <DropdownMenuSubContent className="bg-white border border-gray-200 shadow-lg">
                           <DropdownMenuItem asChild>
-                            <Link href={category.href} className="text-white hover:bg-white/10 focus:bg-white/10">
+                            <Link href={category.href} className="text-gray-700 hover:bg-gray-100 focus:bg-gray-100">
                               <span>ყველა {category.name}</span>
                             </Link>
                           </DropdownMenuItem>
                           {category.subcategories?.map((sub) => (
                             <DropdownMenuItem key={sub.id} asChild>
-                              <Link href={sub.href} className="text-white hover:bg-white/10 focus:bg-white/10">
+                              <Link href={sub.href} className="text-gray-700 hover:bg-gray-100 focus:bg-gray-100">
                                 <span>{sub.name}</span>
                               </Link>
                             </DropdownMenuItem>
@@ -150,7 +150,7 @@ export default function Header() {
                       </DropdownMenuSub>
                     ) : (
                       <DropdownMenuItem asChild>
-                        <Link href={category.href} className="text-white hover:bg-white/10 focus:bg-white/10">
+                        <Link href={category.href} className="text-gray-700 hover:bg-gray-100 focus:bg-gray-100">
                           <span>{category.name}</span>
                         </Link>
                       </DropdownMenuItem>

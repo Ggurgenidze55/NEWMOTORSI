@@ -213,6 +213,14 @@ export default function CategoryPage({ params }: { params: { id: string } }) {
           category: t("marketAccessories"),
           isNew: true,
         },
+        {
+          id: "perforated-wall-cover-1",
+          name: t("perforatedWallCoverUnit"),
+          price: 150.0,
+          image: "/images/perforated-wall-cover-1.jpg",
+          category: t("marketAccessories"),
+          isNew: true,
+        },
       ],
       "tire-shelving": [
         {
