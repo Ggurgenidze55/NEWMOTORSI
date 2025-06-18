@@ -180,6 +180,43 @@ export default function ProductsPage() {
       subcategory: "market-shelves",
       isNew: true,
     },
+    // Add the 4 new pallet shelving products
+    {
+      id: "pallet-shelving-1",
+      name: t("palletShelvingUnit1"),
+      price: 850.0,
+      image: "/images/pallet-shelving-1.jpg",
+      category: t("palletShelving"),
+      subcategory: "pallet-shelving",
+      isNew: true,
+    },
+    {
+      id: "pallet-shelving-2",
+      name: t("palletShelvingUnit2"),
+      price: 950.0,
+      image: "/images/pallet-shelving-2.jpg",
+      category: t("palletShelving"),
+      subcategory: "pallet-shelving",
+      isNew: true,
+    },
+    {
+      id: "pallet-shelving-3",
+      name: t("palletShelvingUnit3"),
+      price: 1050.0,
+      image: "/images/pallet-shelving-3.jpg",
+      category: t("palletShelving"),
+      subcategory: "pallet-shelving",
+      isNew: true,
+    },
+    {
+      id: "pallet-shelving-4",
+      name: t("palletShelvingUnit4"),
+      price: 1250.0,
+      image: "/images/pallet-shelving-4.png",
+      category: t("palletShelving"),
+      subcategory: "pallet-shelving",
+      isNew: true,
+    },
   ]
 
   const getBannerTitle = () => {

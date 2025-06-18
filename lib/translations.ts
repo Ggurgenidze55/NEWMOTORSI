@@ -61,6 +61,10 @@ export const translations = {
     tierShelving: "იარუსიანი სტელაჟი",
     tierShelvingUnit: "სტელაჟი 4 იარუსით",
     largeTierShelvingUnit: "დიდი სტელაჟი 4 იარუსით",
+    palletShelvingUnit1: "საპალეტე სტელაჟი 352x270x85",
+    palletShelvingUnit2: "საპალეტე სტელაჟი 352x270x105",
+    palletShelvingUnit3: "საპალეტე სტელაჟი 405x270x105",
+    palletShelvingUnit4: "საპალეტე სტელაჟი 502x270x105",
 
     // Featured Products
     featuredProducts: "პოპულარული პროდუქტები",
@@ -252,6 +256,10 @@ export const translations = {
     tierShelving: "Tier Shelving",
     tierShelvingUnit: "4-Tier Shelving Unit",
     largeTierShelvingUnit: "Large 4-Tier Shelving Unit",
+    palletShelvingUnit1: "Pallet Racking 352x270x85",
+    palletShelvingUnit2: "Pallet Racking 352x270x105",
+    palletShelvingUnit3: "Pallet Racking 405x270x105",
+    palletShelvingUnit4: "Pallet Racking 502x270x105",
 
     // Featured Products
     featuredProducts: "Featured Products",
@@ -443,6 +451,10 @@ export const translations = {
     tierShelving: "Ярусный стеллаж",
     tierShelvingUnit: "4-ярусный стеллаж",
     largeTierShelvingUnit: "Большой 4-ярусный стеллаж",
+    palletShelvingUnit1: "Паллетный стеллаж 352x270x85",
+    palletShelvingUnit2: "Паллетный стеллаж 352x270x105",
+    palletShelvingUnit3: "Паллетный стеллаж 405x270x105",
+    palletShelvingUnit4: "Паллетный стеллаж 502x270x105",
 
     // Featured Products
     featuredProducts: "Популярные товары",
