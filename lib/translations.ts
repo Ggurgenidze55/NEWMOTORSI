@@ -55,6 +55,12 @@ export const translations = {
     wallGridDisplayUnit: "აქსესუარების კედლის საკიდი H2000*D1000",
     perforatedWallCover: "პერფორირებული კედელი საბურავით",
     perforatedWallCoverUnit: "პერფორირებული კედელი საბურავით H1800*D1000",
+    basketShelving: "კალათიანი სტელაჟი",
+    basketShelvingUnit: "სტელაჟი 4 კალათით და საბურავით",
+    basketShelvingLargeUnit: "დიდი სტელაჟი 4 კალათით და საბურავით",
+    tierShelving: "იარუსიანი სტელაჟი",
+    tierShelvingUnit: "სტელაჟი 4 იარუსით",
+    largeTierShelvingUnit: "დიდი სტელაჟი 4 იარუსით",
 
     // Featured Products
     featuredProducts: "პოპულარული პროდუქტები",
@@ -240,6 +246,12 @@ export const translations = {
     wallGridDisplayUnit: "Wall Grid Display for Accessories H2000*D1000",
     perforatedWallCover: "Perforated Wall with Cover",
     perforatedWallCoverUnit: "Perforated Wall with Cover H1800*D1000",
+    basketShelving: "Basket Shelving",
+    basketShelvingUnit: "Shelving Unit with 4 Baskets and Cover",
+    basketShelvingLargeUnit: "Large Shelving Unit with 4 Baskets and Cover",
+    tierShelving: "Tier Shelving",
+    tierShelvingUnit: "4-Tier Shelving Unit",
+    largeTierShelvingUnit: "Large 4-Tier Shelving Unit",
 
     // Featured Products
     featuredProducts: "Featured Products",
@@ -425,6 +437,12 @@ export const translations = {
     wallGridDisplayUnit: "Настенная сетка для аксессуаров H2000*D1000",
     perforatedWallCover: "Перфорированная стена с покрытием",
     perforatedWallCoverUnit: "Перфорированная стена с покрытием H1800*D1000",
+    basketShelving: "Стеллаж с корзинами",
+    basketShelvingUnit: "Стеллаж с 4 корзинами и крышкой",
+    basketShelvingLargeUnit: "Большой стеллаж с 4 корзинами и крышкой",
+    tierShelving: "Ярусный стеллаж",
+    tierShelvingUnit: "4-ярусный стеллаж",
+    largeTierShelvingUnit: "Большой 4-ярусный стеллаж",
 
     // Featured Products
     featuredProducts: "Популярные товары",
@@ -507,7 +525,7 @@ export const translations = {
     blue: "Синий",
     red: "Красный",
     silver: "Серебристый",
-    aluminum: "Алюминиевый",
+    aluminum: "Алюминий",
     mattBlack: "Матовый черный",
     matteWhite: "Матовый белый",
 

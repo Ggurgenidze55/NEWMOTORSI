@@ -706,7 +706,7 @@ Perfect for displaying accessories, bags and other lightweight items.`,
             "Материал: Хромированный металл",
             "Длина: 60 см",
             "Нагрузка: 15 кг",
-            "Настенный монтаж",
+            "Монтаж: Настенный",
             "Легкий вес",
             "Устойчив к коррозии",
             "Простая установка",
@@ -989,7 +989,7 @@ Perfect for organized display of accessories, tools and various products.`,
 • Монтаж: Мобильная на колесах
 • Цвета: Матовый белый, матовый черный
 
-Идеальна для организованной демонстрации аксессуаров, инструментов и различных товаров.`,
+Идеальна для организованной демонстрации аксессуаров, инструментов и различных продуктов.`,
         },
         features: {
           ka: [
@@ -1033,6 +1033,332 @@ Perfect for organized display of accessories, tools and various products.`,
         category: t("marketAccessories"),
         rating: 4.7,
         reviewCount: 13,
+      },
+      "basket-shelving-1": {
+        id: "basket-shelving-1",
+        name: t("basketShelvingUnit"),
+        price: 220.0,
+        description: {
+          ka: `სტელაჟი 4 კალათით და პერფორირებული საბურავით. იდეალურია მაღაზიებისთვის, სუპერმარკეტებისთვის და საწყობებისთვის პროდუქტების გამოსაფენად.
+
+**ტექნიკური მახასიათებლები:**
+• ზომა: L540*W300*H1400 მმ
+• მასალა: მეტალი
+• კალათების რაოდენობა: 4
+• პერფორირებული საბურავი ზედა ნაწილში
+• ბორბლებზე მობილური
+• ფერები: თეთრი, შავი
+
+იდეალურია სასურსათო პროდუქტების, სასმელების, წვრილმანი ნივთების და სხვა საქონლის გამოსაფენად.`,
+          en: `Shelving unit with 4 baskets and perforated cover. Ideal for shops, supermarkets and warehouses for displaying products.
+
+**Technical Specifications:**
+• Size: L540*W300*H1400 mm
+• Material: Metal
+• Number of baskets: 4
+• Perforated cover at the top
+• Mobile on wheels
+• Colors: White, Black
+
+Perfect for displaying groceries, beverages, small items and other merchandise.`,
+          ru: `Стеллаж с 4 корзинами и перфорированной крышкой. Идеален для магазинов, супермаркетов и складов для демонстрации товаров.
+
+**Технические характеристики:**
+• Размер: L540*W300*H1400 мм
+• Материал: Металл
+• Количество корзин: 4
+• Перфорированная крышка в верхней части
+• Мобильный на колесах
+• Цвета: Белый, Черный
+
+Идеален для демонстрации продуктов питания, напитков, мелких предметов и других товаров.`,
+        },
+        features: {
+          ka: [
+            "ზომა: L540*W300*H1400 მმ",
+            "მასალა: მეტალი",
+            "კალათების რაოდენობა: 4",
+            "პერფორირებული საბურავი",
+            "მობილური ბორბლებზე",
+            "ფერები: თეთრი, შავი",
+            "მარტივი აწყობა",
+            "მრავალფუნქციური",
+          ],
+          en: [
+            "Size: L540*W300*H1400 mm",
+            "Material: Metal",
+            "Number of baskets: 4",
+            "Perforated cover",
+            "Mobile on wheels",
+            "Colors: White, Black",
+            "Easy assembly",
+            "Multi-functional",
+          ],
+          ru: [
+            "Размер: L540*W300*H1400 мм",
+            "Материал: Металл",
+            "Количество корзин: 4",
+            "Перфорированная крышка",
+            "Мобильный на колесах",
+            "Цвета: Белый, Черный",
+            "Простая сборка",
+            "Многофункциональный",
+          ],
+        },
+        images: [
+          "/images/basket-shelving-white.jpeg",
+          "/images/basket-shelving-black.jpeg",
+          "/images/basket-shelving-display.jpeg",
+        ],
+        colors: [t("white"), t("black")],
+        sizes: ["L540*W300*H1400"],
+        category: t("marketShelves"),
+        rating: 4.8,
+        reviewCount: 12,
+      },
+      "basket-shelving-2": {
+        id: "basket-shelving-2",
+        name: t("basketShelvingLargeUnit"),
+        price: 280.0,
+        description: {
+          ka: `დიდი ზომის სტელაჟი 4 კალათით და პერფორირებული საბურავით. იდეალურია დიდი მაღაზიებისთვის, სუპერმარკეტებისთვის და საწყობებისთვის პროდუქტების გამოსაფენად.
+
+**ტექნიკური მახასიათებლები:**
+• ზომა: L800*W300*H1700 მმ
+• მასალა: მეტალი
+• კალათების რაოდენობა: 4
+• პერფორირებული საბურავი ზედა ნაწილში
+• ბორბლებზე მობილური
+• ფერები: თეთრი, შავი
+
+იდეალურია სასურსათო პროდუქტების, სასმელების, წვრილმანი ნივთების და სხვა საქონლის გამოსაფენად. უფრო დიდი ზომის გამო მეტი პროდუქტის განთავსება შეიძლება.`,
+          en: `Large shelving unit with 4 baskets and perforated cover. Ideal for large shops, supermarkets and warehouses for displaying products.
+
+**Technical Specifications:**
+• Size: L800*W300*H1700 mm
+• Material: Metal
+• Number of baskets: 4
+• Perforated cover at the top
+• Mobile on wheels
+• Colors: White, Black
+
+Perfect for displaying groceries, beverages, small items and other merchandise. The larger size allows for more product storage.`,
+          ru: `Большой стеллаж с 4 корзинами и перфорированной крышкой. Идеален для больших магазинов, супермаркетов и складов для демонстрации товаров.
+
+**Технические характеристики:**
+• Размер: L800*W300*H1700 мм
+• Материал: Металл
+• Количество корзин: 4
+• Перфорированная крышка в верхней части
+• Мобильный на колесах
+• Цвета: Белый, Черный
+
+Идеален для демонстрации продуктов питания, напитков, мелких предметов и других товаров. Больший размер позволяет разместить больше товаров.`,
+        },
+        features: {
+          ka: [
+            "ზომა: L800*W300*H1700 მმ",
+            "მასალა: მეტალი",
+            "კალათების რაოდენობა: 4",
+            "პერფორირებული საბურავი",
+            "მობილური ბორბლებზე",
+            "ფერები: თეთრი, შავი",
+            "მარტივი აწყობა",
+            "მრავალფუნქციური",
+            "დიდი ტევადობა",
+          ],
+          en: [
+            "Size: L800*W300*H1700 mm",
+            "Material: Metal",
+            "Number of baskets: 4",
+            "Perforated cover",
+            "Mobile on wheels",
+            "Colors: White, Black",
+            "Easy assembly",
+            "Multi-functional",
+            "Large capacity",
+          ],
+          ru: [
+            "Размер: L800*W300*H1700 мм",
+            "Материал: Металл",
+            "Количество корзин: 4",
+            "Перфорированная крышка",
+            "Мобильный на колесах",
+            "Цвета: Белый, Черный",
+            "Простая сборка",
+            "Многофункциональный",
+            "Большая вместимость",
+          ],
+        },
+        images: ["/images/basket-shelving-large-white.jpeg"],
+        colors: [t("white"), t("black")],
+        sizes: ["L800*W300*H1700"],
+        category: t("marketShelves"),
+        rating: 4.9,
+        reviewCount: 8,
+      },
+      "tier-shelving-1": {
+        id: "tier-shelving-1",
+        name: t("tierShelvingUnit"),
+        price: 190.0,
+        description: {
+          ka: `4 იარუსიანი სტელაჟი მყარი თაროებით და პერფორირებული უკანა პანელით. იდეალურია მაღაზიებისთვის, სუპერმარკეტებისთვის და საწყობებისთვის პროდუქტების გამოსაფენად.
+
+**ტექნიკური მახასიათებლები:**
+• ზომა: L540*W300*H1400 მმ
+• მასალა: მეტალი
+• იარუსების რაოდენობა: 4
+• პერფორირებული უკანა პანელი
+• მყარი თაროები
+• ფერები: მწვანე, წითელი, ლურჯი
+
+იდეალურია სხვადასხვა პროდუქტების, წიგნების, ოფისის ნივთების და სხვა საქონლის გამოსაფენად.`,
+          en: `4-tier shelving unit with solid shelves and perforated back panel. Ideal for shops, supermarkets and warehouses for displaying products.
+
+**Technical Specifications:**
+• Size: L540*W300*H1400 mm
+• Material: Metal
+• Number of tiers: 4
+• Perforated back panel
+• Solid shelves
+• Colors: Green, Red, Blue
+
+Perfect for displaying various products, books, office items and other merchandise.`,
+          ru: `4-ярусный стеллаж с твердыми полками и перфорированной задней панелью. Идеален для магазинов, супермаркетов и складов для демонстрации товаров.
+
+**Технические характеристики:**
+• Размер: L540*W300*H1400 мм
+• Материал: Металл
+• Количество ярусов: 4
+• Перфорированная задняя панель
+• Твердые полки
+• Цвета: Зеленый, Красный, Синий
+
+Идеален для демонстрации различных товаров, книг, офисных предметов и других товаров.`,
+        },
+        features: {
+          ka: [
+            "ზომა: L540*W300*H1400 მმ",
+            "მასალა: მეტალი",
+            "იარუსების რაოდენობა: 4",
+            "პერფორირებული უკანა პანელი",
+            "მყარი თაროები",
+            "ფერები: მწვანე, წითელი, ლურჯი",
+            "მარტივი აწყობა",
+            "მრავალფუნქციური",
+          ],
+          en: [
+            "Size: L540*W300*H1400 mm",
+            "Material: Metal",
+            "Number of tiers: 4",
+            "Perforated back panel",
+            "Solid shelves",
+            "Colors: Green, Red, Blue",
+            "Easy assembly",
+            "Multi-functional",
+          ],
+          ru: [
+            "Размер: L540*W300*H1400 мм",
+            "Материал: Металл",
+            "Количество ярусов: 4",
+            "Перфорированная задняя панель",
+            "Твердые полки",
+            "Цвета: Зеленый, Красный, Синий",
+            "Простая сборка",
+            "Многофункциональный",
+          ],
+        },
+        images: [
+          "/images/tier-shelving-red.jpeg",
+          "/images/tier-shelving-blue.jpeg",
+          "/images/tier-shelving-colors.jpeg",
+        ],
+        colors: ["მწვანე", "წითელი", t("blue")],
+        sizes: ["L540*W300*H1400"],
+        category: t("marketShelves"),
+        rating: 4.7,
+        reviewCount: 15,
+      },
+      "tier-shelving-2": {
+        id: "tier-shelving-2",
+        name: t("largeTierShelvingUnit"),
+        price: 250.0,
+        description: {
+          ka: `დიდი ზომის 4 იარუსიანი სტელაჟი პერფორირებული თაროებით და მყარი უკანა პანელით. იდეალურია მაღაზიებისთვის, სუპერმარკეტებისთვის და საწყობებისთვის პროდუქტების გამოსაფენად.
+
+**ტექნიკური მახასიათებლები:**
+• ზომა: L800*W300*H1700 მმ
+• მასალა: მეტალი
+• იარუსების რაოდენობა: 4
+• პერფორირებული თაროები
+• მყარი უკანა პანელი
+• ფერები: თეთრი, შავი
+
+იდეალურია სხვადასხვა პროდუქტების, წიგნების, ოფისის ნივთების და სხვა საქონლის გამოსაფენად. უფრო დიდი ზომის გამო მეტი პროდუქტის განთავსება შეიძლება.`,
+          en: `Large 4-tier shelving unit with perforated shelves and solid back panel. Ideal for shops, supermarkets and warehouses for displaying products.
+
+**Technical Specifications:**
+• Size: L800*W300*H1700 mm
+• Material: Metal
+• Number of tiers: 4
+• Perforated shelves
+• Solid back panel
+• Colors: White, Black
+
+Perfect for displaying various products, books, office items and other merchandise. The larger size allows for more product storage.`,
+          ru: `Большой 4-ярусный стеллаж с перфорированными полками и твердой задней панелью. Идеален для магазинов, супермаркетов и складов для демонстрации товаров.
+
+**Технические характеристики:**
+• Размер: L800*W300*H1700 мм
+• Материал: Металл
+• Количество ярусов: 4
+• Перфорированные полки
+• Твердая задняя панель
+• Цвета: Белый, Черный
+
+Идеален для демонстрации различных товаров, книг, офисных предметов и других товаров. Больший размер позволяет разместить больше товаров.`,
+        },
+        features: {
+          ka: [
+            "ზომა: L800*W300*H1700 მმ",
+            "მასალა: მეტალი",
+            "იარუსების რაოდენობა: 4",
+            "პერფორირებული თაროები",
+            "მყარი უკანა პანელი",
+            "ფერები: თეთრი, შავი",
+            "მარტივი აწყობა",
+            "მრავალფუნქციური",
+            "დიდი ტევადობა",
+          ],
+          en: [
+            "Size: L800*W300*H1700 mm",
+            "Material: Metal",
+            "Number of tiers: 4",
+            "Perforated shelves",
+            "Solid back panel",
+            "Colors: White, Black",
+            "Easy assembly",
+            "Multi-functional",
+            "Large capacity",
+          ],
+          ru: [
+            "Размер: L800*W300*H1700 мм",
+            "Материал: Металл",
+            "Количество ярусов: 4",
+            "Перфорированные полки",
+            "Твердая задняя панель",
+            "Цвета: Белый, Черный",
+            "Простая сборка",
+            "Многофункциональный",
+            "Большая вместимость",
+          ],
+        },
+        images: ["/images/large-tier-shelving-colors.jpeg"],
+        colors: [t("white"), t("black")],
+        sizes: ["L800*W300*H1700"],
+        category: t("marketShelves"),
+        rating: 4.8,
+        reviewCount: 10,
       },
       // Default fallback product
       "1": {

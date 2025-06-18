@@ -140,6 +140,46 @@ export default function ProductsPage() {
       subcategory: "market-accessories",
       isNew: true,
     },
+    // Add the new basket shelving product to the products array
+    {
+      id: "basket-shelving-1",
+      name: t("basketShelvingUnit"),
+      price: 220.0,
+      image: "/images/basket-shelving-white.jpeg",
+      category: t("marketShelves"),
+      subcategory: "market-shelves",
+      isNew: true,
+    },
+    // Add the new larger basket shelving product
+    {
+      id: "basket-shelving-2",
+      name: t("basketShelvingLargeUnit"),
+      price: 280.0,
+      image: "/images/basket-shelving-large-white.jpeg",
+      category: t("marketShelves"),
+      subcategory: "market-shelves",
+      isNew: true,
+    },
+    // Add the new 4-tier shelving product
+    {
+      id: "tier-shelving-1",
+      name: t("tierShelvingUnit"),
+      price: 190.0,
+      image: "/images/tier-shelving-red.jpeg",
+      category: t("marketShelves"),
+      subcategory: "market-shelves",
+      isNew: true,
+    },
+    // Add the new large 4-tier shelving product
+    {
+      id: "tier-shelving-2",
+      name: t("largeTierShelvingUnit"),
+      price: 250.0,
+      image: "/images/large-tier-shelving-colors.jpeg",
+      category: t("marketShelves"),
+      subcategory: "market-shelves",
+      isNew: true,
+    },
   ]
 
   const getBannerTitle = () => {
