@@ -22,7 +22,7 @@ export default function HomePage() {
       description: "მაღალი ხარისხის სტელაჟები ნებისმიერი ზომის საწყობისთვის",
       descriptionEn: "High quality shelving for warehouses of any size",
       descriptionRu: "Высококачественные стеллажи для складов любого размера",
-      image: "/images/warehouse-shelving-unit.jpg",
+      image: "/images/warehouse-shelving.jpg",
       href: "/categories/shelving",
       icon: "📦",
       count: "9 პროდუქტი",
@@ -35,7 +35,7 @@ export default function HomePage() {
       description: "საგამოფენო თაროები პროდუქტების ეფექტური წარმოსაჩენად",
       descriptionEn: "Display shelves for effective product presentation",
       descriptionRu: "Выставочные полки для эффективной презентации товаров",
-      image: "/images/market-shelf-single.jpg",
+      image: "/images/market-shelves.jpg",
       href: "/categories/market-shelves",
       icon: "🏪",
       count: "1 პროდუქტი",
@@ -61,10 +61,10 @@ export default function HomePage() {
       description: "სარეკლამო და საინფორმაციო მასალები მაღაზიებისთვის",
       descriptionEn: "Advertising and information materials for stores",
       descriptionRu: "Рекламные и информационные материалы для магазинов",
-      image: "/images/plastic-frames.jpg",
+      image: "/images/pos-materials.jpg",
       href: "/categories/pos-materials",
       icon: "📊",
-      count: "2 პროდუქტი",
+      count: "0 პროდუქტი",
     },
     {
       id: "trolleys",
@@ -74,10 +74,10 @@ export default function HomePage() {
       description: "საყიდლების ურიკები და ტრანსპორტირების საშუალებები",
       descriptionEn: "Shopping carts and transportation means",
       descriptionRu: "Тележки для покупок и средства транспортировки",
-      image: "/images/hand-pallet-truck.jpg",
+      image: "/images/trolleys.jpg",
       href: "/categories/trolleys",
       icon: "🛒",
-      count: "1 პროდუქტი",
+      count: "0 პროდუქტი",
     },
     {
       id: "trash-bins",
@@ -87,10 +87,10 @@ export default function HomePage() {
       description: "მაღალი ხარისხის ნაგვის ურნები კომერციული სივრცეებისთვის",
       descriptionEn: "High quality trash bins for commercial spaces",
       descriptionRu: "Высококачественные мусорные баки для коммерческих помещений",
-      image: "/images/rubbish-bin-120l.jpg",
+      image: "/images/trash-bins.jpg",
       href: "/categories/trash-bins",
       icon: "🗑️",
-      count: "1 პროდუქტი",
+      count: "0 პროდუქტი",
     },
   ]
 
@@ -252,17 +252,17 @@ export default function HomePage() {
   return (
     <div className="overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative w-full min-h-screen overflow-hidden">
+      <section className="relative w-full min-h-screen bg-hero-pattern overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/6.jpg"
-            alt="Modern warehouse with professional shelving systems"
+            src="/images/warehouse-hero.jpg"
+            alt="Warehouse with shelving systems"
             fill
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-primary/60"></div>
+          <div className="absolute inset-0 bg-primary/80"></div>
         </div>
 
         {/* Content */}
@@ -386,6 +386,7 @@ export default function HomePage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-primary text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-hero-pattern opacity-20"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">{getSectionTitle("readyToStart")}</h2>
           <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">{getSectionDescription("readyToStart")}</p>

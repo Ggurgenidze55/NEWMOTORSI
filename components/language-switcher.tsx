@@ -15,11 +15,6 @@ const languages = {
 export default function LanguageSwitcher() {
   const { language, setLanguage } = useLanguage()
 
-  const handleLanguageChange = (newLanguage: Language) => {
-    console.log("Language switcher clicked:", newLanguage) // Add for debugging
-    setLanguage(newLanguage)
-  }
-
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -33,12 +28,8 @@ export default function LanguageSwitcher() {
         {Object.entries(languages).map(([code, { name, flag }]) => (
           <DropdownMenuItem
             key={code}
-            onClick={(e) => {
-              e.preventDefault()
-              e.stopPropagation()
-              handleLanguageChange(code as Language)
-            }}
-            className={`cursor-pointer hover:bg-accent ${language === code ? "bg-accent" : ""}`}
+            onClick={() => setLanguage(code as Language)}
+            className={language === code ? "bg-accent" : ""}
           >
             <span className="mr-2">{flag}</span>
             {name}

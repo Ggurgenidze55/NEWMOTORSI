@@ -5,6 +5,15 @@ import { Menu, ChevronDown, ChevronRight, X } from "lucide-react"
 import { useState } from "react"
 
 import { Button } from "@/components/ui/button"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+} from "@/components/ui/dropdown-menu"
 import LanguageSwitcher from "@/components/language-switcher"
 import LogoFallback from "@/components/logo-fallback"
 import { useLanguage } from "@/contexts/language-context"
@@ -98,69 +107,58 @@ export default function Header() {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </Link>
 
-            {/* Products Dropdown with Hover */}
-            <div className="relative group">
-              <Link
-                href="/products"
-                className="text-gray-700 hover:text-primary font-medium transition-colors relative group flex items-center gap-1"
-              >
-                პროდუქტები
-                <ChevronDown className="h-4 w-4 ml-1 transition-transform group-hover:rotate-180" />
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-              </Link>
-
-              {/* Dropdown Content */}
-              <div className="absolute top-full left-0 w-64 bg-white border border-gray-200 shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 mt-1">
-                <div className="py-2">
-                  <Link href="/products" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors">
-                    ყველა პროდუქტი
+            {/* Products Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  variant="ghost"
+                  className="text-gray-700 hover:text-primary font-medium transition-colors relative group flex items-center gap-1 p-0 h-auto hover:bg-transparent"
+                >
+                  პროდუქტები
+                  <ChevronDown className="h-4 w-4 ml-1" />
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" className="w-64 bg-white border border-gray-200 shadow-lg z-50">
+                <DropdownMenuItem asChild>
+                  <Link href="/products" className="text-gray-700 hover:bg-gray-100 focus:bg-gray-100">
+                    <span>ყველა პროდუქტი</span>
                   </Link>
-                  {productCategories.map((category) => (
-                    <div key={category.id} className="relative group/sub">
-                      {category.hasSubcategories ? (
-                        <>
-                          <Link
-                            href={category.href}
-                            className="flex items-center justify-between px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
-                          >
-                            <span>{category.name}</span>
-                            <ChevronRight className="h-4 w-4" />
-                          </Link>
-
-                          {/* Subcategory Dropdown */}
-                          <div className="absolute left-full top-0 w-56 bg-white border border-gray-200 shadow-lg rounded-md opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-200 z-50 ml-1">
-                            <div className="py-2">
-                              <Link
-                                href={category.href}
-                                className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors font-medium"
-                              >
-                                ყველა {category.name}
+                </DropdownMenuItem>
+                {productCategories.map((category) => (
+                  <div key={category.id}>
+                    {category.hasSubcategories ? (
+                      <DropdownMenuSub>
+                        <DropdownMenuSubTrigger className="text-gray-700 hover:bg-gray-100 focus:bg-gray-100">
+                          <span>{category.name}</span>
+                          <ChevronRight className="h-4 w-4 ml-auto" />
+                        </DropdownMenuSubTrigger>
+                        <DropdownMenuSubContent className="bg-white border border-gray-200 shadow-lg">
+                          <DropdownMenuItem asChild>
+                            <Link href={category.href} className="text-gray-700 hover:bg-gray-100 focus:bg-gray-100">
+                              <span>ყველა {category.name}</span>
+                            </Link>
+                          </DropdownMenuItem>
+                          {category.subcategories?.map((sub) => (
+                            <DropdownMenuItem key={sub.id} asChild>
+                              <Link href={sub.href} className="text-gray-700 hover:bg-gray-100 focus:bg-gray-100">
+                                <span>{sub.name}</span>
                               </Link>
-                              {category.subcategories?.map((sub) => (
-                                <Link
-                                  key={sub.id}
-                                  href={sub.href}
-                                  className="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors"
-                                >
-                                  {sub.name}
-                                </Link>
-                              ))}
-                            </div>
-                          </div>
-                        </>
-                      ) : (
-                        <Link
-                          href={category.href}
-                          className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
-                        >
-                          {category.name}
+                            </DropdownMenuItem>
+                          ))}
+                        </DropdownMenuSubContent>
+                      </DropdownMenuSub>
+                    ) : (
+                      <DropdownMenuItem asChild>
+                        <Link href={category.href} className="text-gray-700 hover:bg-gray-100 focus:bg-gray-100">
+                          <span>{category.name}</span>
                         </Link>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+                      </DropdownMenuItem>
+                    )}
+                  </div>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
 
             <Link
               href="/about"

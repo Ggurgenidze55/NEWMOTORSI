@@ -18,7 +18,7 @@ export default function Footer() {
             <div className="flex items-center mb-6">
               {!logoError ? (
                 <Image
-                  src="/images/motorsi-logo-simple.png"
+                  src="/images/new-motorsi-logo.png"
                   alt="New Motorsi Logo"
                   width={180}
                   height={60}

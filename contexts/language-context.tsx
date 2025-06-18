@@ -17,24 +17,18 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const savedLanguage = localStorage.getItem("language") as Language
-    if (savedLanguage && ["ka", "en", "ru"].includes(savedLanguage)) {
+    if (savedLanguage && translations[savedLanguage]) {
       setLanguage(savedLanguage)
     }
   }, [])
 
   const handleSetLanguage = (lang: Language) => {
-    console.log("Changing language to:", lang) // Add for debugging
     setLanguage(lang)
     localStorage.setItem("language", lang)
   }
 
   const t = (key: TranslationKey): string => {
-    try {
-      return translations[language]?.[key] || translations.ka[key] || key
-    } catch (error) {
-      console.error("Translation error:", error)
-      return key
-    }
+    return translations[language][key] || translations.ka[key] || key
   }
 
   return (
