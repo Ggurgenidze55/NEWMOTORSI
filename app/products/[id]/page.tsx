@@ -1299,7 +1299,162 @@ Perfect for storing palletized goods, large boxes and industrial materials.`,
   const product = getProductData(params.id)
 
   // Related products
-  const relatedProducts: any[] = []
+  // Related products - get products from the same category
+  const relatedProducts = [
+    // Warehouse Shelving products
+    ...(product.category === t("warehouseShelving")
+      ? [
+          {
+            id: "warehouse-1",
+            name: t("warehouseShelvingUnit"),
+            price: 450.0,
+            image: "/images/blue-warehouse-shelving.png",
+            category: t("warehouseShelving"),
+            isNew: true,
+          },
+          {
+            id: "warehouse-2",
+            name: t("warehouseShelvingUnit"),
+            price: 420.0,
+            image: "/images/blue-orange-warehouse-shelving.jpg",
+            category: t("warehouseShelving"),
+          },
+          {
+            id: "warehouse-3",
+            name: t("warehouseShelvingUnit"),
+            price: 480.0,
+            image: "/images/gray-warehouse-shelving.jpg",
+            category: t("warehouseShelving"),
+          },
+          {
+            id: "warehouse-4",
+            name: t("warehouseShelvingUnit"),
+            price: 520.0,
+            image: "/images/tall-warehouse-shelving.jpg",
+            category: t("warehouseShelving"),
+            isNew: true,
+          },
+        ]
+      : []),
+
+    // Market Shelves products
+    ...(product.category === t("marketShelves")
+      ? [
+          {
+            id: "basket-shelving-1",
+            name: t("basketShelvingUnit"),
+            price: 220.0,
+            image: "/images/basket-shelving-white.jpeg",
+            category: t("marketShelves"),
+          },
+          {
+            id: "basket-shelving-2",
+            name: t("basketShelvingLargeUnit"),
+            price: 280.0,
+            image: "/images/basket-shelving-large-white.jpeg",
+            category: t("marketShelves"),
+            isNew: true,
+          },
+          {
+            id: "tier-shelving-1",
+            name: t("tierShelvingUnit"),
+            price: 190.0,
+            image: "/images/tier-shelving-red.jpeg",
+            category: t("marketShelves"),
+          },
+          {
+            id: "tier-shelving-2",
+            name: t("largeTierShelvingUnit"),
+            price: 250.0,
+            image: "/images/large-tier-shelving-colors.jpeg",
+            category: t("marketShelves"),
+          },
+          {
+            id: "perforated-profile-1",
+            name: t("perforatedProfileUnit"),
+            price: 85.0,
+            image: "/images/perforated-profile-2.jpg",
+            category: t("marketShelves"),
+          },
+        ]
+      : []),
+
+    // Market Accessories products
+    ...(product.category === t("marketAccessories")
+      ? [
+          {
+            id: "aluminum-rail-1",
+            name: t("aluminumRailUnit"),
+            price: 45.0,
+            image: "/images/aluminum-rail-3.jpg",
+            category: t("marketAccessories"),
+          },
+        ]
+      : []),
+
+    // Pallet Shelving products
+    ...(product.category === t("palletShelving")
+      ? [
+          {
+            id: "pallet-shelving-1",
+            name: t("palletShelvingUnit1"),
+            price: 850.0,
+            image: "/images/pallet-shelving-1.jpg",
+            category: t("palletShelving"),
+            isNew: true,
+          },
+          {
+            id: "pallet-shelving-2",
+            name: t("palletShelvingUnit2"),
+            price: 950.0,
+            image: "/images/pallet-shelving-2.jpg",
+            category: t("palletShelving"),
+          },
+          {
+            id: "pallet-shelving-3",
+            name: t("palletShelvingUnit3"),
+            price: 1050.0,
+            image: "/images/pallet-shelving-3.jpg",
+            category: t("palletShelving"),
+          },
+          {
+            id: "pallet-shelving-4",
+            name: t("palletShelvingUnit4"),
+            price: 1250.0,
+            image: "/images/pallet-shelving-4.png",
+            category: t("palletShelving"),
+            isNew: true,
+          },
+        ]
+      : []),
+
+    // Tire Shelving products
+    ...(product.category === t("tireShelving")
+      ? [
+          {
+            id: "tire-shelving-1",
+            name: t("tireShelvingUnit"),
+            price: 680.0,
+            image: "/images/tire-shelving-1.png",
+            category: t("tireShelving"),
+            isNew: true,
+          },
+        ]
+      : []),
+
+    // Clothing Shelving products
+    ...(product.category === t("clothingShelving")
+      ? [
+          {
+            id: "clothing-shelving-1",
+            name: t("clothingShelvingUnit"),
+            price: 380.0,
+            image: "/images/clothing-rack-1.jpg",
+            category: t("clothingShelving"),
+          },
+        ]
+      : []),
+  ].filter((p) => p.id !== product.id) // Remove current product from related products
 
   return (
     <div className="flex flex-col min-h-screen">
