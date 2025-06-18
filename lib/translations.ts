@@ -45,6 +45,14 @@ export const translations = {
     shelfBracket: "თაროს დამჭერი",
     adjustableHeight: "რეგულირებადი სიმაღლე",
     wallMounting: "კედლის მონტაჟი",
+    accessoryHolder: "აქსესუარების დამჭერი",
+    accessoryHolderUnit: "ქრომირებული აქსესუარების დამჭერი",
+    perforatedWall: "პერფორირებული კედელი",
+    perforatedWallUnit: "პერფორირებული კედელი H2000*D1000",
+    shelfDivider: "სტელაჟის გამყოფი",
+    shelfDividerUnit: "სასაწყობე სტელაჟის გამყოფი H300/H450",
+    wallGridDisplay: "კედლის ბადე დისპლეი",
+    wallGridDisplayUnit: "აქსესუარების კედლის საკიდი H2000*D1000",
 
     // Featured Products
     featuredProducts: "პოპულარული პროდუქტები",
@@ -218,6 +226,14 @@ export const translations = {
     shelfBracket: "Shelf Bracket",
     adjustableHeight: "Adjustable Height",
     wallMounting: "Wall Mounting",
+    accessoryHolder: "Accessory Holder",
+    accessoryHolderUnit: "Chrome Accessory Holder",
+    perforatedWall: "Perforated Wall",
+    perforatedWallUnit: "Perforated Wall H2000*D1000",
+    shelfDivider: "Shelf Divider",
+    shelfDividerUnit: "Warehouse Shelf Divider H300/H450",
+    wallGridDisplay: "Wall Grid Display",
+    wallGridDisplayUnit: "Wall Grid Display for Accessories H2000*D1000",
 
     // Featured Products
     featuredProducts: "Featured Products",
@@ -391,6 +407,14 @@ export const translations = {
     shelfBracket: "Кронштейн полки",
     adjustableHeight: "Регулируемая высота",
     wallMounting: "Настенный монтаж",
+    accessoryHolder: "Держатель аксессуаров",
+    accessoryHolderUnit: "Хромированный держатель аксессуаров",
+    perforatedWall: "Перфорированная стена",
+    perforatedWallUnit: "Перфорированная стена H2000*D1000",
+    shelfDivider: "Разделитель полки",
+    shelfDividerUnit: "Разделитель складской полки H300/H450",
+    wallGridDisplay: "Настенная сетка-дисплей",
+    wallGridDisplayUnit: "Настенная сетка для аксессуаров H2000*D1000",
 
     // Featured Products
     featuredProducts: "Популярные товары",

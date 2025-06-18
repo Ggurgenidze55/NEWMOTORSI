@@ -645,6 +645,316 @@ Adjustable system allows you to position shelves at desired heights.`,
         rating: 4.8,
         reviewCount: 19,
       },
+      "accessory-holder-1": {
+        id: "accessory-holder-1",
+        name: t("accessoryHolderUnit"),
+        price: 35.0,
+        description: {
+          ka: `ქრომირებული ლითონის აქსესუარების დამჭერი მაღაზიებისა და საგამოფენო სივრცეებისთვის. მაღალი ხარისხის ქრომირებული ლითონისგან დამზადებული.
+
+**ტექნიკური მახასიათებლები:**
+• მასალა: ქრომირებული ლითონი
+• სიგრძე: 60 სმ
+• დატვირთვა: 15 კგ
+• მონტაჟი: კედელზე მაგრდება
+• ფერი: ქრომი
+
+იდეალურია აქსესუარების, ჩანთების და სხვა მსუბუქი ნივთების გამოსაფენად.`,
+          en: `Chrome metal accessory holder for stores and display spaces. Made from high-quality chrome-plated metal.
+
+**Technical Specifications:**
+• Material: Chrome-plated metal
+• Length: 60 cm
+• Load capacity: 15 kg
+• Mounting: Wall mounted
+• Color: Chrome
+
+Perfect for displaying accessories, bags and other lightweight items.`,
+          ru: `Хромированный металлический держатель аксессуаров для магазинов и выставочных пространств. Изготовлен из высококачественного хромированного металла.
+
+**Технические характеристики:**
+• Материал: Хромированный металл
+• Длина: 60 см
+• Нагрузка: 15 кг
+• Монтаж: Настенный
+• Цвет: Хром
+
+Идеален для демонстрации аксессуаров, сумок и других легких предметов.`,
+        },
+        features: {
+          ka: [
+            "მასალა: ქრომირებული ლითონი",
+            "სიგრძე: 60 სმ",
+            "დატვირთვა: 15 კგ",
+            "კედელზე მონტაჟი",
+            "მსუბუქი წონა",
+            "კოროზიისგან დაცული",
+            "მარტივი ინსტალაცია",
+            "ელეგანტური დიზაინი",
+          ],
+          en: [
+            "Material: Chrome-plated metal",
+            "Length: 60 cm",
+            "Load capacity: 15 kg",
+            "Wall mounted",
+            "Lightweight",
+            "Corrosion resistant",
+            "Easy installation",
+            "Elegant design",
+          ],
+          ru: [
+            "Материал: Хромированный металл",
+            "Длина: 60 см",
+            "Нагрузка: 15 кг",
+            "Настенный монтаж",
+            "Легкий вес",
+            "Устойчив к коррозии",
+            "Простая установка",
+            "Элегантный дизайн",
+          ],
+        },
+        images: ["/images/accessory-holder-1.jpg"],
+        colors: ["ქრომი", t("silver")],
+        sizes: ["60cm"],
+        category: t("marketAccessories"),
+        rating: 4.5,
+        reviewCount: 12,
+      },
+      "perforated-wall-1": {
+        id: "perforated-wall-1",
+        name: t("perforatedWallUnit"),
+        price: 180.0,
+        description: {
+          ka: `პერფორირებული კედელი პროდუქციის ჩამოსაკიდად. მაღალი ხარისხის ლითონისგან დამზადებული, იდეალურია ინსტრუმენტების, აქსესუარების და სხვადასხვა ნივთების ორგანიზებული შენახვისთვის.
+
+**ტექნიკური მახასიათებლები:**
+• ზომა: H2000*D1000 მმ
+• მასალა: ლითონი
+• პერფორაცია: 25მმ ნახვრეტები
+• მონტაჟი: კედელზე მაგრდება
+• ფერები: ღია ნაცრისფერი, მუქი ნაცრისფერი
+
+იდეალურია სამუშაო სივრცეების, ოფისების, მაღაზიების და საწყობების ორგანიზაციისთვის.`,
+          en: `Perforated wall for hanging products. Made from high-quality metal, ideal for organized storage of tools, accessories and various items.
+
+**Technical Specifications:**
+• Size: H2000*D1000 mm
+• Material: Metal
+• Perforation: 25mm holes
+• Mounting: Wall mounted
+• Colors: Light gray, dark gray
+
+Perfect for organizing workspaces, offices, stores and warehouses.`,
+          ru: `Перфорированная стена для подвешивания продукции. Изготовлена из высококачественного металла, идеальна для организованного хранения инструментов, аксессуаров и различных предметов.
+
+**Технические характеристики:**
+• Размер: H2000*D1000 мм
+• Материал: Металл
+• Перфорация: отверстия 25мм
+• Монтаж: Настенный
+• Цвета: Светло-серый, темно-серый
+
+Идеальна для организации рабочих пространств, офисов, магазинов и складов.`,
+        },
+        features: {
+          ka: [
+            "ზომა: H2000*D1000 მმ",
+            "მასალა: ლითონი",
+            "პერფორაცია: 25მმ ნახვრეტები",
+            "კედელზე მონტაჟი",
+            "მრავალფუნქციური",
+            "კოროზიისგან დაცული",
+            "მარტივი ინსტალაცია",
+            "ორგანიზებული შენახვა",
+          ],
+          en: [
+            "Size: H2000*D1000 mm",
+            "Material: Metal",
+            "Perforation: 25mm holes",
+            "Wall mounted",
+            "Multi-functional",
+            "Corrosion resistant",
+            "Easy installation",
+            "Organized storage",
+          ],
+          ru: [
+            "Размер: H2000*D1000 мм",
+            "Материал: Металл",
+            "Перфорация: отверстия 25мм",
+            "Настенный монтаж",
+            "Многофункциональный",
+            "Устойчив к коррозии",
+            "Простая установка",
+            "Организованное хранение",
+          ],
+        },
+        images: [
+          "/images/perforated-wall-1.jpg",
+          "/images/perforated-wall-2.jpg",
+          "/images/perforated-wall-3.jpg",
+          "/images/perforated-wall-4.jpg",
+        ],
+        colors: ["ღია ნაცრისფერი", "მუქი ნაცრისფერი"],
+        sizes: ["H2000*D1000"],
+        category: t("marketAccessories"),
+        rating: 4.8,
+        reviewCount: 16,
+      },
+      "shelf-divider-1": {
+        id: "shelf-divider-1",
+        name: t("shelfDividerUnit"),
+        price: 25.0,
+        description: {
+          ka: `სასაწყობე სტელაჟის გამყოფი თაროზე სხვადასხვა პროდუქციის გამოსაყოფად. მაღალი ხარისხის ლითონისგან დამზადებული, იდეალურია საწყობებისა და მაღაზიებისთვის.
+
+**ტექნიკური მახასიათებლები:**
+• სიმაღლე: H300 ან H450 მმ
+• მასალა: მეტალი
+• ფერი: ლურჯი
+• დანიშნულება: პროდუქციის გამოყოფა თაროზე
+• მონტაჟი: მარტივი დამაგრება
+
+იდეალურია სხვადასხვა ზომის და ტიპის პროდუქტების ორგანიზებული შენახვისთვის.`,
+          en: `Warehouse shelf divider for separating different products on shelves. Made from high-quality metal, ideal for warehouses and stores.
+
+**Technical Specifications:**
+• Height: H300 or H450 mm
+• Material: Metal
+• Color: Blue
+• Purpose: Product separation on shelves
+• Installation: Easy attachment
+
+Perfect for organized storage of different sizes and types of products.`,
+          ru: `Разделитель складской полки для разделения различных товаров на полках. Изготовлен из высококачественного металла, идеален для складов и магазинов.
+
+**Технические характеристики:**
+• Высота: H300 или H450 мм
+• Материал: Металл
+• Цвет: Синий
+• Назначение: Разделение товаров на полках
+• Монтаж: Простое крепление
+
+Идеален для организованного хранения товаров разных размеров и типов.`,
+        },
+        features: {
+          ka: [
+            "სიმაღლე: H300 ან H450 მმ",
+            "მასალა: მეტალი",
+            "ფერი: ლურჯი",
+            "მარტივი მონტაჟი",
+            "მაღალი ხარისხის ლითონი",
+            "კოროზიისგან დაცული",
+            "ორგანიზებული შენახვა",
+            "უნივერსალური გამოყენება",
+          ],
+          en: [
+            "Height: H300 or H450 mm",
+            "Material: Metal",
+            "Color: Blue",
+            "Easy installation",
+            "High-quality metal",
+            "Corrosion resistant",
+            "Organized storage",
+            "Universal use",
+          ],
+          ru: [
+            "Высота: H300 или H450 мм",
+            "Материал: Металл",
+            "Цвет: Синий",
+            "Простая установка",
+            "Высококачественный металл",
+            "Устойчив к коррозии",
+            "Организованное хранение",
+            "Универсальное использование",
+          ],
+        },
+        images: ["/images/shelf-divider-1.jpg"],
+        colors: [t("blue")],
+        sizes: ["H300", "H450"],
+        category: t("warehouseShelving"),
+        rating: 4.7,
+        reviewCount: 14,
+      },
+      "wall-grid-display-1": {
+        id: "wall-grid-display-1",
+        name: t("wallGridDisplayUnit"),
+        price: 120.0,
+        description: {
+          ka: `აქსესუარების კედლის საკიდი მაღაზიებისა და საგამოფენო სივრცეებისთვის. მაღალი ხარისხის ლითონისგან დამზადებული ბადე სისტემა, იდეალურია აქსესუარების, ჩანთების და სხვა პროდუქტების ორგანიზებული გამოფენისთვის.
+
+**ტექნიკური მახასიათებლები:**
+• ზომა: H2000*D1000 მმ
+• მასალა: ლითონი
+• ბადის ზომა: 50x50 მმ
+• მონტაჟი: კედელზე ან ფეხებზე
+• ფერები: შავი, თეთრი
+
+შესაძლებელია სხვადასხვა საკიდების და აქსესუარების დამატება.`,
+          en: `Wall grid display for accessories for stores and exhibition spaces. Made from high-quality metal grid system, ideal for organized display of accessories, bags and other products.
+
+**Technical Specifications:**
+• Size: H2000*D1000 mm
+• Material: Metal
+• Grid size: 50x50 mm
+• Mounting: Wall mounted or with legs
+• Colors: Black, white
+
+Various hooks and accessories can be added.`,
+          ru: `Настенная сетка для аксессуаров для магазинов и выставочных пространств. Изготовлена из высококачественной металлической сетки, идеальна для организованной демонстрации аксессуаров, сумок и других товаров.
+
+**Технические характеристики:**
+• Размер: H2000*D1000 мм
+• Материал: Металл
+• Размер сетки: 50x50 мм
+• Монтаж: Настенный или на ножках
+• Цвета: Черный, белый
+
+Можно добавить различные крючки и аксессуары.`,
+        },
+        features: {
+          ka: [
+            "ზომა: H2000*D1000 მმ",
+            "მასალა: ლითონი",
+            "ბადის ზომა: 50x50 მმ",
+            "კედელზე ან ფეხებზე მონტაჟი",
+            "მრავალფუნქციური",
+            "კოროზიისგან დაცული",
+            "მარტივი ინსტალაცია",
+            "სხვადასხვა აქსესუარები",
+          ],
+          en: [
+            "Size: H2000*D1000 mm",
+            "Material: Metal",
+            "Grid size: 50x50 mm",
+            "Wall or leg mounting",
+            "Multi-functional",
+            "Corrosion resistant",
+            "Easy installation",
+            "Various accessories",
+          ],
+          ru: [
+            "Размер: H2000*D1000 мм",
+            "Материал: Металл",
+            "Размер сетки: 50x50 мм",
+            "Настенный или на ножках",
+            "Многофункциональный",
+            "Устойчив к коррозии",
+            "Простая установка",
+            "Различные аксессуары",
+          ],
+        },
+        images: [
+          "/images/wall-grid-display-1.jpg",
+          "/images/wall-grid-display-2.jpg",
+          "/images/wall-grid-display-3.jpg",
+          "/images/wall-grid-display-4.jpg",
+        ],
+        colors: ["შავი", "თეთრი"],
+        sizes: ["H2000*D1000"],
+        category: t("marketAccessories"),
+        rating: 4.6,
+        reviewCount: 18,
+      },
       // Default fallback product
       "1": {
         id: params.id,

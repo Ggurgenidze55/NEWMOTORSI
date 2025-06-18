@@ -90,6 +90,46 @@ export default function ProductsPage() {
       subcategory: "market-shelves",
       isNew: true,
     },
+    // Accessory holder product
+    {
+      id: "accessory-holder-1",
+      name: t("accessoryHolderUnit"),
+      price: 35.0,
+      image: "/images/accessory-holder-1.jpg",
+      category: t("marketAccessories"),
+      subcategory: "market-accessories",
+      isNew: true,
+    },
+    // Perforated wall product
+    {
+      id: "perforated-wall-1",
+      name: t("perforatedWallUnit"),
+      price: 180.0,
+      image: "/images/perforated-wall-1.jpg",
+      category: t("marketAccessories"),
+      subcategory: "market-accessories",
+      isNew: true,
+    },
+    // Shelf divider product
+    {
+      id: "shelf-divider-1",
+      name: t("shelfDividerUnit"),
+      price: 25.0,
+      image: "/images/shelf-divider-1.jpg",
+      category: t("warehouseShelving"),
+      subcategory: "warehouse-shelving",
+      isNew: true,
+    },
+    // Wall grid display product
+    {
+      id: "wall-grid-display-1",
+      name: t("wallGridDisplayUnit"),
+      price: 120.0,
+      image: "/images/wall-grid-display-1.jpg",
+      category: t("marketAccessories"),
+      subcategory: "market-accessories",
+      isNew: true,
+    },
   ]
 
   const getBannerTitle = () => {

@@ -29,7 +29,7 @@ export default function HomePage() {
       image: "/images/warehouse-shelving.jpg",
       href: "/categories/shelving",
       icon: "📦",
-      count: "1 პროდუქტი",
+      count: "9 პროდუქტი",
     },
     {
       id: "market-shelves",
@@ -42,7 +42,7 @@ export default function HomePage() {
       image: "/images/market-shelves.jpg",
       href: "/categories/market-shelves",
       icon: "🏪",
-      count: "0 პროდუქტი",
+      count: "1 პროდუქტი",
     },
     {
       id: "market-accessories",
@@ -55,7 +55,7 @@ export default function HomePage() {
       image: "/images/market-accessories.jpg",
       href: "/categories/market-accessories",
       icon: "🛍️",
-      count: "0 პროდუქტი",
+      count: "4 პროდუქტი",
     },
     {
       id: "pos-materials",

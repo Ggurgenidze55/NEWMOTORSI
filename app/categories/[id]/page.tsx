@@ -116,6 +116,14 @@ export default function CategoryPage({ params }: { params: { id: string } }) {
           category: t("clothingShelving"),
           isNew: true,
         },
+        {
+          id: "shelf-divider-1",
+          name: t("shelfDividerUnit"),
+          price: 25.0,
+          image: "/images/shelf-divider-1.jpg",
+          category: t("warehouseShelving"),
+          isNew: true,
+        },
       ],
       "warehouse-shelving": [
         {
@@ -150,6 +158,14 @@ export default function CategoryPage({ params }: { params: { id: string } }) {
           category: t("warehouseShelving"),
           isNew: true,
         },
+        {
+          id: "shelf-divider-1",
+          name: t("shelfDividerUnit"),
+          price: 25.0,
+          image: "/images/shelf-divider-1.jpg",
+          category: t("warehouseShelving"),
+          isNew: true,
+        },
       ],
       "market-shelves": [
         {
@@ -170,6 +186,30 @@ export default function CategoryPage({ params }: { params: { id: string } }) {
           name: t("aluminumRailUnit"),
           price: 45.0,
           image: "/images/aluminum-rail-3.jpg",
+          category: t("marketAccessories"),
+          isNew: true,
+        },
+        {
+          id: "accessory-holder-1",
+          name: t("accessoryHolderUnit"),
+          price: 35.0,
+          image: "/images/accessory-holder-1.jpg",
+          category: t("marketAccessories"),
+          isNew: true,
+        },
+        {
+          id: "perforated-wall-1",
+          name: t("perforatedWallUnit"),
+          price: 180.0,
+          image: "/images/perforated-wall-1.jpg",
+          category: t("marketAccessories"),
+          isNew: true,
+        },
+        {
+          id: "wall-grid-display-1",
+          name: t("wallGridDisplayUnit"),
+          price: 120.0,
+          image: "/images/wall-grid-display-1.jpg",
           category: t("marketAccessories"),
           isNew: true,
         },
