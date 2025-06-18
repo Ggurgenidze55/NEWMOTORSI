@@ -20,9 +20,9 @@ export default function Footer() {
                 <Image
                   src="/images/new-motorsi-logo.png"
                   alt="New Motorsi Logo"
-                  width={180}
-                  height={60}
-                  className="h-12 w-auto brightness-0 invert"
+                  width={220}
+                  height={75}
+                  className="h-16 w-auto brightness-0 invert"
                   onError={() => setLogoError(true)}
                 />
               ) : (

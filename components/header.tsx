@@ -89,9 +89,9 @@ export default function Header() {
               <Image
                 src="/images/new-motorsi-logo.png"
                 alt="New Motorsi Logo"
-                width={180}
-                height={60}
-                className="h-12 w-auto group-hover:scale-105 transition-transform duration-300"
+                width={220}
+                height={75}
+                className="h-16 w-auto group-hover:scale-105 transition-transform duration-300"
                 priority
                 onError={() => setLogoError(true)}
               />
