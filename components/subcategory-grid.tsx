@@ -44,7 +44,7 @@ export default function SubcategoryGrid() {
       description: "POS მასალები და რეკლამის სტენდები",
       image: "/placeholder.svg?height=200&width=300&text=POS+Materials",
       href: "/categories/pos-materials",
-      count: 0,
+      count: 3,
       featured: false,
     },
     {

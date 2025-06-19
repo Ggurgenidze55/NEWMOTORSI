@@ -288,7 +288,32 @@ export default function CategoryPage({ params }: { params: { id: string } }) {
         },
       ],
       trolleys: [],
-      "pos-materials": [],
+      "pos-materials": [
+        {
+          id: "shelf-price-display-1",
+          name: t("shelfPriceDisplayUnit"),
+          price: 12.0,
+          image: "/images/shelf-price-display-1.jpg",
+          category: t("posMaterials"),
+          isNew: true,
+        },
+        {
+          id: "plastic-frames-1",
+          name: t("plasticFramesUnit"),
+          price: 8.0,
+          image: "/images/plastic-frames-1.jpg",
+          category: t("posMaterials"),
+          isNew: true,
+        },
+        {
+          id: "frame-stands-1",
+          name: t("frameStandsUnit"),
+          price: 25.0,
+          image: "/images/frame-stands-1.jpg",
+          category: t("posMaterials"),
+          isNew: true,
+        },
+      ],
       "trash-bins": [],
       "market-accessories": [
         {

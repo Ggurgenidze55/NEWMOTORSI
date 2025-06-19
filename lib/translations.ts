@@ -67,6 +67,12 @@ export const translations = {
     palletShelvingUnit4: "საპალეტე სტელაჟი 502x270x105",
     archiveShelvingUnit: "საარქივო სტელაჟი",
     archiveShelvingUnit2: "საარქივო სტელაჟი მოდული",
+    shelfPriceDisplay: "თაროს ფასმაჩვენებელი",
+    shelfPriceDisplayUnit: "თაროს ფასმაჩვენებელი სისტემა",
+    plasticFrames: "პლასტმასის ჩარჩოები",
+    plasticFramesUnit: "ფერადი პლასტმასის ჩარჩოები",
+    frameStands: "ჩარჩოს სადგამები",
+    frameStandsUnit: "ჩარჩოს სადგამი რეგულირებადი",
 
     // Featured Products
     featuredProducts: "პოპულარული პროდუქტები",
@@ -264,6 +270,12 @@ export const translations = {
     palletShelvingUnit4: "Pallet Racking 502x270x105",
     archiveShelvingUnit: "Archive Shelving Unit",
     archiveShelvingUnit2: "Archive Shelving Module",
+    shelfPriceDisplay: "Shelf Price Display",
+    shelfPriceDisplayUnit: "Shelf Price Display System",
+    plasticFrames: "Plastic Frames",
+    plasticFramesUnit: "Colored Plastic Frames",
+    frameStands: "Frame Stands",
+    frameStandsUnit: "Adjustable Frame Stand",
 
     // Featured Products
     featuredProducts: "Featured Products",
@@ -461,6 +473,12 @@ export const translations = {
     palletShelvingUnit4: "Паллетный стеллаж 502x270x105",
     archiveShelvingUnit: "Архивный стеллаж",
     archiveShelvingUnit2: "Архивный стеллаж модуль",
+    shelfPriceDisplay: "Ценовая полка",
+    shelfPriceDisplayUnit: "Система ценовых полок",
+    plasticFrames: "Пластиковые рамки",
+    plasticFramesUnit: "Цветные пластиковые рамки",
+    frameStands: "Подставки для рамок",
+    frameStandsUnit: "Регулируемая подставка для рамок",
 
     // Featured Products
     featuredProducts: "Популярные товары",

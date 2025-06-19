@@ -71,7 +71,7 @@ export default function SubcategoryNavigation() {
       id: "pos-materials",
       name: t("posMaterials"),
       href: "/categories/pos-materials",
-      count: 19,
+      count: 3,
     },
     {
       id: "trolleys",

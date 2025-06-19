@@ -64,7 +64,7 @@ export default function HomePage() {
       image: "/images/pos-materials.jpg",
       href: "/categories/pos-materials",
       icon: "📊",
-      count: "0 პროდუქტი",
+      count: "3 პროდუქტი",
     },
     {
       id: "trolleys",

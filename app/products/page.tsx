@@ -237,6 +237,34 @@ export default function ProductsPage() {
       subcategory: "archive-shelving",
       isNew: true,
     },
+    // Add the new POS materials products:
+    {
+      id: "shelf-price-display-1",
+      name: t("shelfPriceDisplayUnit"),
+      price: 12.0,
+      image: "/images/shelf-price-display-1.jpg",
+      category: t("posMaterials"),
+      subcategory: "pos-materials",
+      isNew: true,
+    },
+    {
+      id: "plastic-frames-1",
+      name: t("plasticFramesUnit"),
+      price: 8.0,
+      image: "/images/plastic-frames-1.jpg",
+      category: t("posMaterials"),
+      subcategory: "pos-materials",
+      isNew: true,
+    },
+    {
+      id: "frame-stands-1",
+      name: t("frameStandsUnit"),
+      price: 25.0,
+      image: "/images/frame-stands-1.jpg",
+      category: t("posMaterials"),
+      subcategory: "pos-materials",
+      isNew: true,
+    },
   ]
 
   const getBannerTitle = () => {
