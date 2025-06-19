@@ -160,6 +160,14 @@ export default function CategoryPage({ params }: { params: { id: string } }) {
           category: t("palletShelving"),
           isNew: true,
         },
+        {
+          id: "archive-shelving-1",
+          name: t("archiveShelvingUnit"),
+          price: 320.0,
+          image: "/images/archive-shelving-1.jpg",
+          category: t("archiveShelving"),
+          isNew: true,
+        },
       ],
       "warehouse-shelving": [
         {
@@ -341,6 +349,24 @@ export default function CategoryPage({ params }: { params: { id: string } }) {
           price: 380.0,
           image: "/images/clothing-rack-1.jpg",
           category: t("clothingShelving"),
+          isNew: true,
+        },
+      ],
+      "archive-shelving": [
+        {
+          id: "archive-shelving-1",
+          name: t("archiveShelvingUnit"),
+          price: 320.0,
+          image: "/images/archive-shelving-1.jpg",
+          category: t("archiveShelving"),
+          isNew: true,
+        },
+        {
+          id: "archive-shelving-2",
+          name: t("archiveShelvingUnit2"),
+          price: 290.0,
+          image: "/images/archive-shelving-2.jpg",
+          category: t("archiveShelving"),
           isNew: true,
         },
       ],

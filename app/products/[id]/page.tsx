@@ -1251,6 +1251,156 @@ Perfect for storing palletized goods, large boxes and industrial materials.`,
         rating: 5.0,
         reviewCount: 4,
       },
+      "archive-shelving-1": {
+        id: "archive-shelving-1",
+        name: t("archiveShelvingUnit"),
+        price: 320.0,
+        description: {
+          ka: `პროფესიონალური საარქივო სტელაჟი დოკუმენტების და საარქივო მასალების ორგანიზებული შენახვისთვის. მაღალი ხარისხის ლითონისგან დამზადებული, იდეალურია ოფისებისა და საარქივო ოთახებისთვის.
+
+**ტექნიკური მახასიათებლები:**
+• სიმაღლე: 200 სმ
+• სიგანე: 92 სმ  
+• სიღრმე: 30 ან 60 სმ
+• თაროების რაოდენობა: 5
+• დატვირთვა: 80 კგ ერთ თაროზე
+
+იდეალურია საარქივო ყუთების, ფაილების და დოკუმენტების შენახვისთვის. პერფორირებული კონსტრუქცია უზრუნველყოფს ვენტილაციას.`,
+          en: `Professional archive shelving for organized storage of documents and archival materials. Made from high-quality metal, ideal for offices and archive rooms.
+
+**Technical Specifications:**
+• Height: 200 cm
+• Width: 92 cm
+• Depth: 30 or 60 cm
+• Number of shelves: 5
+• Load capacity: 80 kg per shelf
+
+Perfect for storing archive boxes, files and documents. Perforated construction ensures ventilation.`,
+          ru: `Профессиональный архивный стеллаж для организованного хранения документов и архивных материалов. Изготовлен из высококачественного металла, идеален для офисов и архивных помещений.
+
+**Технические характеристики:**
+• Высота: 200 см
+• Ширина: 92 см
+• Глубина: 30 или 60 см
+• Количество полок: 5
+• Нагрузка: 80 кг на полку
+
+Идеален для хранения архивных коробок, файлов и документов. Перфорированная конструкция обеспечивает вентиляцию.`,
+        },
+        features: {
+          ka: [
+            "სიმაღლე: 200 სმ",
+            "სიგანე: 92 სმ",
+            "სიღრმე: 30 ან 60 სმ",
+            "თაროების რაოდენობა: 5",
+            "დატვირთვა: 80 კგ ერთ თაროზე",
+            "პერფორირებული კონსტრუქცია",
+            "კოროზიისგან დაცული",
+            "მარტივი მონტაჟი",
+          ],
+          en: [
+            "Height: 200 cm",
+            "Width: 92 cm",
+            "Depth: 30 or 60 cm",
+            "Number of shelves: 5",
+            "Load capacity: 80 kg per shelf",
+            "Perforated construction",
+            "Corrosion resistant",
+            "Easy assembly",
+          ],
+          ru: [
+            "Высота: 200 см",
+            "Ширина: 92 см",
+            "Глубина: 30 или 60 см",
+            "Количество полок: 5",
+            "Нагрузка: 80 кг на полку",
+            "Перфорированная конструкция",
+            "Устойчив к коррозии",
+            "Простая сборка",
+          ],
+        },
+        images: ["/images/archive-shelving-1.jpg"],
+        colors: [t("white"), "ნაცარი"],
+        sizes: ["200x92x30", "200x92x60"],
+        category: t("archiveShelving"),
+        rating: 4.6,
+        reviewCount: 22,
+      },
+      "archive-shelving-2": {
+        id: "archive-shelving-2",
+        name: t("archiveShelvingUnit2"),
+        price: 290.0,
+        description: {
+          ka: `მოდულური საარქივო სტელაჟი უნივერსალური გამოყენებისთვის. მაღალი ხარისხის ლითონისგან დამზადებული, იდეალურია ოფისებისა და სამზარეულოებისთვის.
+
+**ტექნიკური მახასიათებლები:**
+• სიმაღლე: 200 სმ
+• სიგრძე: 93 სმ  
+• სიღრმე: 31 ან 43 სმ
+• თაროების რაოდენობა: 5 ან 6
+• დატვირთვა: 70 კგ ერთ თაროზე
+
+მოდულური დიზაინი საშუალებას იძლევა მოერგოს ნებისმიერ ინტერიერს. ხელმისაწვდომია ნაცრისფერი და თეთრი ფერებით.`,
+          en: `Modular archive shelving for universal use. Made from high-quality metal, ideal for offices and kitchens.
+
+**Technical Specifications:**
+• Height: 200 cm
+• Width: 93 cm
+• Depth: 31 or 43 cm
+• Number of shelves: 5 or 6
+• Load capacity: 70 kg per shelf
+
+Modular design allows adaptation to any interior. Available in gray and white colors.`,
+          ru: `Модульный архивный стеллаж для универсального использования. Изготовлен из высококачественного металла, идеален для офисов и кухонь.
+
+**Технические характеристики:**
+• Высота: 200 см
+• Ширина: 93 см
+• Глубина: 31 или 43 см
+• Количество полок: 5 или 6
+• Нагрузка: 70 кг на полку
+
+Модульный дизайн позволяет адаптироваться к любому интерьеру. Доступен в сером и белом цветах.`,
+        },
+        features: {
+          ka: [
+            "სიმაღლე: 200 სმ",
+            "სიგრძე: 93 სმ",
+            "სიღრმე: 31 ან 43 სმ",
+            "თაროების რაოდენობა: 5 ან 6",
+            "დატვირთვა: 70 კგ ერთ თაროზე",
+            "მოდულური დიზაინი",
+            "კოროზიისგან დაცული",
+            "მარტივი მონტაჟი",
+          ],
+          en: [
+            "Height: 200 cm",
+            "Width: 93 cm",
+            "Depth: 31 or 43 cm",
+            "Number of shelves: 5 or 6",
+            "Load capacity: 70 kg per shelf",
+            "Modular design",
+            "Corrosion resistant",
+            "Easy assembly",
+          ],
+          ru: [
+            "Высота: 200 см",
+            "Ширина: 93 см",
+            "Глубина: 31 или 43 см",
+            "Количество полок: 5 или 6",
+            "Нагрузка: 70 кг на полку",
+            "Модульный дизайн",
+            "Устойчив к коррозии",
+            "Простая сборка",
+          ],
+        },
+        images: ["/images/archive-shelving-2.jpg"],
+        colors: ["ნაცარი", t("white")],
+        sizes: ["200x93x31", "200x93x43"],
+        category: t("archiveShelving"),
+        rating: 4.5,
+        reviewCount: 18,
+      },
       // Default fallback product
       "1": {
         id: params.id,
@@ -1451,6 +1601,28 @@ Perfect for storing palletized goods, large boxes and industrial materials.`,
             price: 380.0,
             image: "/images/clothing-rack-1.jpg",
             category: t("clothingShelving"),
+          },
+        ]
+      : []),
+
+    // Archive Shelving products
+    ...(product.category === t("archiveShelving")
+      ? [
+          {
+            id: "archive-shelving-1",
+            name: t("archiveShelvingUnit"),
+            price: 320.0,
+            image: "/images/archive-shelving-1.jpg",
+            category: t("archiveShelving"),
+            isNew: true,
+          },
+          {
+            id: "archive-shelving-2",
+            name: t("archiveShelvingUnit2"),
+            price: 290.0,
+            image: "/images/archive-shelving-2.jpg",
+            category: t("archiveShelving"),
+            isNew: true,
           },
         ]
       : []),

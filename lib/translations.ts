@@ -65,6 +65,8 @@ export const translations = {
     palletShelvingUnit2: "საპალეტე სტელაჟი 352x270x105",
     palletShelvingUnit3: "საპალეტე სტელაჟი 405x270x105",
     palletShelvingUnit4: "საპალეტე სტელაჟი 502x270x105",
+    archiveShelvingUnit: "საარქივო სტელაჟი",
+    archiveShelvingUnit2: "საარქივო სტელაჟი მოდული",
 
     // Featured Products
     featuredProducts: "პოპულარული პროდუქტები",
@@ -260,6 +262,8 @@ export const translations = {
     palletShelvingUnit2: "Pallet Racking 352x270x105",
     palletShelvingUnit3: "Pallet Racking 405x270x105",
     palletShelvingUnit4: "Pallet Racking 502x270x105",
+    archiveShelvingUnit: "Archive Shelving Unit",
+    archiveShelvingUnit2: "Archive Shelving Module",
 
     // Featured Products
     featuredProducts: "Featured Products",
@@ -455,6 +459,8 @@ export const translations = {
     palletShelvingUnit2: "Паллетный стеллаж 352x270x105",
     palletShelvingUnit3: "Паллетный стеллаж 405x270x105",
     palletShelvingUnit4: "Паллетный стеллаж 502x270x105",
+    archiveShelvingUnit: "Архивный стеллаж",
+    archiveShelvingUnit2: "Архивный стеллаж модуль",
 
     // Featured Products
     featuredProducts: "Популярные товары",

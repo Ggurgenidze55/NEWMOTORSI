@@ -217,6 +217,26 @@ export default function ProductsPage() {
       subcategory: "pallet-shelving",
       isNew: true,
     },
+    // Add the new archive shelving product to the products array:
+    {
+      id: "archive-shelving-1",
+      name: t("archiveShelvingUnit"),
+      price: 320.0,
+      image: "/images/archive-shelving-1.jpg",
+      category: t("archiveShelving"),
+      subcategory: "archive-shelving",
+      isNew: true,
+    },
+    // Add the new archive shelving product to the products array:
+    {
+      id: "archive-shelving-2",
+      name: t("archiveShelvingUnit2"),
+      price: 290.0,
+      image: "/images/archive-shelving-2.jpg",
+      category: t("archiveShelving"),
+      subcategory: "archive-shelving",
+      isNew: true,
+    },
   ]
 
   const getBannerTitle = () => {
