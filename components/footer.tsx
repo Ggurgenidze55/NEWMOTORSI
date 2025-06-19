@@ -66,16 +66,14 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/careers" className="text-gray-300 hover:text-primary transition-colors">
-                  {t("careers")}
-                </Link>
+                
               </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-gray-700 pt-8 text-center">
-          <p className="text-gray-400">© 2024 ნიუ მოტორსი. {t("allRightsReserved")}</p>
+          <p className="text-gray-400">© 2025 ნიუ მოტორსი. {t("allRightsReserved")}</p>
         </div>
       </div>
     </footer>

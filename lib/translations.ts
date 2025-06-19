@@ -173,7 +173,7 @@ export const translations = {
     shopping: "შოპინგი",
     company: "კომპანია",
     aboutUs: "ჩვენ შესახებ",
-    careers: "კარიერა",
+    careers: "",
     help: "დახმარება",
     faq: "ხშირად დასმული კითხვები",
     shipping: "მიწოდება",
@@ -181,7 +181,7 @@ export const translations = {
     legal: "იურიდიული",
     privacy: "კონფიდენციალურობა",
     terms: "წესები და პირობები",
-    allRightsReserved: "ყველა უფლება დაცულია.",
+    allRightsReserved: "ყველა უფლება დაცულია.By OmniFrame",
 
     // Product Details
     color: "ფერი",
@@ -456,7 +456,7 @@ export const translations = {
     shopping: "Shopping",
     company: "Company",
     aboutUs: "About Us",
-    careers: "Careers",
+    careers: "",
     help: "Help",
     faq: "FAQ",
     shipping: "Shipping",
@@ -464,7 +464,7 @@ export const translations = {
     legal: "Legal",
     privacy: "Privacy",
     terms: "Terms & Conditions",
-    allRightsReserved: "All rights reserved.",
+    allRightsReserved: "All rights reserved. By OmniFrame",
 
     // Product Details
     color: "Color",
@@ -739,7 +739,7 @@ export const translations = {
     shopping: "Покупки",
     company: "Компания",
     aboutUs: "О нас",
-    careers: "Карьера",
+    careers: "",
     help: "Помощь",
     faq: "Часто задаваемые вопросы",
     shipping: "Доставка",
@@ -747,7 +747,7 @@ export const translations = {
     legal: "Юридическая информация",
     privacy: "Конфиденциальность",
     terms: "Условия использования",
-    allRightsReserved: "Все права защищены.",
+    allRightsReserved: "Все права защищены. By OmniFrame",
 
     // Product Details
     color: "Цвет",
