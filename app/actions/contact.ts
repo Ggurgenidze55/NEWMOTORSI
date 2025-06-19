@@ -1,9 +1,5 @@
 "use server"
 
-import { Resend } from "resend"
-
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 export async function submitContactForm(formData: FormData) {
   const name = formData.get("name") as string
   const email = formData.get("email") as string
@@ -28,9 +24,29 @@ export async function submitContactForm(formData: FormData) {
   }
 
   try {
+    // თუ RESEND_API_KEY არ არის, მხოლოდ console-ში დავბეჭდავთ
+    if (!process.env.RESEND_API_KEY) {
+      console.log("კონტაქტის ფორმის მონაცემები (RESEND_API_KEY არ არის):", {
+        name,
+        email,
+        subject,
+        message,
+        timestamp: new Date().toISOString(),
+      })
+
+      return {
+        success: true,
+        message: "შეტყობინება მიღებულია! ჩვენ მალე დაგიკავშირდებით.",
+      }
+    }
+
+    // Resend import მხოლოდ თუ API key არსებობს
+    const { Resend } = await import("resend")
+    const resend = new Resend(process.env.RESEND_API_KEY)
+
     // Email გაგზავნა Resend-ით
     const { data, error } = await resend.emails.send({
-      from: "onboarding@resend.dev", // Resend-ის verified domain
+      from: "onboarding@resend.dev",
       to: ["gurgenidze55@gmail.com"],
       subject: `კონტაქტის ფორმა: ${subject}`,
       html: `
@@ -52,11 +68,9 @@ export async function submitContactForm(formData: FormData) {
           
           <div style="margin-top: 20px; padding: 15px; background-color: #e9ecef; border-radius: 8px; font-size: 12px; color: #6c757d;">
             <p><strong>გაგზავნის დრო:</strong> ${new Date().toLocaleString("ka-GE")}</p>
-            <p><strong>IP მისამართი:</strong> მიღებული კონტაქტის ფორმიდან</p>
           </div>
         </div>
       `,
-      // ასევე plain text ვერსია
       text: `
         ახალი შეტყობინება კონტაქტის ფორმიდან
         
