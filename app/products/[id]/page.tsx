@@ -1401,6 +1401,229 @@ Modular design allows adaptation to any interior. Available in gray and white co
         rating: 4.5,
         reviewCount: 18,
       },
+      // Add the 3 new POS materials products
+      "shelf-price-display-1": {
+        id: "shelf-price-display-1",
+        name: t("shelfPriceDisplayUnit"),
+        price: 12.0,
+        description: {
+          ka: `თაროს ფასმაჩვენებელი სისტემა მაღაზიებისთვის. მაღალი ხარისხის პლასტმასისგან დამზადებული, იდეალურია პროდუქტების ფასების ეფექტური წარმოსაჩენად.
+
+**ტექნიკური მახასიათებლები:**
+• სიგრძე: 10-15 სმ
+• სიგანე: 3-5 სმ
+• მასალა: მაღალი ხარისხის პლასტმასი
+• ფერები: გამჭვირვალე, თეთრი
+• მონტაჟი: თაროზე დამაგრება
+
+იდეალურია ფასების, აქციების და პროდუქტის ინფორმაციის გამოსაჩენად.`,
+          en: `Shelf price display system for stores. Made from high-quality plastic, ideal for effective price presentation.
+
+**Technical Specifications:**
+• Length: 10-15 cm
+• Width: 3-5 cm
+• Material: High-quality plastic
+• Colors: Transparent, white
+• Mounting: Shelf attachment
+
+Perfect for displaying prices, promotions and product information.`,
+          ru: `Система ценовых полок для магазинов. Изготовлена из высококачественного пластика, идеальна для эффективной презентации цен.
+
+**Технические характеристики:**
+• Длина: 10-15 см
+• Ширина: 3-5 см
+• Материал: Высококачественный пластик
+• Цвета: Прозрачный, белый
+• Монтаж: Крепление к полке
+
+Идеален для отображения цен, акций и информации о товарах.`,
+        },
+        features: {
+          ka: [
+            "სიგრძე: 10-15 სმ",
+            "სიგანე: 3-5 სმ",
+            "მაღალი ხარისხის პლასტმასი",
+            "გამჭვირვალე და თეთრი ფერები",
+            "მარტივი მონტაჟი",
+            "მრავალჯერადი გამოყენება",
+            "ეკონომიური",
+            "ეფექტური ფასების წარმოჩენა",
+          ],
+          en: [
+            "Length: 10-15 cm",
+            "Width: 3-5 cm",
+            "High-quality plastic",
+            "Transparent and white colors",
+            "Easy mounting",
+            "Reusable",
+            "Economical",
+            "Effective price display",
+          ],
+          ru: [
+            "Длина: 10-15 см",
+            "Ширина: 3-5 см",
+            "Высококачественный пластик",
+            "Прозрачный и белый цвета",
+            "Простой монтаж",
+            "Многоразовое использование",
+            "Экономичный",
+            "Эффективное отображение цен",
+          ],
+        },
+        images: ["/images/shelf-price-display-1.jpg"],
+        colors: ["გამჭვირვალე", t("white")],
+        sizes: ["10x3", "12x4", "15x5"],
+        category: t("posMaterials"),
+        rating: 4.3,
+        reviewCount: 15,
+      },
+      "plastic-frames-1": {
+        id: "plastic-frames-1",
+        name: t("plasticFramesUnit"),
+        price: 8.0,
+        description: {
+          ka: `ფერადი პლასტმასის ჩარჩოები სარეკლამო მასალებისთვის. მაღალი ხარისხის პლასტმასისგან დამზადებული, იდეალურია ფოტოების, რეკლამების და ინფორმაციის გამოსაჩენად.
+
+**ტექნიკური მახასიათებლები:**
+• ზომები: A4, A3, A5
+• მასალა: მაღალი ხარისხის პლასტმასი
+• ფერები: წითელი, ლურჯი, მწვანე, ყვითელი
+• სისქე: 2-3 მმ
+
+მრავალფეროვანი ფერები და ზომები ნებისმიერი დიზაინისთვის.`,
+          en: `Colored plastic frames for advertising materials. Made from high-quality plastic, ideal for displaying photos, ads and information.
+
+**Technical Specifications:**
+• Sizes: A4, A3, A5
+• Material: High-quality plastic
+• Colors: Red, blue, green, yellow
+• Thickness: 2-3 mm
+
+Various colors and sizes for any design.`,
+          ru: `Цветные пластиковые рамки для рекламных материалов. Изготовлены из высококачественного пластика, идеальны для отображения фотографий, рекламы и информации.
+
+**Технические характеристики:**
+• Размеры: A4, A3, A5
+• Материал: Высококачественный пластик
+• Цвета: Красный, синий, зеленый, желтый
+• Толщина: 2-3 мм
+
+Различные цвета и размеры для любого дизайна.`,
+        },
+        features: {
+          ka: [
+            "ზომები: A4, A3, A5",
+            "მაღალი ხარისხის პლასტმასი",
+            "4 ფერი: წითელი, ლურჯი, მწვანე, ყვითელი",
+            "სისქე: 2-3 მმ",
+            "მსუბუქი წონა",
+            "ეკონომიური",
+            "მარტივი გამოყენება",
+            "მრავალჯერადი გამოყენება",
+          ],
+          en: [
+            "Sizes: A4, A3, A5",
+            "High-quality plastic",
+            "4 colors: red, blue, green, yellow",
+            "Thickness: 2-3 mm",
+            "Lightweight",
+            "Economical",
+            "Easy to use",
+            "Reusable",
+          ],
+          ru: [
+            "Размеры: A4, A3, A5",
+            "Высококачественный пластик",
+            "4 цвета: красный, синий, зеленый, желтый",
+            "Толщина: 2-3 мм",
+            "Легкий вес",
+            "Экономичный",
+            "Простота использования",
+            "Многоразовое использование",
+          ],
+        },
+        images: ["/images/plastic-frames-1.jpg"],
+        colors: ["წითელი", t("blue"), "მწვანე", "ყვითელი"],
+        sizes: ["A4", "A3", "A5"],
+        category: t("posMaterials"),
+        rating: 4.2,
+        reviewCount: 12,
+      },
+      "frame-stands-1": {
+        id: "frame-stands-1",
+        name: t("frameStandsUnit"),
+        price: 25.0,
+        description: {
+          ka: `ჩარჩოს სადგამი რეგულირებადი სარეკლამო მასალებისთვის. მაღალი ხარისხის ლითონისგან დამზადებული, იდეალურია ჩარჩოების და ფოსტერების დასადგმელად.
+
+**ტექნიკური მახასიათებლები:**
+• სიმაღლე: 15-30 სმ (რეგულირებადი)
+• ბაზის ზომა: 10x10 სმ
+• მასალა: ლითონი
+• ფერი: ნაცარი, შავი
+• წონა: 200-300 გრ
+
+სტაბილური და რეგულირებადი ნებისმიერი ზომის ჩარჩოსთვის.`,
+          en: `Adjustable frame stand for advertising materials. Made from high-quality metal, ideal for displaying frames and posters.
+
+**Technical Specifications:**
+• Height: 15-30 cm (adjustable)
+• Base size: 10x10 cm
+• Material: Metal
+• Color: Gray, black
+• Weight: 200-300 g
+
+Stable and adjustable for any frame size.`,
+          ru: `Регулируемая подставка для рамок для рекламных материалов. Изготовлена из высококачественного металла, идеальна для отображения рамок и постеров.
+
+**Технические характеристики:**
+• Высота: 15-30 см (регулируемая)
+• Размер основания: 10x10 см
+• Материал: Металл
+• Цвет: Серый, черный
+• Вес: 200-300 г
+
+Стабильная и регулируемая для любого размера рамки.`,
+        },
+        features: {
+          ka: [
+            "სიმაღლე: 15-30 სმ (რეგულირებადი)",
+            "ბაზის ზომა: 10x10 სმ",
+            "მაღალი ხარისხის ლითონი",
+            "ნაცარი და შავი ფერები",
+            "წონა: 200-300 გრ",
+            "სტაბილური კონსტრუქცია",
+            "მარტივი რეგულირება",
+            "უნივერსალური გამოყენება",
+          ],
+          en: [
+            "Height: 15-30 cm (adjustable)",
+            "Base size: 10x10 cm",
+            "High-quality metal",
+            "Gray and black colors",
+            "Weight: 200-300 g",
+            "Stable construction",
+            "Easy adjustment",
+            "Universal use",
+          ],
+          ru: [
+            "Высота: 15-30 см (регулируемая)",
+            "Размер основания: 10x10 см",
+            "Высококачественный металл",
+            "Серый и черный цвета",
+            "Вес: 200-300 г",
+            "Стабильная конструкция",
+            "Простая регулировка",
+            "Универсальное использование",
+          ],
+        },
+        images: ["/images/frame-stands-1.jpg"],
+        colors: ["ნაცარი", t("black")],
+        sizes: ["15-30x10x10"],
+        category: t("posMaterials"),
+        rating: 4.4,
+        reviewCount: 8,
+      },
       // Default fallback product
       "1": {
         id: params.id,
@@ -1538,6 +1761,36 @@ Modular design allows adaptation to any interior. Available in gray and white co
             price: 45.0,
             image: "/images/aluminum-rail-3.jpg",
             category: t("marketAccessories"),
+          },
+        ]
+      : []),
+
+    // POS Materials products
+    ...(product.category === t("posMaterials")
+      ? [
+          {
+            id: "shelf-price-display-1",
+            name: t("shelfPriceDisplayUnit"),
+            price: 12.0,
+            image: "/images/shelf-price-display-1.jpg",
+            category: t("posMaterials"),
+            isNew: true,
+          },
+          {
+            id: "plastic-frames-1",
+            name: t("plasticFramesUnit"),
+            price: 8.0,
+            image: "/images/plastic-frames-1.jpg",
+            category: t("posMaterials"),
+            isNew: true,
+          },
+          {
+            id: "frame-stands-1",
+            name: t("frameStandsUnit"),
+            price: 25.0,
+            image: "/images/frame-stands-1.jpg",
+            category: t("posMaterials"),
+            isNew: true,
           },
         ]
       : []),
