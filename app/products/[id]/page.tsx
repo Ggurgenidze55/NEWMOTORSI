@@ -1933,6 +1933,805 @@ Large volume for more waste.`,
         rating: 4.5,
         reviewCount: 5,
       },
+      // New Market Shelves
+      "market-shelf-single-165": {
+        id: "market-shelf-single-165",
+        name: t("marketShelfSingle165"),
+        price: 0, // Price hidden
+        description: {
+          ka: `ცალმხრივი თარო მარკეტისთვის. იდეალურია პროდუქციის ეფექტურად წარმოსაჩენად.
+**ტექნიკური მახასიათებლები:**
+• სიმაღლე: 165 სმ
+• სიგანე: 90 სმ
+• ძირი თაროს სიღრმე: 45 სმ
+• დანარჩენი თაროები: 40 სმ
+• თაროების რაოდენობა: 5
+• დატვირთვა: 250 კგ ერთ თაროზე
+• ფერი: თეთრი პრიალა ან/და შავი მატი
+• განლაგება: ცალკე მდგომი
+კომპლექტაციაში შედის ფასმაჩვენებლები. თაროები არის მარტივად ასაწყობ-დასაშლელი კონსტრუქციის. შესაძლებელია თაროების გადაადგილება სურვილის მიხედვით. თაროების გადაბმის შემთხვევაში არ გჭირდებათ ბოლო პროფილი.`,
+          en: `One-sided market shelf. Ideal for effective product display.
+**Technical Specifications:**
+• Height: 165 cm
+• Width: 90 cm
+• Base shelf depth: 45 cm
+• Other shelves depth: 40 cm
+• Number of shelves: 5
+• Load capacity: 250 kg per shelf
+• Color: Glossy White and/or Matte Black
+• Layout: Standalone
+Includes price holders. Easy to assemble/disassemble. Shelves can be repositioned. No end profile needed for joining shelves.`,
+          ru: `Односторонний стеллаж для магазина. Идеален для эффективной выкладки товаров.
+**Технические характеристики:**
+• Высота: 165 см
+• Ширина: 90 см
+• Глубина базовой полки: 45 см
+• Глубина остальных полок: 40 см
+• Количество полок: 5
+• Нагрузка: 250 кг на полку
+• Цвет: Белый глянцевый и/или Черный матовый
+• Расположение: Отдельностоящий
+В комплекте ценникодержатели. Легко собираемая/разбираемая конструкция. Полки можно перемещать. При соединении стеллажей торцевой профиль не нужен.`,
+        },
+        features: {
+          ka: [
+            "სიმაღლე: 165 სმ",
+            "სიგანე: 90 სმ",
+            "ძირი თაროს სიღრმე: 45 სმ",
+            "დანარჩენი თაროები: 40 სმ",
+            "თაროების რაოდენობა: 5",
+            "დატვირთვა: 250 კგ ერთ თაროზე",
+            "ფერი: თეთრი პრიალა / შავი მატი",
+            t("includesPriceHolders"),
+            t("easyAssembly"),
+            t("adjustableShelves"),
+            t("noEndProfileNeeded"),
+          ],
+          en: [
+            "Height: 165 cm",
+            "Width: 90 cm",
+            "Base shelf depth: 45 cm",
+            "Other shelves depth: 40 cm",
+            "Number of shelves: 5",
+            "Load capacity: 250 kg per shelf",
+            "Color: Glossy White / Matte Black",
+            t("includesPriceHolders"),
+            t("easyAssembly"),
+            t("adjustableShelves"),
+            t("noEndProfileNeeded"),
+          ],
+          ru: [
+            "Высота: 165 см",
+            "Ширина: 90 см",
+            "Глубина базовой полки: 45 см",
+            "Глубина остальных полок: 40 см",
+            "Количество полок: 5",
+            "Нагрузка: 250 кг на полку",
+            "Цвет: Белый глянцевый / Черный матовый",
+            t("includesPriceHolders"),
+            t("easyAssembly"),
+            t("adjustableShelves"),
+            t("noEndProfileNeeded"),
+          ],
+        },
+        images: ["/images/market-shelves/market-shelf-single-165.jpg"],
+        colors: [t("colorGlossyWhite"), t("colorMatteBlack")],
+        sizes: ["165x90x45/40"],
+        category: t("marketShelves"),
+        rating: 4.7,
+        reviewCount: 10,
+      },
+      "market-shelf-single-195": {
+        id: "market-shelf-single-195",
+        name: t("marketShelfSingle195"),
+        price: 0,
+        description: {
+          ka: `ცალმხრივი თარო მარკეტისთვის. იდეალურია პროდუქციის ეფექტურად წარმოსაჩენად.
+**ტექნიკური მახასიათებლები:**
+• სიმაღლე: 195 სმ
+• სიგანე: 90 სმ
+• ძირი თაროს სიღრმე: 45 სმ
+• დანარჩენი თაროები: 40 სმ
+• თაროების რაოდენობა: 5
+• დატვირთვა: 250 კგ ერთ თაროზე
+• ფერი: თეთრი პრიალა ან/და შავი მატი
+• განლაგება: ცალკე მდგომი
+კომპლექტაციაში შედის ფასმაჩვენებლები. თაროები არის მარტივად ასაწყობ-დასაშლელი კონსტრუქციის. შესაძლებელია თაროების გადაადგილება სურვილის მიხედვით. თაროების გადაბმის შემთხვევაში არ გჭირდებათ ბოლო პროფილი.`,
+          en: `One-sided market shelf. Ideal for effective product display.
+**Technical Specifications:**
+• Height: 195 cm
+• Width: 90 cm
+• Base shelf depth: 45 cm
+• Other shelves depth: 40 cm
+• Number of shelves: 5
+• Load capacity: 250 kg per shelf
+• Color: Glossy White and/or Matte Black
+• Layout: Standalone
+Includes price holders. Easy to assemble/disassemble. Shelves can be repositioned. No end profile needed for joining shelves.`,
+          ru: `Односторонний стеллаж для магазина. Идеален для эффективной выкладки товаров.
+**Технические характеристики:**
+• Высота: 195 см
+• Ширина: 90 см
+• Глубина базовой полки: 45 см
+• Глубина остальных полок: 40 см
+• Количество полок: 5
+• Нагрузка: 250 кг на полку
+• Цвет: Белый глянцевый и/или Черный матовый
+• Расположение: Отдельностоящий
+В комплекте ценникодержатели. Легко собираемая/разбираемая конструкция. Полки можно перемещать. При соединении стеллажей торцевой профиль не нужен.`,
+        },
+        features: {
+          ka: [
+            "სიმაღლე: 195 სმ",
+            "სიგანე: 90 სმ",
+            "ძირი თაროს სიღრმე: 45 სმ",
+            "დანარჩენი თაროები: 40 სმ",
+            "თაროების რაოდენობა: 5",
+            "დატვირთვა: 250 კგ ერთ თაროზე",
+            "ფერი: თეთრი პრიალა / შავი მატი",
+            t("includesPriceHolders"),
+            t("easyAssembly"),
+            t("adjustableShelves"),
+            t("noEndProfileNeeded"),
+          ],
+          en: [
+            "Height: 195 cm",
+            "Width: 90 cm",
+            "Base shelf depth: 45 cm",
+            "Other shelves depth: 40 cm",
+            "Number of shelves: 5",
+            "Load capacity: 250 kg per shelf",
+            "Color: Glossy White / Matte Black",
+            t("includesPriceHolders"),
+            t("easyAssembly"),
+            t("adjustableShelves"),
+            t("noEndProfileNeeded"),
+          ],
+          ru: [
+            "Высота: 195 см",
+            "Ширина: 90 см",
+            "Глубина базовой полки: 45 см",
+            "Глубина остальных полок: 40 см",
+            "Количество полок: 5",
+            "Нагрузка: 250 кг на полку",
+            "Цвет: Белый глянцевый / Черный матовый",
+            t("includesPriceHolders"),
+            t("easyAssembly"),
+            t("adjustableShelves"),
+            t("noEndProfileNeeded"),
+          ],
+        },
+        images: ["/images/market-shelves/market-shelf-single-195.jpg"],
+        colors: [t("colorGlossyWhite"), t("colorMatteBlack")],
+        sizes: ["195x90x45/40"],
+        category: t("marketShelves"),
+        rating: 4.8,
+        reviewCount: 12,
+      },
+      "market-shelf-single-220": {
+        id: "market-shelf-single-220",
+        name: t("marketShelfSingle220"),
+        price: 0,
+        description: {
+          ka: `ცალმხრივი თარო მარკეტისთვის. იდეალურია პროდუქციის ეფექტურად წარმოსაჩენად.
+**ტექნიკური მახასიათებლები:**
+• სიმაღლე: 220 სმ
+• სიგანე: 90 სმ
+• ძირი თაროს სიღრმე: 45 სმ
+• დანარჩენი თაროები: 40 სმ
+• თაროების რაოდენობა: 5
+• დატვირთვა: 250 კგ ერთ თაროზე
+• ფერი: თეთრი პრიალა
+• განლაგება: ცალკე მდგომი
+კომპლექტაციაში შედის ფასმაჩვენებლები და წინა ბარიერი. თაროები არის მარტივად ასაწყობ-დასაშლელი კონსტრუქციის. შესაძლებელია თაროების გადაადგილება სურვილის მიხედვით.`,
+          en: `One-sided market shelf. Ideal for effective product display.
+**Technical Specifications:**
+• Height: 220 cm
+• Width: 90 cm
+• Base shelf depth: 45 cm
+• Other shelves depth: 40 cm
+• Number of shelves: 5
+• Load capacity: 250 kg per shelf
+• Color: Glossy White
+• Layout: Standalone
+Includes price holders and front barrier. Easy to assemble/disassemble. Shelves can be repositioned.`,
+          ru: `Односторонний стеллаж для магазина. Идеален для эффективной выкладки товаров.
+**Технические характеристики:**
+• Высота: 220 см
+• Ширина: 90 см
+• Глубина базовой полки: 45 см
+• Глубина остальных полок: 40 см
+• Количество полок: 5
+• Нагрузка: 250 кг на полку
+• Цвет: Белый глянцевый
+• Расположение: Отдельностоящий
+В комплекте ценникодержатели и передний барьер. Легко собираемая/разбираемая конструкция. Полки можно перемещать.`,
+        },
+        features: {
+          ka: [
+            "სიმაღლე: 220 სმ",
+            "სიგანე: 90 სმ",
+            "ძირი თაროს სიღრმე: 45 სმ",
+            "დანარჩენი თაროები: 40 სმ",
+            "თაროების რაოდენობა: 5",
+            "დატვირთვა: 250 კგ ერთ თაროზე",
+            "ფერი: თეთრი პრიალა",
+            t("includesPriceHolders"),
+            t("includesFrontBarrier"),
+            t("easyAssembly"),
+            t("adjustableShelves"),
+          ],
+          en: [
+            "Height: 220 cm",
+            "Width: 90 cm",
+            "Base shelf depth: 45 cm",
+            "Other shelves depth: 40 cm",
+            "Number of shelves: 5",
+            "Load capacity: 250 kg per shelf",
+            "Color: Glossy White",
+            t("includesPriceHolders"),
+            t("includesFrontBarrier"),
+            t("easyAssembly"),
+            t("adjustableShelves"),
+          ],
+          ru: [
+            "Высота: 220 см",
+            "Ширина: 90 см",
+            "Глубина базовой полки: 45 см",
+            "Глубина остальных полок: 40 см",
+            "Количество полок: 5",
+            "Нагрузка: 250 кг на полку",
+            "Цвет: Белый глянцевый",
+            t("includesPriceHolders"),
+            t("includesFrontBarrier"),
+            t("easyAssembly"),
+            t("adjustableShelves"),
+          ],
+        },
+        images: ["/images/market-shelves/market-shelf-single-220.jpg"],
+        colors: [t("colorGlossyWhite")],
+        sizes: ["220x90x45/40"],
+        category: t("marketShelves"),
+        rating: 4.9,
+        reviewCount: 15,
+      },
+      "market-shelf-basket-165": {
+        id: "market-shelf-basket-165",
+        name: t("marketShelfBasket165"),
+        price: 0,
+        description: {
+          ka: `ცალმხრივი თარო კალათებით.
+**ტექნიკური მახასიათებლები:**
+• სიმაღლე: 165 სმ
+• სიგანე: 90 სმ
+• ძირი თაროს სიღრმე: 35 სმ
+• თაროების რაოდენობა ძირის ჩათვლით: 5 (1 თარო + 4 კალათი)
+• ფერი: თეთრი პრიალა ან/და შავი მატი
+კომპლექტაციაში შედის 4 კალათი. თაროები არის მარტივად ასაწყობ-დასაშლელი კონსტრუქციის. შესაძლებელია თაროების/კალათების გადაადგილება სურვილის მიხედვით.`,
+          en: `One-sided shelf with baskets.
+**Technical Specifications:**
+• Height: 165 cm
+• Width: 90 cm
+• Base shelf depth: 35 cm
+• Total levels (including base): 5 (1 shelf + 4 baskets)
+• Color: Glossy White and/or Matte Black
+Includes 4 baskets. Easy to assemble/disassemble. Shelves/baskets can be repositioned.`,
+          ru: `Односторонний стеллаж с корзинами.
+**Технические характеристики:**
+• Высота: 165 см
+• Ширина: 90 см
+• Глубина базовой полки: 35 см
+• Общее количество уровней (включая базу): 5 (1 полка + 4 корзины)
+• Цвет: Белый глянцевый и/или Черный матовый
+В комплекте 4 корзины. Легко собираемая/разбираемая конструкция. Полки/корзины можно перемещать.`,
+        },
+        features: {
+          ka: [
+            "სიმაღლე: 165 სმ",
+            "სიგანე: 90 სმ",
+            "ძირი თაროს სიღრმე: 35 სმ",
+            "სულ დონე: 5 (1 თარო + 4 კალათი)",
+            "ფერი: თეთრი პრიალა / შავი მატი",
+            t("includes4Baskets"),
+            t("easyAssembly"),
+            t("adjustableShelves"),
+          ],
+          en: [
+            "Height: 165 cm",
+            "Width: 90 cm",
+            "Base shelf depth: 35 cm",
+            "Total levels: 5 (1 shelf + 4 baskets)",
+            "Color: Glossy White / Matte Black",
+            t("includes4Baskets"),
+            t("easyAssembly"),
+            t("adjustableShelves"),
+          ],
+          ru: [
+            "Высота: 165 см",
+            "Ширина: 90 см",
+            "Глубина базовой полки: 35 см",
+            "Общее количество уровней: 5 (1 полка + 4 корзины)",
+            "Цвет: Белый глянцевый / Черный матовый",
+            t("includes4Baskets"),
+            t("easyAssembly"),
+            t("adjustableShelves"),
+          ],
+        },
+        images: ["/images/market-shelves/market-shelf-basket.jpg"],
+        colors: [t("colorGlossyWhite"), t("colorMatteBlack")],
+        sizes: ["165x90x35"],
+        category: t("marketShelves"),
+        rating: 4.6,
+        reviewCount: 9,
+      },
+      "market-shelf-basket-195": {
+        id: "market-shelf-basket-195",
+        name: t("marketShelfBasket195"),
+        price: 0,
+        description: {
+          ka: `ცალმხრივი თარო კალათებით.
+**ტექნიკური მახასიათებლები:**
+• სიმაღლე: 195 სმ
+• სიგანე: 90 სმ
+• ძირი თაროს სიღრმე: 35 სმ
+• თაროების რაოდენობა ძირის ჩათვლით: 5 (1 თარო + 4 კალათი)
+• ფერი: თეთრი პრიალა ან/და შავი მატი
+კომპლექტაციაში შედის 4 კალათი. თაროები არის მარტივად ასაწყობ-დასაშლელი კონსტრუქციის. შესაძლებელია თაროების/კალათების გადაადგილება სურვილის მიხედვით.`,
+          en: `One-sided shelf with baskets.
+**Technical Specifications:**
+• Height: 195 cm
+• Width: 90 cm
+• Base shelf depth: 35 cm
+• Total levels (including base): 5 (1 shelf + 4 baskets)
+• Color: Glossy White and/or Matte Black
+Includes 4 baskets. Easy to assemble/disassemble. Shelves/baskets can be repositioned.`,
+          ru: `Односторонний стеллаж с корзинами.
+**Технические характеристики:**
+• Высота: 195 см
+• Ширина: 90 см
+• Глубина базовой полки: 35 см
+• Общее количество уровней (включая базу): 5 (1 полка + 4 корзины)
+• Цвет: Белый глянцевый и/или Черный матовый
+В комплекте 4 корзины. Легко собираемая/разбираемая конструкция. Полки/корзины можно перемещать.`,
+        },
+        features: {
+          ka: [
+            "სიმაღლე: 195 სმ",
+            "სიგანე: 90 სმ",
+            "ძირი თაროს სიღრმე: 35 სმ",
+            "სულ დონე: 5 (1 თარო + 4 კალათი)",
+            "ფერი: თეთრი პრიალა / შავი მატი",
+            t("includes4Baskets"),
+            t("easyAssembly"),
+            t("adjustableShelves"),
+          ],
+          en: [
+            "Height: 195 cm",
+            "Width: 90 cm",
+            "Base shelf depth: 35 cm",
+            "Total levels: 5 (1 shelf + 4 baskets)",
+            "Color: Glossy White / Matte Black",
+            t("includes4Baskets"),
+            t("easyAssembly"),
+            t("adjustableShelves"),
+          ],
+          ru: [
+            "Высота: 195 см",
+            "Ширина: 90 см",
+            "Глубина базовой полки: 35 см",
+            "Общее количество уровней: 5 (1 полка + 4 корзины)",
+            "Цвет: Белый глянцевый / Черный матовый",
+            t("includes4Baskets"),
+            t("easyAssembly"),
+            t("adjustableShelves"),
+          ],
+        },
+        images: ["/images/market-shelves/market-shelf-basket.jpg"], // Same image as 165H version
+        colors: [t("colorGlossyWhite"), t("colorMatteBlack")],
+        sizes: ["195x90x35"],
+        category: t("marketShelves"),
+        rating: 4.6,
+        reviewCount: 7,
+      },
+      "market-shelf-gondola-135": {
+        id: "market-shelf-gondola-135",
+        name: t("marketShelfGondola135"),
+        price: 0,
+        description: {
+          ka: `ორმხრივი თარო-გონდოლა.
+**ტექნიკური მახასიათებლები:**
+• სიმაღლე: 135 სმ
+• სიგანე: 90 სმ
+• ძირი თაროს სიღრმე: 35 სმ (თითო მხარეს)
+• დანარჩენი თაროები: 30 სმ (თითო მხარეს)
+• თაროების რაოდენობა ძირის ჩათვლით: 10 (5 თითო მხარეს)
+• დატვირთვა: 150 კგ ერთ თაროზე
+• ფერი: თეთრი პრიალა
+კომპლექტაციაში შედის ფასმაჩვენებლები და წინა ბარიერი. თაროები არის მარტივად ასაწყობ-დასაშლელი კონსტრუქციის. შესაძლებელია თაროების გადაადგილება სურვილის მიხედვით.`,
+          en: `Double-sided gondola shelf.
+**Technical Specifications:**
+• Height: 135 cm
+• Width: 90 cm
+• Base shelf depth: 35 cm (per side)
+• Other shelves depth: 30 cm (per side)
+• Total shelves (including base): 10 (5 per side)
+• Load capacity: 150 kg per shelf
+• Color: Glossy White
+Includes price holders and front barrier. Easy to assemble/disassemble. Shelves can be repositioned.`,
+          ru: `Двусторонний стеллаж-гондола.
+**Технические характеристики:**
+• Высота: 135 см
+• Ширина: 90 см
+• Глубина базовой полки: 35 см (с каждой стороны)
+• Глубина остальных полок: 30 см (с каждой стороны)
+• Общее количество полок (включая базовые): 10 (5 с каждой стороны)
+• Нагрузка: 150 кг на полку
+• Цвет: Белый глянцевый
+В комплекте ценникодержатели и передний барьер. Легко собираемая/разбираемая конструкция. Полки можно перемещать.`,
+        },
+        features: {
+          ka: [
+            "სიმაღლე: 135 სმ",
+            "სიგანე: 90 სმ",
+            "ძირი თაროს სიღრმე: 35 სმ (თითო მხარეს)",
+            "დანარჩენი თაროები: 30 სმ (თითო მხარეს)",
+            "სულ თარო: 10 (5 თითო მხარეს)",
+            "დატვირთვა: 150 კგ ერთ თაროზე",
+            "ფერი: თეთრი პრიალა",
+            t("includesPriceHolders"),
+            t("includesFrontBarrier"),
+            t("easyAssembly"),
+            t("adjustableShelves"),
+          ],
+          en: [
+            "Height: 135 cm",
+            "Width: 90 cm",
+            "Base shelf depth: 35 cm (per side)",
+            "Other shelves depth: 30 cm (per side)",
+            "Total shelves: 10 (5 per side)",
+            "Load capacity: 150 kg per shelf",
+            "Color: Glossy White",
+            t("includesPriceHolders"),
+            t("includesFrontBarrier"),
+            t("easyAssembly"),
+            t("adjustableShelves"),
+          ],
+          ru: [
+            "Высота: 135 см",
+            "Ширина: 90 см",
+            "Глубина базовой полки: 35 см (с каждой стороны)",
+            "Глубина остальных полок: 30 см (с каждой стороны)",
+            "Общее количество полок: 10 (5 с каждой стороны)",
+            "Нагрузка: 150 кг на полку",
+            "Цвет: Белый глянцевый",
+            t("includesPriceHolders"),
+            t("includesFrontBarrier"),
+            t("easyAssembly"),
+            t("adjustableShelves"),
+          ],
+        },
+        images: ["/images/market-shelves/market-shelf-gondola-135.jpg"],
+        colors: [t("colorGlossyWhite")],
+        sizes: ["135x90x35/30"],
+        category: t("marketShelves"),
+        rating: 4.7,
+        reviewCount: 11,
+      },
+      "market-shelf-gondola-165": {
+        id: "market-shelf-gondola-165",
+        name: t("marketShelfGondola165"),
+        price: 0,
+        description: {
+          ka: `ორმხრივი თარო-გონდოლა.
+**ტექნიკური მახასიათებლები:**
+• სიმაღლე: 165 სმ
+• სიგანე: 90 სმ
+• ძირი თაროს სიღრმე: 35 სმ (თითო მხარეს)
+• დანარჩენი თაროები: 30 სმ (თითო მხარეს)
+• თაროების რაოდენობა ძირის ჩათვლით: 10 (5 თითო მხარეს)
+• დატვირთვა: 150 კგ ერთ თაროზე
+• ფერი: თეთრი პრიალა
+კომპლექტაციაში შედის ფასმაჩვენებლები და წინა ბარიერი. თაროები არის მარტივად ასაწყობ-დასაშლელი კონსტრუქციის. შესაძლებელია თაროების გადაადგილება სურვილის მიხედვით.`,
+          en: `Double-sided gondola shelf.
+**Technical Specifications:**
+• Height: 165 cm
+• Width: 90 cm
+• Base shelf depth: 35 cm (per side)
+• Other shelves depth: 30 cm (per side)
+• Total shelves (including base): 10 (5 per side)
+• Load capacity: 150 kg per shelf
+• Color: Glossy White
+Includes price holders and front barrier. Easy to assemble/disassemble. Shelves can be repositioned.`,
+          ru: `Двусторонний стеллаж-гондола.
+**Технические характеристики:**
+• Высота: 165 см
+• Ширина: 90 см
+• Глубина базовой полки: 35 см (с каждой стороны)
+• Глубина остальных полок: 30 см (с каждой стороны)
+• Общее количество полок (включая базовые): 10 (5 с каждой стороны)
+• Нагрузка: 150 кг на полку
+• Цвет: Белый глянцевый
+В комплекте ценникодержатели и передний барьер. Легко собираемая/разбираемая конструкция. Полки можно перемещать.`,
+        },
+        features: {
+          ka: [
+            "სიმაღლე: 165 სმ",
+            "სიგანე: 90 სმ",
+            "ძირი თაროს სიღრმე: 35 სმ (თითო მხარეს)",
+            "დანარჩენი თაროები: 30 სმ (თითო მხარეს)",
+            "სულ თარო: 10 (5 თითო მხარეს)",
+            "დატვირთვა: 150 კგ ერთ თაროზე",
+            "ფერი: თეთრი პრიალა",
+            t("includesPriceHolders"),
+            t("includesFrontBarrier"),
+            t("easyAssembly"),
+            t("adjustableShelves"),
+          ],
+          en: [
+            "Height: 165 cm",
+            "Width: 90 cm",
+            "Base shelf depth: 35 cm (per side)",
+            "Other shelves depth: 30 cm (per side)",
+            "Total shelves: 10 (5 per side)",
+            "Load capacity: 150 kg per shelf",
+            "Color: Glossy White",
+            t("includesPriceHolders"),
+            t("includesFrontBarrier"),
+            t("easyAssembly"),
+            t("adjustableShelves"),
+          ],
+          ru: [
+            "Высота: 165 см",
+            "Ширина: 90 см",
+            "Глубина базовой полки: 35 см (с каждой стороны)",
+            "Глубина остальных полок: 30 см (с каждой стороны)",
+            "Общее количество полок: 10 (5 с каждой стороны)",
+            "Нагрузка: 150 кг на полку",
+            "Цвет: Белый глянцевый",
+            t("includesPriceHolders"),
+            t("includesFrontBarrier"),
+            t("easyAssembly"),
+            t("adjustableShelves"),
+          ],
+        },
+        images: ["/images/market-shelves/market-shelf-gondola-165.png"],
+        colors: [t("colorGlossyWhite")],
+        sizes: ["165x90x35/30"],
+        category: t("marketShelves"),
+        rating: 4.8,
+        reviewCount: 14,
+      },
+      "market-shelf-perf-165": {
+        id: "market-shelf-perf-165",
+        name: t("marketShelfPerf165"),
+        price: 0,
+        description: {
+          ka: `ცალმხრივი პერფორირებული თარო.
+**ტექნიკური მახასიათებლები:**
+• სიმაღლე: 165 სმ
+• სიგანე: 90 სმ
+• ძირი თაროს სიღრმე: 45 სმ
+• ფერი: თეთრი პრიალა ან/და შავი მატი
+• განლაგება: ცალკე მდგომი
+კომპლექტაციაში არ შედის კაუჭები. თაროს უკანა პანელი დახვრეტილია, რაც საშუალებას გაძლევთ დაამაგროთ კაუჭები პროდუქციის ჩამოსაკიდად.`,
+          en: `One-sided perforated shelf.
+**Technical Specifications:**
+• Height: 165 cm
+• Width: 90 cm
+• Base shelf depth: 45 cm
+• Color: Glossy White and/or Matte Black
+• Layout: Standalone
+Hooks not included. The back panel is perforated, allowing you to attach hooks for hanging products.`,
+          ru: `Односторонний перфорированный стеллаж.
+**Технические характеристики:**
+• Высота: 165 см
+• Ширина: 90 см
+• Глубина базовой полки: 45 см
+• Цвет: Белый глянцевый и/или Черный матовый
+• Расположение: Отдельностоящий
+Крючки не включены. Задняя панель перфорирована, что позволяет крепить крючки для подвешивания товаров.`,
+        },
+        features: {
+          ka: [
+            "სიმაღლე: 165 სმ",
+            "სიგანე: 90 სმ",
+            "ძირი თაროს სიღრმე: 45 სმ",
+            "ფერი: თეთრი პრიალა / შავი მატი",
+            t("layoutStandalone"),
+            t("hooksNotIncluded"),
+            t("perforatedBackPanel"),
+          ],
+          en: [
+            "Height: 165 cm",
+            "Width: 90 cm",
+            "Base shelf depth: 45 cm",
+            "Color: Glossy White / Matte Black",
+            t("layoutStandalone"),
+            t("hooksNotIncluded"),
+            t("perforatedBackPanel"),
+          ],
+          ru: [
+            "Высота: 165 см",
+            "Ширина: 90 см",
+            "Глубина базовой полки: 45 см",
+            "Цвет: Белый глянцевый / Черный матовый",
+            t("layoutStandalone"),
+            t("hooksNotIncluded"),
+            t("perforatedBackPanel"),
+          ],
+        },
+        images: ["/images/market-shelves/market-shelf-perf-165.png"],
+        colors: [t("colorGlossyWhite"), t("colorMatteBlack")],
+        sizes: ["165x90x45"],
+        category: t("marketShelves"),
+        rating: 4.5,
+        reviewCount: 8,
+      },
+      "market-shelf-perf-195": {
+        id: "market-shelf-perf-195",
+        name: t("marketShelfPerf195"),
+        price: 0,
+        description: {
+          ka: `ცალმხრივი პერფორირებული თარო.
+**ტექნიკური მახასიათებლები:**
+• სიმაღლე: 195 სმ
+• სიგანე: 90 სმ
+• ძირი თაროს სიღრმე: 45 სმ
+• ფერი: თეთრი პრიალა ან/და შავი მატი
+• განლაგება: ცალკე მდგომი
+კომპლექტაციაში არ შედის კაუჭები. თაროს უკანა პანელი დახვრეტილია, რაც საშუალებას გაძლევთ დაამაგროთ კაუჭები პროდუქციის ჩამოსაკიდად.`,
+          en: `One-sided perforated shelf.
+**Technical Specifications:**
+• Height: 195 cm
+• Width: 90 cm
+• Base shelf depth: 45 cm
+• Color: Glossy White and/or Matte Black
+• Layout: Standalone
+Hooks not included. The back panel is perforated, allowing you to attach hooks for hanging products.`,
+          ru: `Односторонний перфорированный стеллаж.
+**Технические характеристики:**
+• Высота: 195 см
+• Ширина: 90 см
+• Глубина базовой полки: 45 см
+• Цвет: Белый глянцевый и/или Черный матовый
+• Расположение: Отдельностоящий
+Крючки не включены. Задняя панель перфорирована, что позволяет крепить крючки для подвешивания товаров.`,
+        },
+        features: {
+          ka: [
+            "სიმაღლე: 195 სმ",
+            "სიგანე: 90 სმ",
+            "ძირი თაროს სიღრმე: 45 სმ",
+            "ფერი: თეთრი პრიალა / შავი მატი",
+            t("layoutStandalone"),
+            t("hooksNotIncluded"),
+            t("perforatedBackPanel"),
+          ],
+          en: [
+            "Height: 195 cm",
+            "Width: 90 cm",
+            "Base shelf depth: 45 cm",
+            "Color: Glossy White / Matte Black",
+            t("layoutStandalone"),
+            t("hooksNotIncluded"),
+            t("perforatedBackPanel"),
+          ],
+          ru: [
+            "Высота: 195 см",
+            "Ширина: 90 см",
+            "Глубина базовой полки: 45 см",
+            "Цвет: Белый глянцевый / Черный матовый",
+            t("layoutStandalone"),
+            t("hooksNotIncluded"),
+            t("perforatedBackPanel"),
+          ],
+        },
+        images: ["/images/market-shelves/market-shelf-perf-195.png"],
+        colors: [t("colorGlossyWhite"), t("colorMatteBlack")],
+        sizes: ["195x90x45"],
+        category: t("marketShelves"),
+        rating: 4.6,
+        reviewCount: 10,
+      },
+      "market-shelf-checkout-front": {
+        id: "market-shelf-checkout-front",
+        name: t("marketShelfCheckoutFront"),
+        price: 0,
+        description: {
+          ka: `სალაროს მაგიდის წინა თარო.
+**ტექნიკური მახასიათებლები:**
+• ზომა: L700+L730*W350*H750
+• ფერი: თეთრი და შავი მატი`,
+          en: `Checkout counter front shelf.
+**Technical Specifications:**
+• Size: L700+L730*W350*H750
+• Color: White and Matte Black`,
+          ru: `Прикассовый стеллаж.
+**Технические характеристики:**
+• Размер: L700+L730*W350*H750
+• Цвет: Белый и Черный матовый`,
+        },
+        features: {
+          ka: ["ზომა: L700+L730*W350*H750", "ფერი: თეთრი / შავი მატი"],
+          en: ["Size: L700+L730*W350*H750", "Color: White / Matte Black"],
+          ru: ["Размер: L700+L730*W350*H750", "Цвет: Белый / Черный матовый"],
+        },
+        images: ["/images/market-shelves/market-shelf-checkout-front.jpg"],
+        colors: [t("white"), t("mattBlack")],
+        sizes: ["L700+L730*W350*H750"],
+        category: t("marketShelves"),
+        rating: 4.4,
+        reviewCount: 6,
+      },
+      "market-shelf-single-135-w73": {
+        id: "market-shelf-single-135-w73",
+        name: t("marketShelfSingle135W73"),
+        price: 0,
+        description: {
+          ka: `ცალმხრივი თარო.
+**ტექნიკური მახასიათებლები:**
+• სიმაღლე: 135 სმ
+• სიგანე: 73 სმ
+• ძირი თაროს სიღრმე: 35 სმ
+• დანარჩენი თაროები: 30 სმ
+• თაროების რაოდენობა ძირის ჩათვლით: 5
+• დატვირთვა: 50 კგ ერთ თაროზე
+• ფერი: თეთრი პრიალა`,
+          en: `One-sided shelf.
+**Technical Specifications:**
+• Height: 135 cm
+• Width: 73 cm
+• Base shelf depth: 35 cm
+• Other shelves depth: 30 cm
+• Number of shelves (including base): 5
+• Load capacity: 50 kg per shelf
+• Color: Glossy White`,
+          ru: `Односторонний стеллаж.
+**Технические характеристики:**
+• Высота: 135 см
+• Ширина: 73 см
+• Глубина базовой полки: 35 см
+• Глубина остальных полок: 30 см
+• Количество полок (включая базовую): 5
+• Нагрузка: 50 кг на полку
+• Цвет: Белый глянцевый`,
+        },
+        features: {
+          ka: [
+            "სიმაღლე: 135 სმ",
+            "სიგანე: 73 სმ",
+            "ძირი თაროს სიღრმე: 35 სმ",
+            "დანარჩენი თაროები: 30 სმ",
+            "თაროების რაოდენობა: 5",
+            "დატვირთვა: 50 კგ ერთ თაროზე",
+            "ფერი: თეთრი პრიალა",
+          ],
+          en: [
+            "Height: 135 cm",
+            "Width: 73 cm",
+            "Base shelf depth: 35 cm",
+            "Other shelves depth: 30 cm",
+            "Number of shelves: 5",
+            "Load capacity: 50 kg per shelf",
+            "Color: Glossy White",
+          ],
+          ru: [
+            "Высота: 135 см",
+            "Ширина: 73 см",
+            "Глубина базовой полки: 35 см",
+            "Глубина остальных полок: 30 см",
+            "Количество полок: 5",
+            "Нагрузка: 50 кг на полку",
+            "Цвет: Белый глянцевый",
+          ],
+        },
+        images: ["/images/market-shelves/market-shelf-single-135w73.jpg"],
+        colors: [t("colorGlossyWhite")],
+        sizes: ["135x73x35/30"],
+        category: t("marketShelves"),
+        rating: 4.5,
+        reviewCount: 7,
+      },
     }
 
     return products[productId] || null
@@ -2253,6 +3052,106 @@ Large volume for more waste.`,
         category: t("marketAccessories"),
         rating: 4.5,
         reviewCount: 5,
+      },
+      // New Market Shelves
+      {
+        id: "market-shelf-single-165",
+        name: t("marketShelfSingle165"),
+        price: 0,
+        image: "/images/market-shelves/market-shelf-single-165.jpg",
+        category: t("marketShelves"),
+        rating: 4.7,
+        reviewCount: 10,
+      },
+      {
+        id: "market-shelf-single-195",
+        name: t("marketShelfSingle195"),
+        price: 0,
+        image: "/images/market-shelves/market-shelf-single-195.jpg",
+        category: t("marketShelves"),
+        rating: 4.8,
+        reviewCount: 12,
+      },
+      {
+        id: "market-shelf-single-220",
+        name: t("marketShelfSingle220"),
+        price: 0,
+        image: "/images/market-shelves/market-shelf-single-220.jpg",
+        category: t("marketShelves"),
+        rating: 4.9,
+        reviewCount: 15,
+      },
+      {
+        id: "market-shelf-basket-165",
+        name: t("marketShelfBasket165"),
+        price: 0,
+        image: "/images/market-shelves/market-shelf-basket.jpg",
+        category: t("marketShelves"),
+        rating: 4.6,
+        reviewCount: 9,
+      },
+      {
+        id: "market-shelf-basket-195",
+        name: t("marketShelfBasket195"),
+        price: 0,
+        image: "/images/market-shelves/market-shelf-basket.jpg",
+        category: t("marketShelves"),
+        rating: 4.6,
+        reviewCount: 7,
+      },
+      {
+        id: "market-shelf-gondola-135",
+        name: t("marketShelfGondola135"),
+        price: 0,
+        image: "/images/market-shelves/market-shelf-gondola-135.jpg",
+        category: t("marketShelves"),
+        rating: 4.7,
+        reviewCount: 11,
+      },
+      {
+        id: "market-shelf-gondola-165",
+        name: t("marketShelfGondola165"),
+        price: 0,
+        image: "/images/market-shelves/market-shelf-gondola-165.png",
+        category: t("marketShelves"),
+        rating: 4.8,
+        reviewCount: 14,
+      },
+      {
+        id: "market-shelf-perf-165",
+        name: t("marketShelfPerf165"),
+        price: 0,
+        image: "/images/market-shelves/market-shelf-perf-165.png",
+        category: t("marketShelves"),
+        rating: 4.5,
+        reviewCount: 8,
+      },
+      {
+        id: "market-shelf-perf-195",
+        name: t("marketShelfPerf195"),
+        price: 0,
+        image: "/images/market-shelves/market-shelf-perf-195.png",
+        category: t("marketShelves"),
+        rating: 4.6,
+        reviewCount: 10,
+      },
+      {
+        id: "market-shelf-checkout-front",
+        name: t("marketShelfCheckoutFront"),
+        price: 0,
+        image: "/images/market-shelves/market-shelf-checkout-front.jpg",
+        category: t("marketShelves"),
+        rating: 4.4,
+        reviewCount: 6,
+      },
+      {
+        id: "market-shelf-single-135-w73",
+        name: t("marketShelfSingle135W73"),
+        price: 0,
+        image: "/images/market-shelves/market-shelf-single-135w73.jpg",
+        category: t("marketShelves"),
+        rating: 4.5,
+        reviewCount: 7,
       },
     ]
   }
