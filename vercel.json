@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.newmotorsi.ge"
+        }
+      ],
+      "destination": "https://newmotorsi.ge/:path*",
+      "permanent": true
+    }
+  ]
+}
