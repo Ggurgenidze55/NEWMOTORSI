@@ -58,12 +58,7 @@ export default function ProductCard({
           <div>
             <h3 className="font-medium text-base truncate text-white">{name}</h3>
             <p className="text-xs text-white/90">{category}</p>
-            {!hidePrice && (
-              <div className="flex items-center gap-2 mt-1">
-                <span className="font-medium text-white">{price.toFixed(2)}₾</span>
-                {oldPrice && <span className="text-sm text-white/80 line-through">{oldPrice.toFixed(2)}₾</span>}
-              </div>
-            )}
+            {/* Price is now always hidden */}
           </div>
         </div>
       </div>

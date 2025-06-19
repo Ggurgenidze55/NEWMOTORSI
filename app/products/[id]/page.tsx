@@ -1649,6 +1649,290 @@ Large volume for more waste.`,
         rating: 4.7,
         reviewCount: 15,
       },
+      "shopping-basket-20l": {
+        id: "shopping-basket-20l",
+        name: t("shoppingBasket20lUnit"),
+        price: 25.0, // Placeholder price
+        description: {
+          ka: `20 ლიტრიანი საყიდლების კალათა მეტალის სახელურით. ფერი: წითელი. იდეალურია მცირე ზომის მაღაზიებისთვის და სუპერმარკეტებისთვის.`,
+          en: `20-liter shopping basket with metal handle. Color: Red. Ideal for small shops and supermarkets.`,
+          ru: `20-литровая корзина для покупок с металлической ручкой. Цвет: Красный. Идеально подходит для небольших магазинов и супермаркетов.`,
+        },
+        features: {
+          ka: ["მოცულობა: 20 ლიტრი", "ფერი: წითელი", "სახელური: მეტალის", "გამძლე პლასტმასი"],
+          en: ["Volume: 20 Liters", "Color: Red", "Handle: Metal", "Durable plastic"],
+          ru: ["Объем: 20 литров", "Цвет: Красный", "Ручка: Металлическая", "Прочный пластик"],
+        },
+        images: ["/images/shopping-basket-20l-red.jpg"],
+        colors: [t("red")],
+        sizes: ["20L"],
+        category: t("marketAccessories"),
+        rating: 4.5, // Placeholder rating
+        reviewCount: 10, // Placeholder review count
+      },
+      "perforated-hooks": {
+        id: "perforated-hooks",
+        name: t("perforatedHooksUnit"),
+        price: 5.0, // Placeholder price (per hook or set)
+        description: {
+          ka: `მოთუთიებული კაუჭები პროდუქციის ჩამოსაკიდად. მაგრდება პერფორირებულ პანელზე. ხელმისაწვდომი ზომები: 10მმ, 15მმ, 20მმ, 25მმ, 30მმ.`,
+          en: `Galvanized hooks for hanging products. Mounts on a perforated panel. Available sizes: 10mm, 15mm, 20mm, 25mm, 30mm.`,
+          ru: `Оцинкованные крючки для подвешивания товаров. Крепятся на перфорированную панель. Доступные размеры: 10мм, 15мм, 20мм, 25мм, 30мм.`,
+        },
+        features: {
+          ka: [
+            "ზომები: 10მმ, 15მმ, 20მმ, 25მმ, 30მმ",
+            "მოთუთიებული ზედაპირი",
+            "მაგრდება პერფორირებულ პანელზე",
+            "გამძლე და საიმედო",
+          ],
+          en: [
+            "Sizes: 10mm, 15mm, 20mm, 25mm, 30mm",
+            "Galvanized surface",
+            "Mounts on perforated panel",
+            "Durable and reliable",
+          ],
+          ru: [
+            "Размеры: 10мм, 15мм, 20мм, 25мм, 30мм",
+            "Оцинкованная поверхность",
+            "Крепится на перфорированную панель",
+            "Прочные и надежные",
+          ],
+        },
+        images: ["/images/perforated-panel-hooks.jpg"],
+        colors: [t("silver")],
+        sizes: ["10mm", "15mm", "20mm", "25mm", "30mm"],
+        category: t("marketAccessories"),
+        rating: 4.3,
+        reviewCount: 15,
+      },
+      "shelf-front-barrier": {
+        id: "shelf-front-barrier",
+        name: t("shelfFrontBarrierUnit"),
+        price: 15.0, // Placeholder price
+        description: {
+          ka: `თაროს წინა ბარიერი იცავს პროდუქციას თაროდან გადმოვარდნისგან. ხელმისაწვდომია თეთრ და შავ მატ ფერებში.`,
+          en: `Shelf front barrier protects products from falling off the shelf. Available in white and matte black colors.`,
+          ru: `Передний барьер для полки защищает товары от падения с полки. Доступен в белом и матовом черном цветах.`,
+        },
+        features: {
+          ka: [
+            "იცავს პროდუქციას გადმოვარდნისგან",
+            "ფერები: თეთრი, შავი მატი",
+            "მარტივი დასამაგრებელი",
+            "ზრდის თაროს უსაფრთხოებას",
+          ],
+          en: [
+            "Prevents products from falling",
+            "Colors: White, Matte Black",
+            "Easy to attach",
+            "Increases shelf safety",
+          ],
+          ru: [
+            "Предотвращает падение товаров",
+            "Цвета: Белый, Матовый Черный",
+            "Легко крепится",
+            "Повышает безопасность полки",
+          ],
+        },
+        images: ["/images/shelf-front-barrier.jpg"],
+        colors: [t("white"), t("mattBlack")],
+        sizes: [], // No specific sizes mentioned, can be length based
+        category: t("marketAccessories"),
+        rating: 4.2,
+        reviewCount: 8,
+      },
+      "checkout-counter-1500": {
+        id: "checkout-counter-1500",
+        name: t("checkoutCounter1500Unit"),
+        price: 750.0, // Placeholder price
+        description: {
+          ka: `სალაროს მაგიდა მაღაზიისთვის, ზომით L1500*(500+500)*H800. გამძლე და ფუნქციონალური დიზაინი.`,
+          en: `Checkout counter for stores, size L1500*(500+500)*H800. Durable and functional design.`,
+          ru: `Кассовый стол для магазинов, размер L1500*(500+500)*H800. Прочная и функциональная конструкция.`,
+        },
+        features: {
+          ka: ["ზომა: L1500*(500+500)*H800", "გამძლე კონსტრუქცია", "ერგონომიული დიზაინი", "ინტეგრირებული სათავსოები"],
+          en: ["Size: L1500*(500+500)*H800", "Durable construction", "Ergonomic design", "Integrated storage spaces"],
+          ru: [
+            "Размер: L1500*(500+500)*H800",
+            "Прочная конструкция",
+            "Эргономичный дизайн",
+            "Встроенные места для хранения",
+          ],
+        },
+        images: ["/images/checkout-counter-1500.jpg"],
+        colors: [t("black"), t("silver")], // Example colors
+        sizes: ["L1500*(500+500)*H800"],
+        category: t("marketAccessories"),
+        rating: 4.6,
+        reviewCount: 5,
+      },
+      "shelf-divider-h250": {
+        id: "shelf-divider-h250",
+        name: t("shelfDividerH250Unit"),
+        price: 10.0, // Placeholder price
+        description: {
+          ka: `თაროს გამყოფი H250 გამოიყენება სხვადასხვა პროდუქციის გამოსაყოფად თაროზე. მაგრდება მაგნიტით. მასალა: პლასტმასი, ფერი: გამჭვირვალე, სახელური: მეტალის.`,
+          en: `Shelf divider H250 is used to separate different products on a shelf. Attaches with a magnet. Material: Plastic, Color: Transparent, Handle: Metal.`,
+          ru: `Разделитель полки H250 используется для разделения различных товаров на полке. Крепится на магните. Материал: Пластик, Цвет: Прозрачный, Ручка: Металлическая.`,
+        },
+        features: {
+          ka: ["სიმაღლე: 250მმ", "მაგრდება მაგნიტით", "მასალა: პლასტმასი", "ფერი: გამჭვირვალე", "სახელური: მეტალის"],
+          en: ["Height: 250mm", "Attaches with magnet", "Material: Plastic", "Color: Transparent", "Handle: Metal"],
+          ru: ["Высота: 250мм", "Крепится на магните", "Материал: Пластик", "Цвет: Прозрачный", "Ручка: Металлическая"],
+        },
+        images: ["/images/shelf-divider-h250.jpg"],
+        colors: ["გამჭვირვალე"],
+        sizes: ["H250mm"],
+        category: t("marketAccessories"),
+        rating: 4.0,
+        reviewCount: 12,
+      },
+      "promotion-basket-90x60": {
+        id: "promotion-basket-90x60",
+        name: t("promotionBasket90x60Unit"),
+        price: 120.0, // Placeholder price
+        description: {
+          ka: `სააქციო კალათა პროდუქციის გამოსაფენად. ზომა: L90*W60*H80. ფერი: თეთრი და ქრომირებული. იდეალურია სეზონური და სააქციო პროდუქტებისთვის.`,
+          en: `Promotion basket for product display. Size: L90*W60*H80. Color: White and Chrome. Ideal for seasonal and promotional products.`,
+          ru: `Акционная корзина для выкладки товаров. Размер: L90*W60*H80. Цвет: Белый и Хром. Идеально для сезонных и акционных товаров.`,
+        },
+        features: {
+          ka: [
+            "ზომა: L90*W60*H80",
+            "ფერი: თეთრი და ქრომირებული",
+            "იდეალურია აქციებისთვის",
+            "გამძლე ლითონის კონსტრუქცია",
+            "თვლებით გადასაადგილებლად (სურვილისამებრ)",
+          ],
+          en: [
+            "Size: L90*W60*H80",
+            "Color: White and Chrome",
+            "Ideal for promotions",
+            "Durable metal construction",
+            "Wheels for mobility (optional)",
+          ],
+          ru: [
+            "Размер: L90*W60*H80",
+            "Размер: L90*W60*H80",
+            "Цвет: Белый и Хром",
+            "Идеально для акций",
+            "Прочная металлическая конструкция",
+            "Колеса для мобильности (опционально)",
+          ],
+        },
+        images: ["/images/promotion-basket-90x60.jpg"],
+        colors: [t("white"), "ქრომირებული"],
+        sizes: ["L90*W60*H80"],
+        category: t("marketAccessories"),
+        rating: 4.4,
+        reviewCount: 7,
+      },
+      "lightbox-890x330": {
+        id: "lightbox-890x330",
+        name: t("lightbox890x330Unit"),
+        price: 180.0, // Placeholder price
+        description: {
+          ka: `ლაით ბოქსი რეკლამისთვის, ზომით L890*H330. ეფექტურად წარმოაჩენს თქვენს რეკლამას ან ინფორმაციას.`,
+          en: `Lightbox for advertising, size L890*H330. Effectively showcases your advertisement or information.`,
+          ru: `Лайтбокс для рекламы, размер L890*H330. Эффективно демонстрирует вашу рекламу или информацию.`,
+        },
+        features: {
+          ka: ["ზომა: L890*H330", "LED განათებით", "ენერგოეფექტური", "მარტივი პოსტერის შეცვლა"],
+          en: ["Size: L890*H330", "LED illuminated", "Energy efficient", "Easy poster change"],
+          ru: ["Размер: L890*H330", "LED подсветка", "Энергоэффективный", "Легкая смена постера"],
+        },
+        images: ["/images/lightbox-890x330.jpg"],
+        colors: [t("white"), t("silver")], // Frame color
+        sizes: ["L890*H330"],
+        category: t("marketAccessories"), // Or POS Materials
+        rating: 4.5,
+        reviewCount: 9,
+      },
+      "cash-drawer-368": {
+        id: "cash-drawer-368",
+        name: t("cashDrawer368Unit"),
+        price: 90.0, // Placeholder price
+        description: {
+          ka: `მექანიკური/ავტომატური ფულის უჯრა სალაროსთვის. ზომა: L368*W335*H80. უზრუნველყოფს ნაღდი ფულის უსაფრთხო შენახვას.`,
+          en: `Manual/Automatic cash drawer for checkout. Size: L368*W335*H80. Ensures secure storage of cash.`,
+          ru: `Механический/автоматический денежный ящик для кассы. Размер: L368*W335*H80. Обеспечивает безопасное хранение наличных.`,
+        },
+        features: {
+          ka: [
+            "ზომა: L368*W335*H80",
+            "მექანიკური ან ავტომატური გახსნა",
+            "გასაღებით ჩაკეტვის შესაძლებლობა",
+            "რამდენიმე განყოფილება კუპიურებისა და მონეტებისთვის",
+          ],
+          en: [
+            "Size: L368*W335*H80",
+            "Manual or automatic opening",
+            "Key lockable",
+            "Multiple compartments for bills and coins",
+          ],
+          ru: [
+            "Размер: L368*W335*H80",
+            "Механическое или автоматическое открытие",
+            "Возможность запирания на ключ",
+            "Несколько отделений для купюр и монет",
+          ],
+        },
+        images: ["/images/cash-drawer-368.jpg"],
+        colors: [t("white"), t("black")],
+        sizes: ["L368*W335*H80"],
+        category: t("marketAccessories"),
+        rating: 4.3,
+        reviewCount: 11,
+      },
+      "hook-locker": {
+        id: "hook-locker",
+        name: t("hookLockerUnit"),
+        price: 2.0, // Placeholder price
+        description: {
+          ka: `კაუჭის ლოქერი (შემზღუდველი) პროდუქციის უსაფრთხოებისთვის. იცავს პროდუქტს კაუჭიდან უნებართვო მოხსნისგან.`,
+          en: `Hook locker (security stopper) for product security. Protects products from unauthorized removal from hooks.`,
+          ru: `Замок для крючка (ограничитель) для безопасности товаров. Защищает товары от несанкционированного снятия с крючков.`,
+        },
+        features: {
+          ka: [
+            "იცავს ქურდობისგან",
+            "მარტივი გამოსაყენებელი მაგნიტურ გასაღებთან ერთად",
+            "გამძლე პლასტმასი",
+            "წითელი ფერის",
+          ],
+          en: ["Prevents theft", "Easy to use with magnetic key", "Durable plastic", "Red color"],
+          ru: ["Предотвращает кражу", "Легко использовать с магнитным ключом", "Прочный пластик", "Красный цвет"],
+        },
+        images: ["/images/hook-locker.jpg"],
+        colors: [t("red")],
+        sizes: [], // One size
+        category: t("marketAccessories"),
+        rating: 4.0,
+        reviewCount: 20,
+      },
+      "hook-locker-key": {
+        id: "hook-locker-key",
+        name: t("hookLockerKeyUnit"),
+        price: 15.0, // Placeholder price
+        description: {
+          ka: `მაგნიტური გასაღები კაუჭის ლოქერების მოსახსნელად. კომპაქტური და მოსახერხებელი.`,
+          en: `Magnetic key for removing hook lockers. Compact and convenient.`,
+          ru: `Магнитный ключ для снятия замков с крючков. Компактный и удобный.`,
+        },
+        features: {
+          ka: ["გამოიყენება კაუჭის ლოქერებთან", "კომპაქტური დიზაინი", "ძლიერი მაგნიტი", "მეტალის კორპუსი"],
+          en: ["Used with hook lockers", "Compact design", "Strong magnet", "Metal body"],
+          ru: ["Используется с замками для крючков", "Компактный дизайн", "Сильный магнит", "Металлический корпус"],
+        },
+        images: ["/images/hook-locker-key.jpg"],
+        colors: [t("silver"), t("red")], // Key color
+        sizes: [], // One size
+        category: t("marketAccessories"),
+        rating: 4.5,
+        reviewCount: 5,
+      },
     }
 
     return products[productId] || null
@@ -1880,6 +2164,96 @@ Large volume for more waste.`,
         rating: 4.7,
         reviewCount: 15,
       },
+      {
+        id: "shopping-basket-20l",
+        name: t("shoppingBasket20lUnit"),
+        price: 25.0,
+        image: "/images/shopping-basket-20l-red.jpg",
+        category: t("marketAccessories"),
+        rating: 4.5,
+        reviewCount: 10,
+      },
+      {
+        id: "perforated-hooks",
+        name: t("perforatedHooksUnit"),
+        price: 5.0,
+        image: "/images/perforated-panel-hooks.jpg",
+        category: t("marketAccessories"),
+        rating: 4.3,
+        reviewCount: 15,
+      },
+      {
+        id: "shelf-front-barrier",
+        name: t("shelfFrontBarrierUnit"),
+        price: 15.0,
+        image: "/images/shelf-front-barrier.jpg",
+        category: t("marketAccessories"),
+        rating: 4.2,
+        reviewCount: 8,
+      },
+      {
+        id: "checkout-counter-1500",
+        name: t("checkoutCounter1500Unit"),
+        price: 750.0,
+        image: "/images/checkout-counter-1500.jpg",
+        category: t("marketAccessories"),
+        rating: 4.6,
+        reviewCount: 5,
+      },
+      {
+        id: "shelf-divider-h250",
+        name: t("shelfDividerH250Unit"),
+        price: 10.0,
+        image: "/images/shelf-divider-h250.jpg",
+        category: t("marketAccessories"),
+        rating: 4.0,
+        reviewCount: 12,
+      },
+      {
+        id: "promotion-basket-90x60",
+        name: t("promotionBasket90x60Unit"),
+        price: 120.0,
+        image: "/images/promotion-basket-90x60.jpg",
+        category: t("marketAccessories"),
+        rating: 4.4,
+        reviewCount: 7,
+      },
+      {
+        id: "lightbox-890x330",
+        name: t("lightbox890x330Unit"),
+        price: 180.0,
+        image: "/images/lightbox-890x330.jpg",
+        category: t("marketAccessories"),
+        rating: 4.5,
+        reviewCount: 9,
+      },
+      {
+        id: "cash-drawer-368",
+        name: t("cashDrawer368Unit"),
+        price: 90.0,
+        image: "/images/cash-drawer-368.jpg",
+        category: t("marketAccessories"),
+        rating: 4.3,
+        reviewCount: 11,
+      },
+      {
+        id: "hook-locker",
+        name: t("hookLockerUnit"),
+        price: 2.0,
+        image: "/images/hook-locker.jpg",
+        category: t("marketAccessories"),
+        rating: 4.0,
+        reviewCount: 20,
+      },
+      {
+        id: "hook-locker-key",
+        name: t("hookLockerKeyUnit"),
+        price: 15.0,
+        image: "/images/hook-locker-key.jpg",
+        category: t("marketAccessories"),
+        rating: 4.5,
+        reviewCount: 5,
+      },
     ]
   }
 
@@ -1943,13 +2317,10 @@ Large volume for more waste.`,
           <div className="mt-10 px-4 sm:px-0 sm:mt-16 lg:mt-0">
             <h1 className="text-3xl font-extrabold tracking-tight text-gray-900">{product.name}</h1>
 
-            <div className="mt-3">
-              <h2 className="sr-only">{t("price")}</h2>
-              <p className="text-3xl text-gray-900">${product.price}</p>
-            </div>
+            {/* Price section removed */}
 
             {/* Reviews */}
-            <div className="mt-3">
+            <div className="mt-6">
               <h3 className="sr-only">{t("reviews")}</h3>
               <div className="flex items-center">
                 <div className="flex items-center">
@@ -2031,7 +2402,6 @@ Large volume for more waste.`,
                       <p className="ml-2 text-sm text-gray-500">({relatedProduct.reviewCount})</p>
                     </div>
                   </div>
-                  <p className="text-sm font-medium text-gray-900">${relatedProduct.price}</p>
                 </div>
               </div>
             ))}
