@@ -253,6 +253,9 @@ export const translations = {
     posStand: "პოს სტენდი",
     priceTag: "ფასის ეტიკეტი",
     warehouseShelvingUnit: "სასაწყობე სტელაჟი",
+    allProducts: "ყველა პროდუქტი",
+    companyDescription:
+      "ჩვენ ვართ წამყვანი კომპანია სტელაჟებისა და საწყობის აღჭურვილობის სფეროში. ჩვენი მისიაა თქვენი ბიზნესის ეფექტურობის გაზრდა.",
 
     // Technical specifications
     height: "სიმაღლე",
@@ -535,6 +538,9 @@ export const translations = {
     posStand: "POS Stand",
     priceTag: "Price Tag",
     warehouseShelvingUnit: "Warehouse Shelving Unit",
+    allProducts: "All Products",
+    companyDescription:
+      "We are a leading company in the field of shelving and warehouse equipment. Our mission is to increase the efficiency of your business.",
 
     // Technical specifications
     height: "Height",
@@ -817,6 +823,9 @@ export const translations = {
     posStand: "POS стенд",
     priceTag: "Ценник",
     warehouseShelvingUnit: "Складской стеллаж",
+    allProducts: "Все товары",
+    companyDescription:
+      "Мы являемся ведущей компанией в области стеллажного и складского оборудования. Наша миссия - повысить эффективность вашего бизнеса.",
 
     // Technical specifications
     height: "Высота",
