@@ -323,6 +323,15 @@ export default function ProductsPage() {
       isNew: true,
     },
     {
+      id: "shelf-divider-h250",
+      name: t("shelfDividerH250Unit"),
+      price: 10.0, // Placeholder price
+      image: "/images/shelf-divider-h250.jpg",
+      category: t("marketAccessories"),
+      subcategory: "market-accessories",
+      isNew: true,
+    },
+    {
       id: "promotion-basket-90x60",
       name: t("promotionBasket90x60Unit"),
       price: 120.0, // Placeholder price
@@ -513,13 +522,7 @@ export default function ProductsPage() {
       subcategory: "kitchen-shelving",
       isNew: true,
     },
-  ].filter(
-    (product) =>
-      product.id !== "accessory-holder-1" &&
-      product.id !== "perforated-wall-1" &&
-      product.id !== "shelf-divider-1" &&
-      product.id !== "wall-grid-display-1",
-  )
+  ]
 
   const getPageTitle = () => {
     switch (language) {

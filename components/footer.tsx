@@ -29,7 +29,10 @@ export default function Footer() {
                 <LogoFallback isFooter={true} />
               )}
             </div>
-            <p className="text-gray-300 max-w-md leading-relaxed mb-6">{t("companyDescription")}</p>
+            <p className="text-gray-300 max-w-md leading-relaxed mb-6">
+              ჩვენ ვართ წამყვანი კომპანია სტელაჟებისა და საწყობის აღჭურვილობის სფეროში. ჩვენი მისიაა თქვენი ბიზნესის
+              ეფექტურობის გაზრდა.
+            </p>
             <div className="flex space-x-4">
               <Link
                 href="#"
@@ -53,7 +56,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-bold text-lg mb-4 text-primary">{t("company")}</h3>
+            <h3 className="font-bold text-lg mb-4 text-primary">კომპანია</h3>
             <ul className="space-y-3">
               <li>
                 <Link href="/about" className="text-gray-300 hover:text-primary transition-colors">

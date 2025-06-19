@@ -114,7 +114,7 @@ export default function Header() {
                   variant="ghost"
                   className="text-gray-700 hover:text-primary font-medium transition-colors relative group flex items-center gap-1 p-0 h-auto hover:bg-transparent"
                 >
-                  {t("products")}
+                  პროდუქტები
                   <ChevronDown className="h-4 w-4 ml-1" />
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                 </Button>
@@ -122,7 +122,7 @@ export default function Header() {
               <DropdownMenuContent align="start" className="w-64 bg-white border border-gray-200 shadow-lg z-[60]">
                 <DropdownMenuItem asChild>
                   <Link href="/products" className="text-gray-700 hover:bg-gray-100 focus:bg-gray-100">
-                    <span>{t("allProducts")}</span>
+                    <span>ყველა პროდუქტი</span>
                   </Link>
                 </DropdownMenuItem>
                 {productCategories.map((category) => (
@@ -136,9 +136,7 @@ export default function Header() {
                         <DropdownMenuSubContent className="bg-white border border-gray-200 shadow-lg z-[60]">
                           <DropdownMenuItem asChild>
                             <Link href={category.href} className="text-gray-700 hover:bg-gray-100 focus:bg-gray-100">
-                              <span>
-                                {t("allProducts")} {category.name}
-                              </span>
+                              <span>ყველა {category.name}</span>
                             </Link>
                           </DropdownMenuItem>
                           {category.subcategories?.map((sub) => (
@@ -235,7 +233,7 @@ export default function Header() {
                     className="text-white hover:bg-white/10 px-4 py-3 font-medium transition-colors block"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    {t("allProducts")}
+                    ყველა პროდუქტი
                   </Link>
                   {productCategories.map((category) => (
                     <div key={category.id} className="border-t border-white/10">
