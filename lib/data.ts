@@ -97,4 +97,30 @@ export const allProducts = [
   { id: "shelf-price-display-1", category: "pos-materials" },
   { id: "pallet-trolley-red", category: "trolleys" },
   { id: "trash-bin-120l", category: "trash-bins" },
+  {
+    id: "warehouse-1",
+    name: {
+      ka: "სასაწყობე სტელაჟი",
+      en: "Warehouse Shelving Unit",
+      ru: "Складской стеллаж",
+    },
+    price: 450.0,
+    images: ["/images/blue-warehouse-shelving.png"],
+    category: { ka: "სასაწყობე სტელაჟები", en: "Warehouse Shelving", ru: "Складские стеллажи" },
+    rating: 4.8,
+    reviewCount: 24,
+  },
+  {
+    id: "warehouse-2",
+    name: {
+      ka: "სასაწყობე სტელაჟი ნარინჯისფერი",
+      en: "Warehouse Shelving Unit Orange",
+      ru: "Складской стеллаж Оранжевый",
+    },
+    price: 460.0,
+    images: ["/images/blue-orange-warehouse-shelving.jpg"],
+    category: { ka: "სასაწყობე სტელაჟები", en: "Warehouse Shelving", ru: "Складские стеллажи" },
+    rating: 4.7,
+    reviewCount: 18,
+  },
 ]

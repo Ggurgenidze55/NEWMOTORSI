@@ -4,8 +4,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { ChevronRight, Star } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
-import type { Product } from "@/lib/types" // Assuming you have a Product type defined
-import { allProducts as getAllProductData } from "@/lib/data" // Assuming this function fetches all product details
+import type { Product } from "@/lib/types"
+import { allProducts as getAllProductData } from "@/lib/data"
 
 // Helper function to get product data (simulated)
 const getProductById = (productId: string, lang: string): Product | null => {
@@ -37,7 +37,6 @@ const getProductById = (productId: string, lang: string): Product | null => {
       availability: "https://schema.org/InStock",
       currency: "GEL",
     },
-    // Add other products here...
     "kitchen-shelf-1": {
       id: "kitchen-shelf-1",
       name: {
@@ -65,6 +64,33 @@ const getProductById = (productId: string, lang: string): Product | null => {
       availability: "https://schema.org/InStock",
       currency: "GEL",
     },
+    "warehouse-2": {
+      id: "warehouse-2",
+      name: {
+        ka: "სასაწყობე სტელაჟი ნარინჯისფერი",
+        en: "Warehouse Shelving Unit Orange",
+        ru: "Складской стеллаж Оранжевый",
+      },
+      price: 460.0,
+      description: {
+        ka: `მტკიცე სასაწყობე სტელაჟი, ნარინჯისფერი აქცენტებით. განკუთვნილია მძიმე ტვირთისთვის.`,
+        en: `Robust warehouse shelving with orange accents. Designed for heavy loads.`,
+        ru: `Прочный складской стеллаж с оранжевыми акцентами. Предназначен для тяжелых грузов.`,
+      },
+      features: {
+        ka: ["სიმაღლე: 220სმ", "სიგანე: 120სმ", "დატვირთვა: 350კგ/იარუსი"],
+        en: ["Height: 220cm", "Width: 120cm", "Load: 350kg/tier"],
+        ru: ["Высота: 220см", "Ширина: 120см", "Нагрузка: 350кг/ярус"],
+      },
+      images: ["/images/blue-orange-warehouse-shelving.jpg"],
+      category: { ka: "სასაწყობე სტელაჟები", en: "Warehouse Shelving", ru: "Складские стеллажи" },
+      rating: 4.7,
+      reviewCount: 18,
+      sku: "WH-002",
+      brand: { name: "ნიუ მოტორსი" },
+      availability: "https://schema.org/InStock",
+      currency: "GEL",
+    },
   }
   const productData = productsData[productId]
   if (!productData) return null
@@ -83,7 +109,6 @@ const getProductById = (productId: string, lang: string): Product | null => {
     brand: productData.brand,
     availability: productData.availability,
     currency: productData.currency,
-    // Add other necessary fields from your actual product data structure
   } as Product
 }
 
@@ -95,9 +120,9 @@ export default function ProductPageClient({ params }: { params: { id: string } }
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold mb-4">{t("productNotFound")}</h1>
+          <h1 className="text-2xl font-bold mb-4">{t("productNotFound") || "Product not found"}</h1>
           <Link href="/products" className="text-blue-600 hover:underline">
-            {t("backToProducts")}
+            {t("browseProducts") || "Back to products"}
           </Link>
         </div>
       </div>
@@ -113,7 +138,7 @@ export default function ProductPageClient({ params }: { params: { id: string } }
     image: product.images.map((img) => `${siteUrl}${img}`),
     description: product.description,
     sku: product.sku,
-    mpn: product.sku, // Often same as SKU or a manufacturer part number
+    mpn: product.sku,
     brand: {
       "@type": "Brand",
       name: product.brand?.name || "ნიუ მოტორსი",
@@ -121,7 +146,6 @@ export default function ProductPageClient({ params }: { params: { id: string } }
     review:
       product.reviewCount > 0
         ? {
-            // Optional: Add if you have reviews
             "@type": "Review",
             reviewRating: {
               "@type": "Rating",
@@ -130,7 +154,7 @@ export default function ProductPageClient({ params }: { params: { id: string } }
             },
             author: {
               "@type": "Person",
-              name: "Customer", // Placeholder, ideally link to actual reviews
+              name: "Customer",
             },
           }
         : undefined,
@@ -146,8 +170,8 @@ export default function ProductPageClient({ params }: { params: { id: string } }
       "@type": "Offer",
       url: `${siteUrl}/products/${product.id}`,
       priceCurrency: product.currency || "GEL",
-      price: product.price > 0 ? product.price.toString() : "0", // Use "0" for Request a Quote items
-      priceValidUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString(), // Valid for 1 year
+      price: product.price > 0 ? product.price.toString() : "0",
+      priceValidUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString(),
       itemCondition: "https://schema.org/NewCondition",
       availability: product.availability || "https://schema.org/InStock",
       seller: {
@@ -157,13 +181,14 @@ export default function ProductPageClient({ params }: { params: { id: string } }
     },
   }
 
-  // Simplified related products logic for brevity
-  const allSiteProducts = getAllProductData // This should be your actual full product list
+  const allSiteProducts = getAllProductData
   const relatedProducts = allSiteProducts
-    .filter((p: any) => p.category === product.category && p.id !== product.id) // Ensure p.category is comparable
+    .filter((p: any) => {
+      const pCategoryName = p.category?.[language] || p.category?.ka
+      return pCategoryName === product.category && p.id !== product.id
+    })
     .slice(0, 4)
     .map((p: any) => ({
-      // Map to a common structure if needed
       id: p.id,
       name: p.name?.[language] || p.name?.ka || "Related Product",
       image: p.images?.[0] || p.image || "/placeholder.svg",
@@ -171,13 +196,13 @@ export default function ProductPageClient({ params }: { params: { id: string } }
       rating: p.rating || 0,
       reviewCount: p.reviewCount || 0,
       price: p.price,
+      currency: p.currency || "GEL",
     }))
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
       <div className="min-h-screen bg-gray-50">
-        {/* Breadcrumb */}
         <div className="bg-white border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <nav className="flex items-center space-x-2 text-sm text-gray-500">
@@ -196,7 +221,6 @@ export default function ProductPageClient({ params }: { params: { id: string } }
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="lg:grid lg:grid-cols-2 lg:gap-x-8 lg:items-start">
-            {/* Image gallery */}
             <div className="flex flex-col-reverse">
               <div className="hidden mt-6 w-full max-w-2xl mx-auto sm:block lg:max-w-none">
                 <div className="grid grid-cols-4 gap-6">
@@ -227,7 +251,6 @@ export default function ProductPageClient({ params }: { params: { id: string } }
               </div>
             </div>
 
-            {/* Product info */}
             <div className="mt-10 px-4 sm:px-0 sm:mt-16 lg:mt-0">
               <h1 className="text-3xl font-extrabold tracking-tight text-gray-900">{product.name}</h1>
 
@@ -239,11 +262,10 @@ export default function ProductPageClient({ params }: { params: { id: string } }
                 </div>
               ) : (
                 <div className="mt-3">
-                  <p className="text-xl text-gray-700">{t("priceOnRequest")}</p>
+                  <p className="text-xl text-gray-700">{t("priceOnRequest") || "Price on request"}</p>
                 </div>
               )}
 
-              {/* Reviews */}
               <div className="mt-6">
                 <h3 className="sr-only">{t("reviews")}</h3>
                 <div className="flex items-center">
@@ -282,7 +304,7 @@ export default function ProductPageClient({ params }: { params: { id: string } }
                     href={`/contact?product=${encodeURIComponent(product.name)}&id=${product.id}`}
                     className="w-full bg-primary text-white py-3 px-6 rounded-md hover:bg-primary/90 transition-colors text-lg font-semibold flex items-center justify-center"
                   >
-                    {t("requestQuote")}
+                    {t("requestQuote") || "Request a Quote"}
                   </Link>
                 </div>
               )}
@@ -295,14 +317,13 @@ export default function ProductPageClient({ params }: { params: { id: string } }
                   {Array.isArray(product.features) ? (
                     product.features.map((feature: string, index: number) => <li key={index}>{feature}</li>)
                   ) : (
-                    <p>{t("featuresNotAvailable")}</p>
+                    <p>{t("featuresNotAvailable") || "Features not available"}</p>
                   )}
                 </ul>
               </section>
             </div>
           </div>
 
-          {/* Related products */}
           {relatedProducts.length > 0 && (
             <div className="mt-16">
               <h2 className="text-2xl font-extrabold text-gray-900 mb-6">{t("relatedProducts")}</h2>
@@ -343,10 +364,10 @@ export default function ProductPageClient({ params }: { params: { id: string } }
                       </div>
                       {relatedProduct.price > 0 ? (
                         <p className="text-sm font-medium text-gray-900 mt-2">
-                          {relatedProduct.price} {product.currency}
+                          {relatedProduct.price} {relatedProduct.currency}
                         </p>
                       ) : (
-                        <p className="text-xs text-gray-600 mt-2">{t("priceOnRequest")}</p>
+                        <p className="text-xs text-gray-600 mt-2">{t("priceOnRequest") || "Price on request"}</p>
                       )}
                     </div>
                   </div>
