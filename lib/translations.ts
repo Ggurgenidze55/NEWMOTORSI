@@ -168,7 +168,8 @@ export const translations = {
     privacyPolicy: "კონფიდენციალურობის პოლიტიკა",
 
     // Footer
-    footerDescription: "მაღალი ხარისხის პროდუქცია საუკეთესო ფასად. უფასო მიწოდება 50₾-ზე მეტი შენაძენის შემთხვევაში.",
+    footerDescription:
+      "ჩვენ ვართ წამყვანი კომპანია სტელაჟებისა და საწყობის აღჭურვილობის სფეროში. ჩვენი მისიაა თქვენი ბიზნესის ეფექტურობის გაზრდა.",
     shopping: "შოპინგი",
     company: "კომპანია",
     aboutUs: "ჩვენ შესახებ",
@@ -450,7 +451,8 @@ export const translations = {
     privacyPolicy: "Privacy Policy",
 
     // Footer
-    footerDescription: "High quality products at the best prices. Free shipping on orders over $50.",
+    footerDescription:
+      "We are a leading company in the field of shelving and warehouse equipment. Our mission is to increase the efficiency of your business.",
     shopping: "Shopping",
     company: "Company",
     aboutUs: "About Us",
@@ -732,7 +734,8 @@ export const translations = {
     privacyPolicy: "Политика конфиденциальности",
 
     // Footer
-    footerDescription: "Высококачественные товары по лучшим ценам. Бесплатная доставка при заказе свыше $50.",
+    footerDescription:
+      "Мы являемся ведущей компанией в области стеллажного и складского оборудования. Наша миссия - повысить эффективность вашего бизнеса.",
     shopping: "Покупки",
     company: "Компания",
     aboutUs: "О нас",
