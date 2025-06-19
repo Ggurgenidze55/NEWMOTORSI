@@ -7,9 +7,12 @@ import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent } from "@/components/ui/card"
 import { useLanguage } from "@/contexts/language-context"
 import { useEffect } from "react"
+import { useActionState } from "react"
+import { submitContactForm } from "@/app/actions/contact"
 
 export default function ContactPage() {
   const { t, language } = useLanguage()
+  const [state, formAction, isPending] = useActionState(submitContactForm, null)
 
   // Update page title for Contact page
   useEffect(() => {
@@ -43,6 +46,7 @@ export default function ContactPage() {
       subject: "თემა",
       message: "შეტყობინება",
       sendMessage: "შეტყობინების გაგზავნა",
+      sending: "იგზავნება...",
       contactInfo: "საკონტაქტო ინფორმაცია",
       address: "მისამართი",
       addressTextTbilisi: "თბილისი\nლევან დევდარიანის მე-3 შესახვევი #12",
@@ -65,6 +69,7 @@ export default function ContactPage() {
       subject: "Subject",
       message: "Message",
       sendMessage: "Send Message",
+      sending: "Sending...",
       contactInfo: "Contact Information",
       address: "Address",
       addressTextTbilisi: "Tbilisi\nLevan Devdariani 3rd Lane #12",
@@ -87,6 +92,7 @@ export default function ContactPage() {
       subject: "Тема",
       message: "Сообщение",
       sendMessage: "Отправить сообщение",
+      sending: "Отправляется...",
       contactInfo: "Контактная информация",
       address: "Адрес",
       addressTextTbilisi: "Тбилиси\nПереулок Левана Девдариани 3 #12",
@@ -134,7 +140,7 @@ export default function ContactPage() {
                     <h2 className="text-3xl font-bold text-black">{content.formTitle}</h2>
                   </div>
 
-                  <form className="space-y-6">
+                  <form action={formAction} className="space-y-6">
                     <div className="grid gap-6 sm:grid-cols-2">
                       <div className="space-y-2">
                         <label htmlFor="name" className="block text-sm font-semibold text-black">
@@ -142,9 +148,11 @@ export default function ContactPage() {
                         </label>
                         <Input
                           id="name"
+                          name="name"
                           type="text"
                           required
-                          className="h-12 border-2 border-gray-200 focus:border-[#00adef] text-black bg-white"
+                          disabled={isPending}
+                          className="h-12 border-2 border-gray-200 focus:border-[#00adef] text-black bg-white disabled:opacity-50"
                         />
                       </div>
                       <div className="space-y-2">
@@ -153,9 +161,11 @@ export default function ContactPage() {
                         </label>
                         <Input
                           id="email"
+                          name="email"
                           type="email"
                           required
-                          className="h-12 border-2 border-gray-200 focus:border-[#00adef] text-black bg-white"
+                          disabled={isPending}
+                          className="h-12 border-2 border-gray-200 focus:border-[#00adef] text-black bg-white disabled:opacity-50"
                         />
                       </div>
                     </div>
@@ -165,9 +175,11 @@ export default function ContactPage() {
                       </label>
                       <Input
                         id="subject"
+                        name="subject"
                         type="text"
                         required
-                        className="h-12 border-2 border-gray-200 focus:border-[#00adef] text-black bg-white"
+                        disabled={isPending}
+                        className="h-12 border-2 border-gray-200 focus:border-[#00adef] text-black bg-white disabled:opacity-50"
                       />
                     </div>
                     <div className="space-y-2">
@@ -176,21 +188,34 @@ export default function ContactPage() {
                       </label>
                       <Textarea
                         id="message"
+                        name="message"
                         rows={6}
                         required
-                        className="border-2 border-gray-200 focus:border-[#00adef] resize-none text-black bg-white"
+                        disabled={isPending}
+                        className="border-2 border-gray-200 focus:border-[#00adef] resize-none text-black bg-white disabled:opacity-50"
                       />
                     </div>
+
+                    {/* Success/Error Message */}
+                    {state && (
+                      <div
+                        className={`p-4 rounded-lg ${state.success ? "bg-green-50 text-green-800 border border-green-200" : "bg-red-50 text-red-800 border border-red-200"}`}
+                      >
+                        {state.message}
+                      </div>
+                    )}
+
                     <Button
                       type="submit"
                       size="lg"
-                      className="w-full h-12 text-white font-semibold flex items-center justify-center gap-2"
+                      disabled={isPending}
+                      className="w-full h-12 text-white font-semibold flex items-center justify-center gap-2 disabled:opacity-50"
                       style={{ backgroundColor: "#00adef" }}
-                      onMouseEnter={(e) => (e.target.style.backgroundColor = "#0099d4")}
-                      onMouseLeave={(e) => (e.target.style.backgroundColor = "#00adef")}
+                      onMouseEnter={(e) => !isPending && (e.target.style.backgroundColor = "#0099d4")}
+                      onMouseLeave={(e) => !isPending && (e.target.style.backgroundColor = "#00adef")}
                     >
                       <Send className="h-5 w-5" />
-                      {content.sendMessage}
+                      {isPending ? content.sending : content.sendMessage}
                     </Button>
                   </form>
                 </CardContent>
