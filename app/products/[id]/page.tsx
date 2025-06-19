@@ -2,11 +2,10 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { ChevronRight, Star, Truck } from "lucide-react"
+import { ChevronRight, Star } from "lucide-react"
 
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Label } from "@/components/ui/label"
-import ProductCard from "@/components/product-card"
 import { useLanguage } from "@/contexts/language-context"
 
 export default function ProductPage({ params }: { params: { id: string } }) {
@@ -507,7 +506,7 @@ Perfect for effective clothing display.`,
 • Load capacity: 15 kg
 
 Easy installation and use.`,
-          ru: `Алюминиевая рейка для торговых аксессуаров. Изготовлена из высококачественного алюминия, идеальна для торговых полок и витрин.
+          ru: `Алюминиевый рельс для торговых аксессуаров. Изготовлен из высококачественного алюминия, идеален для торговых полок и витрин.
 
 **Технические характеристики:**
 • Длина: 100 см
@@ -525,7 +524,7 @@ Easy installation and use.`,
             "სისქე: 2 სმ",
             "მასალა: ალუმინი",
             "დატვირთვა: 15 კგ",
-            "მსუბუქი წონა",
+            "მსუბუქი და მტკიცე",
             "კოროზიისგან დაცული",
             "მარტივი მონტაჟი",
           ],
@@ -535,9 +534,9 @@ Easy installation and use.`,
             "Thickness: 2 cm",
             "Material: Aluminum",
             "Load capacity: 15 kg",
-            "Lightweight",
+            "Lightweight and durable",
             "Corrosion resistant",
-            "Easy assembly",
+            "Easy installation",
           ],
           ru: [
             "Длина: 100 см",
@@ -545,169 +544,248 @@ Easy installation and use.`,
             "Толщина: 2 см",
             "Материал: Алюминий",
             "Нагрузка: 15 кг",
-            "Легкий вес",
+            "Легкий и прочный",
             "Устойчив к коррозии",
             "Простая сборка",
           ],
         },
         images: [
-          "/images/aluminum-rail-3.jpg",
           "/images/aluminum-rail-1.jpg",
           "/images/aluminum-rail-2.jpg",
+          "/images/aluminum-rail-3.jpg",
           "/images/aluminum-rail-4.jpg",
           "/images/aluminum-rail-5.jpg",
         ],
-        colors: ["ალუმინი"],
+        colors: [t("aluminum")],
         sizes: ["100x3x2"],
-        category: t("marketAccessories"),
-        rating: 4.4,
-        reviewCount: 7,
+        category: t("aluminumRail"),
+        rating: 4.6,
+        reviewCount: 22,
       },
       "perforated-profile-1": {
         id: "perforated-profile-1",
         name: t("perforatedProfileUnit"),
         price: 85.0,
         description: {
-          ka: `პერფორირებული პროფილი მარკეტის თაროებისთვის. მაღალი ხარისხის ლითონისგან დამზადებული, იდეალურია მარკეტის თაროებისა და გამოფენისთვის.
+          ka: `პერფორირებული პროფილი თაროს დამჭერით. მაღალი ხარისხის ლითონისგან დამზადებული, იდეალურია მარკეტის თაროებისა და აქსესუარებისთვის.
 
 **ტექნიკური მახასიათებლები:**
-• სიგრძე: 120 სმ
-• სიგანე: 4 სმ  
-• სისქე: 2 სმ
-• მასალა: ლითონი
+• სიმაღლე: 200 სმ
+• სიგანე: 5 სმ  
+• სისქე: 3 სმ
+• პერფორაციის ზომა: 5x5 მმ
 • დატვირთვა: 25 კგ
 
-მრავალფუნქციური და ადაპტირებადი.`,
-          en: `Perforated profile for market shelves. Made from high-quality metal, ideal for market shelves and displays.
+რეგულირებადი სიმაღლე და მარტივი მონტაჟი.`,
+          en: `Perforated profile with shelf bracket. Made from high-quality metal, ideal for market shelves and accessories.
 
 **Technical Specifications:**
-• Length: 120 cm
-• Width: 4 cm
-• Thickness: 2 cm
-• Material: Metal
+• Height: 200 cm
+• Width: 5 cm
+• Thickness: 3 cm
+• Perforation size: 5x5 mm
 • Load capacity: 25 kg
 
-Multifunctional and adaptable.`,
-          ru: `Перфорированный профиль для торговых полок. Изготовлен из высококачественного металла, идеален для торговых полок и витрин.
+Adjustable height and easy installation.`,
+          ru: `Перфорированный профиль с кронштейном полки. Изготовлен из высококачественного металла, идеален для торговых полок и аксессуаров.
 
 **Технические характеристики:**
-• Длина: 120 см
-• Ширина: 4 см
-• Толщина: 2 см
-• Материал: Металл
+• Высота: 200 см
+• Ширина: 5 см
+• Толщина: 3 см
+• Размер перфорации: 5x5 мм
 • Нагрузка: 25 кг
 
-Многофункциональный и адаптируемый.`,
+Регулируемая высота и простая установка.`,
         },
         features: {
           ka: [
-            "სიგრძე: 120 სმ",
-            "სიგანე: 4 სმ",
-            "სისქე: 2 სმ",
-            "მასალა: ლითონი",
+            "სიმაღლე: 200 სმ",
+            "სიგანე: 5 სმ",
+            "სისქე: 3 სმ",
+            "პერფორაციის ზომა: 5x5 მმ",
             "დატვირთვა: 25 კგ",
-            "პერფორირებული დიზაინი",
-            "კოროზიისგან დაცული",
+            "რეგულირებადი სიმაღლე",
+            "კედლის მონტაჟი",
             "მარტივი მონტაჟი",
           ],
           en: [
-            "Length: 120 cm",
-            "Width: 4 cm",
-            "Thickness: 2 cm",
-            "Material: Metal",
+            "Height: 200 cm",
+            "Width: 5 cm",
+            "Thickness: 3 cm",
+            "Perforation size: 5x5 mm",
             "Load capacity: 25 kg",
-            "Perforated design",
-            "Corrosion resistant",
-            "Easy assembly",
+            "Adjustable height",
+            "Wall mounting",
+            "Easy installation",
           ],
           ru: [
-            "Длина: 120 см",
-            "Ширина: 4 см",
-            "Толщина: 2 см",
-            "Материал: Металл",
+            "Высота: 200 см",
+            "Ширина: 5 см",
+            "Толщина: 3 см",
+            "Размер перфорации: 5x5 мм",
             "Нагрузка: 25 кг",
-            "Перфорированный дизайн",
-            "Устойчив к коррозии",
-            "Простая сборка",
+            "Регулируемая высота",
+            "Настенный монтаж",
+            "Простая установка",
           ],
         },
         images: [
-          "/images/perforated-profile-2.jpg",
           "/images/perforated-profile-1.jpg",
+          "/images/perforated-profile-2.jpg",
           "/images/perforated-profile-3.jpg",
           "/images/perforated-profile-4.jpg",
         ],
-        colors: ["ნაცარი", t("white")],
-        sizes: ["120x4x2"],
-        category: t("marketShelves"),
+        colors: [t("white"), t("black")],
+        sizes: ["200x5x3"],
+        category: t("perforatedProfile"),
+        rating: 4.4,
+        reviewCount: 16,
+      },
+      "perforated-wall-1": {
+        id: "perforated-wall-1",
+        name: t("perforatedWallUnit"),
+        price: 320.0,
+        description: {
+          ka: `პერფორირებული კედელი აქსესუარების საკიდისთვის. მაღალი ხარისხის ლითონისგან დამზადებული, იდეალურია მარკეტებისა და მაღაზიებისთვის.
+
+**ტექნიკური მახასიათებლები:**
+• სიმაღლე: 200 სმ
+• სიღრმე: 100 სმ  
+• სისქე: 2 სმ
+• პერფორაციის ზომა: 5x5 მმ
+• დატვირთვა: 50 კგ
+
+მრავალფუნქციური და ეფექტური გადაწყვეტა.`,
+          en: `Perforated wall for accessory hanging. Made from high-quality metal, ideal for markets and stores.
+
+**Technical Specifications:**
+• Height: 200 cm
+• Depth: 100 cm
+• Thickness: 2 cm
+• Perforation size: 5x5 mm
+• Load capacity: 50 kg
+
+Multifunctional and efficient solution.`,
+          ru: `Перфорированная стена для подвешивания аксессуаров. Изготовлена из высококачественного металла, идеальна для рынков и магазинов.
+
+**Технические характеристики:**
+• Высота: 200 см
+• Глубина: 100 см
+• Толщина: 2 см
+• Размер перфорации: 5x5 мм
+• Нагрузка: 50 кг
+
+Многофункциональное и эффективное решение.`,
+        },
+        features: {
+          ka: [
+            "სიმაღლე: 200 სმ",
+            "სიღრმე: 100 სმ",
+            "სისქე: 2 სმ",
+            "პერფორაციის ზომა: 5x5 მმ",
+            "დატვირთვა: 50 კგ",
+            "მრავალფუნქციური",
+            "კედლის მონტაჟი",
+            "მარტივი მონტაჟი",
+          ],
+          en: [
+            "Height: 200 cm",
+            "Depth: 100 cm",
+            "Thickness: 2 cm",
+            "Perforation size: 5x5 mm",
+            "Load capacity: 50 kg",
+            "Multifunctional",
+            "Wall mounting",
+            "Easy installation",
+          ],
+          ru: [
+            "Высота: 200 см",
+            "Глубина: 100 см",
+            "Толщина: 2 см",
+            "Размер перфорации: 5x5 мм",
+            "Нагрузка: 50 кг",
+            "Многофункциональная",
+            "Настенный монтаж",
+            "Простая установка",
+          ],
+        },
+        images: [
+          "/images/perforated-wall-cover-1.jpg",
+          "/images/perforated-wall-cover-2.jpg",
+          "/images/perforated-wall-cover-3.jpg",
+        ],
+        colors: [t("white"), t("black")],
+        sizes: ["200x100x2"],
+        category: t("perforatedWall"),
         rating: 4.3,
         reviewCount: 11,
       },
       "basket-shelving-1": {
         id: "basket-shelving-1",
         name: t("basketShelvingUnit"),
-        price: 220.0,
+        price: 280.0,
         description: {
-          ka: `კალათიანი სტელაჟი მარკეტის თაროებისთვის. მაღალი ხარისხის ლითონისგან დამზადებული, იდეალურია მარკეტებისა და მაღაზიებისთვის.
+          ka: `კალათიანი სტელაჟი 4 კალათით და საბურავით. მაღალი ხარისხის ლითონისგან დამზადებული, იდეალურია სახლისა და ოფისისთვის.
 
 **ტექნიკური მახასიათებლები:**
 • სიმაღლე: 150 სმ
-• სიგანე: 90 სმ  
+• სიგანე: 60 სმ  
 • სიღრმე: 40 სმ
 • კალათების რაოდენობა: 4
-• დატვირთვა: 30 კგ კალათაზე
+• დატვირთვა: 20 კგ კალათზე
 
-იდეალურია პროდუქტების ორგანიზებული გამოსაჩენად.`,
-          en: `Basket shelving for market shelves. Made from high-quality metal, ideal for markets and stores.
+კომპაქტური და ფუნქციური დიზაინი.`,
+          en: `Basket shelving with 4 baskets and cover. Made from high-quality metal, ideal for home and office.
 
 **Technical Specifications:**
 • Height: 150 cm
-• Width: 90 cm
+• Width: 60 cm
 • Depth: 40 cm
 • Number of baskets: 4
-• Load capacity: 30 kg per basket
+• Load capacity: 20 kg per basket
 
-Perfect for organized product display.`,
-          ru: `Стеллаж с корзинами для торговых полок. Изготовлен из высококачественного металла, идеален для рынков и магазинов.
+Compact and functional design.`,
+          ru: `Стеллаж с корзинами с 4 корзинами и крышкой. Изготовлен из высококачественного металла, идеален для дома и офиса.
 
 **Технические характеристики:**
 • Высота: 150 см
-• Ширина: 90 см
+• Ширина: 60 см
 • Глубина: 40 см
 • Количество корзин: 4
-• Нагрузка: 30 кг на корзину
+• Нагрузка: 20 кг на корзину
 
-Идеален для организованной демонстрации товаров.`,
+Компактный и функциональный дизайн.`,
         },
         features: {
           ka: [
             "სიმაღლე: 150 სმ",
-            "სიგანე: 90 სმ",
+            "სიგანე: 60 სმ",
             "სიღრმე: 40 სმ",
             "კალათების რაოდენობა: 4",
-            "დატვირთვა: 30 კგ კალათაზე",
-            "მობილური კალათები",
-            "კოროზიისგან დაცული",
+            "დატვირთვა: 20 კგ კალათზე",
+            "კომპაქტური დიზაინი",
+            "საბურავით",
             "მარტივი მონტაჟი",
           ],
           en: [
             "Height: 150 cm",
-            "Width: 90 cm",
+            "Width: 60 cm",
             "Depth: 40 cm",
             "Number of baskets: 4",
-            "Load capacity: 30 kg per basket",
-            "Mobile baskets",
-            "Corrosion resistant",
+            "Load capacity: 20 kg per basket",
+            "Compact design",
+            "With cover",
             "Easy assembly",
           ],
           ru: [
             "Высота: 150 см",
-            "Ширина: 90 см",
+            "Ширина: 60 см",
             "Глубина: 40 см",
             "Количество корзин: 4",
-            "Нагрузка: 30 кг на корзину",
-            "Мобильные корзины",
-            "Устойчив к коррозии",
+            "Нагрузка: 20 кг на корзину",
+            "Компактный дизайн",
+            "С крышкой",
             "Простая сборка",
           ],
         },
@@ -717,121 +795,46 @@ Perfect for organized product display.`,
           "/images/basket-shelving-display.jpeg",
         ],
         colors: [t("white"), t("black")],
-        sizes: ["150x90x40"],
-        category: t("marketShelves"),
-        rating: 4.6,
-        reviewCount: 13,
-      },
-      "basket-shelving-2": {
-        id: "basket-shelving-2",
-        name: t("basketShelvingLargeUnit"),
-        price: 280.0,
-        description: {
-          ka: `დიდი კალათიანი სტელაჟი მარკეტის თაროებისთვის. მაღალი ხარისხის ლითონისგან დამზადებული, იდეალურია დიდი მარკეტებისა და სუპერმარკეტებისთვის.
-
-**ტექნიკური მახასიათებლები:**
-• სიმაღლე: 180 სმ
-• სიგანე: 120 სმ  
-• სიღრმე: 50 სმ
-• კალათების რაოდენობა: 6
-• დატვირთვა: 40 კგ კალათაზე
-
-მეტი ტევადობა და ფუნქციონალობა.`,
-          en: `Large basket shelving for market shelves. Made from high-quality metal, ideal for large markets and supermarkets.
-
-**Technical Specifications:**
-• Height: 180 cm
-• Width: 120 cm
-• Depth: 50 cm
-• Number of baskets: 6
-• Load capacity: 40 kg per basket
-
-More capacity and functionality.`,
-          ru: `Большой стеллаж с корзинами для торговых полок. Изготовлен из высококачественного металла, идеален для больших рынков и супермаркетов.
-
-**Технические характеристики:**
-• Высота: 180 см
-• Ширина: 120 см
-• Глубина: 50 см
-• Количество корзин: 6
-• Нагрузка: 40 кг на корзину
-
-Больше вместимости и функциональности.`,
-        },
-        features: {
-          ka: [
-            "სიმაღლე: 180 სმ",
-            "სიგანე: 120 სმ",
-            "სიღრმე: 50 სმ",
-            "კალათების რაოდენობა: 6",
-            "დატვირთვა: 40 კგ კალათაზე",
-            "დიდი ტევადობა",
-            "კოროზიისგან დაცული",
-            "მარტივი მონტაჟი",
-          ],
-          en: [
-            "Height: 180 cm",
-            "Width: 120 cm",
-            "Depth: 50 cm",
-            "Number of baskets: 6",
-            "Load capacity: 40 kg per basket",
-            "Large capacity",
-            "Corrosion resistant",
-            "Easy assembly",
-          ],
-          ru: [
-            "Высота: 180 см",
-            "Ширина: 120 см",
-            "Глубина: 50 см",
-            "Количество корзин: 6",
-            "Нагрузка: 40 кг на корзину",
-            "Большая вместимость",
-            "Устойчив к коррозии",
-            "Простая сборка",
-          ],
-        },
-        images: ["/images/basket-shelving-large-white.jpeg", "/images/basket-shelving-white.jpeg"],
-        colors: [t("white")],
-        sizes: ["180x120x50"],
-        category: t("marketShelves"),
-        rating: 4.8,
-        reviewCount: 8,
+        sizes: ["150x60x40"],
+        category: t("basketShelving"),
+        rating: 4.5,
+        reviewCount: 19,
       },
       "tier-shelving-1": {
         id: "tier-shelving-1",
         name: t("tierShelvingUnit"),
-        price: 190.0,
+        price: 220.0,
         description: {
-          ka: `4-იარუსიანი სტელაჟი მარკეტის თაროებისთვის. მაღალი ხარისხის ლითონისგან დამზადებული, იდეალურია მარკეტებისა და მაღაზიებისთვის.
+          ka: `4-იარუსიანი სტელაჟი. მაღალი ხარისხის ლითონისგან დამზადებული, იდეალურია სახლისა და ოფისისთვის.
 
 **ტექნიკური მახასიათებლები:**
 • სიმაღლე: 160 სმ
 • სიგანე: 80 სმ  
 • სიღრმე: 35 სმ
 • იარუსების რაოდენობა: 4
-• დატვირთვა: 25 კგ იარუსზე
+• დატვირთვა: 30 კგ იარუსზე
 
-კომპაქტური და ეფექტური.`,
-          en: `4-tier shelving for market shelves. Made from high-quality metal, ideal for markets and stores.
+მრავალფერი ფერების არჩევანი.`,
+          en: `4-tier shelving unit. Made from high-quality metal, ideal for home and office.
 
 **Technical Specifications:**
 • Height: 160 cm
 • Width: 80 cm
 • Depth: 35 cm
 • Number of tiers: 4
-• Load capacity: 25 kg per tier
+• Load capacity: 30 kg per tier
 
-Compact and efficient.`,
-          ru: `4-ярусный стеллаж для торговых полок. Изготовлен из высококачественного металла, идеален для рынков и магазинов.
+Multiple color options available.`,
+          ru: `4-ярусный стеллаж. Изготовлен из высококачественного металла, идеален для дома и офиса.
 
 **Технические характеристики:**
 • Высота: 160 см
 • Ширина: 80 см
 • Глубина: 35 см
 • Количество ярусов: 4
-• Нагрузка: 25 кг на ярус
+• Нагрузка: 30 кг на ярус
 
-Компактный и эффективный.`,
+Доступны различные цветовые варианты.`,
         },
         features: {
           ka: [
@@ -839,9 +842,9 @@ Compact and efficient.`,
             "სიგანე: 80 სმ",
             "სიღრმე: 35 სმ",
             "იარუსების რაოდენობა: 4",
-            "დატვირთვა: 25 კგ იარუსზე",
-            "კომპაქტური დიზაინი",
-            "კოროზიისგან დაცული",
+            "დატვირთვა: 30 კგ იარუსზე",
+            "მრავალფერი ფერები",
+            "კომპაქტური",
             "მარტივი მონტაჟი",
           ],
           en: [
@@ -849,9 +852,9 @@ Compact and efficient.`,
             "Width: 80 cm",
             "Depth: 35 cm",
             "Number of tiers: 4",
-            "Load capacity: 25 kg per tier",
-            "Compact design",
-            "Corrosion resistant",
+            "Load capacity: 30 kg per tier",
+            "Multiple colors",
+            "Compact",
             "Easy assembly",
           ],
           ru: [
@@ -859,1403 +862,1093 @@ Compact and efficient.`,
             "Ширина: 80 см",
             "Глубина: 35 см",
             "Количество ярусов: 4",
-            "Нагрузка: 25 кг на ярус",
-            "Компактный дизайн",
-            "Устойчив к коррозии",
+            "Нагрузка: 30 кг на ярус",
+            "Различные цвета",
+            "Компактный",
             "Простая сборка",
           ],
         },
         images: [
-          "/images/tier-shelving-red.jpeg",
-          "/images/tier-shelving-blue.jpeg",
           "/images/tier-shelving-colors.jpeg",
+          "/images/tier-shelving-blue.jpeg",
+          "/images/tier-shelving-red.jpeg",
         ],
-        colors: ["წითელი", t("blue")],
+        colors: [t("blue"), t("red"), "ყვითელი", "მწვანე"],
         sizes: ["160x80x35"],
-        category: t("marketShelves"),
+        category: t("tierShelving"),
         rating: 4.4,
-        reviewCount: 16,
-      },
-      "tier-shelving-2": {
-        id: "tier-shelving-2",
-        name: t("largeTierShelvingUnit"),
-        price: 250.0,
-        description: {
-          ka: `დიდი 4-იარუსიანი სტელაჟი მარკეტის თაროებისთვის. მაღალი ხარისხის ლითონისგან დამზადებული, იდეალურია დიდი მარკეტებისა და სუპერმარკეტებისთვის.
-
-**ტექნიკური მახასიათებლები:**
-• სიმაღლე: 200 სმ
-• სიგანე: 100 სმ  
-• სიღრმე: 40 სმ
-• იარუსების რაოდენობა: 4
-• დატვირთვა: 35 კგ იარუსზე
-
-მეტი ტევადობა და სტაბილურობა.`,
-          en: `Large 4-tier shelving for market shelves. Made from high-quality metal, ideal for large markets and supermarkets.
-
-**Technical Specifications:**
-• Height: 200 cm
-• Width: 100 cm
-• Depth: 40 cm
-• Number of tiers: 4
-• Load capacity: 35 kg per tier
-
-More capacity and stability.`,
-          ru: `Большой 4-ярусный стеллаж для торговых полок. Изготовлен из высококачественного металла, идеален для больших рынков и супермаркетов.
-
-**Технические характеристики:**
-• Высота: 200 см
-• Ширина: 100 см
-• Глубина: 40 см
-• Количество ярусов: 4
-• Нагрузка: 35 кг на ярус
-
-Больше вместимости и стабильности.`,
-        },
-        features: {
-          ka: [
-            "სიმაღლე: 200 სმ",
-            "სიგანე: 100 სმ",
-            "სიღრმე: 40 სმ",
-            "იარუსების რაოდენობა: 4",
-            "დატვირთვა: 35 კგ იარუსზე",
-            "დიდი ტევადობა",
-            "კოროზიისგან დაცული",
-            "მარტივი მონტაჟი",
-          ],
-          en: [
-            "Height: 200 cm",
-            "Width: 100 cm",
-            "Depth: 40 cm",
-            "Number of tiers: 4",
-            "Load capacity: 35 kg per tier",
-            "Large capacity",
-            "Corrosion resistant",
-            "Easy assembly",
-          ],
-          ru: [
-            "Высота: 200 см",
-            "Ширина: 100 см",
-            "Глубина: 40 см",
-            "Количество ярусов: 4",
-            "Нагрузка: 35 кг на ярус",
-            "Большая вместимость",
-            "Устойчив к коррозии",
-            "Простая сборка",
-          ],
-        },
-        images: ["/images/large-tier-shelving-colors.jpeg", "/images/tier-shelving-colors.jpeg"],
-        colors: ["წითელი", t("blue"), "მწვანე"],
-        sizes: ["200x100x40"],
-        category: t("marketShelves"),
-        rating: 4.7,
-        reviewCount: 10,
+        reviewCount: 25,
       },
       "pallet-shelving-1": {
         id: "pallet-shelving-1",
         name: t("palletShelvingUnit1"),
         price: 850.0,
         description: {
-          ka: `პროფესიონალური საპალეტე სტელაჟი ინდუსტრიული საწყობებისთვის. მაღალი ხარისხის ლითონისგან დამზადებული, იდეალურია მძიმე ტვირთების ორგანიზებული შენახვისთვის.
+          ka: `საპალეტე სტელაჟი 352x270x85. მაღალი ხარისხის ლითონისგან დამზადებული, იდეალურია დიდი საწყობებისთვის.
 
 **ტექნიკური მახასიათებლები:**
 • სიმაღლე: 352 სმ
-• სიგანე: 270 სმ
+• სიგანე: 270 სმ  
 • სიღრმე: 85 სმ
-• დატვირთვა: 2000 კგ ერთ იარუსზე
-• მასალა: მაღალი ხარისხის ლითონი
+• იარუსების რაოდენობა: 3
+• დატვირთვა: 1000 კგ იარუსზე
 
-იდეალურია საპალეტე ტვირთების, დიდი ზომის ყუთების და ინდუსტრიული მასალების შენახვისთვის.`,
-          en: `Professional pallet racking for industrial warehouses. Made from high-quality metal, ideal for organized storage of heavy loads.
+პროფესიონალური საწყობო გადაწყვეტა.`,
+          en: `Pallet racking 352x270x85. Made from high-quality metal, ideal for large warehouses.
 
 **Technical Specifications:**
 • Height: 352 cm
 • Width: 270 cm
 • Depth: 85 cm
-• Load capacity: 2000 kg per tier
-• Material: High-quality metal
+• Number of tiers: 3
+• Load capacity: 1000 kg per tier
 
-Perfect for storing palletized goods, large boxes and industrial materials.`,
-          ru: `Профессиональный паллетный стеллаж для промышленных складов. Изготовлен из высококачественного металла, идеален для организованного хранения тяжелых грузов.
+Professional warehouse solution.`,
+          ru: `Паллетный стеллаж 352x270x85. Изготовлен из высококачественного металла, идеален для больших складов.
 
 **Технические характеристики:**
 • Высота: 352 см
 • Ширина: 270 см
 • Глубина: 85 см
-• Нагрузка: 2000 кг на ярус
-• Материал: Высококачественный металл
+• Количество ярусов: 3
+• Нагрузка: 1000 кг на ярус
 
-Идеален для хранения паллетированных товаров, больших коробок и промышленных материалов.`,
+Профессиональное складское решение.`,
         },
         features: {
           ka: [
             "სიმაღლე: 352 სმ",
             "სიგანე: 270 სმ",
             "სიღრმე: 85 სმ",
-            "დატვირთვა: 2000 კგ ერთ იარუსზე",
-            "მაღალი ხარისხის ლითონი",
-            "კოროზიისგან დაცული",
-            "გაფართოებადი სისტემა",
-            "ინდუსტრიული ხარისხი",
+            "იარუსების რაოდენობა: 3",
+            "დატვირთვა: 1000 კგ იარუსზე",
+            "პროფესიონალური",
+            "მაღალი ტვირთამწეობა",
+            "მარტივი მონტაჟი",
           ],
           en: [
             "Height: 352 cm",
             "Width: 270 cm",
             "Depth: 85 cm",
-            "Load capacity: 2000 kg per tier",
-            "High-quality metal",
-            "Corrosion resistant",
-            "Expandable system",
-            "Industrial grade",
+            "Number of tiers: 3",
+            "Load capacity: 1000 kg per tier",
+            "Professional",
+            "High load capacity",
+            "Easy assembly",
           ],
           ru: [
             "Высота: 352 см",
             "Ширина: 270 см",
             "Глубина: 85 см",
-            "Нагрузка: 2000 кг на ярус",
-            "Высококачественный металл",
-            "Устойчив к коррозии",
-            "Расширяемая система",
-            "Промышленный класс",
+            "Количество ярусов: 3",
+            "Нагрузка: 1000 кг на ярус",
+            "Профессиональный",
+            "Высокая грузоподъемность",
+            "Простая сборка",
           ],
         },
-        images: ["/images/pallet-shelving-1.jpg"],
+        images: [
+          "/images/pallet-shelving-1.jpg",
+          "/images/pallet-shelving-2.jpg",
+          "/images/pallet-shelving-3.jpg",
+          "/images/pallet-shelving-4.png",
+        ],
         colors: [t("blue"), "ნარინჯისფერი"],
         sizes: ["352x270x85"],
         category: t("palletShelving"),
-        rating: 4.9,
-        reviewCount: 8,
-      },
-      "pallet-shelving-2": {
-        id: "pallet-shelving-2",
-        name: t("palletShelvingUnit2"),
-        price: 950.0,
-        description: {
-          ka: `პროფესიონალური საპალეტე სტელაჟი ინდუსტრიული საწყობებისთვის. მაღალი ხარისხის ლითონისგან დამზადებული, იდეალურია მძიმე ტვირთების ორგანიზებული შენახვისთვის.
-
-**ტექნიკური მახასიათებლები:**
-• სიმაღლე: 352 სმ
-• სიგანე: 270 სმ
-• სიღრმე: 105 სმ
-• დატვირთვა: 3000 კგ ერთ იარუსზე
-• მასალა: მაღალი ხარისხის ლითონი
-
-იდეალურია საპალეტე ტვირთების, დიდი ზომის ყუთების და ინდუსტრიული მასალების შენახვისთვის.`,
-          en: `Professional pallet racking for industrial warehouses. Made from high-quality metal, ideal for organized storage of heavy loads.
-
-**Technical Specifications:**
-• Height: 352 cm
-• Width: 270 cm
-• Depth: 105 cm
-• Load capacity: 3000 kg per tier
-• Material: High-quality metal
-
-Perfect for storing palletized goods, large boxes and industrial materials.`,
-          ru: `Профессиональный паллетный стеллаж для промышленных складов. Изготовлен из высококачественного металла, идеален для организованного хранения тяжелых грузов.
-
-**Технические характеристики:**
-• Высота: 352 см
-• Ширина: 270 см
-• Глубина: 105 см
-• Нагрузка: 3000 кг на ярус
-• Материал: Высококачественный металл
-
-Идеален для хранения паллетированных товаров, больших коробок и промышленных материалов.`,
-        },
-        features: {
-          ka: [
-            "სიმაღლე: 352 სმ",
-            "სიგანე: 270 სმ",
-            "სიღრმე: 105 სმ",
-            "დატვირთვა: 3000 კგ ერთ იარუსზე",
-            "მაღალი ხარისხის ლითონი",
-            "კოროზიისგან დაცული",
-            "გაფართოებადი სისტემა",
-            "ინდუსტრიული ხარისხი",
-          ],
-          en: [
-            "Height: 352 cm",
-            "Width: 270 cm",
-            "Depth: 105 cm",
-            "Load capacity: 3000 kg per tier",
-            "High-quality metal",
-            "Corrosion resistant",
-            "Expandable system",
-            "Industrial grade",
-          ],
-          ru: [
-            "Высота: 352 см",
-            "Ширина: 270 см",
-            "Глубина: 105 см",
-            "Нагрузка: 3000 кг на ярус",
-            "Высококачественный металл",
-            "Устойчив к коррозии",
-            "Расширяемая система",
-            "Промышленный класс",
-          ],
-        },
-        images: ["/images/pallet-shelving-2.jpg"],
-        colors: [t("blue"), "ნარინჯისფერი"],
-        sizes: ["352x270x105"],
-        category: t("palletShelving"),
         rating: 4.8,
-        reviewCount: 12,
-      },
-      "pallet-shelving-3": {
-        id: "pallet-shelving-3",
-        name: t("palletShelvingUnit3"),
-        price: 1050.0,
-        description: {
-          ka: `პროფესიონალური საპალეტე სტელაჟი ინდუსტრიული საწყობებისთვის. მაღალი ხარისხის ლითონისგან დამზადებული, იდეალურია მძიმე ტვირთების ორგანიზებული შენახვისთვის.
-
-**ტექნიკური მახასიათებლები:**
-• სიმაღლე: 405 სმ
-• სიგანე: 270 სმ
-• სიღრმე: 105 სმ
-• დატვირთვა: 3000 კგ ერთ იარუსზე
-• მასალა: მაღალი ხარისხის ლითონი
-
-იდეალურია საპალეტე ტვირთების, დიდი ზომის ყუთების და ინდუსტრიული მასალების შენახვისთვის.`,
-          en: `Professional pallet racking for industrial warehouses. Made from high-quality metal, ideal for organized storage of heavy loads.
-
-**Technical Specifications:**
-• Height: 405 cm
-• Width: 270 cm
-• Depth: 105 cm
-• Load capacity: 3000 kg per tier
-• Material: High-quality metal
-
-Perfect for storing palletized goods, large boxes and industrial materials.`,
-          ru: `Профессиональный паллетный стеллаж для промышленных складов. Изготовлен из высококачественного металла, идеален для организованного хранения тяжелых грузов.
-
-**Технические характеристики:**
-• Высота: 405 см
-• Ширина: 270 см
-• Глубина: 105 см
-• Нагрузка: 3000 кг на ярус
-• Материал: Высококачественный металл
-
-Идеален для хранения паллетированных товаров, больших коробок и промышленных материалов.`,
-        },
-        features: {
-          ka: [
-            "სიმაღლე: 405 სმ",
-            "სიგანე: 270 სმ",
-            "სიღრმე: 105 სმ",
-            "დატვირთვა: 3000 კგ ერთ იარუსზე",
-            "მაღალი ხარისხის ლითონი",
-            "კოროზიისგან დაცული",
-            "გაფართოებადი სისტემა",
-            "ინდუსტრიული ხარისხი",
-          ],
-          en: [
-            "Height: 405 cm",
-            "Width: 270 cm",
-            "Depth: 105 cm",
-            "Load capacity: 3000 kg per tier",
-            "High-quality metal",
-            "Corrosion resistant",
-            "Expandable system",
-            "Industrial grade",
-          ],
-          ru: [
-            "Высота: 405 см",
-            "Ширина: 270 см",
-            "Глубина: 105 см",
-            "Нагрузка: 3000 кг на ярус",
-            "Высококачественный металл",
-            "Устойчив к коррозии",
-            "Расширяемая система",
-            "Промышленный класс",
-          ],
-        },
-        images: ["/images/pallet-shelving-3.jpg"],
-        colors: [t("blue"), "ნარინჯისფერი"],
-        sizes: ["405x270x105"],
-        category: t("palletShelving"),
-        rating: 4.9,
-        reviewCount: 6,
-      },
-      "pallet-shelving-4": {
-        id: "pallet-shelving-4",
-        name: t("palletShelvingUnit4"),
-        price: 1250.0,
-        description: {
-          ka: `პროფესიონალური საპალეტე სტელაჟი ინდუსტრიული საწყობებისთვის. მაღალი ხარისხის ლითონისგან დამზადებული, იდეალურია მძიმე ტვირთების ორგანიზებული შენახვისთვის.
-
-**ტექნიკური მახასიათებლები:**
-• სიმაღლე: 502 სმ
-• სიგანე: 270 სმ
-• სიღრმე: 105 სმ
-• დატვირთვა: 3000 კგ ერთ იარუსზე
-• მასალა: მაღალი ხარისხის ლითონი
-
-იდეალურია საპალეტე ტვირთების, დიდი ზომის ყუთების და ინდუსტრიული მასალების შენახვისთვის.`,
-          en: `Professional pallet racking for industrial warehouses. Made from high-quality metal, ideal for organized storage of heavy loads.
-
-**Technical Specifications:**
-• Height: 502 cm
-• Width: 270 cm
-• Depth: 105 cm
-• Load capacity: 3000 kg per tier
-• Material: High-quality metal
-
-Perfect for storing palletized goods, large boxes and industrial materials.`,
-          ru: `Профессиональный паллетный стеллаж для промышленных складов. Изготовлен из высококачественного металла, идеален для организованного хранения тяжелых грузов.
-
-**Технические характеристики:**
-• Высота: 502 см
-• Ширина: 270 см
-• Глубина: 105 см
-• Нагрузка: 3000 кг на ярус
-• Материал: Высококачественный металл
-
-Идеален для хранения паллетированных товаров, больших коробок и промышленных материалов.`,
-        },
-        features: {
-          ka: [
-            "სიმაღლე: 502 სმ",
-            "სიგანე: 270 სმ",
-            "სიღრმე: 105 სმ",
-            "დატვირთვა: 3000 კგ ერთ იარუსზე",
-            "მაღალი ხარისხის ლითონი",
-            "კოროზიისგან დაცული",
-            "გაფართოებადი სისტემა",
-            "ინდუსტრიული ხარისხი",
-          ],
-          en: [
-            "Height: 502 cm",
-            "Width: 270 cm",
-            "Depth: 105 cm",
-            "Load capacity: 3000 kg per tier",
-            "High-quality metal",
-            "Corrosion resistant",
-            "Expandable system",
-            "Industrial grade",
-          ],
-          ru: [
-            "Высота: 502 см",
-            "Ширина: 270 см",
-            "Глубина: 105 см",
-            "Нагрузка: 3000 кг на ярус",
-            "Высококачественный металл",
-            "Устойчив к коррозии",
-            "Расширяемая система",
-            "Промышленный класс",
-          ],
-        },
-        images: ["/images/pallet-shelving-4.png"],
-        colors: [t("blue"), "ნარინჯისფერი"],
-        sizes: ["502x270x105"],
-        category: t("palletShelving"),
-        rating: 5.0,
-        reviewCount: 4,
+        reviewCount: 8,
       },
       "archive-shelving-1": {
         id: "archive-shelving-1",
         name: t("archiveShelvingUnit"),
-        price: 320.0,
+        price: 420.0,
         description: {
-          ka: `პროფესიონალური საარქივო სტელაჟი დოკუმენტების და საარქივო მასალების ორგანიზებული შენახვისთვის. მაღალი ხარისხის ლითონისგან დამზადებული, იდეალურია ოფისებისა და საარქივო ოთახებისთვის.
+          ka: `საარქივო სტელაჟი დოკუმენტებისთვის. მაღალი ხარისხის ლითონისგან დამზადებული, იდეალურია ოფისებისა და არქივებისთვის.
 
 **ტექნიკური მახასიათებლები:**
 • სიმაღლე: 200 სმ
-• სიგანე: 92 სმ  
-• სიღრმე: 30 ან 60 სმ
-• თაროების რაოდენობა: 5
-• დატვირთვა: 80 კგ ერთ თაროზე
+• სიგანე: 100 სმ  
+• სიღრმე: 35 სმ
+• იარუსების რაოდენობა: 6
+• დატვირთვა: 80 კგ იარუსზე
 
-იდეალურია საარქივო ყუთების, ფაილების და დოკუმენტების შენახვისთვის. პერფორირებული კონსტრუქცია უზრუნველყოფს ვენტილაციას.`,
-          en: `Professional archive shelving for organized storage of documents and archival materials. Made from high-quality metal, ideal for offices and archive rooms.
+სპეციალურად შექმნილია დოკუმენტების შენახვისთვის.`,
+          en: `Archive shelving for documents. Made from high-quality metal, ideal for offices and archives.
 
 **Technical Specifications:**
 • Height: 200 cm
-• Width: 92 cm
-• Depth: 30 or 60 cm
-• Number of shelves: 5
-• Load capacity: 80 kg per shelf
+• Width: 100 cm
+• Depth: 35 cm
+• Number of tiers: 6
+• Load capacity: 80 kg per tier
 
-Perfect for storing archive boxes, files and documents. Perforated construction ensures ventilation.`,
-          ru: `Профессиональный архивный стеллаж для организованного хранения документов и архивных материалов. Изготовлен из высококачественного металла, идеален для офисов и архивных помещений.
+Specially designed for document storage.`,
+          ru: `Архивный стеллаж для документов. Изготовлен из высококачественного металла, идеален для офисов и архивов.
 
 **Технические характеристики:**
 • Высота: 200 см
-• Ширина: 92 см
-• Глубина: 30 или 60 см
-• Количество полок: 5
-• Нагрузка: 80 кг на полку
+• Ширина: 100 см
+• Глубина: 35 см
+• Количество ярусов: 6
+• Нагрузка: 80 кг на ярус
 
-Идеален для хранения архивных коробок, файлов и документов. Перфорированная конструкция обеспечивает вентиляцию.`,
+Специально разработан для хранения документов.`,
         },
         features: {
           ka: [
             "სიმაღლე: 200 სმ",
-            "სიგანე: 92 სმ",
-            "სიღრმე: 30 ან 60 სმ",
-            "თაროების რაოდენობა: 5",
-            "დატვირთვა: 80 კგ ერთ თაროზე",
-            "პერფორირებული კონსტრუქცია",
-            "კოროზიისგან დაცული",
+            "სიგანე: 100 სმ",
+            "სიღრმე: 35 სმ",
+            "იარუსების რაოდენობა: 6",
+            "დატვირთვა: 80 კგ იარუსზე",
+            "დოკუმენტებისთვის",
+            "კომპაქტური",
             "მარტივი მონტაჟი",
           ],
           en: [
             "Height: 200 cm",
-            "Width: 92 cm",
-            "Depth: 30 or 60 cm",
-            "Number of shelves: 5",
-            "Load capacity: 80 kg per shelf",
-            "Perforated construction",
-            "Corrosion resistant",
+            "Width: 100 cm",
+            "Depth: 35 cm",
+            "Number of tiers: 6",
+            "Load capacity: 80 kg per tier",
+            "For documents",
+            "Compact",
             "Easy assembly",
           ],
           ru: [
             "Высота: 200 см",
-            "Ширина: 92 см",
-            "Глубина: 30 или 60 см",
-            "Количество полок: 5",
-            "Нагрузка: 80 кг на полку",
-            "Перфорированная конструкция",
-            "Устойчив к коррозии",
+            "Ширина: 100 см",
+            "Глубина: 35 см",
+            "Количество ярусов: 6",
+            "Нагрузка: 80 кг на ярус",
+            "Для документов",
+            "Компактный",
             "Простая сборка",
           ],
         },
-        images: ["/images/archive-shelving-1.jpg"],
-        colors: [t("white"), "ნაცარი"],
-        sizes: ["200x92x30", "200x92x60"],
+        images: ["/images/archive-shelving-1.jpg", "/images/archive-shelving-2.jpg"],
+        colors: ["ნაცარი", t("white")],
+        sizes: ["200x100x35"],
         category: t("archiveShelving"),
         rating: 4.6,
-        reviewCount: 22,
+        reviewCount: 13,
       },
-      "archive-shelving-2": {
-        id: "archive-shelving-2",
-        name: t("archiveShelvingUnit2"),
-        price: 290.0,
-        description: {
-          ka: `მოდულური საარქივო სტელაჟი უნივერსალური გამოყენებისთვის. მაღალი ხარისხის ლითონისგან დამზადებული, იდეალურია ოფისებისა და სამზარეულოებისთვის.
-
-**ტექნიკური მახასიათებლები:**
-• სიმაღლე: 200 სმ
-• სიგრძე: 93 სმ  
-• სიღრმე: 31 ან 43 სმ
-• თაროების რაოდენობა: 5 ან 6
-• დატვირთვა: 70 კგ ერთ თაროზე
-
-მოდულური დიზაინი საშუალებას იძლევა მოერგოს ნებისმიერ ინტერიერს. ხელმისაწვდომია ნაცრისფერი და თეთრი ფერებით.`,
-          en: `Modular archive shelving for universal use. Made from high-quality metal, ideal for offices and kitchens.
-
-**Technical Specifications:**
-• Height: 200 cm
-• Width: 93 cm
-• Depth: 31 or 43 cm
-• Number of shelves: 5 or 6
-• Load capacity: 70 kg per shelf
-
-Modular design allows adaptation to any interior. Available in gray and white colors.`,
-          ru: `Модульный архивный стеллаж для универсального использования. Изготовлен из высококачественного металла, идеален для офисов и кухонь.
-
-**Технические характеристики:**
-• Высота: 200 см
-• Ширина: 93 см
-• Глубина: 31 или 43 см
-• Количество полок: 5 или 6
-• Нагрузка: 70 кг на полку
-
-Модульный дизайн позволяет адаптироваться к любому интерьеру. Доступен в сером и белом цветах.`,
-        },
-        features: {
-          ka: [
-            "სიმაღლე: 200 სმ",
-            "სიგრძე: 93 სმ",
-            "სიღრმე: 31 ან 43 სმ",
-            "თაროების რაოდენობა: 5 ან 6",
-            "დატვირთვა: 70 კგ ერთ თაროზე",
-            "მოდულური დიზაინი",
-            "კოროზიისგან დაცული",
-            "მარტივი მონტაჟი",
-          ],
-          en: [
-            "Height: 200 cm",
-            "Width: 93 cm",
-            "Depth: 31 or 43 cm",
-            "Number of shelves: 5 or 6",
-            "Load capacity: 70 kg per shelf",
-            "Modular design",
-            "Corrosion resistant",
-            "Easy assembly",
-          ],
-          ru: [
-            "Высота: 200 см",
-            "Ширина: 93 см",
-            "Глубина: 31 или 43 см",
-            "Количество полок: 5 или 6",
-            "Нагрузка: 70 кг на полку",
-            "Модульный дизайн",
-            "Устойчив к коррозии",
-            "Простая сборка",
-          ],
-        },
-        images: ["/images/archive-shelving-2.jpg"],
-        colors: ["ნაცარი", t("white")],
-        sizes: ["200x93x31", "200x93x43"],
-        category: t("archiveShelving"),
-        rating: 4.5,
-        reviewCount: 18,
-      },
-      // Add the 3 new POS materials products
       "shelf-price-display-1": {
         id: "shelf-price-display-1",
         name: t("shelfPriceDisplayUnit"),
-        price: 12.0,
+        price: 25.0,
         description: {
-          ka: `თაროს ფასმაჩვენებელი სისტემა მაღაზიებისთვის. მაღალი ხარისხის პლასტმასისგან დამზადებული, იდეალურია პროდუქტების ფასების ეფექტური წარმოსაჩენად.
+          ka: `თაროს ფასმაჩვენებელი სისტემა. მაღალი ხარისხის პლასტმასისგან დამზადებული, იდეალურია მარკეტებისა და მაღაზიებისთვის.
 
 **ტექნიკური მახასიათებლები:**
-• სიგრძე: 10-15 სმ
-• სიგანე: 3-5 სმ
-• მასალა: მაღალი ხარისხის პლასტმასი
-• ფერები: გამჭვირვალე, თეთრი
-• მონტაჟი: თაროზე დამაგრება
+• სიგრძე: 100 სმ
+• სიმაღლე: 4 სმ  
+• სისქე: 2 სმ
+• მასალა: გამძლე პლასტმასი
+• ფერი: გამჭვირვალე
 
-იდეალურია ფასების, აქციების და პროდუქტის ინფორმაციის გამოსაჩენად.`,
-          en: `Shelf price display system for stores. Made from high-quality plastic, ideal for effective price presentation.
+მარტივი დამონტაჟება და გამოყენება.`,
+          en: `Shelf price display system. Made from high-quality plastic, ideal for markets and stores.
 
 **Technical Specifications:**
-• Length: 10-15 cm
-• Width: 3-5 cm
-• Material: High-quality plastic
-• Colors: Transparent, white
-• Mounting: Shelf attachment
+• Length: 100 cm
+• Height: 4 cm
+• Thickness: 2 cm
+• Material: Durable plastic
+• Color: Transparent
 
-Perfect for displaying prices, promotions and product information.`,
-          ru: `Система ценовых полок для магазинов. Изготовлена из высококачественного пластика, идеальна для эффективной презентации цен.
+Easy installation and use.`,
+          ru: `Система ценовых полок. Изготовлена из высококачественного пластика, идеальна для рынков и магазинов.
 
 **Технические характеристики:**
-• Длина: 10-15 см
-• Ширина: 3-5 см
-• Материал: Высококачественный пластик
-• Цвета: Прозрачный, белый
-• Монтаж: Крепление к полке
+• Длина: 100 см
+• Высота: 4 см
+• Толщина: 2 см
+• Материал: Прочный пластик
+• Цвет: Прозрачный
 
-Идеален для отображения цен, акций и информации о товарах.`,
+Простая установка и использование.`,
         },
         features: {
           ka: [
-            "სიგრძე: 10-15 სმ",
-            "სიგანე: 3-5 სმ",
-            "მაღალი ხარისხის პლასტმასი",
-            "გამჭვირვალე და თეთრი ფერები",
-            "მარტივი მონტაჟი",
-            "მრავალჯერადი გამოყენება",
+            "სიგრძე: 100 სმ",
+            "სიმაღლე: 4 სმ",
+            "სისქე: 2 სმ",
+            "მასალა: გამძლე პლასტმასი",
+            "ფერი: გამჭვირვალე",
+            "მარტივი დამონტაჟება",
             "ეკონომიური",
-            "ეფექტური ფასების წარმოჩენა",
+            "მრავალჯერადი გამოყენება",
           ],
           en: [
-            "Length: 10-15 cm",
-            "Width: 3-5 cm",
-            "High-quality plastic",
-            "Transparent and white colors",
-            "Easy mounting",
-            "Reusable",
+            "Length: 100 cm",
+            "Height: 4 cm",
+            "Thickness: 2 cm",
+            "Material: Durable plastic",
+            "Color: Transparent",
+            "Easy installation",
             "Economical",
-            "Effective price display",
+            "Reusable",
           ],
           ru: [
-            "Длина: 10-15 см",
-            "Ширина: 3-5 см",
-            "Высококачественный пластик",
-            "Прозрачный и белый цвета",
-            "Простой монтаж",
-            "Многоразовое использование",
+            "Длина: 100 см",
+            "Высота: 4 см",
+            "Толщина: 2 см",
+            "Материал: Прочный пластик",
+            "Цвет: Прозрачный",
+            "Простая установка",
             "Экономичный",
-            "Эффективное отображение цен",
+            "Многоразовое использование",
           ],
         },
         images: ["/images/shelf-price-display-1.jpg"],
-        colors: ["გამჭვირვალე", t("white")],
-        sizes: ["10x3", "12x4", "15x5"],
-        category: t("posMaterials"),
-        rating: 4.3,
-        reviewCount: 15,
+        colors: ["გამჭვირვალე"],
+        sizes: ["100x4x2"],
+        category: t("shelfPriceDisplay"),
+        rating: 4.2,
+        reviewCount: 31,
       },
       "plastic-frames-1": {
         id: "plastic-frames-1",
         name: t("plasticFramesUnit"),
-        price: 8.0,
+        price: 15.0,
         description: {
-          ka: `ფერადი პლასტმასის ჩარჩოები სარეკლამო მასალებისთვის. მაღალი ხარისხის პლასტმასისგან დამზადებული, იდეალურია ფოტოების, რეკლამების და ინფორმაციის გამოსაჩენად.
+          ka: `ფერადი პლასტმასის ჩარჩოები. მაღალი ხარისხის პლასტმასისგან დამზადებული, იდეალურია ფასების და ინფორმაციის გამოსაჩენად.
 
 **ტექნიკური მახასიათებლები:**
-• ზომები: A4, A3, A5
-• მასალა: მაღალი ხარისხის პლასტმასი
-• ფერები: წითელი, ლურჯი, მწვანე, ყვითელი
-• სისქე: 2-3 მმ
+• ზომა: A4 (21x30 სმ)
+• მასალა: გამძლე პლასტმასი
+• სისქე: 3 მმ
+• ფერები: წითელი, ლურჯი, ყვითელი, მწვანე
 
-მრავალფეროვანი ფერები და ზომები ნებისმიერი დიზაინისთვის.`,
-          en: `Colored plastic frames for advertising materials. Made from high-quality plastic, ideal for displaying photos, ads and information.
+მრავალფერი ფერების არჩევანი.`,
+          en: `Colored plastic frames. Made from high-quality plastic, ideal for displaying prices and information.
 
 **Technical Specifications:**
-• Sizes: A4, A3, A5
-• Material: High-quality plastic
-• Colors: Red, blue, green, yellow
-• Thickness: 2-3 mm
+• Size: A4 (21x30 cm)
+• Material: Durable plastic
+• Thickness: 3 mm
+• Colors: Red, blue, yellow, green
 
-Various colors and sizes for any design.`,
-          ru: `Цветные пластиковые рамки для рекламных материалов. Изготовлены из высококачественного пластика, идеальны для отображения фотографий, рекламы и информации.
+Multiple color options available.`,
+          ru: `Цветные пластиковые рамки. Изготовлены из высококачественного пластика, идеальны для отображения цен и информации.
 
 **Технические характеристики:**
-• Размеры: A4, A3, A5
-• Материал: Высококачественный пластик
-• Цвета: Красный, синий, зеленый, желтый
-• Толщина: 2-3 мм
+• Размер: A4 (21x30 см)
+• Материал: Прочный пластик
+• Толщина: 3 мм
+• Цвета: Красный, синий, желтый, зеленый
 
-Различные цвета и размеры для любого дизайна.`,
+Доступны различные цветовые варианты.`,
         },
         features: {
           ka: [
-            "ზომები: A4, A3, A5",
-            "მაღალი ხარისხის პლასტმასი",
-            "4 ფერი: წითელი, ლურჯი, მწვანე, ყვითელი",
-            "სისქე: 2-3 მმ",
-            "მსუბუქი წონა",
+            "ზომა: A4 (21x30 სმ)",
+            "მასალა: გამძლე პლასტმასი",
+            "სისქე: 3 მმ",
+            "ფერები: წითელი, ლურჯი, ყვითელი, მწვანე",
+            "მსუბუქი",
             "ეკონომიური",
-            "მარტივი გამოყენება",
             "მრავალჯერადი გამოყენება",
+            "მარტივი გამოყენება",
           ],
           en: [
-            "Sizes: A4, A3, A5",
-            "High-quality plastic",
-            "4 colors: red, blue, green, yellow",
-            "Thickness: 2-3 mm",
+            "Size: A4 (21x30 cm)",
+            "Material: Durable plastic",
+            "Thickness: 3 mm",
+            "Colors: Red, blue, yellow, green",
             "Lightweight",
             "Economical",
-            "Easy to use",
             "Reusable",
+            "Easy to use",
           ],
           ru: [
-            "Размеры: A4, A3, A5",
-            "Высококачественный пластик",
-            "4 цвета: красный, синий, зеленый, желтый",
-            "Толщина: 2-3 мм",
-            "Легкий вес",
-            "Экономичный",
-            "Простота использования",
+            "Размер: A4 (21x30 см)",
+            "Материал: Прочный пластик",
+            "Толщина: 3 мм",
+            "Цвета: Красный, синий, желтый, зеленый",
+            "Легкие",
+            "Экономичные",
             "Многоразовое использование",
+            "Простота использования",
           ],
         },
         images: ["/images/plastic-frames-1.jpg"],
-        colors: ["წითელი", t("blue"), "მწვანე", "ყვითელი"],
-        sizes: ["A4", "A3", "A5"],
-        category: t("posMaterials"),
-        rating: 4.2,
-        reviewCount: 12,
+        colors: [t("red"), t("blue"), "ყვითელი", "მწვანე"],
+        sizes: ["A4"],
+        category: t("plasticFrames"),
+        rating: 4.1,
+        reviewCount: 42,
       },
       "frame-stands-1": {
         id: "frame-stands-1",
         name: t("frameStandsUnit"),
-        price: 25.0,
+        price: 35.0,
         description: {
-          ka: `ჩარჩოს სადგამი რეგულირებადი სარეკლამო მასალებისთვის. მაღალი ხარისხის ლითონისგან დამზადებული, იდეალურია ჩარჩოების და ფოსტერების დასადგმელად.
+          ka: `ჩარჩოს სადგამი რეგულირებადი. მაღალი ხარისხის ლითონისგან დამზადებული, იდეალურია ფასების და ინფორმაციის გამოსაჩენად.
 
 **ტექნიკური მახასიათებლები:**
-• სიმაღლე: 15-30 სმ (რეგულირებადი)
+• სიმაღლე: 15-25 სმ (რეგულირებადი)
 • ბაზის ზომა: 10x10 სმ
 • მასალა: ლითონი
-• ფერი: ნაცარი, შავი
-• წონა: 200-300 გრ
+• ფერი: ქრომირებული
 
-სტაბილური და რეგულირებადი ნებისმიერი ზომის ჩარჩოსთვის.`,
-          en: `Adjustable frame stand for advertising materials. Made from high-quality metal, ideal for displaying frames and posters.
+რეგულირებადი სიმაღლე და მტკიცე კონსტრუქცია.`,
+          en: `Adjustable frame stand. Made from high-quality metal, ideal for displaying prices and information.
 
 **Technical Specifications:**
-• Height: 15-30 cm (adjustable)
+• Height: 15-25 cm (adjustable)
 • Base size: 10x10 cm
 • Material: Metal
-• Color: Gray, black
-• Weight: 200-300 g
+• Color: Chrome
 
-Stable and adjustable for any frame size.`,
-          ru: `Регулируемая подставка для рамок для рекламных материалов. Изготовлена из высококачественного металла, идеальна для отображения рамок и постеров.
+Adjustable height and sturdy construction.`,
+          ru: `Регулируемая подставка для рамок. Изготовлена из высококачественного металла, идеальна для отображения цен и информации.
 
 **Технические характеристики:**
-• Высота: 15-30 см (регулируемая)
+• Высота: 15-25 см (регулируемая)
 • Размер основания: 10x10 см
 • Материал: Металл
-• Цвет: Серый, черный
-• Вес: 200-300 г
+• Цвет: Хром
 
-Стабильная и регулируемая для любого размера рамки.`,
+Регулируемая высота и прочная конструкция.`,
         },
         features: {
           ka: [
-            "სიმაღლე: 15-30 სმ (რეგულირებადი)",
+            "სიმაღლე: 15-25 სმ (რეგულირებადი)",
             "ბაზის ზომა: 10x10 სმ",
-            "მაღალი ხარისხის ლითონი",
-            "ნაცარი და შავი ფერები",
-            "წონა: 200-300 გრ",
-            "სტაბილური კონსტრუქცია",
-            "მარტივი რეგულირება",
-            "უნივერსალური გამოყენება",
+            "მასალა: ლითონი",
+            "ფერი: ქრომირებული",
+            "რეგულირებადი სიმაღლე",
+            "მტკიცე კონსტრუქცია",
+            "მარტივი გამოყენება",
+            "პროფესიონალური",
           ],
           en: [
-            "Height: 15-30 cm (adjustable)",
+            "Height: 15-25 cm (adjustable)",
             "Base size: 10x10 cm",
-            "High-quality metal",
-            "Gray and black colors",
-            "Weight: 200-300 g",
-            "Stable construction",
-            "Easy adjustment",
-            "Universal use",
+            "Material: Metal",
+            "Color: Chrome",
+            "Adjustable height",
+            "Sturdy construction",
+            "Easy to use",
+            "Professional",
           ],
           ru: [
-            "Высота: 15-30 см (регулируемая)",
+            "Высота: 15-25 см (регулируемая)",
             "Размер основания: 10x10 см",
             "Материал: Металл",
-            "Цвет: Серый, черный",
-            "Вес: 200-300 г",
-            "Стабильная конструкция",
-            "Простая регулировка",
-            "Универсальное использование",
+            "Цвет: Хром",
+            "Регулируемая высота",
+            "Прочная конструкция",
+            "Простота использования",
+            "Профессиональная",
           ],
         },
         images: ["/images/frame-stands-1.jpg"],
-        colors: ["ნაცარი", t("black")],
-        sizes: ["15-30x10x10"],
-        category: t("posMaterials"),
-        rating: 4.4,
-        reviewCount: 8,
+        colors: ["ქრომირებული"],
+        sizes: ["15-25x10x10"],
+        category: t("frameStands"),
+        rating: 4.3,
+        reviewCount: 18,
       },
-      // Add the 3 new trolley products
       "pallet-trolley-1": {
         id: "pallet-trolley-1",
         name: t("palletTrolleyUnit"),
-        price: 450.0,
+        price: 180.0,
         description: {
-          ka: `პალეტის ურიკა როლიკებით ინდუსტრიული გამოყენებისთვის. მაღალი ხარისხის ლითონისგან დამზადებული, იდეალურია საწყობებისა და ინდუსტრიული ობიექტებისთვის.
+          ka: `პალეტის ურიკა როხლი. მაღალი ხარისხის ლითონისგან დამზადებული, იდეალურია საწყობებისა და ლოჯისტიკისთვის.
 
 **ტექნიკური მახასიათებლები:**
-• ტვირთამწეობა: 2000 ან 3000 კგ
-• აწევის სიმაღლე: 200 მმ
-• ჩანგლების სიგრძე: 1150 × 550 მმ
-• გორგოლაჭები: პოლიურეთანი (PU)
-• მასალა: მაღალი ხარისხის ლითონი
+• სიგრძე: 120 სმ
+• სიგანე: 80 სმ  
+• სიმაღლე: 15 სმ
+• დატვირთვა: 1000 კგ
+• თვლების რაოდენობა: 4
 
-იდეალურია პალეტების ტრანსპორტირებისთვის საწყობებში.`,
-          en: `Pallet trolley with wheels for industrial use. Made from high-quality metal, ideal for warehouses and industrial facilities.
+მძიმე ტვირთების გადასატანად.`,
+          en: `Pallet trolley with wheels. Made from high-quality metal, ideal for warehouses and logistics.
 
 **Technical Specifications:**
-• Load capacity: 2000 or 3000 kg
-• Lifting height: 200 mm
-• Fork length: 1150 × 550 mm
-• Wheels: Polyurethane (PU)
-• Material: High-quality metal
+• Length: 120 cm
+• Width: 80 cm
+• Height: 15 cm
+• Load capacity: 1000 kg
+• Number of wheels: 4
 
-Perfect for transporting pallets in warehouses.`,
-          ru: `Паллетная тележка с колесами для промышленного использования. Изготовлена из высококачественного металла, идеальна для складов и промышленных объектов.
+For transporting heavy loads.`,
+          ru: `Паллетная тележка с колесами. Изготовлена из высококачественного металла, идеальна для складов и логистики.
 
 **Технические характеристики:**
-• Грузоподъемность: 2000 или 3000 кг
-• Высота подъема: 200 мм
-• Длина вил: 1150 × 550 мм
-• Колеса: Полиуретан (PU)
-• Материал: Высококачественный металл
+• Длина: 120 см
+• Ширина: 80 см
+• Высота: 15 см
+• Нагрузка: 1000 кг
+• Количество колес: 4
 
-Идеальна для транспортировки паллет на складах.`,
+Для транспортировки тяжелых грузов.`,
         },
         features: {
           ka: [
-            "ტვირთამწეობა: 2000 ან 3000 კგ",
-            "აწევის სიმაღლე: 200 მმ",
-            "ჩანგლების სიგრძე: 1150 × 550 მმ",
-            "გორგოლაჭები: პოლიურეთანი (PU)",
-            "მაღალი ხარისხის ლითონი",
-            "კოროზიისგან დაცული",
-            "ინდუსტრიული ხარისხი",
-            "მარტივი მართვა",
+            "სიგრძე: 120 სმ",
+            "სიგანე: 80 სმ",
+            "სიმაღლე: 15 სმ",
+            "დატვირთვა: 1000 კგ",
+            "თვლების რაოდენობა: 4",
+            "მძიმე ტვირთებისთვის",
+            "მანევრირებადი",
+            "გამძლე",
           ],
           en: [
-            "Load capacity: 2000 or 3000 kg",
-            "Lifting height: 200 mm",
-            "Fork length: 1150 × 550 mm",
-            "Wheels: Polyurethane (PU)",
-            "High-quality metal",
-            "Corrosion resistant",
-            "Industrial grade",
-            "Easy handling",
+            "Length: 120 cm",
+            "Width: 80 cm",
+            "Height: 15 cm",
+            "Load capacity: 1000 kg",
+            "Number of wheels: 4",
+            "For heavy loads",
+            "Maneuverable",
+            "Durable",
           ],
           ru: [
-            "Грузоподъемность: 2000 или 3000 кг",
-            "Высота подъема: 200 мм",
-            "Длина вил: 1150 × 550 мм",
-            "Колеса: Полиуретан (PU)",
-            "Высококачественный металл",
-            "Устойчив к коррозии",
-            "Промышленный класс",
-            "Простое управление",
+            "Длина: 120 см",
+            "Ширина: 80 см",
+            "Высота: 15 см",
+            "Нагрузка: 1000 кг",
+            "Количество колес: 4",
+            "Для тяжелых грузов",
+            "Маневренная",
+            "Прочная",
           ],
         },
         images: ["/images/pallet-trolley-red.jpeg"],
-        colors: ["წითელი"],
-        sizes: ["120x80x85"],
-        category: t("trolleys"),
+        colors: [t("red")],
+        sizes: ["120x80x15"],
+        category: t("palletTrolley"),
         rating: 4.7,
-        reviewCount: 15,
+        reviewCount: 12,
       },
-      "platform-trolley-blue-1": {
-        id: "platform-trolley-blue-1",
+      "platform-trolley-blue": {
+        id: "platform-trolley-blue",
         name: t("platformTrolleyBlue"),
-        price: 180.0,
+        price: 150.0,
         description: {
-          ka: `პლატფორმის ურიკა ლურჯი საბურავით. მაღალი ხარისხის ლითონისგან დამზადებული, იდეალურია მაღაზიებისა და საწყობებისთვის.
+          ka: `პლატფორმის ურიკა ლურჯი საბურავით. მაღალი ხარისხის ლითონისგან დამზადებული, იდეალურია საწყობებისა და ლოჯისტიკისთვის.
 
 **ტექნიკური მახასიათებლები:**
-• ტვირთამწეობა: 300 კგ
-• ზომა: L90*W60
-• როლიკები: 4 ცალი
-• საბურავი: ლურჯი
-• მასალა: მაღალი ხარისხის ლითონი
+• სიგრძე: 90 სმ
+• სიგანე: 60 სმ  
+• სიმაღლე: 85 სმ
+• დატვირთვა: 300 კგ
+• თვლების რაოდენობა: 4
 
-გაძლიერებული კონსტრუქცია მეტი ტვირთამწეობით.`,
-          en: `Platform trolley with blue cover. Made from high-quality metal, ideal for stores and warehouses.
+საბურავით დაცული ტვირთისთვის.`,
+          en: `Platform trolley with blue cover. Made from high-quality metal, ideal for warehouses and logistics.
 
 **Technical Specifications:**
+• Length: 90 cm
+• Width: 60 cm
+• Height: 85 cm
 • Load capacity: 300 kg
-• Size: L90*W60
-• Wheels: 4 pieces
-• Cover: Blue
-• Material: High-quality metal
+• Number of wheels: 4
 
-Reinforced construction with higher load capacity.`,
-          ru: `Платформенная тележка с синим покрытием. Изготовлена из высококачественного металла, идеальна для магазинов и складов.
+With cover for protected cargo.`,
+          ru: `Платформенная тележка с синим покрытием. Изготовлена из высококачественного металла, идеальна для складов и логистики.
 
 **Технические характеристики:**
-• Грузоподъемность: 300 кг
-• Размер: L90*W60
-• Колеса: 4 штуки
-• Покрытие: Синее
-• Материал: Высококачественный металл
+• Длина: 90 см
+• Ширина: 60 см
+• Высота: 85 см
+• Нагрузка: 300 кг
+• Количество колес: 4
 
-Усиленная конструкция с повышенной грузоподъемностью.`,
+С покрытием для защищенного груза.`,
         },
         features: {
           ka: [
-            "ტვირთამწეობა: 300 კგ",
-            "ზომა: L90*W60",
-            "როლიკები: 4 ცალი",
-            "ლურჯი საბურავი",
-            "მაღალი ხარისხის ლითონი",
-            "გაძლიერებული კონსტრუქცია",
-            "მარტივი მართვა",
-            "მაღალი ტვირთამწეობა",
+            "სიგრძე: 90 სმ",
+            "სიგანე: 60 სმ",
+            "სიმაღლე: 85 სმ",
+            "დატვირთვა: 300 კგ",
+            "თვლების რაოდენობა: 4",
+            "საბურავით",
+            "მანევრირებადი",
+            "გამძლე",
           ],
           en: [
+            "Length: 90 cm",
+            "Width: 60 cm",
+            "Height: 85 cm",
             "Load capacity: 300 kg",
-            "Size: L90*W60",
-            "Wheels: 4 pieces",
-            "Blue cover",
-            "High-quality metal",
-            "Reinforced construction",
-            "Easy handling",
-            "High load capacity",
+            "Number of wheels: 4",
+            "With cover",
+            "Maneuverable",
+            "Durable",
           ],
           ru: [
-            "Грузоподъемность: 300 кг",
-            "Размер: L90*W60",
-            "Колеса: 4 штуки",
-            "Синее покрытие",
-            "Высококачественный металл",
-            "Усиленная конструкция",
-            "Простое управление",
-            "Высокая грузоподъемность",
+            "Длина: 90 см",
+            "Ширина: 60 см",
+            "Высота: 85 см",
+            "Нагрузка: 300 кг",
+            "Количество колес: 4",
+            "С покрытием",
+            "Маневренная",
+            "Прочная",
           ],
         },
         images: ["/images/platform-trolley-blue.jpeg"],
         colors: [t("blue")],
-        sizes: ["90x60x90"],
-        category: t("trolleys"),
+        sizes: ["90x60x85"],
+        category: t("platformTrolley"),
         rating: 4.5,
-        reviewCount: 12,
+        reviewCount: 8,
       },
-      "platform-trolley-yellow-1": {
-        id: "platform-trolley-yellow-1",
+      "platform-trolley-yellow": {
+        id: "platform-trolley-yellow",
         name: t("platformTrolleyYellow"),
-        price: 220.0,
+        price: 150.0,
         description: {
-          ka: `პლატფორმის ურიკა ყვითელი საბურავით. მაღალი ხარისხის ლითონისგან დამზადებული, იდეალურია მაღაზიებისა და საწყობებისთვის.
+          ka: `პლატფორმის ურიკა ყვითელი საბურავით. მაღალი ხარისხის ლითონისგან დამზადებული, იდეალურია საწყობებისა და ლოჯისტიკისთვის.
 
 **ტექნიკური მახასიათებლები:**
-• ტვირთამწეობა: 150 კგ
-• ზომა: L72*W48
-• როლიკები: 4 ცალი
-• საბურავი: ყვითელი
-• მასალა: მაღალი ხარისხის ლითონი
+• სიგრძე: 90 სმ
+• სიგანე: 60 სმ  
+• სიმაღლე: 85 სმ
+• დატვირთვა: 300 კგ
+• თვლების რაოდენობა: 4
 
-კომფორტული და ფუნქციონალური ტრანსპორტირებისთვის.`,
-          en: `Platform trolley with yellow cover. Made from high-quality metal, ideal for stores and warehouses.
+საბურავით დაცული ტვირთისთვის.`,
+          en: `Platform trolley with yellow cover. Made from high-quality metal, ideal for warehouses and logistics.
 
 **Technical Specifications:**
-• Load capacity: 150 kg
-• Size: L72*W48
-• Wheels: 4 pieces
-• Cover: Yellow
-• Material: High-quality metal
+• Length: 90 cm
+• Width: 60 cm
+• Height: 85 cm
+• Load capacity: 300 kg
+• Number of wheels: 4
 
-Comfortable and functional for transportation.`,
-          ru: `Платформенная тележка с желтым покрытием. Изготовлена из высококачественного металла, идеальна для магазинов и складов.
+With cover for protected cargo.`,
+          ru: `Платформенная тележка с желтым покрытием. Изготовлена из высококачественного металла, идеальна для складов и логистики.
 
 **Технические характеристики:**
-• Грузоподъемность: 150 кг
-• Размер: L72*W48
-• Колеса: 4 штуки
-• Покрытие: Желтое
-• Материал: Высококачественный металл
+• Длина: 90 см
+• Ширина: 60 см
+• Высота: 85 см
+• Нагрузка: 300 кг
+• Количество колес: 4
 
-Удобная и функциональная для транспортировки.`,
+С покрытием для защищенного груза.`,
         },
         features: {
           ka: [
-            "ტვირთამწეობა: 150 კგ",
-            "ზომა: L72*W48",
-            "როლიკები: 4 ცალი",
-            "ყვითელი საბურავი",
-            "მაღალი ხარისხის ლითონი",
-            "კომპაქტური დიზაინი",
-            "მარტივი მართვა",
-            "ეკონომიური",
+            "სიგრძე: 90 სმ",
+            "სიგანე: 60 სმ",
+            "სიმაღლე: 85 სმ",
+            "დატვირთვა: 300 კგ",
+            "თვლების რაოდენობა: 4",
+            "საბურავით",
+            "მანევრირებადი",
+            "გამძლე",
           ],
           en: [
-            "Load capacity: 150 kg",
-            "Size: L72*W48",
-            "Wheels: 4 pieces",
-            "Yellow cover",
-            "High-quality metal",
-            "Compact design",
-            "Easy handling",
-            "Economical",
+            "Length: 90 cm",
+            "Width: 60 cm",
+            "Height: 85 cm",
+            "Load capacity: 300 kg",
+            "Number of wheels: 4",
+            "With cover",
+            "Maneuverable",
+            "Durable",
           ],
           ru: [
-            "Грузоподъемность: 150 кг",
-            "Размер: L72*W48",
-            "Колеса: 4 штуки",
-            "Желтое покрытие",
-            "Высококачественный металл",
-            "Компактный дизайн",
-            "Простое управление",
-            "Экономичный",
+            "Длина: 90 см",
+            "Ширина: 60 см",
+            "Высота: 85 см",
+            "Нагрузка: 300 кг",
+            "Количество колес: 4",
+            "С покрытием",
+            "Маневренная",
+            "Прочная",
           ],
         },
         images: ["/images/platform-trolley-yellow.jpeg"],
         colors: ["ყვითელი"],
-        sizes: ["100x70x95"],
-        category: t("trolleys"),
-        rating: 4.6,
-        reviewCount: 10,
+        sizes: ["90x60x85"],
+        category: t("platformTrolley"),
+        rating: 4.5,
+        reviewCount: 6,
       },
-      // Default fallback product
-      "1": {
-        id: params.id,
-        name: t("metalShelving"),
-        price: 299.99,
+      "trash-bin-120": {
+        id: "trash-bin-120",
+        name: t("trashBin120Unit"),
+        price: 85.0,
         description: {
-          ka: "მაღალი ხარისხის ლითონის სტელაჟი, რომელიც იდეალურია მაღაზიებისა და საწყობებისთვის. მტკიცე კონსტრუქცია და მარტივი მონტაჟი.",
-          en: "High-quality metal shelving unit, ideal for stores and warehouses. Sturdy construction and easy assembly.",
-          ru: "Высококачественный металлический стеллаж, идеальный для магазинов и складов. Прочная конструкция и простая сборка.",
+          ka: `ნაგვის ურნა 120 ლიტრი HDPE მასალისგან. მაღალი ხარისხის პლასტმასისგან დამზადებული, იდეალურია საცხოვრებელი და კომერციული ობიექტებისთვის.
+
+**ტექნიკური მახასიათებლები:**
+• მოცულობა: 120 ლ
+• სიგანე: 450 მმ
+• სიღრმე: 570 მმ
+• სიმაღლე: 970 მმ
+• თვლების დიამეტრი: 200 მმ
+• მასალა: HDPE
+• ტევადობა: 120 კგ
+
+ფერების ფართო არჩევანი: მწვანე, ლურჯი, წითელი, შავი.`,
+          en: `120 liter HDPE trash bin. Made from high-quality plastic, ideal for residential and commercial properties.
+
+**Technical Specifications:**
+• Volume: 120 L
+• Width: 450 mm
+• Depth: 570 mm
+• Height: 970 mm
+• Wheel diameter: 200 mm
+• Material: HDPE
+• Capacity: 120 kg
+
+Wide color selection: green, blue, red, black.`,
+          ru: `Мусорный контейнер 120 литров из HDPE. Изготовлен из высококачественного пластика, идеален для жилых и коммерческих объектов.
+
+**Технические характеристики:**
+• Объем: 120 л
+• Ширина: 450 мм
+• Глубина: 570 мм
+• Высота: 970 мм
+• Диаметр колес: 200 мм
+• Материал: HDPE
+• Вместимость: 120 кг
+
+Широкий выбор цветов: зеленый, синий, красный, черный.`,
         },
         features: {
           ka: [
-            "მაღალი ხარისხის ლითონისგან დამზადებული",
-            "მაქსიმალური ტვირთამწეობა: 200კგ თაროზე",
-            "მარტივი მონტაჟი",
-            "კოროზიისგან დაცული",
-            "რეგულირებადი თაროები",
+            "მოცულობა: 120 ლ",
+            "სიგანე: 450 მმ",
+            "სიღრმე: 570 მმ",
+            "სიმაღლე: 970 მმ",
+            "თვლების დიამეტრი: 200 მმ",
+            "მასალა: HDPE",
+            "ტევადობა: 120 კგ",
+            "ამინდისგან დაცული",
+            "მარტივი გადაადგილება",
+            "ეკოლოგიურად უსაფრთხო",
           ],
           en: [
-            "Made from high-quality metal",
-            "Maximum load capacity: 200kg per shelf",
-            "Easy assembly",
-            "Corrosion resistant",
-            "Adjustable shelves",
+            "Volume: 120 L",
+            "Width: 450 mm",
+            "Depth: 570 mm",
+            "Height: 970 mm",
+            "Wheel diameter: 200 mm",
+            "Material: HDPE",
+            "Capacity: 120 kg",
+            "Weather resistant",
+            "Easy mobility",
+            "Environmentally safe",
           ],
           ru: [
-            "Изготовлен из высококачественного металла",
-            "Максимальная нагрузка: 200кг на полку",
-            "Простая сборка",
-            "Устойчив к коррозии",
-            "Регулируемые полки",
+            "Объем: 120 л",
+            "Ширина: 450 мм",
+            "Глубина: 570 мм",
+            "Высота: 970 мм",
+            "Диаметр колес: 200 мм",
+            "Материал: HDPE",
+            "Вместимость: 120 кг",
+            "Устойчив к погоде",
+            "Легкая мобильность",
+            "Экологически безопасный",
           ],
         },
-        images: ["/placeholder.svg?height=600&width=600"],
-        colors: [t("black"), t("white"), "ნაცარი", "ლურჯი"],
-        sizes: ["120x40x180", "150x50x200", "180x60x220"],
-        category: t("shelving"),
-        rating: 4.5,
-        reviewCount: 89,
+        images: ["/images/trash-bin-120l.jpg"],
+        colors: ["მწვანე", t("blue"), t("red"), t("black")],
+        sizes: ["120L"],
+        category: t("trashBins"),
+        rating: 4.6,
+        reviewCount: 28,
+      },
+      "trash-bin-240": {
+        id: "trash-bin-240",
+        name: t("trashBin240Unit"),
+        price: 120.0,
+        description: {
+          ka: `ნაგვის ურნა 240 ლიტრი HDPE მასალისგან. მაღალი ხარისხის პლასტმასისგან დამზადებული, იდეალურია კომერციული და ინდუსტრიული ობიექტებისთვის.
+
+**ტექნიკური მახასიათებლები:**
+• მოცულობა: 240 ლ
+• სიგანე: 570 მმ
+• სიღრმე: 720 მმ
+• სიმაღლე: 1068 მმ
+• თვლების დიამეტრი: 200 მმ
+• მასალა: HDPE
+• ტევადობა: 240 კგ
+
+დიდი მოცულობა მეტი ნაგვისთვის.`,
+          en: `240 liter HDPE trash bin. Made from high-quality plastic, ideal for commercial and industrial properties.
+
+**Technical Specifications:**
+• Volume: 240 L
+• Width: 570 mm
+• Depth: 720 mm
+• Height: 1068 mm
+• Wheel diameter: 200 mm
+• Material: HDPE
+• Capacity: 240 kg
+
+Large volume for more waste.`,
+          ru: `Мусорный контейнер 240 литров из HDPE. Изготовлен из высококачественного пластика, идеален для коммерческих и промышленных объектов.
+
+**Технические характеристики:**
+• Объем: 240 л
+• Ширина: 570 мм
+• Глубина: 720 мм
+• Высота: 1068 мм
+• Диаметр колес: 200 мм
+• Материал: HDPE
+• Вместимость: 240 кг
+
+Большой объем для большего количества отходов.`,
+        },
+        features: {
+          ka: [
+            "მოცულობა: 240 ლ",
+            "სიგანე: 570 მმ",
+            "სიღრმე: 720 მმ",
+            "სიმაღლე: 1068 მმ",
+            "თვლების დიამეტრი: 200 მმ",
+            "მასალა: HDPE",
+            "ტევადობა: 240 კგ",
+            "ამინდისგან დაცული",
+            "მარტივი გადაადგილება",
+            "ეკოლოგიურად უსაფრთხო",
+          ],
+          en: [
+            "Volume: 240 L",
+            "Width: 570 mm",
+            "Depth: 720 mm",
+            "Height: 1068 mm",
+            "Wheel diameter: 200 mm",
+            "Material: HDPE",
+            "Capacity: 240 kg",
+            "Weather resistant",
+            "Easy mobility",
+            "Environmentally safe",
+          ],
+          ru: [
+            "Объем: 240 л",
+            "Ширина: 570 мм",
+            "Глубина: 720 мм",
+            "Высота: 1068 мм",
+            "Диаметр колес: 200 мм",
+            "Материал: HDPE",
+            "Вместимость: 240 кг",
+            "Устойчив к погоде",
+            "Легкая мобильность",
+            "Экологически безопасный",
+          ],
+        },
+        images: ["/images/trash-bin-240l.jpg"],
+        colors: [t("blue")],
+        sizes: ["240L"],
+        category: t("trashBins"),
+        rating: 4.7,
+        reviewCount: 15,
       },
     }
 
-    return products[productId as keyof typeof products] || products["1"]
+    return products[productId] || null
   }
 
   const product = getProductData(params.id)
 
-  // Related products
-  // Related products - get products from the same category
+  if (!product) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold mb-4">Product not found</h1>
+          <Link href="/products" className="text-blue-600 hover:underline">
+            Back to products
+          </Link>
+        </div>
+      </div>
+    )
+  }
+
+  // Related products (same category, different product)
   const relatedProducts = [
-    // Warehouse Shelving products
-    ...(product.category === t("warehouseShelving")
-      ? [
-          {
-            id: "warehouse-1",
-            name: t("warehouseShelvingUnit"),
-            price: 450.0,
-            image: "/images/blue-warehouse-shelving.png",
-            category: t("warehouseShelving"),
-            isNew: true,
-          },
-          {
-            id: "warehouse-2",
-            name: t("warehouseShelvingUnit"),
-            price: 420.0,
-            image: "/images/blue-orange-warehouse-shelving.jpg",
-            category: t("warehouseShelving"),
-          },
-          {
-            id: "warehouse-3",
-            name: t("warehouseShelvingUnit"),
-            price: 480.0,
-            image: "/images/gray-warehouse-shelving.jpg",
-            category: t("warehouseShelving"),
-          },
-          {
-            id: "warehouse-4",
-            name: t("warehouseShelvingUnit"),
-            price: 520.0,
-            image: "/images/tall-warehouse-shelving.jpg",
-            category: t("warehouseShelving"),
-            isNew: true,
-          },
-        ]
-      : []),
-
-    // Market Shelves products
-    ...(product.category === t("marketShelves")
-      ? [
-          {
-            id: "basket-shelving-1",
-            name: t("basketShelvingUnit"),
-            price: 220.0,
-            image: "/images/basket-shelving-white.jpeg",
-            category: t("marketShelves"),
-          },
-          {
-            id: "basket-shelving-2",
-            name: t("basketShelvingLargeUnit"),
-            price: 280.0,
-            image: "/images/basket-shelving-large-white.jpeg",
-            category: t("marketShelves"),
-            isNew: true,
-          },
-          {
-            id: "tier-shelving-1",
-            name: t("tierShelvingUnit"),
-            price: 190.0,
-            image: "/images/tier-shelving-red.jpeg",
-            category: t("marketShelves"),
-          },
-          {
-            id: "tier-shelving-2",
-            name: t("largeTierShelvingUnit"),
-            price: 250.0,
-            image: "/images/large-tier-shelving-colors.jpeg",
-            category: t("marketShelves"),
-          },
-          {
-            id: "perforated-profile-1",
-            name: t("perforatedProfileUnit"),
-            price: 85.0,
-            image: "/images/perforated-profile-2.jpg",
-            category: t("marketShelves"),
-          },
-        ]
-      : []),
-
-    // Market Accessories products
-    ...(product.category === t("marketAccessories")
-      ? [
-          {
-            id: "aluminum-rail-1",
-            name: t("aluminumRailUnit"),
-            price: 45.0,
-            image: "/images/aluminum-rail-3.jpg",
-            category: t("marketAccessories"),
-          },
-        ]
-      : []),
-
-    // POS Materials products
-    ...(product.category === t("posMaterials")
-      ? [
-          {
-            id: "shelf-price-display-1",
-            name: t("shelfPriceDisplayUnit"),
-            price: 12.0,
-            image: "/images/shelf-price-display-1.jpg",
-            category: t("posMaterials"),
-            isNew: true,
-          },
-          {
-            id: "plastic-frames-1",
-            name: t("plasticFramesUnit"),
-            price: 8.0,
-            image: "/images/plastic-frames-1.jpg",
-            category: t("posMaterials"),
-            isNew: true,
-          },
-          {
-            id: "frame-stands-1",
-            name: t("frameStandsUnit"),
-            price: 25.0,
-            image: "/images/frame-stands-1.jpg",
-            category: t("posMaterials"),
-            isNew: true,
-          },
-        ]
-      : []),
-
-    // Pallet Shelving products
-    ...(product.category === t("palletShelving")
-      ? [
-          {
-            id: "pallet-shelving-1",
-            name: t("palletShelvingUnit1"),
-            price: 850.0,
-            image: "/images/pallet-shelving-1.jpg",
-            category: t("palletShelving"),
-            isNew: true,
-          },
-          {
-            id: "pallet-shelving-2",
-            name: t("palletShelvingUnit2"),
-            price: 950.0,
-            image: "/images/pallet-shelving-2.jpg",
-            category: t("palletShelving"),
-          },
-          {
-            id: "pallet-shelving-3",
-            name: t("palletShelvingUnit3"),
-            price: 1050.0,
-            image: "/images/pallet-shelving-3.jpg",
-            category: t("palletShelving"),
-          },
-          {
-            id: "pallet-shelving-4",
-            name: t("palletShelvingUnit4"),
-            price: 1250.0,
-            image: "/images/pallet-shelving-4.png",
-            category: t("palletShelving"),
-            isNew: true,
-          },
-        ]
-      : []),
-
-    // Tire Shelving products
-    ...(product.category === t("tireShelving")
-      ? [
-          {
-            id: "tire-shelving-1",
-            name: t("tireShelvingUnit"),
-            price: 680.0,
-            image: "/images/tire-shelving-1.png",
-            category: t("tireShelving"),
-            isNew: true,
-          },
-        ]
-      : []),
-
-    // Clothing Shelving products
-    ...(product.category === t("clothingShelving")
-      ? [
-          {
-            id: "clothing-shelving-1",
-            name: t("clothingShelvingUnit"),
-            price: 380.0,
-            image: "/images/clothing-rack-1.jpg",
-            category: t("clothingShelving"),
-          },
-        ]
-      : []),
-
-    // Archive Shelving products
-    ...(product.category === t("archiveShelving")
-      ? [
-          {
-            id: "archive-shelving-1",
-            name: t("archiveShelvingUnit"),
-            price: 320.0,
-            image: "/images/archive-shelving-1.jpg",
-            category: t("archiveShelving"),
-            isNew: true,
-          },
-          {
-            id: "archive-shelving-2",
-            name: t("archiveShelvingUnit2"),
-            price: 290.0,
-            image: "/images/archive-shelving-2.jpg",
-            category: t("archiveShelving"),
-            isNew: true,
-          },
-        ]
-      : []),
-  ].filter((p) => p.id !== product.id) // Remove current product from related products
+    {
+      id: "warehouse-1",
+      name: t("warehouseShelvingUnit"),
+      price: 450.0,
+      image: "/images/blue-warehouse-shelving.png",
+      category: t("warehouseShelving"),
+      rating: 4.8,
+      reviewCount: 24,
+    },
+    {
+      id: "tire-shelving-1",
+      name: t("tireShelvingUnit"),
+      price: 680.0,
+      image: "/images/tire-shelving-1.png",
+      category: t("tireShelving"),
+      rating: 4.7,
+      reviewCount: 9,
+    },
+    {
+      id: "basket-shelving-1",
+      name: t("basketShelvingUnit"),
+      price: 280.0,
+      image: "/images/basket-shelving-white.jpeg",
+      category: t("basketShelving"),
+      rating: 4.5,
+      reviewCount: 19,
+    },
+    {
+      id: "tier-shelving-1",
+      name: t("tierShelvingUnit"),
+      price: 220.0,
+      image: "/images/tier-shelving-colors.jpeg",
+      category: t("tierShelving"),
+      rating: 4.4,
+      reviewCount: 25,
+    },
+  ]
+    .filter((p) => p.id !== product.id)
+    .slice(0, 3)
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <div className="flex-1">
-        <div className="container px-4 py-8 md:px-6 md:py-12">
-          {/* Breadcrumbs */}
-          <nav className="flex items-center text-sm text-muted-foreground mb-6">
-            <Link href="/" className="hover:text-foreground">
+    <div className="min-h-screen bg-gray-50">
+      {/* Breadcrumb */}
+      <div className="bg-white border-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <nav className="flex items-center space-x-2 text-sm text-gray-500">
+            <Link href="/" className="hover:text-gray-700">
               {t("home")}
             </Link>
-            <ChevronRight className="h-4 w-4 mx-2" />
-            <Link href="/products" className="hover:text-foreground">
+            <ChevronRight className="h-4 w-4" />
+            <Link href="/products" className="hover:text-gray-700">
               {t("products")}
             </Link>
-            <ChevronRight className="h-4 w-4 mx-2" />
-            <Link href={`/categories/${product.category}`} className="hover:text-foreground">
-              {product.category}
-            </Link>
-            <ChevronRight className="h-4 w-4 mx-2" />
-            <span className="text-foreground">{product.name}</span>
+            <ChevronRight className="h-4 w-4" />
+            <span className="text-gray-900">{product.name}</span>
           </nav>
+        </div>
+      </div>
 
-          <div className="grid gap-8 md:grid-cols-2">
-            {/* Product Images */}
-            <div className="space-y-4">
-              <div className="overflow-hidden rounded-lg border">
-                <Image
-                  src={product.images[0] || "/placeholder.svg"}
-                  alt={product.name}
-                  width={600}
-                  height={600}
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              {product.images.length > 1 && (
-                <div
-                  className={`grid gap-4 ${product.images.length === 2 ? "grid-cols-2" : product.images.length === 3 ? "grid-cols-3" : "grid-cols-4"}`}
-                >
-                  {product.images.slice(1).map((image, index) => (
-                    <div key={index + 1} className="overflow-hidden rounded-lg border cursor-pointer">
-                      <Image
-                        src={image || "/placeholder.svg"}
-                        alt={`${product.name} - სურათი ${index + 2}`}
-                        width={150}
-                        height={150}
-                        className="h-full w-full object-cover"
-                      />
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Product Details */}
-            <div className="space-y-6">
-              <div>
-                <h1 className="text-3xl font-bold text-black">{product.name}</h1>
-                <div className="flex items-center gap-4 mt-2">
-                  <div className="flex items-center">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className={`h-5 w-5 ${
-                          i < Math.floor(product.rating)
-                            ? "fill-primary text-primary"
-                            : i < product.rating
-                              ? "fill-primary text-primary opacity-50"
-                              : "text-muted-foreground"
-                        }`}
-                      />
-                    ))}
-                    <span className="ml-2 text-sm text-muted-foreground">
-                      ({product.reviewCount} {t("reviews")})
-                    </span>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="lg:grid lg:grid-cols-2 lg:gap-x-8 lg:items-start">
+          {/* Image gallery */}
+          <div className="flex flex-col-reverse">
+            <div className="hidden mt-6 w-full max-w-2xl mx-auto sm:block lg:max-w-none">
+              <div className="grid grid-cols-4 gap-6">
+                {product.images.map((image, index) => (
+                  <div
+                    key={index}
+                    className="relative h-24 bg-white rounded-md flex items-center justify-center text-sm font-medium uppercase text-gray-900 cursor-pointer hover:bg-gray-50 focus:outline-none focus:ring focus:ring-offset-4 focus:ring-indigo-500"
+                  >
+                    <Image
+                      src={image || "/placeholder.svg"}
+                      alt={`${product.name} ${index + 1}`}
+                      fill
+                      className="object-cover object-center rounded-md"
+                    />
                   </div>
-                </div>
-              </div>
-
-              <p className="text-black">{product.description[language]}</p>
-
-              <div className="space-y-4">
-                <div>
-                  <h3 className="font-medium mb-2">{t("color")}</h3>
-                  <RadioGroup defaultValue={product.colors[0]} className="flex flex-wrap gap-2">
-                    {product.colors.map((color, index) => (
-                      <div key={index} className="flex items-center">
-                        <RadioGroupItem id={`color-${index}`} value={color} className="peer sr-only" />
-                        <Label
-                          htmlFor={`color-${index}`}
-                          className="flex cursor-pointer items-center justify-center rounded-md border-2 border-muted bg-popover px-3 py-2 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary"
-                        >
-                          {color}
-                        </Label>
-                      </div>
-                    ))}
-                  </RadioGroup>
-                </div>
-
-                <div>
-                  <h3 className="font-medium mb-2">{t("size")} (სმ)</h3>
-                  <RadioGroup defaultValue={product.sizes[0]} className="flex flex-wrap gap-2">
-                    {product.sizes.map((size, index) => (
-                      <div key={index} className="flex items-center">
-                        <RadioGroupItem id={`size-${index}`} value={size} className="peer sr-only" />
-                        <Label
-                          htmlFor={`size-${index}`}
-                          className="flex cursor-pointer items-center justify-center rounded-md border-2 border-muted bg-popover px-3 py-2 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary"
-                        >
-                          {size}
-                        </Label>
-                      </div>
-                    ))}
-                  </RadioGroup>
-                </div>
-              </div>
-
-              <div className="rounded-lg border p-4 flex items-start gap-3">
-                <Truck className="h-5 w-5 mt-0.5 text-muted-foreground" />
-                <div>
-                  <h4 className="font-medium">{t("freeShipping")}</h4>
-                  <p className="text-sm text-muted-foreground">{t("freeShippingDescription")}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Product Description */}
-          <div className="mt-12">
-            <div className="border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">{t("description")}</h3>
-              <div className="prose prose-gray max-w-none">
-                <div className="whitespace-pre-line text-black">{product.description[language]}</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Related Products */}
-          <div className="mt-16">
-            <h2 className="text-2xl font-bold mb-6">{t("relatedProducts")}</h2>
-            {relatedProducts.length > 0 ? (
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {relatedProducts.map((product) => (
-                  <ProductCard key={product.id} {...product} />
                 ))}
               </div>
-            ) : (
-              <div className="text-center py-8">
-                <p className="text-muted-foreground">მსგავსი პროდუქტები მალე დაემატება</p>
+            </div>
+
+            <div className="w-full aspect-square">
+              <Image
+                src={product.images[0] || "/placeholder.svg"}
+                alt={product.name}
+                width={600}
+                height={600}
+                className="w-full h-full object-cover object-center sm:rounded-lg"
+              />
+            </div>
+          </div>
+
+          {/* Product info */}
+          <div className="mt-10 px-4 sm:px-0 sm:mt-16 lg:mt-0">
+            <h1 className="text-3xl font-extrabold tracking-tight text-gray-900">{product.name}</h1>
+
+            <div className="mt-3">
+              <h2 className="sr-only">{t("price")}</h2>
+              <p className="text-3xl text-gray-900">${product.price}</p>
+            </div>
+
+            {/* Reviews */}
+            <div className="mt-3">
+              <h3 className="sr-only">{t("reviews")}</h3>
+              <div className="flex items-center">
+                <div className="flex items-center">
+                  {[0, 1, 2, 3, 4].map((rating) => (
+                    <Star
+                      key={rating}
+                      className={`${
+                        product.rating > rating ? "text-yellow-400 fill-current" : "text-gray-300"
+                      } h-5 w-5 flex-shrink-0`}
+                    />
+                  ))}
+                </div>
+                <p className="sr-only">{product.rating} out of 5 stars</p>
+                <a href="#" className="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500">
+                  {product.reviewCount} {t("reviews")}
+                </a>
               </div>
-            )}
+            </div>
+
+            <div className="mt-6">
+              <h3 className="sr-only">{t("description")}</h3>
+              <div
+                className="text-base text-gray-700 space-y-6"
+                dangerouslySetInnerHTML={{
+                  __html: product.description[language].replace(/\n/g, "<br>"),
+                }}
+              />
+            </div>
+
+            <form className="mt-6">
+              {/* Colors */}
+              {product.colors && product.colors.length > 0 && (
+                <div>
+                  <h3 className="text-sm text-gray-600">{t("color")}</h3>
+                  <RadioGroup defaultValue={product.colors[0]} className="mt-2">
+                    <div className="flex items-center space-x-3">
+                      {product.colors.map((color) => (
+                        <div key={color} className="flex items-center">
+                          <RadioGroupItem value={color} id={color} className="sr-only" />
+                          <Label
+                            htmlFor={color}
+                            className="relative -m-0.5 flex cursor-pointer items-center justify-center rounded-full p-0.5 focus:outline-none"
+                          >
+                            <span
+                              className={`h-8 w-8 border border-black border-opacity-10 rounded-full ${
+                                color === t("blue")
+                                  ? "bg-blue-500"
+                                  : color === t("red")
+                                    ? "bg-red-500"
+                                    : color === t("black")
+                                      ? "bg-black"
+                                      : color === t("white")
+                                        ? "bg-white"
+                                        : color === "მწვანე"
+                                          ? "bg-green-500"
+                                          : color === "ყვითელი"
+                                            ? "bg-yellow-500"
+                                            : color === "ნაცარი"
+                                              ? "bg-gray-500"
+                                              : color === "ნარინჯისფერი"
+                                                ? "bg-orange-500"
+                                                : color === t("aluminum")
+                                                  ? "bg-gray-300"
+                                                  : color === "ქრომირებული"
+                                                    ? "bg-gray-400"
+                                                    : color === "გამჭვირვალე"
+                                                      ? "bg-gray-100 border-2 border-dashed"
+                                                      : "bg-gray-200"
+                              }`}
+                            />
+                          </Label>
+                        </div>
+                      ))}
+                    </div>
+                  </RadioGroup>
+                </div>
+              )}
+
+              {/* Size */}
+              {product.sizes && product.sizes.length > 0 && (
+                <div className="mt-8">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-sm text-gray-600">{t("size")}</h3>
+                  </div>
+                  <RadioGroup defaultValue={product.sizes[0]} className="mt-2">
+                    <div className="grid grid-cols-3 gap-3 sm:grid-cols-6">
+                      {product.sizes.map((size) => (
+                        <div key={size}>
+                          <RadioGroupItem value={size} id={size} className="sr-only" />
+                          <Label
+                            htmlFor={size}
+                            className="cursor-pointer bg-white border rounded-md py-3 px-3 flex items-center justify-center text-sm font-medium uppercase sm:flex-1 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                          >
+                            {size}
+                          </Label>
+                        </div>
+                      ))}
+                    </div>
+                  </RadioGroup>
+                </div>
+              )}
+
+              <div className="mt-10 flex sm:flex-col1">
+                <button
+                  type="submit"
+                  className="max-w-xs flex-1 bg-indigo-600 border border-transparent rounded-md py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-full"
+                >
+                  {t("addToCart")}
+                </button>
+
+                <button className="ml-4 py-3 px-8 rounded-md border border-gray-300 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                  {t("wishList")}
+                </button>
+              </div>
+            </form>
+
+            <section className="mt-16" aria-labelledby="features-heading">
+              <h2 id="features-heading" className="text-lg font-medium text-gray-900">
+                {t("features")}
+              </h2>
+
+              <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+                {product.features[language].map((feature, index) => (
+                  <div key={index} className="flex">
+                    <p className="text-sm text-gray-500">{feature}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          </div>
+        </div>
+
+        {/* Related products */}
+        <div className="mt-16">
+          <h2 className="text-2xl font-extrabold text-gray-900 mb-6">{t("relatedProducts")}</h2>
+
+          <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-4 xl:gap-x-8">
+            {relatedProducts.map((relatedProduct) => (
+              <div key={relatedProduct.id} className="group relative">
+                <div className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
+                  <Image
+                    src={relatedProduct.image || "/placeholder.svg"}
+                    alt={relatedProduct.name}
+                    width={500}
+                    height={500}
+                    className="w-full h-full object-center object-cover lg:w-full lg:h-full"
+                  />
+                </div>
+                <div className="mt-4 flex justify-between">
+                  <div>
+                    <h3 className="text-sm text-gray-700">
+                      <Link href={`/products/${relatedProduct.id}`}>
+                        <span aria-hidden="true" className="absolute inset-0" />
+                        {relatedProduct.name}
+                      </Link>
+                    </h3>
+                    <div className="flex items-center">
+                      {[0, 1, 2, 3, 4].map((rating) => (
+                        <Star
+                          key={rating}
+                          className={`${
+                            relatedProduct.rating > rating ? "text-yellow-400 fill-current" : "text-gray-300"
+                          } h-4 w-4 flex-shrink-0`}
+                        />
+                      ))}
+                      <p className="ml-2 text-sm text-gray-500">({relatedProduct.reviewCount})</p>
+                    </div>
+                  </div>
+                  <p className="text-sm font-medium text-gray-900">${relatedProduct.price}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

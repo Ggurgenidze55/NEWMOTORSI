@@ -79,6 +79,11 @@ export const translations = {
     platformTrolley: "პლატფორმის ურიკა",
     platformTrolleyBlue: "ურიკა საბურავით (ლურჯი)",
     platformTrolleyYellow: "ურიკა საბურავით (ყვითელი)",
+    // Add new trash bin products
+    trashBin120: "ნაგვის ურნა 120 ლ",
+    trashBin120Unit: "ნაგვის ურნა 120 ლიტრი HDPE",
+    trashBin240: "ნაგვის ურნა 240 ლ",
+    trashBin240Unit: "ნაგვის ურნა 240 ლიტრი HDPE",
 
     // Featured Products
     featuredProducts: "პოპულარული პროდუქტები",
@@ -203,6 +208,9 @@ export const translations = {
     hooks: "საკიდები",
     mounting: "მონტაჟი",
     wallMounted: "კედლის მონტაჟი",
+    volume: "მოცულობა",
+    wheelDiameter: "თვლების დიამეტრი",
+    capacity: "ტევადობა",
   },
 
   en: {
@@ -288,6 +296,11 @@ export const translations = {
     platformTrolley: "Platform Trolley",
     platformTrolleyBlue: "Platform Trolley with Cover (Blue)",
     platformTrolleyYellow: "Platform Trolley with Cover (Yellow)",
+    // Add new trash bin products
+    trashBin120: "Trash Bin 120 L",
+    trashBin120Unit: "120 Liter HDPE Trash Bin",
+    trashBin240: "Trash Bin 240 L",
+    trashBin240Unit: "240 Liter HDPE Trash Bin",
 
     // Featured Products
     featuredProducts: "Featured Products",
@@ -412,6 +425,9 @@ export const translations = {
     hooks: "Hooks",
     mounting: "Mounting",
     wallMounted: "Wall Mounted",
+    volume: "Volume",
+    wheelDiameter: "Wheel Diameter",
+    capacity: "Capacity",
   },
 
   ru: {
@@ -497,6 +513,11 @@ export const translations = {
     platformTrolley: "Платформенная тележка",
     platformTrolleyBlue: "Тележка с покрытием (синяя)",
     platformTrolleyYellow: "Тележка с покрытием (желтая)",
+    // Add new trash bin products
+    trashBin120: "Мусорный бак 120 л",
+    trashBin120Unit: "Мусорный контейнер 120 литров HDPE",
+    trashBin240: "Мусорный бак 240 л",
+    trashBin240Unit: "Мусорный контейнер 240 литров HDPE",
 
     // Featured Products
     featuredProducts: "Популярные товары",
@@ -621,6 +642,9 @@ export const translations = {
     hooks: "Крючки",
     mounting: "Монтаж",
     wallMounted: "Настенный монтаж",
+    volume: "Объем",
+    wheelDiameter: "Диаметр колес",
+    capacity: "Вместимость",
   },
 } as const
 
