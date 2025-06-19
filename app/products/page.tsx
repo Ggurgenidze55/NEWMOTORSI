@@ -113,7 +113,7 @@ export default function ProductsPage() {
       id: "accessory-holder-1",
       name: t("accessoryHolderUnit"),
       price: 35.0,
-      image: "/images/accessory-holder-1.png", // Ensure this is the image path
+      image: "/images/accessory-holder-1.png",
       category: t("marketAccessories"),
       subcategory: "market-accessories",
       isNew: true,
@@ -122,7 +122,7 @@ export default function ProductsPage() {
     {
       id: "perforated-wall-1",
       name: t("perforatedWallUnit"),
-      price: 320.0,
+      price: 180.0,
       image: "/images/perforated-wall-1.png",
       category: t("marketAccessories"),
       subcategory: "market-accessories",
@@ -133,9 +133,9 @@ export default function ProductsPage() {
       id: "shelf-divider-1",
       name: t("shelfDividerUnit"),
       price: 25.0,
-      image: "/images/shelf-divider-1.png", // Ensure this is the image path
-      category: t("marketAccessories"), // Corrected category
-      subcategory: "market-accessories", // Corrected subcategory
+      image: "/images/shelf-divider-1.png",
+      category: t("warehouseShelving"),
+      subcategory: "warehouse-shelving",
       isNew: true,
     },
     // Wall grid display product
@@ -143,7 +143,7 @@ export default function ProductsPage() {
       id: "wall-grid-display-1",
       name: t("wallGridDisplayUnit"),
       price: 120.0,
-      image: "/images/wall-grid-display-1.png", // Ensure this is the image path
+      image: "/images/wall-grid-display-1.png",
       category: t("marketAccessories"),
       subcategory: "market-accessories",
       isNew: true,

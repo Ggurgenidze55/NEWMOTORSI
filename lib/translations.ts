@@ -29,7 +29,9 @@ export const translations = {
     posMaterials: "პოს მასალები",
     trolleys: "ურიკები",
     trashBins: "ნაგვის ურნები",
-    products: "პროდუქტი",
+    // products: "პროდუქტი", // This was singular, changing to plural as used in category page
+    productsLabel: "პროდუქტი", // Adding a new key for singular 'product' if needed elsewhere
+    productsCount: "პროდუქტი", // Key for "products" count label
     subcategories: "ქვეკატეგორიები",
     allSubcategories: "ყველა ქვეკატეგორია",
     viewAll: "ყველას ნახვა",
@@ -123,6 +125,14 @@ export const translations = {
     kitchenShelving200x90x53: "სამზარეულოს სტელაჟი 200x90x53",
     kitchenShelving200x90x60: "სამზარეულოს სტელაჟი 200x90x60",
     wheelsCanBeInstalled: "შესაძლებელია საბურავების დაყენება",
+
+    // NEW KITCHEN SHELVING TRANSLATIONS
+    kitchenShelvingStainlessL120: "სამზარეულოს სტელაჟი უჟანგავი ცხაურით L1200*W500*H1550 - 4 თაროთი",
+    kitchenShelvingStainlessL180: "სამზარეულოს სტელაჟი უჟანგავი ცხაურით L1800*W500*H1550 - 4 თაროთი",
+    stainlessSteelTraysHL600L400: "უჟანგავი ჟარონები - ნახვრეტიანი და ნახვრეტების გარეშე H600*L400",
+    chromeWireShelvingH200W120D53: "ბადიანი ქრომირებული სტელაჟი H200*W120*D53 - 5 თარო",
+    chromeWireShelvingH200W151D53: "ბადიანი ქრომირებული სტელაჟი H200*W151*D53 - 5 თარო",
+    chromeWireShelvingH200W180D53: "ბადიანი ქრომირებული სტელაჟი H200*W180*D53 - 5 თარო",
 
     baseShelfDepth: "ძირი თაროს სიღრმე",
     otherShelvesDepth: "დანარჩენი თაროები",
@@ -259,7 +269,7 @@ export const translations = {
     maxLength: "მაქსიმალური სიგრძე",
     customLength: "საჭიროების მიხედვით",
     material: "მასალა",
-    aluminum: "ალუმინი",
+    // aluminum: "ალუმინი", // Already defined above
     hooks: "საკიდები",
     mounting: "მონტაჟი",
     wallMounted: "კედლის მონტაჟი",
@@ -291,7 +301,9 @@ export const translations = {
     clothing: "Clothing",
     shoes: "Shoes",
     accessories: "Accessories",
-    products: "products",
+    // products: "products", // This was singular, changing to plural as used in category page
+    productsLabel: "Product", // Adding a new key for singular 'product' if needed elsewhere
+    productsCount: "products", // Key for "products" count label
     shelving: "Shelving",
     warehouseShelving: "Warehouse Shelving",
     palletShelving: "Pallet Shelving",
@@ -388,6 +400,22 @@ export const translations = {
     marketShelfCheckoutFront: "Checkout Counter Front Shelf",
     marketShelfSingle135W73: "One-sided Shelf H135 W73",
     marketShelfSingle165W73: "One-sided Shelf H165 W73",
+
+    // Kitchen Shelves
+    kitchenShelving200x60x35: "Kitchen Shelf 200x60x35",
+    kitchenShelving200x106x35: "Kitchen Shelf 200x106x35",
+    kitchenShelving200x90x53: "Kitchen Shelf 200x90x53",
+    kitchenShelving200x90x60: "Kitchen Shelf 200x90x60",
+    wheelsCanBeInstalled: "Wheels can be installed",
+
+    // NEW KITCHEN SHELVING TRANSLATIONS
+    kitchenShelvingStainlessL120: "Stainless Steel Kitchen Shelf L1200*W500*H1550 - 4 Tiers",
+    kitchenShelvingStainlessL180: "Stainless Steel Kitchen Shelf L1800*W500*H1550 - 4 Tiers",
+    stainlessSteelTraysHL600L400: "Stainless Steel Trays (Perforated and Solid) H600*L400",
+    chromeWireShelvingH200W120D53: "Chrome Wire Shelving H200*W120*D53 - 5 Tiers",
+    chromeWireShelvingH200W151D53: "Chrome Wire Shelving H200*W151*D53 - 5 Tiers",
+    chromeWireShelvingH200W180D53: "Chrome Wire Shelving H200*W180*D53 - 5 Tiers",
+
     baseShelfDepth: "Base Shelf Depth",
     otherShelvesDepth: "Other Shelves Depth",
     shelfCount: "Number of Shelves",
@@ -523,19 +551,13 @@ export const translations = {
     maxLength: "Maximum Length",
     customLength: "Custom Length",
     material: "Material",
-    aluminum: "Aluminum",
+    // aluminum: "Aluminum", // Already defined
     hooks: "Hooks",
     mounting: "Mounting",
     wallMounted: "Wall Mounting",
     volume: "Volume",
     wheelDiameter: "Wheel Diameter",
     capacity: "Capacity",
-    kitchenShelving: "Kitchen Shelving",
-    kitchenShelving200x60x35: "Kitchen Shelf 200x60x35",
-    kitchenShelving200x106x35: "Kitchen Shelf 200x106x35",
-    kitchenShelving200x90x53: "Kitchen Shelf 200x90x53",
-    kitchenShelving200x90x60: "Kitchen Shelf 200x90x60",
-    wheelsCanBeInstalled: "Wheels can be installed",
   },
 
   ru: {
@@ -561,7 +583,9 @@ export const translations = {
     clothing: "Одежда",
     shoes: "Обувь",
     accessories: "Аксессуары",
-    products: "товаров",
+    // products: "товаров", // This was singular, changing to plural as used in category page
+    productsLabel: "Продукт", // Adding a new key for singular 'product' if needed elsewhere
+    productsCount: "товаров", // Key for "products" count label
     shelving: "Стеллажи",
     warehouseShelving: "Складские стеллажи",
     palletShelving: "Паллетные стеллажи",
@@ -658,6 +682,21 @@ export const translations = {
     marketShelfCheckoutFront: "Прикассовый стеллаж",
     marketShelfSingle135W73: "Односторонний стеллаж H135 W73",
     marketShelfSingle165W73: "Односторонний стеллаж H165 W73",
+
+    // Kitchen Shelves
+    kitchenShelving200x60x35: "Кухонный стеллаж 200x60x35",
+    kitchenShelving200x106x35: "Кухонный стеллаж 200x106x35",
+    kitchenShelving200x90x53: "Кухонный стеллаж 200x90x53",
+    kitchenShelving200x90x60: "Кухонный стеллаж 200x90x60",
+    wheelsCanBeInstalled: "Возможна установка колес",
+
+    // NEW KITCHEN SHELVING TRANSLATIONS
+    kitchenShelvingStainlessL120: "Кухонный стеллаж из нержавеющей стали L1200*W500*H1550 - 4 полки",
+    kitchenShelvingStainlessL180: "Кухонный стеллаж из нержавеющей стали L1800*W500*H1550 - 4 полки",
+    stainlessSteelTraysHL600L400: "Подносы из нержавеющей стали (перфорированные и сплошные) H600*L400",
+    chromeWireShelvingH200W120D53: "Хромированный сетчатый стеллаж H200*W120*D53 - 5 полок",
+    chromeWireShelvingH200W151D53: "Хромированный сетчатый стеллаж H200*W151*D53 - 5 полок",
+    chromeWireShelvingH200W180D53: "Хромированный сетчатый стеллаж H200*W180*D53 - 5 полок",
 
     baseShelfDepth: "Глубина базовой полки",
     otherShelvesDepth: "Глубина остальных полок",
@@ -794,21 +833,15 @@ export const translations = {
     maxLength: "Максимальная длина",
     customLength: "По потребности",
     material: "Материал",
-    aluminum: "Алюминий",
+    // aluminum: "Алюминий", // Already defined
     hooks: "Крючки",
     mounting: "Монтаж",
     wallMounted: "Настенный монтаж",
     volume: "Объем",
     wheelDiameter: "Диаметр колес",
     capacity: "Вместимость",
-    kitchenShelving: "Кухонные стеллажи",
-    kitchenShelving200x60x35: "Кухонный стеллаж 200x60x35",
-    kitchenShelving200x106x35: "Кухонный стеллаж 200x106x35",
-    kitchenShelving200x90x53: "Кухонный стеллаж 200x90x53",
-    kitchenShelving200x90x60: "Кухонный стеллаж 200x90x60",
-    wheelsCanBeInstalled: "Возможна установка колес",
   },
 } as const
 
 export type Language = keyof typeof translations
-export type TranslationKey = keyof typeof translations.ka
+export type TranslationKey = keyof typeof translations.ka // Assuming 'ka' has all keys
