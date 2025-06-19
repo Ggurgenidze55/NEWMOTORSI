@@ -18,9 +18,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
     languages: {
-      ka: "/",
-      en: "/en",
-      ru: "/ru",
+      "ka-GE": "/",
+      "en-US": "/en",
+      "ru-RU": "/ru",
     },
   },
   openGraph: {
@@ -37,7 +37,9 @@ export const metadata: Metadata = {
       },
     ],
     locale: "ka_GE",
+    alternateLocale: ["en_US", "ru_RU"],
     type: "website",
+    updatedTime: new Date().toISOString(),
   },
   twitter: {
     card: "summary_large_image",
@@ -61,7 +63,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const jsonLd = {
+  const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "ნიუ მოტორსი",
@@ -69,20 +71,41 @@ export default function RootLayout({
     logo: `${siteUrl}/images/new-motorsi-logo.png`,
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+995-577-03-43-93", // Actual phone from footer
+      telephone: "+995-577-03-43-93",
       contactType: "Customer Service",
       areaServed: "GE",
       availableLanguage: ["Georgian", "English", "Russian"],
     },
-    sameAs: [
-      "https://www.facebook.com/newmotors.ge/", // Actual Facebook from footer
-    ],
+    sameAs: ["https://www.facebook.com/newmotors.ge/"],
   }
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "ნიუ მოტორსი",
+    url: siteUrl,
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${siteUrl}/search?q={search_term_string}`,
+      "query-input": "required name=search_term_string",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "ნიუ მოტორსი",
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteUrl}/images/new-motorsi-logo.png`,
+      },
+    },
+  }
+
+  const jsonLd = [organizationSchema, websiteSchema]
 
   return (
     <html lang="ka">
       <head>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       </head>
       <body className={`${inter.className} bg-white`}>
         <ClientLayout>{children}</ClientLayout>
