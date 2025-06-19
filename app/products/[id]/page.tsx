@@ -2732,6 +2732,90 @@ Hooks not included. The back panel is perforated, allowing you to attach hooks f
         rating: 4.5,
         reviewCount: 7,
       },
+      "market-shelf-single-165-w73": {
+        id: "market-shelf-single-165-w73",
+        name: t("marketShelfSingle165W73"),
+        price: 0, // Price hidden
+        description: {
+          ka: `ცალმხრივი თარო მარკეტისთვის.
+**ტექნიკური მახასიათებლები:**
+• სიმაღლე: 165 სმ
+• სიგანე: 73 სმ
+• ძირი თაროს სიღრმე: 35 სმ
+• დანარჩენი თაროები: 30 სმ
+• თაროების რაოდენობა ძირის ჩათვლით: 5
+• დატვირთვა: 50 კგ ერთ თაროზე
+• ფერი: თეთრი პრიალა
+კომპლექტაციაში შედის ფასმაჩვენებლები და წინა ბარიერი. თაროები არის მარტივად ასაწყობ-დასაშლელი კონსტრუქციის. შესაძლებელია თაროების გადაადგილება სურვილის მიხედვით.`,
+          en: `One-sided market shelf.
+**Technical Specifications:**
+• Height: 165 cm
+• Width: 73 cm
+• Base shelf depth: 35 cm
+• Other shelves depth: 30 cm
+• Number of shelves (including base): 5
+• Load capacity: 50 kg per shelf
+• Color: Glossy White
+Includes price holders and front barrier. Easy to assemble/disassemble. Shelves can be repositioned.`,
+          ru: `Односторонний стеллаж для магазина.
+**Технические характеристики:**
+• Высота: 165 см
+• Ширина: 73 см
+• Глубина базовой полки: 35 см
+• Глубина остальных полок: 30 см
+• Количество полок (включая базовую): 5
+• Нагрузка: 50 кг на полку
+• Цвет: Белый глянцевый
+В комплекте ценникодержатели и передний барьер. Легко собираемая/разбираемая конструкция. Полки можно перемещать.`,
+        },
+        features: {
+          ka: [
+            "სიმაღლე: 165 სმ",
+            "სიგანე: 73 სმ",
+            "ძირი თაროს სიღრმე: 35 სმ",
+            "დანარჩენი თაროები: 30 სმ",
+            "თაროების რაოდენობა: 5",
+            "დატვირთვა: 50 კგ ერთ თაროზე",
+            "ფერი: თეთრი პრიალა",
+            t("includesPriceHolders"),
+            t("includesFrontBarrier"),
+            t("easyAssembly"),
+            t("adjustableShelves"),
+          ],
+          en: [
+            "Height: 165 cm",
+            "Width: 73 cm",
+            "Base shelf depth: 35 cm",
+            "Other shelves depth: 30 cm",
+            "Number of shelves: 5",
+            "Load capacity: 50 kg per shelf",
+            "Color: Glossy White",
+            t("includesPriceHolders"),
+            t("includesFrontBarrier"),
+            t("easyAssembly"),
+            t("adjustableShelves"),
+          ],
+          ru: [
+            "Высота: 165 см",
+            "Ширина: 73 см",
+            "Глубина базовой полки: 35 см",
+            "Глубина остальных полок: 30 см",
+            "Количество полок: 5",
+            "Нагрузка: 50 кг на полку",
+            "Цвет: Белый глянцевый",
+            t("includesPriceHolders"),
+            t("includesFrontBarrier"),
+            t("easyAssembly"),
+            t("adjustableShelves"),
+          ],
+        },
+        images: ["/images/market-shelves/market-shelf-single-165w73.jpg"],
+        colors: [t("colorGlossyWhite")],
+        sizes: ["165x73x35/30"],
+        category: t("marketShelves"),
+        rating: 4.6, // Placeholder
+        reviewCount: 8, // Placeholder
+      },
     }
 
     return products[productId] || null
@@ -3152,6 +3236,15 @@ Hooks not included. The back panel is perforated, allowing you to attach hooks f
         category: t("marketShelves"),
         rating: 4.5,
         reviewCount: 7,
+      },
+      {
+        id: "market-shelf-single-165-w73",
+        name: t("marketShelfSingle165W73"),
+        price: 0,
+        image: "/images/market-shelves/market-shelf-single-165w73.jpg",
+        category: t("marketShelves"),
+        rating: 4.6,
+        reviewCount: 8,
       },
     ]
   }

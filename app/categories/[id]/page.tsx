@@ -375,6 +375,14 @@ export default function CategoryPage({ params }: { params: { id: string } }) {
           category: t("marketShelves"),
           isNew: true,
         },
+        {
+          id: "market-shelf-single-165-w73",
+          name: t("marketShelfSingle165W73"),
+          price: 0,
+          image: "/images/market-shelves/market-shelf-single-165w73.jpg",
+          category: t("marketShelves"),
+          isNew: true,
+        },
       ],
       trolleys: [
         {

@@ -516,6 +516,15 @@ export default function ProductsPage() {
       subcategory: "market-shelves",
       isNew: true,
     },
+    {
+      id: "market-shelf-single-165-w73",
+      name: t("marketShelfSingle165W73"),
+      price: 0,
+      image: "/images/market-shelves/market-shelf-single-165w73.jpg",
+      category: t("marketShelves"),
+      subcategory: "market-shelves",
+      isNew: true,
+    },
   ]
 
   const getPageTitle = () => {
