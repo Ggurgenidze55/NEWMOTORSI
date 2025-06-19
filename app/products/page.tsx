@@ -522,6 +522,48 @@ export default function ProductsPage() {
       subcategory: "kitchen-shelving",
       isNew: true,
     },
+    {
+  id: "kitchen-stainless-shelf-l120",
+  name: "სამზარეულოს სტელაჟი უჟანგავი ცხაურით",
+  price: 0,
+  image: "/images/kitchen-shelving/stainless-steel-shelf-l120.jpeg",
+  category: t("kitchenShelving"),
+  subcategory: "kitchen-shelving",
+  isNew: true,
+    },
+    {
+  id: "kitchen-stainless-shelf-l180",
+  name: "სამზარეულოს სტელაჟი უჟანგავი ცხაურით",
+  price: 0,
+  image: "/images/kitchen-shelving/stainless-steel-shelf-l180.jpeg",
+  category: t("kitchenShelving"),
+  isNew: true,
+},
+    {
+  id: "kitchen-stainless-trays-600x400",
+  name: "უჟანგავი ჟარონები",
+  price: 0,
+  image: "/images/kitchen-shelving/stainless-steel-trays.png",
+  category: t("kitchenShelving"),
+  isNew: true,
+},
+{
+  id: "kitchen-chrome-wire-shelf-200x151",
+  name: "ბადიანი ქრომირებული სტელაჟები",
+  price: 0,
+  image: "/images/kitchen-shelving/chrome-wire-shelf-200x151.jpeg",
+  category: t("kitchenShelving"),
+  isNew: true,
+},
+{
+  id: "kitchen-chrome-wire-shelf-200x180",
+  name: "ბადიანი ქრომირებული სტელაჟები",
+  price: 0,
+  image: "/images/kitchen-shelving/chrome-wire-shelf-200x180.jpeg",
+  category: t("kitchenShelving"),
+  isNew: true,
+},
+    
   ]
 
   const getPageTitle = () => {

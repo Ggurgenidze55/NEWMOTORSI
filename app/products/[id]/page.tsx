@@ -3111,6 +3111,456 @@ ${t("wheelsCanBeInstalled")}. ${t("easyAssembly")}. ${t("adjustableShelves")}.`,
         rating: 4.8, // Placeholder
         reviewCount: 8, // Placeholder
       },
+      "kitchen-stainless-shelf-l120": {
+  id: "kitchen-stainless-shelf-l120",
+  name: "სამზარეულოს სტელაჟი უჟანგავი ცხაურით",
+  price: 0, // ფასი დამალული
+  description: {
+    ka: `სამზარეულოს სტელაჟი უჟანგავი ცხაურით ზომები: L1200W500H1550 - 4 თაროთი
+
+**ტექნიკური მახასიათებლები:**
+• სიგრძე: 120 სმ
+• სიგანე: 50 სმ
+• სიმაღლე: 155 სმ
+• თაროების რაოდენობა: 4
+• მასალა: უჟანგავი ფოლადი
+• დატვირთვა: 200 კგ ერთ თაროზე
+
+იდეალურია სამზარეულოს და კვების ინდუსტრიისთვის. მაღალი ხარისხის უჟანგავი ფოლადისგან დამზადებული.`,
+    en: `Kitchen shelf with stainless steel dimensions: L1200W500H1550 - 4 shelves
+
+**Technical Specifications:**
+• Length: 120 cm
+• Width: 50 cm
+• Height: 155 cm
+• Number of shelves: 4
+• Material: Stainless steel
+• Load capacity: 200 kg per shelf
+
+Ideal for kitchen and food industry. Made from high-quality stainless steel.`,
+    ru: `Кухонный стеллаж из нержавеющей стали размеры: L1200W500H1550 - 4 полки
+
+**Технические характеристики:**
+• Длина: 120 см
+• Ширина: 50 см
+• Высота: 155 см
+• Количество полок: 4
+• Материал: Нержавеющая сталь
+• Нагрузка: 200 кг на полку
+
+Идеально для кухни и пищевой промышленности. Изготовлен из высококачественной нержавеющей стали.`,
+  },
+  features: {
+    ka: [
+      "სიგრძე: 120 სმ",
+      "სიგანე: 50 სმ", 
+      "სიმაღლე: 155 სმ",
+      "თაროების რაოდენობა: 4",
+      "მასალა: უჟანგავი ფოლადი",
+      "დატვირთვა: 200 კგ ერთ თაროზე",
+      "კოროზიისგან დაცული",
+      "მარტივი გასუფთავება",
+      "ჰიგიენური",
+      "გამძლე კონსტრუქცია",
+    ],
+    en: [
+      "Length: 120 cm",
+      "Width: 50 cm",
+      "Height: 155 cm", 
+      "Number of shelves: 4",
+      "Material: Stainless steel",
+      "Load capacity: 200 kg per shelf",
+      "Corrosion resistant",
+      "Easy to clean",
+      "Hygienic",
+      "Durable construction",
+    ],
+    ru: [
+      "Длина: 120 см",
+      "Ширина: 50 см",
+      "Высота: 155 см",
+      "Количество полок: 4", 
+      "Материал: Нержавеющая сталь",
+      "Нагрузка: 200 кг на полку",
+      "Устойчив к коррозии",
+      "Легко чистится",
+      "Гигиеничный",
+      "Прочная конструкция",
+    ],
+  },
+  images: [
+    "/images/kitchen-shelving/stainless-steel-shelf-l120.jpeg",
+  ],
+  colors: [t("silver")],
+  sizes: ["L1200*W500*H1550"],
+  category: t("kitchenShelving"),
+  rating: 4.7,
+  reviewCount: 5,
+},
+        "kitchen-stainless-shelf-l180": {
+      id: "kitchen-stainless-shelf-l180",
+      name: "სამზარეულოს სტელაჟი უჟანგავი ცხაურით",
+      price: 0, // Price hidden
+      description: {
+        ka: `სამზარეულოს სტელაჟი უჟანგავი ცხაურით ზომები: L1800*W500*H1550 - 4 თაროთი
+
+**ტექნიკური მახასიათებლები:**
+• სიგრძე: 180 სმ
+• სიგანე: 50 სმ
+• სიმაღლე: 155 სმ
+• თაროების რაოდენობა: 4
+• მასალა: უჟანგავი ფოლადი
+• დატვირთვა: 200 კგ ერთ თაროზე
+
+იდეალურია სამზარეულოს და კვების ინდუსტრიისთვის. მაღალი ხარისხის უჟანგავი ფოლადისგან დამზადებული.`,
+        en: `Kitchen shelf with stainless steel mesh. Dimensions: L1800*W500*H1550 - 4 shelves
+
+**Technical Specifications:**
+• Length: 180 cm
+• Width: 50 cm
+• Height: 155 cm
+• Number of shelves: 4
+• Material: Stainless steel
+• Load capacity: 200 kg per shelf
+
+Ideal for kitchen and food industry. Made from high-quality stainless steel.`,
+        ru: `Кухонный стеллаж из нержавеющей стали с сеткой. Размеры: L1800*W500*H1550 - 4 полки
+
+**Технические характеристики:**
+• Длина: 180 см
+• Ширина: 50 см
+• Высота: 155 см
+• Количество полок: 4
+• Материал: Нержавеющая сталь
+• Нагрузка: 200 кг на полку
+
+Идеально для кухни и пищевой промышленности. Изготовлен из высококачественной нержавеющей стали.`,
+      },
+      features: {
+        ka: [
+          "სიგრძე: 180 სმ",
+          "სიგანე: 50 სმ",
+          "სიმაღლე: 155 სმ",
+          "თაროების რაოდენობა: 4",
+          "მასალა: უჟანგავი ფოლადი",
+          "დატვირთვა: 200 კგ ერთ თაროზე",
+          "კოროზიისგან დაცული",
+          "მარტივი გასუფთავება",
+          "ჰიგიენური",
+          "გამძლე კონსტრუქცია",
+        ],
+        en: [
+          "Length: 180 cm",
+          "Width: 50 cm",
+          "Height: 155 cm",
+          "Number of shelves: 4",
+          "Material: Stainless steel",
+          "Load capacity: 200 kg per shelf",
+          "Corrosion resistant",
+          "Easy to clean",
+          "Hygienic",
+          "Durable construction",
+        ],
+        ru: [
+          "Длина: 180 см",
+          "Ширина: 50 см",
+          "Высота: 155 см",
+          "Количество полок: 4",
+          "Материал: Нержавеющая сталь",
+          "Нагрузка: 200 кг на полку",
+          "Устойчив к коррозии",
+          "Легко чистится",
+          "Гигиеничный",
+          "Прочная конструкция",
+        ],
+      },
+      images: [
+        "/images/kitchen-shelving/stainless-steel-shelf-l180.jpeg",
+      ],
+      colors: [t("silver")],
+      sizes: ["L1800*W500*H1550"],
+      category: t("kitchenShelving"),
+      rating: 4.7,
+      reviewCount: 5,
+    },
+        "kitchen-stainless-trays-600x400": {
+      id: "kitchen-stainless-trays-600x400",
+      name: "უჟანგავი ჟარონები",
+      price: 0, // Price hidden
+      description: {
+        ka: `უჟანგავი ჟარონები - ნახვრეტიანი და ნახვრეტების გარეშე
+ზომა: H600*L400`,
+        en: `Stainless steel trays - perforated and non-perforated
+Size: H600*L400`,
+        ru: `Противни из нержавеющей стали - перфорированные и неперфорированные
+Размер: H600*L400`,
+      },
+      features: {
+        ka: [
+          "ზომა: H600*L400",
+          "მასალა: უჟანგავი ფოლადი",
+          "ნახვრეტიანი და ნახვრეტების გარეშე",
+          "კოროზიისგან დაცული",
+          "მარტივი გასუფთავება",
+          "ჰიგიენური",
+        ],
+        en: [
+          "Size: H600*L400",
+          "Material: Stainless steel",
+          "Perforated and non-perforated",
+          "Corrosion resistant",
+          "Easy to clean",
+          "Hygienic",
+        ],
+        ru: [
+          "Размер: H600*L400",
+          "Материал: Нержавеющая сталь",
+          "Перфорированные и неперфорированные",
+          "Устойчив к коррозии",
+          "Легко чистится",
+          "Гигиеничный",
+        ],
+      },
+      images: [
+        "/images/kitchen-shelving/stainless-steel-trays.png",
+      ],
+      colors: [t("silver")],
+      sizes: ["H600*L400"],
+      category: t("kitchenShelving"),
+      rating: 4.5,
+      reviewCount: 3,
+    },
+        "kitchen-chrome-wire-shelf-200x120": {
+      id: "kitchen-chrome-wire-shelf-200x120",
+      name: "ბადიანი ქრომირებული სტელაჟები",
+      price: 0, // Price hidden
+      description: {
+        ka: `ბადიანი ქრომირებული სტელაჟები
+სიმაღლე: 200 სმ
+სიგანე: 120 სმ
+თაროების სიღრმე: 53 სმ
+თაროების რაოდენობა: 5
+დატვირთვა: 250 კგ ერთ თაროზე
+შესაძლებელია საბურავების დაყენება
+ფერი: ვერცხლისფერი
+თაროები არის მარტივად ასაწყობ-დასაშლელი კონსტრუქციის. შესაძლებელია თაროების გადაადგილება სურვილის მიხედვით.`,
+        en: `Chrome wire shelving
+Height: 200 cm
+Width: 120 cm
+Shelf depth: 53 cm
+Number of shelves: 5
+Load capacity: 250 kg per shelf
+Wheels can be installed
+Color: Silver
+Shelves are easy to assemble/disassemble. Shelves can be repositioned.`,
+        ru: `Стеллажи из хромированной сетки
+Высота: 200 см
+Ширина: 120 см
+Глубина полок: 53 см
+Количество полок: 5
+Нагрузка: 250 кг на полку
+Возможна установка колес
+Цвет: Серебристый
+Полки легко собираются/разбираются. Полки можно перемещать.`,
+      },
+      features: {
+        ka: [
+          "სიმაღლე: 200 სმ",
+          "სიგანე: 120 სმ",
+          "თაროების სიღრმე: 53 სმ",
+          "თაროების რაოდენობა: 5",
+          "დატვირთვა: 250 კგ ერთ თაროზე",
+          "შესაძლებელია საბურავების დაყენება",
+          "ფერი: ვერცხლისფერი",
+          "მარტივი კონსტრუქცია",
+          "თაროების რეგულირება",
+        ],
+        en: [
+          "Height: 200 cm",
+          "Width: 120 cm",
+          "Shelf depth: 53 cm",
+          "Number of shelves: 5",
+          "Load capacity: 250 kg per shelf",
+          "Wheels can be installed",
+          "Color: Silver",
+          "Easy assembly",
+          "Adjustable shelves",
+        ],
+        ru: [
+          "Высота: 200 см",
+          "Ширина: 120 см",
+          "Глубина полок: 53 см",
+          "Количество полок: 5",
+          "Нагрузка: 250 кг на полку",
+          "Возможна установка колес",
+          "Цвет: Серебристый",
+          "Простая конструкция",
+          "Регулируемые полки",
+        ],
+      },
+      images: [
+        "/images/kitchen-shelving/chrome-wire-shelf-200x120.jpeg",
+      ],
+      colors: [t("silver")],
+      sizes: ["200x120x53"],
+      category: t("kitchenShelving"),
+      rating: 4.6,
+      reviewCount: 4,
+    },
+        "kitchen-chrome-wire-shelf-200x151": {
+      id: "kitchen-chrome-wire-shelf-200x151",
+      name: "ბადიანი ქრომირებული სტელაჟები",
+      price: 0, // Price hidden
+      description: {
+        ka: `ბადიანი ქრომირებული სტელაჟები
+სიმაღლე: 200 სმ
+სიგანე: 151 სმ
+თაროების სიღრმე: 53 სმ
+თაროების რაოდენობა: 5
+დატვირთვა: 250 კგ ერთ თაროზე
+შესაძლებელია საბურავების დაყენება
+ფერი: ვერცხლისფერი
+თაროები არის მარტივად ასაწყობ-დასაშლელი კონსტრუქციის. შესაძლებელია თაროების გადაადგილება სურვილის მიხედვით.`,
+        en: `Chrome wire shelving
+Height: 200 cm
+Width: 151 cm
+Shelf depth: 53 cm
+Number of shelves: 5
+Load capacity: 250 kg per shelf
+Wheels can be installed
+Color: Silver
+Shelves are easy to assemble/disassemble. Shelves can be repositioned.`,
+        ru: `Стеллажи из хромированной сетки
+Высота: 200 см
+Ширина: 151 см
+Глубина полок: 53 см
+Количество полок: 5
+Нагрузка: 250 кг на полку
+Возможна установка колес
+Цвет: Серебристый
+Полки легко собираются/разбираются. Полки можно перемещать.`,
+      },
+      features: {
+        ka: [
+          "სიმაღლე: 200 სმ",
+          "სიგანე: 151 სმ",
+          "თაროების სიღრმე: 53 სმ",
+          "თაროების რაოდენობა: 5",
+          "დატვირთვა: 250 კგ ერთ თაროზე",
+          "შესაძლებელია საბურავების დაყენება",
+          "ფერი: ვერცხლისფერი",
+          "მარტივი კონსტრუქცია",
+          "თაროების რეგულირება",
+        ],
+        en: [
+          "Height: 200 cm",
+          "Width: 151 cm",
+          "Shelf depth: 53 cm",
+          "Number of shelves: 5",
+          "Load capacity: 250 kg per shelf",
+          "Wheels can be installed",
+          "Color: Silver",
+          "Easy assembly",
+          "Adjustable shelves",
+        ],
+        ru: [
+          "Высота: 200 см",
+          "Ширина: 151 см",
+          "Глубина полок: 53 см",
+          "Количество полок: 5",
+          "Нагрузка: 250 кг на полку",
+          "Возможна установка колес",
+          "Цвет: Серебристый",
+          "Простая конструкция",
+          "Регулируемые полки",
+        ],
+      },
+      images: [
+        "/images/kitchen-shelving/chrome-wire-shelf-200x151.jpeg",
+      ],
+      colors: [t("silver")],
+      sizes: ["200x151x53"],
+      category: t("kitchenShelving"),
+      rating: 4.6,
+      reviewCount: 4,
+    },
+        "kitchen-chrome-wire-shelf-200x180": {
+      id: "kitchen-chrome-wire-shelf-200x180",
+      name: "ბადიანი ქრომირებული სტელაჟები",
+      price: 0, // Price hidden
+      description: {
+        ka: `ბადიანი ქრომირებული სტელაჟები
+სიმაღლე: 200 სმ
+სიგანე: 180 სმ
+თაროების სიღრმე: 53 სმ
+თაროების რაოდენობა: 5
+დატვირთვა: 250 კგ ერთ თაროზე
+შესაძლებელია საბურავების დაყენება
+ფერი: ვერცხლისფერი
+თაროები არის მარტივად ასაწყობ-დასაშლელი კონსტრუქციის. შესაძლებელია თაროების გადაადგილება სურვილის მიხედვით.`,
+        en: `Chrome wire shelving
+Height: 200 cm
+Width: 180 cm
+Shelf depth: 53 cm
+Number of shelves: 5
+Load capacity: 250 kg per shelf
+Wheels can be installed
+Color: Silver
+Shelves are easy to assemble/disassemble. Shelves can be repositioned.`,
+        ru: `Стеллажи из хромированной сетки
+Высота: 200 см
+Ширина: 180 см
+Глубина полок: 53 см
+Количество полок: 5
+Нагрузка: 250 кг на полку
+Возможна установка колес
+Цвет: Серебристый
+Полки легко собираются/разбираются. Полки можно перемещать.`,
+      },
+      features: {
+        ka: [
+          "სიმაღლე: 200 სმ",
+          "სიგანე: 180 სმ",
+          "თაროების სიღრმე: 53 სმ",
+          "თაროების რაოდენობა: 5",
+          "დატვირთვა: 250 კგ ერთ თაროზე",
+          "შესაძლებელია საბურავების დაყენება",
+          "ფერი: ვერცხლისფერი",
+          "მარტივი კონსტრუქცია",
+          "თაროების რეგულირება",
+        ],
+        en: [
+          "Height: 200 cm",
+          "Width: 180 cm",
+          "Shelf depth: 53 cm",
+          "Number of shelves: 5",
+          "Load capacity: 250 kg per shelf",
+          "Wheels can be installed",
+          "Color: Silver",
+          "Easy assembly",
+          "Adjustable shelves",
+        ],
+        ru: [
+          "Высота: 200 см",
+          "Ширина: 180 см",
+          "Глубина полок: 53 см",
+          "Количество полок: 5",
+          "Нагрузка: 250 кг на полку",
+          "Возможна установка колес",
+          "Цвет: Серебристый",
+          "Простая конструкция",
+          "Регулируемые полки",
+        ],
+      },
+      images: [
+        "/images/kitchen-shelving/chrome-wire-shelf-200x180.jpeg",
+      ],
+      colors: [t("silver")],
+      sizes: ["200x180x53"],
+      category: t("kitchenShelving"),
+      rating: 4.6,
+      reviewCount: 4,
+    },
     }
 
     return products[productId as keyof typeof products] || null
