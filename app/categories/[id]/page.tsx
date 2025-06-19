@@ -204,6 +204,54 @@ export default function CategoryPage({ params }: { params: { id: string } }) {
           category: t("kitchenShelving"),
           isNew: true,
         },
+        {
+          id: "kitchen-stainless-shelf-l120",
+          name: t("kitchenShelvingStainlessL120"),
+          price: 0, // Set actual price if available
+          image: "/images/kitchen-shelving/stainless-steel-shelf-l120.jpeg",
+          category: t("kitchenShelving"),
+          isNew: true,
+        },
+        {
+          id: "kitchen-stainless-shelf-l180",
+          name: t("kitchenShelvingStainlessL180"),
+          price: 0, // Set actual price if available
+          image: "/images/kitchen-shelving/stainless-steel-shelf-l180.jpeg",
+          category: t("kitchenShelving"),
+          isNew: true,
+        },
+        {
+          id: "kitchen-stainless-trays-600x400",
+          name: t("stainlessSteelTraysHL600L400"),
+          price: 0, // Set actual price if available
+          image: "/images/kitchen-shelving/stainless-steel-trays.png",
+          category: t("kitchenShelving"),
+          isNew: true,
+        },
+        {
+          id: "kitchen-chrome-wire-shelf-200x120",
+          name: t("chromeWireShelvingH200W120D53"),
+          price: 0, // Set actual price if available
+          image: "/images/kitchen-shelving/chrome-wire-shelf-200x120.jpeg",
+          category: t("kitchenShelving"),
+          isNew: true,
+        },
+        {
+          id: "kitchen-chrome-wire-shelf-200x151",
+          name: t("chromeWireShelvingH200W151D53"),
+          price: 0, // Set actual price if available
+          image: "/images/kitchen-shelving/chrome-wire-shelf-200x151.jpeg",
+          category: t("kitchenShelving"),
+          isNew: true,
+        },
+        {
+          id: "kitchen-chrome-wire-shelf-200x180",
+          name: t("chromeWireShelvingH200W180D53"),
+          price: 0, // Set actual price if available
+          image: "/images/kitchen-shelving/chrome-wire-shelf-200x180.jpeg",
+          category: t("kitchenShelving"),
+          isNew: true,
+        },
       ],
       "warehouse-shelving": [
         {
