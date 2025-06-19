@@ -20,6 +20,7 @@ export default function CategoryPage({ params }: { params: { id: string } }) {
     "trash-bins": t("trashBins"),
     "tire-shelving": t("tireShelving"),
     "clothing-shelving": t("clothingShelving"),
+    "kitchen-shelving": t("kitchenShelving"), // Added kitchen shelving
   }
 
   const categoryName = categoryNames[params.id as keyof typeof categoryNames] || t("products")
@@ -38,6 +39,7 @@ export default function CategoryPage({ params }: { params: { id: string } }) {
         "trash-bins": "მაღალი ხარისხის ნაგვის ურნები კომერციული სივრცეებისთვის",
         "tire-shelving": "პროფესიონალური საბურავის სტელაჟები ავტოსერვისებისთვის",
         "clothing-shelving": "ტანსაცმლის სტელაჟები მაღაზიებისა და საწყობებისთვის",
+        "kitchen-shelving": "ფუნქციონალური და გამძლე სტელაჟები თქვენი სამზარეულოსთვის",
       },
       en: {
         shelving: "High quality shelving for warehouses of any size",
@@ -50,6 +52,7 @@ export default function CategoryPage({ params }: { params: { id: string } }) {
         "trash-bins": "High quality trash bins for commercial spaces",
         "tire-shelving": "Professional tire shelving for auto services",
         "clothing-shelving": "Clothing racks for stores and warehouses",
+        "kitchen-shelving": "Functional and durable shelving for your kitchen",
       },
       ru: {
         shelving: "Высококачественные стеллажи для складов любого размера",
@@ -62,6 +65,7 @@ export default function CategoryPage({ params }: { params: { id: string } }) {
         "trash-bins": "Высококачественные мусорные баки для коммерческих помещений",
         "tire-shelving": "Профессиональные стеллажи для шин для автосервисов",
         "clothing-shelving": "Стеллажи для одежды для магазинов и складов",
+        "kitchen-shelving": "Функциональные и прочные стеллажи для вашей кухни",
       },
     }
 
@@ -166,6 +170,39 @@ export default function CategoryPage({ params }: { params: { id: string } }) {
           price: 320.0,
           image: "/images/archive-shelving-1.jpg",
           category: t("archiveShelving"),
+          isNew: true,
+        },
+        // Kitchen Shelves added to general shelving
+        {
+          id: "kitchen-shelf-1",
+          name: t("kitchenShelving200x60x35"),
+          price: 0,
+          image: "/images/kitchen-shelving/kitchen-shelf-1.png",
+          category: t("kitchenShelving"),
+          isNew: true,
+        },
+        {
+          id: "kitchen-shelf-2",
+          name: t("kitchenShelving200x106x35"),
+          price: 0,
+          image: "/images/kitchen-shelving/kitchen-shelf-2.png",
+          category: t("kitchenShelving"),
+          isNew: true,
+        },
+        {
+          id: "kitchen-shelf-3",
+          name: t("kitchenShelving200x90x53"),
+          price: 0,
+          image: "/images/kitchen-shelving/kitchen-shelf-3.jpg",
+          category: t("kitchenShelving"),
+          isNew: true,
+        },
+        {
+          id: "kitchen-shelf-4",
+          name: t("kitchenShelving200x90x60"),
+          price: 0,
+          image: "/images/kitchen-shelving/kitchen-shelf-4.jpg",
+          category: t("kitchenShelving"),
           isNew: true,
         },
       ],
@@ -614,6 +651,40 @@ export default function CategoryPage({ params }: { params: { id: string } }) {
           isNew: true,
         },
       ],
+      "kitchen-shelving": [
+        {
+          id: "kitchen-shelf-1",
+          name: t("kitchenShelving200x60x35"),
+          price: 0,
+          image: "/images/kitchen-shelving/kitchen-shelf-1.png",
+          category: t("kitchenShelving"),
+          isNew: true,
+        },
+        {
+          id: "kitchen-shelf-2",
+          name: t("kitchenShelving200x106x35"),
+          price: 0,
+          image: "/images/kitchen-shelving/kitchen-shelf-2.png",
+          category: t("kitchenShelving"),
+          isNew: true,
+        },
+        {
+          id: "kitchen-shelf-3",
+          name: t("kitchenShelving200x90x53"),
+          price: 0,
+          image: "/images/kitchen-shelving/kitchen-shelf-3.jpg",
+          category: t("kitchenShelving"),
+          isNew: true,
+        },
+        {
+          id: "kitchen-shelf-4",
+          name: t("kitchenShelving200x90x60"),
+          price: 0,
+          image: "/images/kitchen-shelving/kitchen-shelf-4.jpg",
+          category: t("kitchenShelving"),
+          isNew: true,
+        },
+      ],
     }
 
     return allProducts[categoryId as keyof typeof allProducts] || []
@@ -632,7 +703,10 @@ export default function CategoryPage({ params }: { params: { id: string } }) {
               <div>
                 <h2 className="text-3xl font-bold tracking-tight">{categoryName}</h2>
                 <p className="text-muted-foreground">
-                  {products.length} {t("products")} {categoryName.toLowerCase()}-ში
+                  {products.length} {t("products")}{" "}
+                  {params.id === "shelving" || params.id === "market-shelves" || params.id === "kitchen-shelving"
+                    ? ""
+                    : t("itemsInCategory")}
                 </p>
               </div>
 
@@ -640,7 +714,7 @@ export default function CategoryPage({ params }: { params: { id: string } }) {
               {products.length > 0 ? (
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                   {products.map((product) => (
-                    <ProductCard key={product.id} {...product} hidePrice={true} />
+                    <ProductCard key={product.id} {...product} hidePrice={product.price === 0} />
                   ))}
                 </div>
               ) : (

@@ -525,6 +525,43 @@ export default function ProductsPage() {
       subcategory: "market-shelves",
       isNew: true,
     },
+    // Kitchen Shelving Products
+    {
+      id: "kitchen-shelf-1",
+      name: t("kitchenShelving200x60x35"),
+      price: 0,
+      image: "/images/kitchen-shelving/kitchen-shelf-1.png",
+      category: t("kitchenShelving"),
+      subcategory: "kitchen-shelving",
+      isNew: true,
+    },
+    {
+      id: "kitchen-shelf-2",
+      name: t("kitchenShelving200x106x35"),
+      price: 0,
+      image: "/images/kitchen-shelving/kitchen-shelf-2.png",
+      category: t("kitchenShelving"),
+      subcategory: "kitchen-shelving",
+      isNew: true,
+    },
+    {
+      id: "kitchen-shelf-3",
+      name: t("kitchenShelving200x90x53"),
+      price: 0,
+      image: "/images/kitchen-shelving/kitchen-shelf-3.jpg",
+      category: t("kitchenShelving"),
+      subcategory: "kitchen-shelving",
+      isNew: true,
+    },
+    {
+      id: "kitchen-shelf-4",
+      name: t("kitchenShelving200x90x60"),
+      price: 0,
+      image: "/images/kitchen-shelving/kitchen-shelf-4.jpg",
+      category: t("kitchenShelving"),
+      subcategory: "kitchen-shelving",
+      isNew: true,
+    },
   ]
 
   const getPageTitle = () => {

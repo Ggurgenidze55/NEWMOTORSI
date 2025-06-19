@@ -116,6 +116,14 @@ export const translations = {
     marketShelfCheckoutFront: "სალაროს მაგიდის წინა თარო",
     marketShelfSingle135W73: "ცალმხრივი თარო H135 W73",
     marketShelfSingle165W73: "ცალმხრივი თარო H165 W73",
+
+    // Kitchen Shelves
+    kitchenShelving200x60x35: "სამზარეულოს სტელაჟი 200x60x35",
+    kitchenShelving200x106x35: "სამზარეულოს სტელაჟი 200x106x35",
+    kitchenShelving200x90x53: "სამზარეულოს სტელაჟი 200x90x53",
+    kitchenShelving200x90x60: "სამზარეულოს სტელაჟი 200x90x60",
+    wheelsCanBeInstalled: "შესაძლებელია საბურავების დაყენება",
+
     baseShelfDepth: "ძირი თაროს სიღრმე",
     otherShelvesDepth: "დანარჩენი თაროები",
     shelfCount: "თაროების რაოდენობა",
@@ -518,10 +526,16 @@ export const translations = {
     aluminum: "Aluminum",
     hooks: "Hooks",
     mounting: "Mounting",
-    wallMounted: "Wall Mounted",
+    wallMounted: "Wall Mounting",
     volume: "Volume",
     wheelDiameter: "Wheel Diameter",
     capacity: "Capacity",
+    kitchenShelving: "Kitchen Shelving",
+    kitchenShelving200x60x35: "Kitchen Shelf 200x60x35",
+    kitchenShelving200x106x35: "Kitchen Shelf 200x106x35",
+    kitchenShelving200x90x53: "Kitchen Shelf 200x90x53",
+    kitchenShelving200x90x60: "Kitchen Shelf 200x90x60",
+    wheelsCanBeInstalled: "Wheels can be installed",
   },
 
   ru: {
@@ -644,6 +658,7 @@ export const translations = {
     marketShelfCheckoutFront: "Прикассовый стеллаж",
     marketShelfSingle135W73: "Односторонний стеллаж H135 W73",
     marketShelfSingle165W73: "Односторонний стеллаж H165 W73",
+
     baseShelfDepth: "Глубина базовой полки",
     otherShelvesDepth: "Глубина остальных полок",
     shelfCount: "Количество полок",
@@ -786,6 +801,12 @@ export const translations = {
     volume: "Объем",
     wheelDiameter: "Диаметр колес",
     capacity: "Вместимость",
+    kitchenShelving: "Кухонные стеллажи",
+    kitchenShelving200x60x35: "Кухонный стеллаж 200x60x35",
+    kitchenShelving200x106x35: "Кухонный стеллаж 200x106x35",
+    kitchenShelving200x90x53: "Кухонный стеллаж 200x90x53",
+    kitchenShelving200x90x60: "Кухонный стеллаж 200x90x60",
+    wheelsCanBeInstalled: "Возможна установка колес",
   },
 } as const
 

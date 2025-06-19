@@ -2816,9 +2816,304 @@ Includes price holders and front barrier. Easy to assemble/disassemble. Shelves 
         rating: 4.6, // Placeholder
         reviewCount: 8, // Placeholder
       },
+      // Kitchen Shelving Products
+      "kitchen-shelf-1": {
+        id: "kitchen-shelf-1",
+        name: t("kitchenShelving200x60x35"),
+        price: 0, // Price hidden
+        description: {
+          ka: `სამზარეულოს სტელაჟი, ვერცხლისფერი.
+**ტექნიკური მახასიათებლები:**
+• სიმაღლე: 200 სმ
+• სიგანე: 60 სმ
+• თაროების სიღრმე: 35 სმ
+• თაროების რაოდენობა: 5
+• დატვირთვა: 250 კგ ერთ თაროზე
+• ფერი: ვერცხლისფერი
+${t("wheelsCanBeInstalled")}. ${t("easyAssembly")}. ${t("adjustableShelves")}.`,
+          en: `Kitchen shelf, silver.
+**Technical Specifications:**
+• Height: 200 cm
+• Width: 60 cm
+• Shelf depth: 35 cm
+• Number of shelves: 5
+• Load capacity: 250 kg per shelf
+• Color: Silver
+${t("wheelsCanBeInstalled")}. ${t("easyAssembly")}. ${t("adjustableShelves")}.`,
+          ru: `Кухонный стеллаж, серебристый.
+**Технические характеристики:**
+• Высота: 200 см
+• Ширина: 60 см
+• Глубина полок: 35 см
+• Количество полок: 5
+• Нагрузка: 250 кг на полку
+• Цвет: Серебристый
+${t("wheelsCanBeInstalled")}. ${t("easyAssembly")}. ${t("adjustableShelves")}.`,
+        },
+        features: {
+          ka: [
+            "სიმაღლე: 200 სმ",
+            "სიგანე: 60 სმ",
+            "თაროების სიღრმე: 35 სმ",
+            "თაროების რაოდენობა: 5",
+            "დატვირთვა: 250 კგ ერთ თაროზე",
+            "ფერი: ვერცხლისფერი",
+            t("wheelsCanBeInstalled"),
+            t("easyAssembly"),
+            t("adjustableShelves"),
+          ],
+          en: [
+            "Height: 200 cm",
+            "Width: 60 cm",
+            "Shelf depth: 35 cm",
+            "Number of shelves: 5",
+            "Load capacity: 250 kg per shelf",
+            "Color: Silver",
+            t("wheelsCanBeInstalled"),
+            t("easyAssembly"),
+            t("adjustableShelves"),
+          ],
+          ru: [
+            "Высота: 200 см",
+            "Ширина: 60 см",
+            "Глубина полок: 35 см",
+            "Количество полок: 5",
+            "Нагрузка: 250 кг на полку",
+            "Цвет: Серебристый",
+            t("wheelsCanBeInstalled"),
+            t("easyAssembly"),
+            t("adjustableShelves"),
+          ],
+        },
+        images: ["/images/kitchen-shelving/kitchen-shelf-1.png"],
+        colors: [t("silver")],
+        sizes: ["200x60x35"],
+        category: t("kitchenShelving"),
+        rating: 4.5, // Placeholder
+        reviewCount: 5, // Placeholder
+      },
+      "kitchen-shelf-2": {
+        id: "kitchen-shelf-2",
+        name: t("kitchenShelving200x106x35"),
+        price: 0, // Price hidden
+        description: {
+          ka: `სამზარეულოს სტელაჟი, ვერცხლისფერი.
+**ტექნიკური მახასიათებლები:**
+• სიმაღლე: 200 სმ
+• სიგანე: 106 სმ
+• თაროების სიღრმე: 35 სმ
+• თაროების რაოდენობა: 5
+• დატვირთვა: 250 კგ ერთ თაროზე
+• ფერი: ვერცხლისფერი
+${t("wheelsCanBeInstalled")}.`,
+          en: `Kitchen shelf, silver.
+**Technical Specifications:**
+• Height: 200 cm
+• Width: 106 cm
+• Shelf depth: 35 cm
+• Number of shelves: 5
+• Load capacity: 250 kg per shelf
+• Color: Silver
+${t("wheelsCanBeInstalled")}.`,
+          ru: `Кухонный стеллаж, серебристый.
+**Технические характеристики:**
+• Высота: 200 см
+• Ширина: 106 см
+• Глубина полок: 35 см
+• Количество полок: 5
+• Нагрузка: 250 кг на полку
+• Цвет: Серебристый
+${t("wheelsCanBeInstalled")}.`,
+        },
+        features: {
+          ka: [
+            "სიმაღლე: 200 სმ",
+            "სიგანე: 106 სმ",
+            "თაროების სიღრმე: 35 სმ",
+            "თაროების რაოდენობა: 5",
+            "დატვირთვა: 250 კგ ერთ თაროზე",
+            "ფერი: ვერცხლისფერი",
+            t("wheelsCanBeInstalled"),
+          ],
+          en: [
+            "Height: 200 cm",
+            "Width: 106 cm",
+            "Shelf depth: 35 cm",
+            "Number of shelves: 5",
+            "Load capacity: 250 kg per shelf",
+            "Color: Silver",
+            t("wheelsCanBeInstalled"),
+          ],
+          ru: [
+            "Высота: 200 см",
+            "Ширина: 106 см",
+            "Глубина полок: 35 см",
+            "Количество полок: 5",
+            "Нагрузка: 250 кг на полку",
+            "Цвет: Серебристый",
+            t("wheelsCanBeInstalled"),
+          ],
+        },
+        images: ["/images/kitchen-shelving/kitchen-shelf-2.png"],
+        colors: [t("silver")],
+        sizes: ["200x106x35"],
+        category: t("kitchenShelving"),
+        rating: 4.6, // Placeholder
+        reviewCount: 6, // Placeholder
+      },
+      "kitchen-shelf-3": {
+        id: "kitchen-shelf-3",
+        name: t("kitchenShelving200x90x53"),
+        price: 0, // Price hidden
+        description: {
+          ka: `სამზარეულოს სტელაჟი, ვერცხლისფერი.
+**ტექნიკური მახასიათებლები:**
+• სიმაღლე: 200 სმ
+• სიგანე: 90 სმ
+• თაროების სიღრმე: 53 სმ
+• თაროების რაოდენობა: 5
+• დატვირთვა: 250 კგ ერთ თაროზე
+• ფერი: ვერცხლისფერი
+${t("wheelsCanBeInstalled")}. ${t("easyAssembly")}. ${t("adjustableShelves")}.`,
+          en: `Kitchen shelf, silver.
+**Technical Specifications:**
+• Height: 200 cm
+• Width: 90 cm
+• Shelf depth: 53 cm
+• Number of shelves: 5
+• Load capacity: 250 kg per shelf
+• Color: Silver
+${t("wheelsCanBeInstalled")}. ${t("easyAssembly")}. ${t("adjustableShelves")}.`,
+          ru: `Кухонный стеллаж, серебристый.
+**Технические характеристики:**
+• Высота: 200 см
+• Ширина: 90 см
+• Глубина полок: 53 см
+• Количество полок: 5
+• Нагрузка: 250 кг на полку
+• Цвет: Серебристый
+${t("wheelsCanBeInstalled")}. ${t("easyAssembly")}. ${t("adjustableShelves")}.`,
+        },
+        features: {
+          ka: [
+            "სიმაღლე: 200 სმ",
+            "სიგანე: 90 სმ",
+            "თაროების სიღრმე: 53 სმ",
+            "თაროების რაოდენობა: 5",
+            "დატვირთვა: 250 კგ ერთ თაროზე",
+            "ფერი: ვერცხლისფერი",
+            t("wheelsCanBeInstalled"),
+            t("easyAssembly"),
+            t("adjustableShelves"),
+          ],
+          en: [
+            "Height: 200 cm",
+            "Width: 90 cm",
+            "Shelf depth: 53 cm",
+            "Number of shelves: 5",
+            "Load capacity: 250 kg per shelf",
+            "Color: Silver",
+            t("wheelsCanBeInstalled"),
+            t("easyAssembly"),
+            t("adjustableShelves"),
+          ],
+          ru: [
+            "Высота: 200 см",
+            "Ширина: 90 см",
+            "Глубина полок: 53 см",
+            "Количество полок: 5",
+            "Нагрузка: 250 кг на полку",
+            "Цвет: Серебристый",
+            t("wheelsCanBeInstalled"),
+            t("easyAssembly"),
+            t("adjustableShelves"),
+          ],
+        },
+        images: ["/images/kitchen-shelving/kitchen-shelf-3.jpg"],
+        colors: [t("silver")],
+        sizes: ["200x90x53"],
+        category: t("kitchenShelving"),
+        rating: 4.7, // Placeholder
+        reviewCount: 7, // Placeholder
+      },
+      "kitchen-shelf-4": {
+        id: "kitchen-shelf-4",
+        name: t("kitchenShelving200x90x60"),
+        price: 0, // Price hidden
+        description: {
+          ka: `სამზარეულოს სტელაჟი, ვერცხლისფერი.
+**ტექნიკური მახასიათებლები:**
+• სიმაღლე: 200 სმ
+• სიგანე: 90 სმ
+• თაროების სიღრმე: 60 სმ
+• თაროების რაოდენობა: 5
+• დატვირთვა: 250 კგ ერთ თაროზე
+• ფერი: ვერცხლისფერი
+${t("wheelsCanBeInstalled")}. ${t("easyAssembly")}. ${t("adjustableShelves")}.`,
+          en: `Kitchen shelf, silver.
+**Technical Specifications:**
+• Height: 200 cm
+• Width: 90 cm
+• Shelf depth: 60 cm
+• Number of shelves: 5
+• Load capacity: 250 kg per shelf
+• Color: Silver
+${t("wheelsCanBeInstalled")}. ${t("easyAssembly")}. ${t("adjustableShelves")}.`,
+          ru: `Кухонный стеллаж, серебристый.
+**Технические характеристики:**
+• Высота: 200 см
+• Ширина: 90 см
+• Глубина полок: 60 см
+• Количество полок: 5
+• Нагрузка: 250 кг на полку
+• Цвет: Серебристый
+${t("wheelsCanBeInstalled")}. ${t("easyAssembly")}. ${t("adjustableShelves")}.`,
+        },
+        features: {
+          ka: [
+            "სიმაღლე: 200 სმ",
+            "სიგანე: 90 სმ",
+            "თაროების სიღრმე: 60 სმ",
+            "თაროების რაოდენობა: 5",
+            "დატვირთვა: 250 კგ ერთ თაროზე",
+            "ფერი: ვერცხლისფერი",
+            t("wheelsCanBeInstalled"),
+            t("easyAssembly"),
+            t("adjustableShelves"),
+          ],
+          en: [
+            "Height: 200 cm",
+            "Width: 90 cm",
+            "Shelf depth: 60 cm",
+            "Number of shelves: 5",
+            "Load capacity: 250 kg per shelf",
+            "Color: Silver",
+            t("wheelsCanBeInstalled"),
+            t("easyAssembly"),
+            t("adjustableShelves"),
+          ],
+          ru: [
+            "Высота: 200 см",
+            "Ширина: 90 см",
+            "Глубина полок: 60 см",
+            "Количество полок: 5",
+            "Нагрузка: 250 кг на полку",
+            "Цвет: Серебристый",
+            t("wheelsCanBeInstalled"),
+            t("easyAssembly"),
+            t("adjustableShelves"),
+          ],
+        },
+        images: ["/images/kitchen-shelving/kitchen-shelf-4.jpg"],
+        colors: [t("silver")],
+        sizes: ["200x90x60"],
+        category: t("kitchenShelving"),
+        rating: 4.8, // Placeholder
+        reviewCount: 8, // Placeholder
+      },
     }
 
-    return products[productId] || null
+    return products[productId as keyof typeof products] || null
   }
 
   const product = getProductData(params.id)
@@ -3244,6 +3539,43 @@ Includes price holders and front barrier. Easy to assemble/disassemble. Shelves 
         image: "/images/market-shelves/market-shelf-single-165w73.jpg",
         category: t("marketShelves"),
         rating: 4.6,
+        reviewCount: 8,
+      },
+      // Kitchen Shelving Products
+      {
+        id: "kitchen-shelf-1",
+        name: t("kitchenShelving200x60x35"),
+        price: 0,
+        image: "/images/kitchen-shelving/kitchen-shelf-1.png",
+        category: t("kitchenShelving"),
+        rating: 4.5,
+        reviewCount: 5,
+      },
+      {
+        id: "kitchen-shelf-2",
+        name: t("kitchenShelving200x106x35"),
+        price: 0,
+        image: "/images/kitchen-shelving/kitchen-shelf-2.png",
+        category: t("kitchenShelving"),
+        rating: 4.6,
+        reviewCount: 6,
+      },
+      {
+        id: "kitchen-shelf-3",
+        name: t("kitchenShelving200x90x53"),
+        price: 0,
+        image: "/images/kitchen-shelving/kitchen-shelf-3.jpg",
+        category: t("kitchenShelving"),
+        rating: 4.7,
+        reviewCount: 7,
+      },
+      {
+        id: "kitchen-shelf-4",
+        name: t("kitchenShelving200x90x60"),
+        price: 0,
+        image: "/images/kitchen-shelving/kitchen-shelf-4.jpg",
+        category: t("kitchenShelving"),
+        rating: 4.8,
         reviewCount: 8,
       },
     ]
