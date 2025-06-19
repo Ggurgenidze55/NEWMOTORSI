@@ -322,7 +322,7 @@ Perfect for warehouses with high ceilings.`,
           "/images/blue-warehouse-shelving.png",
           "/images/warehouse-shelving.jpg",
         ],
-        colors: [t("blue"), "ნაცარი"],
+        colors: [t("blue"), "ნაცარ���"],
         sizes: ["300x120x80"],
         category: t("warehouseShelving"),
         rating: 4.9,
@@ -2029,7 +2029,7 @@ Includes price holders. Easy to assemble/disassemble. Shelves can be repositione
           ka: `ცალმხრივი თარო მარკეტისთვის. იდეალურია პროდუქციის ეფექტურად წარმოსაჩენად.
 **ტექნიკური მახასიათებლები:**
 • სიმაღლე: 195 სმ
-• სიგანე: 90 სმ
+��� სიგანე: 90 სმ
 • ძირი თაროს სიღრმე: 45 სმ
 • დანარჩენი თაროები: 40 სმ
 • თაროების რაოდენობა: 5
@@ -3545,7 +3545,7 @@ Shelves are easy to assemble/disassemble. Shelves can be repositioned.`,
           "Ширина: 180 см",
           "Глубина полок: 53 см",
           "Количество полок: 5",
-          "Нагрузка: 250 кг на полку",
+          "Нагрузка: 250 кг н�� полку",
           "Возможна установка колес",
           "Цвет: Серебристый",
           "Простая конструкция",

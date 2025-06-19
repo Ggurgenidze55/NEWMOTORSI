@@ -499,14 +499,7 @@ export default function CategoryPage({ params }: { params: { id: string } }) {
           category: t("marketAccessories"),
           isNew: true,
         },
-        {
-          id: "accessory-holder-1",
-          name: t("accessoryHolderUnit"),
-          price: 35.0,
-          image: "/images/accessory-holder-1.png",
-          category: t("marketAccessories"),
-          isNew: true,
-        },
+        
         {
           id: "perforated-wall-1",
           name: t("perforatedWallUnit"),
@@ -754,8 +747,8 @@ export default function CategoryPage({ params }: { params: { id: string } }) {
           <div className="container px-4 py-8 md:px-6 md:py-12">
             <div className="flex flex-col gap-8">
               <div>
-                <h2 className="text-3xl font-bold tracking-tight">{categoryName}</h2>
-                <p className="text-muted-foreground">
+                <h2 className="text-3xl font-bold tracking-tight text-black">{categoryName}</h2>
+                <p className="text-black">
                   {products.length} {t("productsCount")} {/* Using productsCount for plural "products" */}
                   {/* The logic for "itemsInCategory" might need adjustment based on category type */}
                   {/* For simplicity, we'll keep it as is for now */}

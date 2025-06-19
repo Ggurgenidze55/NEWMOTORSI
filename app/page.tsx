@@ -38,7 +38,7 @@ export default function HomePage() {
       image: "/images/market-shelves.jpg",
       href: "/categories/market-shelves",
       icon: "🏪",
-      count: "1 პროდუქტი",
+      count: "17 პროდუქტი",
     },
     {
       id: "market-accessories",
@@ -360,7 +360,7 @@ export default function HomePage() {
                       <h3 className="text-2xl font-bold text-gray-800 group-hover:text-primary transition-colors">
                         {getCategoryTitle(category)}
                       </h3>
-                      <span className="text-sm text-primary font-semibold bg-primary/10 px-3 py-1 rounded-full">
+                      <span className="text-sm text-white font-semibold bg-black px-3 py-1 rounded-full">
                         {getCategoryCount(category)}
                       </span>
                     </div>

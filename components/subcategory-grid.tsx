@@ -23,7 +23,7 @@ export default function SubcategoryGrid() {
     {
       id: "market-shelves",
       name: t("marketShelves"),
-      description: "საგამოფენო თაროები პროდუქტების ეფექტური წარმოსაჩენად",
+      description: "საგამოფენ��� თაროები პროდუქტების ეფექტური წარმოსაჩენად",
       image: "/placeholder.svg?height=200&width=300&text=Market+Shelves",
       href: "/categories/market-shelves",
       count: 0,
