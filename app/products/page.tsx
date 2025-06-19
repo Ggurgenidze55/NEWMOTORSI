@@ -549,14 +549,14 @@ export default function ProductsPage() {
   return (
     <>
       <SubcategoryNavigation />
-      <div className="flex flex-col min-h-screen bg-white">
+      <div className="flex flex-col min-h-screen bg-white text-black">
         <div className="flex-1">
           <div className="container px-4 py-8 md:px-6 md:py-12">
             <div className="flex flex-col gap-8">
               <div className="text-center">
-                <h1 className="text-4xl font-bold tracking-tight mb-4">{getPageTitle()}</h1>
-                <p className="text-xl text-muted-foreground max-w-2xl mx-auto">{getPageDescription()}</p>
-                <p className="text-sm text-muted-foreground mt-2">
+                <h1 className="text-4xl font-bold tracking-tight mb-4 text-black">{getPageTitle()}</h1>
+                <p className="text-xl text-black max-w-2xl mx-auto">{getPageDescription()}</p>
+                <p className="text-sm text-black mt-2">
                   {products.length} {t("products")}
                 </p>
               </div>
