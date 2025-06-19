@@ -2,163 +2,104 @@
 
 import Link from "next/link"
 import Image from "next/image"
+import { useState } from "react"
+import LogoFallback from "@/components/logo-fallback"
 import { useLanguage } from "@/contexts/language-context"
-import { Facebook, MapPin, Phone, Mail } from "lucide-react"
 
 export default function Footer() {
-  const { t, language } = useLanguage()
-
-  const footerContent = {
-    ka: {
-      description: "პროფესიონალური სტელაჟები და საწყობის აღჭურვილობა თქვენი ბიზნესისთვის.",
-      quickLinks: "სწრაფი ბმულები",
-      categories: "კატეგორიები",
-      contact: "კონტაქტი",
-      home: "მთავარი",
-      about: "ჩვენს შესახებ",
-      products: "პროდუქტები",
-      contactPage: "კონტაქტი",
-      shelving: "სასაწყობე სტელაჟები",
-      marketShelves: "მარკეტის თაროები",
-      accessories: "აქსესუარები",
-      rights: "ყველა უფლება დაცულია.",
-    },
-    en: {
-      description: "Professional shelving and warehouse equipment for your business.",
-      quickLinks: "Quick Links",
-      categories: "Categories",
-      contact: "Contact",
-      home: "Home",
-      about: "About Us",
-      products: "Products",
-      contactPage: "Contact",
-      shelving: "Warehouse Shelving",
-      marketShelves: "Market Shelves",
-      accessories: "Accessories",
-      rights: "All rights reserved.",
-    },
-    ru: {
-      description: "Профессиональные стеллажи и складское оборудование для вашего бизнеса.",
-      quickLinks: "Быстрые ссылки",
-      categories: "Категории",
-      contact: "Контакты",
-      home: "Главная",
-      about: "О нас",
-      products: "Продукты",
-      contactPage: "Контакты",
-      shelving: "Складские стеллажи",
-      marketShelves: "Торговые полки",
-      accessories: "Аксессуары",
-      rights: "Все права защищены.",
-    },
-  }
-
-  // fall back to Georgian ("ka") if language code is missing
-  const content = footerContent[(language as keyof typeof footerContent) ?? "ka"] || footerContent.ka
+  const { t } = useLanguage()
+  const [logoError, setLogoError] = useState(false)
 
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* About Section */}
-          <div className="space-y-4">
-            <Link href="/" className="inline-block">
-              <Image src="/images/new-motorsi-logo.png" alt="New Motorsi Logo" width={150} height={40} />
-            </Link>
-            <p className="text-gray-400">{content.description}</p>
+    <footer className="bg-gray-900 text-white py-16">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          <div className="md:col-span-2">
+            <div className="flex items-center mb-6">
+              {!logoError ? (
+                <Image
+                  src="/images/new-motorsi-logo.png"
+                  alt="New Motorsi Logo"
+                  width={220}
+                  height={75}
+                  className="h-16 w-auto brightness-0 invert"
+                  onError={() => setLogoError(true)}
+                />
+              ) : (
+                <LogoFallback isFooter={true} />
+              )}
+            </div>
+            <p className="text-gray-300 max-w-md leading-relaxed mb-6">
+              ჩვენ ვართ წამყვანი კომპანია სტელაჟებისა და საწყობის აღჭურვილობის სფეროში. ჩვენი მისიაა თქვენი ბიზნესის
+              ეფექტურობის გაზრდა.
+            </p>
             <div className="flex space-x-4">
-              <a
-                href="https://www.facebook.com/newmotors.ge/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-                aria-label="Facebook"
+              <Link
+                href="#"
+                className="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform"
               >
-                <Facebook size={20} />
-              </a>
-              {/* Add other social links here */}
+                <span className="text-white text-sm font-bold">f</span>
+              </Link>
+              <Link
+                href="#"
+                className="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+              >
+                <span className="text-white text-sm font-bold">in</span>
+              </Link>
+              <Link
+                href="#"
+                className="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+              >
+                <span className="text-white text-sm font-bold">@</span>
+              </Link>
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">{content.quickLinks}</h3>
+            <h3 className="font-bold text-lg mb-4 text-primary">კომპანია</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/" className="text-gray-400 hover:text-white transition-colors">
-                  {content.home}
+                <Link href="/about" className="text-gray-300 hover:text-primary transition-colors">
+                  {t("aboutUs")}
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-gray-400 hover:text-white transition-colors">
-                  {content.about}
+                <Link href="/contact" className="text-gray-300 hover:text-primary transition-colors">
+                  {t("contact")}
                 </Link>
               </li>
               <li>
-                <Link href="/products" className="text-gray-400 hover:text-white transition-colors">
-                  {content.products}
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-gray-400 hover:text-white transition-colors">
-                  {content.contactPage}
+                <Link href="/careers" className="text-gray-300 hover:text-primary transition-colors">
+                  {t("careers")}
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Categories */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">{content.categories}</h3>
+            <h3 className="font-bold text-lg mb-4 text-primary">მხარდაჭერა</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/categories/shelving" className="text-gray-400 hover:text-white transition-colors">
-                  {content.shelving}
+                <Link href="/faq" className="text-gray-300 hover:text-primary transition-colors">
+                  {t("faq")}
                 </Link>
               </li>
               <li>
-                <Link href="/categories/market-shelves" className="text-gray-400 hover:text-white transition-colors">
-                  {content.marketShelves}
+                <Link href="/shipping" className="text-gray-300 hover:text-primary transition-colors">
+                  {t("shipping")}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/categories/market-accessories"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  {content.accessories}
+                <Link href="/returns" className="text-gray-300 hover:text-primary transition-colors">
+                  {t("returns")}
                 </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">{content.contact}</h3>
-            <ul className="space-y-4 text-gray-400">
-              <li className="flex items-start">
-                <MapPin size={20} className="mr-3 mt-1 flex-shrink-0" />
-                <span>{t.address}</span>
-              </li>
-              <li className="flex items-center">
-                <Phone size={20} className="mr-3" />
-                <a href={`tel:${t.phone}`} className="hover:text-white transition-colors">
-                  {t.phone}
-                </a>
-              </li>
-              <li className="flex items-center">
-                <Mail size={20} className="mr-3" />
-                <a href={`mailto:${t.email}`} className="hover:text-white transition-colors">
-                  {t.email}
-                </a>
               </li>
             </ul>
           </div>
         </div>
-      </div>
-      <div className="bg-gray-950 py-4">
-        <div className="container mx-auto px-4 text-center text-gray-500 text-sm">
-          &copy; {new Date().getFullYear()} New Motorsi. {content.rights}
+
+        <div className="border-t border-gray-700 pt-8 text-center">
+          <p className="text-gray-400">© 2024 ნიუ მოტორსი. ყველა უფლება დაცულია.</p>
         </div>
       </div>
     </footer>

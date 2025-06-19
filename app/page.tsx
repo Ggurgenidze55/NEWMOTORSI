@@ -4,7 +4,6 @@ import Image from "next/image"
 import { Star, Users, Award, TrendingUp } from "lucide-react"
 import { useState, useEffect } from "react"
 import { useLanguage } from "@/contexts/language-context"
-import { allCategories } from "@/lib/data" // Import from centralized data file
 
 export default function HomePage() {
   const { t, language } = useLanguage()
@@ -14,7 +13,86 @@ export default function HomePage() {
     setIsVisible(true)
   }, [])
 
-  // allCategories array is now imported from lib/data.ts
+  const allCategories = [
+    {
+      id: "shelving",
+      title: "სტელაჟები",
+      titleEn: "Shelving",
+      titleRu: "Стеллажи",
+      description: "მაღალი ხარისხის სტელაჟები ნებისმიერი ზომის საწყობისთვის",
+      descriptionEn: "High quality shelving for warehouses of any size",
+      descriptionRu: "Высококачественные стеллажи для складов любого размера",
+      image: "/images/warehouse-shelving.jpg",
+      href: "/categories/shelving",
+      icon: "📦",
+      count: "9 პროდუქტი",
+    },
+    {
+      id: "market-shelves",
+      title: "მარკეტის თაროები",
+      titleEn: "Market Shelves",
+      titleRu: "Торговые полки",
+      description: "საგამოფენო თაროები პროდუქტების ეფექტური წარმოსაჩენად",
+      descriptionEn: "Display shelves for effective product presentation",
+      descriptionRu: "Выставочные полки для эффективной презентации товаров",
+      image: "/images/market-shelves.jpg",
+      href: "/categories/market-shelves",
+      icon: "🏪",
+      count: "1 პროდუქტი",
+    },
+    {
+      id: "market-accessories",
+      title: "მარკეტის აქსესუარები",
+      titleEn: "Market Accessories",
+      titleRu: "Аксессуары для магазинов",
+      description: "აქსესუარები და დამხმარე მასალები მარკეტებისთვის",
+      descriptionEn: "Accessories and auxiliary materials for markets",
+      descriptionRu: "Аксессуары и вспомогательные материалы для магазинов",
+      image: "/images/market-accessories.jpg",
+      href: "/categories/market-accessories",
+      icon: "🛍️",
+      count: "5 პროდუქტი",
+    },
+    {
+      id: "pos-materials",
+      title: "პოს მასალები",
+      titleEn: "POS Materials",
+      titleRu: "POS материалы",
+      description: "სარეკლამო და საინფორმაციო მასალები მაღაზიებისთვის",
+      descriptionEn: "Advertising and information materials for stores",
+      descriptionRu: "Рекламные и информационные материалы для магазинов",
+      image: "/images/pos-materials.jpg",
+      href: "/categories/pos-materials",
+      icon: "📊",
+      count: "3 პროდუქტი",
+    },
+    {
+      id: "trolleys",
+      title: "ურიკები",
+      titleEn: "Trolleys",
+      titleRu: "Тележки",
+      description: "საყიდლების ურიკები და ტრანსპორტირების საშუალებები",
+      descriptionEn: "Shopping carts and transportation means",
+      descriptionRu: "Тележки для покупок и средства транспортировки",
+      image: "/images/trolleys.jpg",
+      href: "/categories/trolleys",
+      icon: "🛒",
+      count: "0 პროდუქტი",
+    },
+    {
+      id: "trash-bins",
+      title: "ნაგვის ურნები",
+      titleEn: "Trash Bins",
+      titleRu: "Мусорные баки",
+      description: "მაღალი ხარისხის ნაგვის ურნები კომერციული სივრცეებისთვის",
+      descriptionEn: "High quality trash bins for commercial spaces",
+      descriptionRu: "Высококачественные мусорные баки для коммерческих помещений",
+      image: "/images/trash-bins.jpg",
+      href: "/categories/trash-bins",
+      icon: "🗑️",
+      count: "0 პროდუქტი",
+    },
+  ]
 
   // Stats with translations
   const getStats = () => {
