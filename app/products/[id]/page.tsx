@@ -3,9 +3,6 @@
 import Image from "next/image"
 import Link from "next/link"
 import { ChevronRight, Star } from "lucide-react"
-
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { Label } from "@/components/ui/label"
 import { useLanguage } from "@/contexts/language-context"
 
 export default function ProductPage({ params }: { params: { id: string } }) {
@@ -1672,47 +1669,223 @@ Large volume for more waste.`,
     )
   }
 
-  // Related products (same category, different product)
-  const relatedProducts = [
-    {
-      id: "warehouse-1",
-      name: t("warehouseShelvingUnit"),
-      price: 450.0,
-      image: "/images/blue-warehouse-shelving.png",
-      category: t("warehouseShelving"),
-      rating: 4.8,
-      reviewCount: 24,
-    },
-    {
-      id: "tire-shelving-1",
-      name: t("tireShelvingUnit"),
-      price: 680.0,
-      image: "/images/tire-shelving-1.png",
-      category: t("tireShelving"),
-      rating: 4.7,
-      reviewCount: 9,
-    },
-    {
-      id: "basket-shelving-1",
-      name: t("basketShelvingUnit"),
-      price: 280.0,
-      image: "/images/basket-shelving-white.jpeg",
-      category: t("basketShelving"),
-      rating: 4.5,
-      reviewCount: 19,
-    },
-    {
-      id: "tier-shelving-1",
-      name: t("tierShelvingUnit"),
-      price: 220.0,
-      image: "/images/tier-shelving-colors.jpeg",
-      category: t("tierShelving"),
-      rating: 4.4,
-      reviewCount: 25,
-    },
-  ]
-    .filter((p) => p.id !== product.id)
-    .slice(0, 3)
+  // Replace the existing relatedProducts array with this:
+  const getAllProducts = () => {
+    return [
+      // Warehouse shelving
+      {
+        id: "warehouse-1",
+        name: t("warehouseShelvingUnit"),
+        price: 450.0,
+        image: "/images/blue-warehouse-shelving.png",
+        category: t("warehouseShelving"),
+        rating: 4.8,
+        reviewCount: 24,
+      },
+      {
+        id: "warehouse-2",
+        name: t("warehouseShelvingUnit"),
+        price: 420.0,
+        image: "/images/blue-orange-warehouse-shelving.jpg",
+        category: t("warehouseShelving"),
+        rating: 4.7,
+        reviewCount: 18,
+      },
+      {
+        id: "warehouse-3",
+        name: t("warehouseShelvingUnit"),
+        price: 480.0,
+        image: "/images/gray-warehouse-shelving.jpg",
+        category: t("warehouseShelving"),
+        rating: 4.6,
+        reviewCount: 15,
+      },
+      {
+        id: "warehouse-4",
+        name: t("warehouseShelvingUnit"),
+        price: 520.0,
+        image: "/images/tall-warehouse-shelving.jpg",
+        category: t("warehouseShelving"),
+        rating: 4.9,
+        reviewCount: 12,
+      },
+      // Tire shelving
+      {
+        id: "tire-shelving-1",
+        name: t("tireShelvingUnit"),
+        price: 680.0,
+        image: "/images/tire-shelving-1.png",
+        category: t("tireShelving"),
+        rating: 4.7,
+        reviewCount: 9,
+      },
+      // Clothing shelving
+      {
+        id: "clothing-shelving-1",
+        name: t("clothingShelvingUnit"),
+        price: 380.0,
+        image: "/images/clothing-rack-1.jpg",
+        category: t("clothingShelving"),
+        rating: 4.5,
+        reviewCount: 14,
+      },
+      // Market accessories
+      {
+        id: "aluminum-rail-1",
+        name: t("aluminumRailUnit"),
+        price: 45.0,
+        image: "/images/aluminum-rail-3.jpg",
+        category: t("marketAccessories"),
+        rating: 4.6,
+        reviewCount: 22,
+      },
+      {
+        id: "perforated-wall-1",
+        name: t("perforatedWallUnit"),
+        price: 320.0,
+        image: "/images/perforated-wall-cover-1.jpg",
+        category: t("marketAccessories"),
+        rating: 4.3,
+        reviewCount: 11,
+      },
+      // Market shelves
+      {
+        id: "perforated-profile-1",
+        name: t("perforatedProfileUnit"),
+        price: 85.0,
+        image: "/images/perforated-profile-2.jpg",
+        category: t("marketShelves"),
+        rating: 4.4,
+        reviewCount: 16,
+      },
+      {
+        id: "basket-shelving-1",
+        name: t("basketShelvingUnit"),
+        price: 280.0,
+        image: "/images/basket-shelving-white.jpeg",
+        category: t("basketShelving"),
+        rating: 4.5,
+        reviewCount: 19,
+      },
+      {
+        id: "tier-shelving-1",
+        name: t("tierShelvingUnit"),
+        price: 220.0,
+        image: "/images/tier-shelving-colors.jpeg",
+        category: t("tierShelving"),
+        rating: 4.4,
+        reviewCount: 25,
+      },
+      // Pallet shelving
+      {
+        id: "pallet-shelving-1",
+        name: t("palletShelvingUnit1"),
+        price: 850.0,
+        image: "/images/pallet-shelving-1.jpg",
+        category: t("palletShelving"),
+        rating: 4.8,
+        reviewCount: 8,
+      },
+      {
+        id: "pallet-shelving-2",
+        name: t("palletShelvingUnit2"),
+        price: 950.0,
+        image: "/images/pallet-shelving-2.jpg",
+        category: t("palletShelving"),
+        rating: 4.7,
+        reviewCount: 6,
+      },
+      // Archive shelving
+      {
+        id: "archive-shelving-1",
+        name: t("archiveShelvingUnit"),
+        price: 420.0,
+        image: "/images/archive-shelving-1.jpg",
+        category: t("archiveShelving"),
+        rating: 4.6,
+        reviewCount: 13,
+      },
+      // POS Materials
+      {
+        id: "shelf-price-display-1",
+        name: t("shelfPriceDisplayUnit"),
+        price: 25.0,
+        image: "/images/shelf-price-display-1.jpg",
+        category: t("posMaterials"),
+        rating: 4.2,
+        reviewCount: 31,
+      },
+      {
+        id: "plastic-frames-1",
+        name: t("plasticFramesUnit"),
+        price: 15.0,
+        image: "/images/plastic-frames-1.jpg",
+        category: t("posMaterials"),
+        rating: 4.1,
+        reviewCount: 42,
+      },
+      {
+        id: "frame-stands-1",
+        name: t("frameStandsUnit"),
+        price: 35.0,
+        image: "/images/frame-stands-1.jpg",
+        category: t("posMaterials"),
+        rating: 4.3,
+        reviewCount: 18,
+      },
+      // Trolleys
+      {
+        id: "pallet-trolley-1",
+        name: t("palletTrolleyUnit"),
+        price: 180.0,
+        image: "/images/pallet-trolley-red.jpeg",
+        category: t("trolleys"),
+        rating: 4.7,
+        reviewCount: 12,
+      },
+      {
+        id: "platform-trolley-blue",
+        name: t("platformTrolleyBlue"),
+        price: 150.0,
+        image: "/images/platform-trolley-blue.jpeg",
+        category: t("trolleys"),
+        rating: 4.5,
+        reviewCount: 8,
+      },
+      {
+        id: "platform-trolley-yellow",
+        name: t("platformTrolleyYellow"),
+        price: 150.0,
+        image: "/images/platform-trolley-yellow.jpeg",
+        category: t("trolleys"),
+        rating: 4.5,
+        reviewCount: 6,
+      },
+      // Trash bins
+      {
+        id: "trash-bin-120",
+        name: t("trashBin120Unit"),
+        price: 85.0,
+        image: "/images/trash-bin-120l.jpg",
+        category: t("trashBins"),
+        rating: 4.6,
+        reviewCount: 28,
+      },
+      {
+        id: "trash-bin-240",
+        name: t("trashBin240Unit"),
+        price: 120.0,
+        image: "/images/trash-bin-240l.jpg",
+        category: t("trashBins"),
+        rating: 4.7,
+        reviewCount: 15,
+      },
+    ]
+  }
+
+  // Get related products from the same category
+  const allProducts = getAllProducts()
+  const relatedProducts = allProducts.filter((p) => p.category === product.category && p.id !== product.id).slice(0, 3)
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -1805,93 +1978,6 @@ Large volume for more waste.`,
                 }}
               />
             </div>
-
-            <form className="mt-6">
-              {/* Colors */}
-              {product.colors && product.colors.length > 0 && (
-                <div>
-                  <h3 className="text-sm text-gray-600">{t("color")}</h3>
-                  <RadioGroup defaultValue={product.colors[0]} className="mt-2">
-                    <div className="flex items-center space-x-3">
-                      {product.colors.map((color) => (
-                        <div key={color} className="flex items-center">
-                          <RadioGroupItem value={color} id={color} className="sr-only" />
-                          <Label
-                            htmlFor={color}
-                            className="relative -m-0.5 flex cursor-pointer items-center justify-center rounded-full p-0.5 focus:outline-none"
-                          >
-                            <span
-                              className={`h-8 w-8 border border-black border-opacity-10 rounded-full ${
-                                color === t("blue")
-                                  ? "bg-blue-500"
-                                  : color === t("red")
-                                    ? "bg-red-500"
-                                    : color === t("black")
-                                      ? "bg-black"
-                                      : color === t("white")
-                                        ? "bg-white"
-                                        : color === "მწვანე"
-                                          ? "bg-green-500"
-                                          : color === "ყვითელი"
-                                            ? "bg-yellow-500"
-                                            : color === "ნაცარი"
-                                              ? "bg-gray-500"
-                                              : color === "ნარინჯისფერი"
-                                                ? "bg-orange-500"
-                                                : color === t("aluminum")
-                                                  ? "bg-gray-300"
-                                                  : color === "ქრომირებული"
-                                                    ? "bg-gray-400"
-                                                    : color === "გამჭვირვალე"
-                                                      ? "bg-gray-100 border-2 border-dashed"
-                                                      : "bg-gray-200"
-                              }`}
-                            />
-                          </Label>
-                        </div>
-                      ))}
-                    </div>
-                  </RadioGroup>
-                </div>
-              )}
-
-              {/* Size */}
-              {product.sizes && product.sizes.length > 0 && (
-                <div className="mt-8">
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-sm text-gray-600">{t("size")}</h3>
-                  </div>
-                  <RadioGroup defaultValue={product.sizes[0]} className="mt-2">
-                    <div className="grid grid-cols-3 gap-3 sm:grid-cols-6">
-                      {product.sizes.map((size) => (
-                        <div key={size}>
-                          <RadioGroupItem value={size} id={size} className="sr-only" />
-                          <Label
-                            htmlFor={size}
-                            className="cursor-pointer bg-white border rounded-md py-3 px-3 flex items-center justify-center text-sm font-medium uppercase sm:flex-1 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                          >
-                            {size}
-                          </Label>
-                        </div>
-                      ))}
-                    </div>
-                  </RadioGroup>
-                </div>
-              )}
-
-              <div className="mt-10 flex sm:flex-col1">
-                <button
-                  type="submit"
-                  className="max-w-xs flex-1 bg-indigo-600 border border-transparent rounded-md py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-full"
-                >
-                  {t("addToCart")}
-                </button>
-
-                <button className="ml-4 py-3 px-8 rounded-md border border-gray-300 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-                  {t("wishList")}
-                </button>
-              </div>
-            </form>
 
             <section className="mt-16" aria-labelledby="features-heading">
               <h2 id="features-heading" className="text-lg font-medium text-gray-900">

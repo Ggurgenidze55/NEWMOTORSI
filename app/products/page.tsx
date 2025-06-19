@@ -308,6 +308,24 @@ export default function ProductsPage() {
       subcategory: "trolleys",
       isNew: true,
     },
+    {
+      id: "trash-bin-120",
+      name: t("trashBin120Unit"),
+      price: 75, // Example price, please adjust
+      image: "/images/trash-bin-120l.jpg",
+      category: t("trashBins"),
+      subcategory: "trash-bins",
+      isNew: true,
+    },
+    {
+      id: "trash-bin-240",
+      name: t("trashBin240Unit"),
+      price: 110, // Example price, please adjust
+      image: "/images/trash-bin-240l.jpg",
+      category: t("trashBins"),
+      subcategory: "trash-bins",
+      isNew: true,
+    },
   ]
 
   const getPageTitle = () => {
