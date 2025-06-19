@@ -1,50 +1,68 @@
 "use client"
 
 import ProductCard from "@/components/product-card"
-import CategoryBanner from "@/components/category-banner"
-import { useLanguage } from "@/contexts/language-context"
 import SubcategoryNavigation from "@/components/subcategory-navigation"
+import { useLanguage } from "@/contexts/language-context"
+import { useEffect } from "react"
 
 export default function ProductsPage() {
   const { t, language } = useLanguage()
 
+  // Update page title for Products page
+  useEffect(() => {
+    const getPageTitle = () => {
+      const baseTitle = {
+        ka: "ნიუ მოტორსი - სტელაჟები და საწყობის აღჭურვილობა",
+        en: "New Motorsi - Shelving and Warehouse Equipment",
+        ru: "Нью Моторси - Стеллажи и складское оборудование",
+      }
+
+      const productsTitle = {
+        ka: "ყველა პროდუქტი",
+        en: "All Products",
+        ru: "Все товары",
+      }
+
+      return `${productsTitle[language]} | ${baseTitle[language]}`
+    }
+
+    document.title = getPageTitle()
+  }, [language])
+
   // This would typically come from an API or database
   const products = [
-    // First warehouse shelving product
+    // Warehouse shelving
     {
       id: "warehouse-1",
       name: t("warehouseShelvingUnit"),
-      price: 450.0,
+      price: 450,
       image: "/images/blue-warehouse-shelving.png",
       category: t("warehouseShelving"),
       subcategory: "warehouse-shelving",
       isNew: true,
     },
-    // Second warehouse shelving product
     {
       id: "warehouse-2",
       name: t("warehouseShelvingUnit"),
-      price: 420.0,
+      price: 420,
       image: "/images/blue-orange-warehouse-shelving.jpg",
       category: t("warehouseShelving"),
       subcategory: "warehouse-shelving",
       isNew: true,
     },
-    // Third warehouse shelving product
     {
       id: "warehouse-3",
       name: t("warehouseShelvingUnit"),
-      price: 480.0,
+      price: 480,
       image: "/images/gray-warehouse-shelving.jpg",
       category: t("warehouseShelving"),
       subcategory: "warehouse-shelving",
       isNew: true,
     },
-    // Fourth warehouse shelving product
     {
       id: "warehouse-4",
       name: t("warehouseShelvingUnit"),
-      price: 520.0,
+      price: 520,
       image: "/images/tall-warehouse-shelving.jpg",
       category: t("warehouseShelving"),
       subcategory: "warehouse-shelving",
@@ -90,7 +108,7 @@ export default function ProductsPage() {
       subcategory: "market-shelves",
       isNew: true,
     },
-    // Accessory holder product - FIXED IMAGE PATH
+    // Accessory holder product
     {
       id: "accessory-holder-1",
       name: t("accessoryHolderUnit"),
@@ -100,7 +118,7 @@ export default function ProductsPage() {
       subcategory: "market-accessories",
       isNew: true,
     },
-    // Perforated wall product - FIXED IMAGE PATH
+    // Perforated wall product
     {
       id: "perforated-wall-1",
       name: t("perforatedWallUnit"),
@@ -110,7 +128,7 @@ export default function ProductsPage() {
       subcategory: "market-accessories",
       isNew: true,
     },
-    // Shelf divider product - FIXED IMAGE PATH
+    // Shelf divider product
     {
       id: "shelf-divider-1",
       name: t("shelfDividerUnit"),
@@ -120,7 +138,7 @@ export default function ProductsPage() {
       subcategory: "warehouse-shelving",
       isNew: true,
     },
-    // Wall grid display product - FIXED IMAGE PATH
+    // Wall grid display product
     {
       id: "wall-grid-display-1",
       name: t("wallGridDisplayUnit"),
@@ -140,7 +158,7 @@ export default function ProductsPage() {
       subcategory: "market-accessories",
       isNew: true,
     },
-    // Add the new basket shelving product to the products array
+    // Basket shelving products
     {
       id: "basket-shelving-1",
       name: t("basketShelvingUnit"),
@@ -150,7 +168,6 @@ export default function ProductsPage() {
       subcategory: "market-shelves",
       isNew: true,
     },
-    // Add the new larger basket shelving product
     {
       id: "basket-shelving-2",
       name: t("basketShelvingLargeUnit"),
@@ -160,7 +177,7 @@ export default function ProductsPage() {
       subcategory: "market-shelves",
       isNew: true,
     },
-    // Add the new 4-tier shelving product
+    // Tier shelving products
     {
       id: "tier-shelving-1",
       name: t("tierShelvingUnit"),
@@ -170,7 +187,6 @@ export default function ProductsPage() {
       subcategory: "market-shelves",
       isNew: true,
     },
-    // Add the new large 4-tier shelving product
     {
       id: "tier-shelving-2",
       name: t("largeTierShelvingUnit"),
@@ -180,7 +196,7 @@ export default function ProductsPage() {
       subcategory: "market-shelves",
       isNew: true,
     },
-    // Add the 4 new pallet shelving products
+    // Pallet shelving products
     {
       id: "pallet-shelving-1",
       name: t("palletShelvingUnit1"),
@@ -217,7 +233,7 @@ export default function ProductsPage() {
       subcategory: "pallet-shelving",
       isNew: true,
     },
-    // Add the new archive shelving product to the products array:
+    // Archive shelving products
     {
       id: "archive-shelving-1",
       name: t("archiveShelvingUnit"),
@@ -227,7 +243,6 @@ export default function ProductsPage() {
       subcategory: "archive-shelving",
       isNew: true,
     },
-    // Add the new archive shelving product to the products array:
     {
       id: "archive-shelving-2",
       name: t("archiveShelvingUnit2"),
@@ -237,7 +252,7 @@ export default function ProductsPage() {
       subcategory: "archive-shelving",
       isNew: true,
     },
-    // Add the new POS materials products:
+    // POS Materials products
     {
       id: "shelf-price-display-1",
       name: t("shelfPriceDisplayUnit"),
@@ -265,49 +280,83 @@ export default function ProductsPage() {
       subcategory: "pos-materials",
       isNew: true,
     },
+    // Trolley products
+    {
+      id: "pallet-trolley-1",
+      name: t("palletTrolleyUnit"),
+      price: 450,
+      image: "/images/pallet-trolley-red.jpeg",
+      category: t("trolleys"),
+      subcategory: "trolleys",
+      isNew: true,
+    },
+    {
+      id: "platform-trolley-blue-1",
+      name: t("platformTrolleyBlue"),
+      price: 180,
+      image: "/images/platform-trolley-blue.jpeg",
+      category: t("trolleys"),
+      subcategory: "trolleys",
+      isNew: true,
+    },
+    {
+      id: "platform-trolley-yellow-1",
+      name: t("platformTrolleyYellow"),
+      price: 220,
+      image: "/images/platform-trolley-yellow.jpeg",
+      category: t("trolleys"),
+      subcategory: "trolleys",
+      isNew: true,
+    },
   ]
 
-  const getBannerTitle = () => {
+  const getPageTitle = () => {
     switch (language) {
       case "en":
-        return "All Categories"
+        return "All Products"
       case "ru":
-        return "Все Категории"
+        return "Все товары"
       default:
-        return "ყველა კატეგორია"
+        return "ყველა პროდუქტი"
     }
   }
 
-  const getBannerSubtitle = () => {
+  const getPageDescription = () => {
     switch (language) {
       case "en":
-        return "Professional shelving and warehouse equipment"
+        return "Browse our complete collection of professional shelving and warehouse equipment"
       case "ru":
-        return "Профессиональные стеллажи и складское оборудование"
+        return "Просмотрите нашу полную коллекцию профессиональных стеллажей и складского оборудования"
       default:
-        return "პროფესიონალური სტელაჟები და საწყობის აღჭურვილობა"
+        return "დაათვალიერეთ ჩვენი სრული კოლექცია პროფესიონალური სტელაჟებისა და საწყობის აღჭურვილობისა"
     }
   }
 
   return (
-    <div className="bg-white min-h-screen">
+    <>
       <SubcategoryNavigation />
-      <CategoryBanner title={getBannerTitle()} subtitle={getBannerSubtitle()} />
-      <div className="container px-4 py-8 md:px-6 md:py-12">
-        <div className="flex flex-col gap-8">
-          <div>
-            <h2 className="text-3xl font-bold tracking-tight">{t("products")}</h2>
-            <p className="text-muted-foreground">{t("categoriesDescription")}</p>
-          </div>
+      <div className="flex flex-col min-h-screen bg-white">
+        <div className="flex-1">
+          <div className="container px-4 py-8 md:px-6 md:py-12">
+            <div className="flex flex-col gap-8">
+              <div className="text-center">
+                <h1 className="text-4xl font-bold tracking-tight mb-4">{getPageTitle()}</h1>
+                <p className="text-xl text-muted-foreground max-w-2xl mx-auto">{getPageDescription()}</p>
+                <p className="text-sm text-muted-foreground mt-2">
+                  {products.length} {t("products")}
+                </p>
+              </div>
 
-          {/* Products Grid */}
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {products.map((product) => (
-              <ProductCard key={product.id} {...product} hidePrice={true} />
-            ))}
+              {/* Products Grid */}
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                {products.map((product) => (
+                  <ProductCard key={product.id} {...product} hidePrice={true} />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }

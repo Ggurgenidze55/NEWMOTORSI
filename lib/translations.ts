@@ -73,6 +73,12 @@ export const translations = {
     plasticFramesUnit: "ფერადი პლასტმასის ჩარჩოები",
     frameStands: "ჩარჩოს სადგამები",
     frameStandsUnit: "ჩარჩოს სადგამი რეგულირებადი",
+    // Add new trolley products
+    palletTrolley: "პალეტის ურიკა",
+    palletTrolleyUnit: "პალეტის ურიკა როხლი",
+    platformTrolley: "პლატფორმის ურიკა",
+    platformTrolleyBlue: "ურიკა საბურავით (ლურჯი)",
+    platformTrolleyYellow: "ურიკა საბურავით (ყვითელი)",
 
     // Featured Products
     featuredProducts: "პოპულარული პროდუქტები",
@@ -196,7 +202,7 @@ export const translations = {
     aluminum: "ალუმინი",
     hooks: "საკიდები",
     mounting: "მონტაჟი",
-    wallMounted: "კედელზე მონტაჟი",
+    wallMounted: "კედლის მონტაჟი",
   },
 
   en: {
@@ -276,6 +282,12 @@ export const translations = {
     plasticFramesUnit: "Colored Plastic Frames",
     frameStands: "Frame Stands",
     frameStandsUnit: "Adjustable Frame Stand",
+    // Add new trolley products
+    palletTrolley: "Pallet Trolley",
+    palletTrolleyUnit: "Pallet Trolley with Wheels",
+    platformTrolley: "Platform Trolley",
+    platformTrolleyBlue: "Platform Trolley with Cover (Blue)",
+    platformTrolleyYellow: "Platform Trolley with Cover (Yellow)",
 
     // Featured Products
     featuredProducts: "Featured Products",
@@ -436,8 +448,8 @@ export const translations = {
     posMaterials: "POS материалы",
     trolleys: "Тележки",
     trashBins: "Мусорные баки",
-    subcategories: "Подкategории",
-    allSubcategories: "Все подкategории",
+    subcategories: "Подкатегории",
+    allSubcategories: "Все подкатегории",
     viewAll: "Посмотреть все",
     itemsInCategory: "товаров в категории",
     tireShelving: "Стеллаж для шин",
@@ -479,6 +491,12 @@ export const translations = {
     plasticFramesUnit: "Цветные пластиковые рамки",
     frameStands: "Подставки для рамок",
     frameStandsUnit: "Регулируемая подставка для рамок",
+    // Add new trolley products
+    palletTrolley: "Паллетная тележка",
+    palletTrolleyUnit: "Паллетная тележка с колесами",
+    platformTrolley: "Платформенная тележка",
+    platformTrolleyBlue: "Тележка с покрытием (синяя)",
+    platformTrolleyYellow: "Тележка с покрытием (желтая)",
 
     // Featured Products
     featuredProducts: "Популярные товары",

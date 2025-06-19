@@ -1609,8 +1609,8 @@ Stable and adjustable for any frame size.`,
           ru: [
             "Высота: 15-30 см (регулируемая)",
             "Размер основания: 10x10 см",
-            "Высококачественный металл",
-            "Серый и черный цвета",
+            "Материал: Металл",
+            "Цвет: Серый, черный",
             "Вес: 200-300 г",
             "Стабильная конструкция",
             "Простая регулировка",
@@ -1623,6 +1623,232 @@ Stable and adjustable for any frame size.`,
         category: t("posMaterials"),
         rating: 4.4,
         reviewCount: 8,
+      },
+      // Add the 3 new trolley products
+      "pallet-trolley-1": {
+        id: "pallet-trolley-1",
+        name: t("palletTrolleyUnit"),
+        price: 450.0,
+        description: {
+          ka: `პალეტის ურიკა როლიკებით ინდუსტრიული გამოყენებისთვის. მაღალი ხარისხის ლითონისგან დამზადებული, იდეალურია საწყობებისა და ინდუსტრიული ობიექტებისთვის.
+
+**ტექნიკური მახასიათებლები:**
+• ტვირთამწეობა: 2000 ან 3000 კგ
+• აწევის სიმაღლე: 200 მმ
+• ჩანგლების სიგრძე: 1150 × 550 მმ
+• გორგოლაჭები: პოლიურეთანი (PU)
+• მასალა: მაღალი ხარისხის ლითონი
+
+იდეალურია პალეტების ტრანსპორტირებისთვის საწყობებში.`,
+          en: `Pallet trolley with wheels for industrial use. Made from high-quality metal, ideal for warehouses and industrial facilities.
+
+**Technical Specifications:**
+• Load capacity: 2000 or 3000 kg
+• Lifting height: 200 mm
+• Fork length: 1150 × 550 mm
+• Wheels: Polyurethane (PU)
+• Material: High-quality metal
+
+Perfect for transporting pallets in warehouses.`,
+          ru: `Паллетная тележка с колесами для промышленного использования. Изготовлена из высококачественного металла, идеальна для складов и промышленных объектов.
+
+**Технические характеристики:**
+• Грузоподъемность: 2000 или 3000 кг
+• Высота подъема: 200 мм
+• Длина вил: 1150 × 550 мм
+• Колеса: Полиуретан (PU)
+• Материал: Высококачественный металл
+
+Идеальна для транспортировки паллет на складах.`,
+        },
+        features: {
+          ka: [
+            "ტვირთამწეობა: 2000 ან 3000 კგ",
+            "აწევის სიმაღლე: 200 მმ",
+            "ჩანგლების სიგრძე: 1150 × 550 მმ",
+            "გორგოლაჭები: პოლიურეთანი (PU)",
+            "მაღალი ხარისხის ლითონი",
+            "კოროზიისგან დაცული",
+            "ინდუსტრიული ხარისხი",
+            "მარტივი მართვა",
+          ],
+          en: [
+            "Load capacity: 2000 or 3000 kg",
+            "Lifting height: 200 mm",
+            "Fork length: 1150 × 550 mm",
+            "Wheels: Polyurethane (PU)",
+            "High-quality metal",
+            "Corrosion resistant",
+            "Industrial grade",
+            "Easy handling",
+          ],
+          ru: [
+            "Грузоподъемность: 2000 или 3000 кг",
+            "Высота подъема: 200 мм",
+            "Длина вил: 1150 × 550 мм",
+            "Колеса: Полиуретан (PU)",
+            "Высококачественный металл",
+            "Устойчив к коррозии",
+            "Промышленный класс",
+            "Простое управление",
+          ],
+        },
+        images: ["/images/pallet-trolley-red.jpeg"],
+        colors: ["წითელი"],
+        sizes: ["120x80x85"],
+        category: t("trolleys"),
+        rating: 4.7,
+        reviewCount: 15,
+      },
+      "platform-trolley-blue-1": {
+        id: "platform-trolley-blue-1",
+        name: t("platformTrolleyBlue"),
+        price: 180.0,
+        description: {
+          ka: `პლატფორმის ურიკა ლურჯი საბურავით. მაღალი ხარისხის ლითონისგან დამზადებული, იდეალურია მაღაზიებისა და საწყობებისთვის.
+
+**ტექნიკური მახასიათებლები:**
+• ტვირთამწეობა: 300 კგ
+• ზომა: L90*W60
+• როლიკები: 4 ცალი
+• საბურავი: ლურჯი
+• მასალა: მაღალი ხარისხის ლითონი
+
+გაძლიერებული კონსტრუქცია მეტი ტვირთამწეობით.`,
+          en: `Platform trolley with blue cover. Made from high-quality metal, ideal for stores and warehouses.
+
+**Technical Specifications:**
+• Load capacity: 300 kg
+• Size: L90*W60
+• Wheels: 4 pieces
+• Cover: Blue
+• Material: High-quality metal
+
+Reinforced construction with higher load capacity.`,
+          ru: `Платформенная тележка с синим покрытием. Изготовлена из высококачественного металла, идеальна для магазинов и складов.
+
+**Технические характеристики:**
+• Грузоподъемность: 300 кг
+• Размер: L90*W60
+• Колеса: 4 штуки
+• Покрытие: Синее
+• Материал: Высококачественный металл
+
+Усиленная конструкция с повышенной грузоподъемностью.`,
+        },
+        features: {
+          ka: [
+            "ტვირთამწეობა: 300 კგ",
+            "ზომა: L90*W60",
+            "როლიკები: 4 ცალი",
+            "ლურჯი საბურავი",
+            "მაღალი ხარისხის ლითონი",
+            "გაძლიერებული კონსტრუქცია",
+            "მარტივი მართვა",
+            "მაღალი ტვირთამწეობა",
+          ],
+          en: [
+            "Load capacity: 300 kg",
+            "Size: L90*W60",
+            "Wheels: 4 pieces",
+            "Blue cover",
+            "High-quality metal",
+            "Reinforced construction",
+            "Easy handling",
+            "High load capacity",
+          ],
+          ru: [
+            "Грузоподъемность: 300 кг",
+            "Размер: L90*W60",
+            "Колеса: 4 штуки",
+            "Синее покрытие",
+            "Высококачественный металл",
+            "Усиленная конструкция",
+            "Простое управление",
+            "Высокая грузоподъемность",
+          ],
+        },
+        images: ["/images/platform-trolley-blue.jpeg"],
+        colors: [t("blue")],
+        sizes: ["90x60x90"],
+        category: t("trolleys"),
+        rating: 4.5,
+        reviewCount: 12,
+      },
+      "platform-trolley-yellow-1": {
+        id: "platform-trolley-yellow-1",
+        name: t("platformTrolleyYellow"),
+        price: 220.0,
+        description: {
+          ka: `პლატფორმის ურიკა ყვითელი საბურავით. მაღალი ხარისხის ლითონისგან დამზადებული, იდეალურია მაღაზიებისა და საწყობებისთვის.
+
+**ტექნიკური მახასიათებლები:**
+• ტვირთამწეობა: 150 კგ
+• ზომა: L72*W48
+• როლიკები: 4 ცალი
+• საბურავი: ყვითელი
+• მასალა: მაღალი ხარისხის ლითონი
+
+კომფორტული და ფუნქციონალური ტრანსპორტირებისთვის.`,
+          en: `Platform trolley with yellow cover. Made from high-quality metal, ideal for stores and warehouses.
+
+**Technical Specifications:**
+• Load capacity: 150 kg
+• Size: L72*W48
+• Wheels: 4 pieces
+• Cover: Yellow
+• Material: High-quality metal
+
+Comfortable and functional for transportation.`,
+          ru: `Платформенная тележка с желтым покрытием. Изготовлена из высококачественного металла, идеальна для магазинов и складов.
+
+**Технические характеристики:**
+• Грузоподъемность: 150 кг
+• Размер: L72*W48
+• Колеса: 4 штуки
+• Покрытие: Желтое
+• Материал: Высококачественный металл
+
+Удобная и функциональная для транспортировки.`,
+        },
+        features: {
+          ka: [
+            "ტვირთამწეობა: 150 კგ",
+            "ზომა: L72*W48",
+            "როლიკები: 4 ცალი",
+            "ყვითელი საბურავი",
+            "მაღალი ხარისხის ლითონი",
+            "კომპაქტური დიზაინი",
+            "მარტივი მართვა",
+            "ეკონომიური",
+          ],
+          en: [
+            "Load capacity: 150 kg",
+            "Size: L72*W48",
+            "Wheels: 4 pieces",
+            "Yellow cover",
+            "High-quality metal",
+            "Compact design",
+            "Easy handling",
+            "Economical",
+          ],
+          ru: [
+            "Грузоподъемность: 150 кг",
+            "Размер: L72*W48",
+            "Колеса: 4 штуки",
+            "Желтое покрытие",
+            "Высококачественный металл",
+            "Компактный дизайн",
+            "Простое управление",
+            "Экономичный",
+          ],
+        },
+        images: ["/images/platform-trolley-yellow.jpeg"],
+        colors: ["ყვითელი"],
+        sizes: ["100x70x95"],
+        category: t("trolleys"),
+        rating: 4.6,
+        reviewCount: 10,
       },
       // Default fallback product
       "1": {

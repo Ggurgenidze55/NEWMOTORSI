@@ -287,7 +287,32 @@ export default function CategoryPage({ params }: { params: { id: string } }) {
           isNew: true,
         },
       ],
-      trolleys: [],
+      trolleys: [
+        {
+          id: "pallet-trolley-1",
+          name: t("palletTrolleyUnit"),
+          price: 450.0,
+          image: "/images/pallet-trolley-red.jpeg",
+          category: t("trolleys"),
+          isNew: true,
+        },
+        {
+          id: "platform-trolley-blue-1",
+          name: t("platformTrolleyBlue"),
+          price: 180.0,
+          image: "/images/platform-trolley-blue.jpeg",
+          category: t("trolleys"),
+          isNew: true,
+        },
+        {
+          id: "platform-trolley-yellow-1",
+          name: t("platformTrolleyYellow"),
+          price: 220.0,
+          image: "/images/platform-trolley-yellow.jpeg",
+          category: t("trolleys"),
+          isNew: true,
+        },
+      ],
       "pos-materials": [
         {
           id: "shelf-price-display-1",
