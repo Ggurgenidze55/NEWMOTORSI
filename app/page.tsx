@@ -4,10 +4,25 @@ import Image from "next/image"
 import { Star, Users, Award, TrendingUp } from "lucide-react"
 import { useState, useEffect } from "react"
 import { useLanguage } from "@/contexts/language-context"
+import { getProductsForCategory } from "@/lib/products"
 
 export default function HomePage() {
   const { t, language } = useLanguage()
   const [isVisible, setIsVisible] = useState(false)
+
+  const getCategoryCount = (categoryId: string) => {
+    const products = getProductsForCategory(categoryId, t)
+    const count = products.length
+
+    switch (language) {
+      case "en":
+        return `${count} products`
+      case "ru":
+        return `${count} товаров`
+      default:
+        return `${count} პროდუქტი`
+    }
+  }
 
   useEffect(() => {
     setIsVisible(true)
@@ -25,7 +40,7 @@ export default function HomePage() {
       image: "/images/warehouse-shelving.jpg",
       href: "/categories/shelving",
       icon: "📦",
-      count: "9 პროდუქტი",
+      count: getCategoryCount("shelving"),
     },
     {
       id: "market-shelves",
@@ -38,7 +53,7 @@ export default function HomePage() {
       image: "/images/market-shelves.jpg",
       href: "/categories/market-shelves",
       icon: "🏪",
-      count: "17 პროდუქტი",
+      count: getCategoryCount("market-shelves"),
     },
     {
       id: "market-accessories",
@@ -51,7 +66,7 @@ export default function HomePage() {
       image: "/images/market-accessories.jpg",
       href: "/categories/market-accessories",
       icon: "🛍️",
-      count: "5 პროდუქტი",
+      count: getCategoryCount("market-accessories"),
     },
     {
       id: "pos-materials",
@@ -64,7 +79,7 @@ export default function HomePage() {
       image: "/images/pos-materials.jpg",
       href: "/categories/pos-materials",
       icon: "📊",
-      count: "3 პროდუქტი",
+      count: getCategoryCount("pos-materials"),
     },
     {
       id: "trolleys",
@@ -77,7 +92,7 @@ export default function HomePage() {
       image: "/images/trolleys.jpg",
       href: "/categories/trolleys",
       icon: "🛒",
-      count: "0 პროდუქტი",
+      count: getCategoryCount("trolleys"),
     },
     {
       id: "trash-bins",
@@ -90,7 +105,7 @@ export default function HomePage() {
       image: "/images/trash-bins.jpg",
       href: "/categories/trash-bins",
       icon: "🗑️",
-      count: "0 პროდუქტი",
+      count: getCategoryCount("trash-bins"),
     },
   ]
 
@@ -140,17 +155,6 @@ export default function HomePage() {
         return category.descriptionRu || category.description
       default:
         return category.description
-    }
-  }
-
-  const getCategoryCount = (category: (typeof allCategories)[0]) => {
-    switch (language) {
-      case "en":
-        return category.count.replace("პროდუქტი", "products")
-      case "ru":
-        return category.count.replace("პროდუქტი", "товаров")
-      default:
-        return category.count
     }
   }
 
@@ -338,7 +342,7 @@ export default function HomePage() {
             {allCategories.map((category, index) => (
               <div
                 key={category.id}
-                className={`group hover:shadow-2xl transition-all duration-500 border-0 overflow-hidden bg-white rounded-lg border ${isVisible ? "animate-fade-in" : "opacity-0"}`}
+                className="group hover:shadow-2xl transition-all duration-500 border-0 overflow-hidden bg-white rounded-lg border"
                 style={{ animationDelay: `${index * 200}ms` }}
               >
                 <div className="p-0">
@@ -361,7 +365,7 @@ export default function HomePage() {
                         {getCategoryTitle(category)}
                       </h3>
                       <span className="text-sm text-white font-semibold bg-black px-3 py-1 rounded-full">
-                        {getCategoryCount(category)}
+                        {category.count}
                       </span>
                     </div>
 
