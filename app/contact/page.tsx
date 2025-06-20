@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent } from "@/components/ui/card"
 import { useLanguage } from "@/contexts/language-context"
 import { useEffect, useRef } from "react"
-import { useActionState } from "react"
+import { useFormState, useFormStatus } from "react-dom"
 import { submitContactForm } from "@/app/actions/contact"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -19,7 +19,8 @@ if (typeof window !== "undefined") {
 
 export default function ContactPage() {
   const { t, language } = useLanguage()
-  const [state, formAction, isPending] = useActionState(submitContactForm, null)
+  const initialState = { success: false, message: "" } as const
+  const [state, formAction] = useFormState(submitContactForm, initialState)
 
   const bannerRef = useRef(null)
   const titleRef = useRef(null)
@@ -329,6 +330,25 @@ export default function ContactPage() {
 
   const content = contactContent[language]
 
+  const SubmitButton = ({ sending, send }: { sending: string; send: string }) => {
+    "use client"
+    const { pending } = useFormStatus()
+    return (
+      <Button
+        type="submit"
+        size="lg"
+        disabled={pending}
+        className="w-full h-12 text-white font-semibold flex items-center justify-center gap-2 disabled:opacity-50"
+        style={{ backgroundColor: "#00adef" }}
+        onMouseEnter={(e) => !pending && (e.currentTarget.style.backgroundColor = "#0099d4")}
+        onMouseLeave={(e) => !pending && (e.currentTarget.style.backgroundColor = "#00adef")}
+      >
+        <Send className="h-5 w-5" />
+        {pending ? sending : send}
+      </Button>
+    )
+  }
+
   return (
     <div className="bg-gradient-to-br from-gray-50 to-white min-h-screen text-black">
       {/* Banner Section */}
@@ -376,7 +396,6 @@ export default function ContactPage() {
                           name="name"
                           type="text"
                           required
-                          disabled={isPending}
                           className="h-12 border-2 border-gray-200 focus:border-[#00adef] text-black bg-white disabled:opacity-50"
                         />
                       </div>
@@ -389,7 +408,6 @@ export default function ContactPage() {
                           name="email"
                           type="email"
                           required
-                          disabled={isPending}
                           className="h-12 border-2 border-gray-200 focus:border-[#00adef] text-black bg-white disabled:opacity-50"
                         />
                       </div>
@@ -403,7 +421,6 @@ export default function ContactPage() {
                         name="subject"
                         type="text"
                         required
-                        disabled={isPending}
                         className="h-12 border-2 border-gray-200 focus:border-[#00adef] text-black bg-white disabled:opacity-50"
                       />
                     </div>
@@ -416,7 +433,6 @@ export default function ContactPage() {
                         name="message"
                         rows={6}
                         required
-                        disabled={isPending}
                         className="border-2 border-gray-200 focus:border-[#00adef] resize-none text-black bg-white disabled:opacity-50"
                       />
                     </div>
@@ -430,18 +446,7 @@ export default function ContactPage() {
                       </div>
                     )}
 
-                    <Button
-                      type="submit"
-                      size="lg"
-                      disabled={isPending}
-                      className="w-full h-12 text-white font-semibold flex items-center justify-center gap-2 disabled:opacity-50"
-                      style={{ backgroundColor: "#00adef" }}
-                      onMouseEnter={(e) => !isPending && (e.target.style.backgroundColor = "#0099d4")}
-                      onMouseLeave={(e) => !isPending && (e.target.style.backgroundColor = "#00adef")}
-                    >
-                      <Send className="h-5 w-5" />
-                      {isPending ? content.sending : content.sendMessage}
-                    </Button>
+                    <SubmitButton sending={content.sending} send={content.sendMessage} />
                   </form>
                 </CardContent>
               </Card>
