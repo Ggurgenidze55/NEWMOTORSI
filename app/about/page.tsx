@@ -2,10 +2,23 @@
 
 import Image from "next/image"
 import { useLanguage } from "@/contexts/language-context"
-import { useEffect } from "react"
+import { useEffect, useRef } from "react"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+// Register GSAP plugins
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger)
+}
 
 export default function AboutPage() {
   const { t, language } = useLanguage()
+  const bannerRef = useRef(null)
+  const titleRef = useRef(null)
+  const subtitleRef = useRef(null)
+  const mainTextRef = useRef(null)
+  const missionRef = useRef(null)
+  const valuesRef = useRef(null)
 
   // Update page title for About page
   useEffect(() => {
@@ -27,6 +40,192 @@ export default function AboutPage() {
 
     document.title = getPageTitle()
   }, [language])
+
+  // GSAP Animations
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Banner parallax effect
+      gsap.to(bannerRef.current, {
+        yPercent: -50,
+        ease: "none",
+        scrollTrigger: {
+          trigger: bannerRef.current,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true,
+        },
+      })
+
+      // Banner content animation
+      gsap.fromTo(
+        titleRef.current,
+        {
+          y: 100,
+          opacity: 0,
+          scale: 0.8,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 1.5,
+          ease: "back.out(1.7)",
+          delay: 0.3,
+        },
+      )
+
+      gsap.fromTo(
+        subtitleRef.current,
+        {
+          y: 50,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          delay: 0.8,
+          ease: "power2.out",
+        },
+      )
+
+      // Main text reveal animation
+      const mainTextElements = mainTextRef.current?.children
+      if (mainTextElements) {
+        gsap.fromTo(
+          mainTextElements,
+          {
+            y: 80,
+            opacity: 0,
+          },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            stagger: 0.3,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: mainTextRef.current,
+              start: "top 80%",
+              toggleActions: "play none none reverse",
+            },
+          },
+        )
+      }
+
+      // Mission section animation
+      gsap.fromTo(
+        missionRef.current,
+        {
+          x: -100,
+          opacity: 0,
+          rotationY: -15,
+        },
+        {
+          x: 0,
+          opacity: 1,
+          rotationY: 0,
+          duration: 1.2,
+          ease: "back.out(1.7)",
+          scrollTrigger: {
+            trigger: missionRef.current,
+            start: "top 80%",
+            toggleActions: "play none none reverse",
+          },
+        },
+      )
+
+      // Values section animation
+      const valuesList = valuesRef.current?.querySelector("ul")?.children
+      if (valuesList) {
+        gsap.fromTo(
+          valuesList,
+          {
+            x: 100,
+            opacity: 0,
+            scale: 0.8,
+          },
+          {
+            x: 0,
+            opacity: 1,
+            scale: 1,
+            duration: 0.8,
+            stagger: 0.2,
+            ease: "back.out(1.7)",
+            scrollTrigger: {
+              trigger: valuesRef.current,
+              start: "top 80%",
+              toggleActions: "play none none reverse",
+            },
+          },
+        )
+
+        // Floating animation for value items
+        Array.from(valuesList).forEach((item, index) => {
+          gsap.to(item, {
+            y: "+=5",
+            duration: 2 + index * 0.5,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut",
+            delay: index * 0.3,
+          })
+        })
+      }
+
+      // Values section title animation
+      const valuesTitle = valuesRef.current?.querySelector("h2")
+      if (valuesTitle) {
+        gsap.fromTo(
+          valuesTitle,
+          {
+            scale: 0,
+            rotation: -10,
+            opacity: 0,
+          },
+          {
+            scale: 1,
+            rotation: 0,
+            opacity: 1,
+            duration: 1,
+            ease: "bounce.out",
+            scrollTrigger: {
+              trigger: valuesTitle,
+              start: "top 85%",
+              toggleActions: "play none none reverse",
+            },
+          },
+        )
+      }
+
+      // Mission title animation
+      const missionTitle = missionRef.current?.querySelector("h2")
+      if (missionTitle) {
+        gsap.fromTo(
+          missionTitle,
+          {
+            scale: 0,
+            rotation: 10,
+            opacity: 0,
+          },
+          {
+            scale: 1,
+            rotation: 0,
+            opacity: 1,
+            duration: 1,
+            ease: "bounce.out",
+            scrollTrigger: {
+              trigger: missionTitle,
+              start: "top 85%",
+              toggleActions: "play none none reverse",
+            },
+          },
+        )
+      }
+    })
+
+    return () => ctx.revert()
+  }, [])
 
   const aboutContent = {
     ka: {
@@ -92,7 +291,7 @@ export default function AboutPage() {
       {/* Add the banner section */}
       <div className="relative w-full h-64 md:h-80 overflow-hidden">
         {/* Background Image */}
-        <div className="absolute inset-0">
+        <div ref={bannerRef} className="absolute inset-0">
           <Image
             src="/images/abstract-blurred-photo-of-store-with-trolley-in-department-store-bokeh-background.jpg"
             alt="Store with trolley background"
@@ -107,14 +306,14 @@ export default function AboutPage() {
         {/* Content */}
         <div className="relative z-10 flex items-center justify-center h-full">
           <div className="text-center text-white px-4">
-            <h1 className="text-3xl md:text-5xl font-bold mb-2 drop-shadow-lg">
+            <h1 ref={titleRef} className="text-3xl md:text-5xl font-bold mb-2 drop-shadow-lg">
               {language === "ka"
                 ? "ნიუ მოტორსი კომპანიის შესახებ"
                 : language === "en"
                   ? "About New Motorsi Company"
                   : "О компании Нью Моторси"}
             </h1>
-            <p className="text-base md:text-lg text-white/90 drop-shadow-md max-w-4xl mx-auto">
+            <p ref={subtitleRef} className="text-base md:text-lg text-white/90 drop-shadow-md max-w-4xl mx-auto">
               {language === "ka"
                 ? "შპს ნიუ მოტორსი გთავაზობთ სასაწყობე სტელაჟებს, თაროებს და აქსესუარებს მაღაზიებისთვის."
                 : language === "en"
@@ -127,17 +326,17 @@ export default function AboutPage() {
 
       <div className="container px-4 py-8 md:px-6 md:py-12">
         <div className="max-w-4xl mx-auto">
-          <div className="space-y-8 mb-16">
+          <div ref={mainTextRef} className="space-y-8 mb-16">
             <p className="text-lg leading-relaxed text-black">{content.mainText1}</p>
             <p className="text-lg leading-relaxed text-black">{content.mainText2}</p>
           </div>
 
           <div className="grid gap-12 md:grid-cols-2">
-            <div>
+            <div ref={missionRef}>
               <h2 className="text-2xl font-bold mb-4 text-black">{content.mission}</h2>
               <p className="text-black leading-relaxed">{content.missionText}</p>
             </div>
-            <div>
+            <div ref={valuesRef}>
               <h2 className="text-2xl font-bold mb-4 text-black">{content.values}</h2>
               <ul className="space-y-3">
                 {content.valuesList.map((value, index) => (

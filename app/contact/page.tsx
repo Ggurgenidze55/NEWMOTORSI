@@ -6,13 +6,27 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent } from "@/components/ui/card"
 import { useLanguage } from "@/contexts/language-context"
-import { useEffect } from "react"
+import { useEffect, useRef } from "react"
 import { useActionState } from "react"
 import { submitContactForm } from "@/app/actions/contact"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+// Register GSAP plugins
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger)
+}
 
 export default function ContactPage() {
   const { t, language } = useLanguage()
   const [state, formAction, isPending] = useActionState(submitContactForm, null)
+
+  const bannerRef = useRef(null)
+  const titleRef = useRef(null)
+  const descriptionRef = useRef(null)
+  const formRef = useRef(null)
+  const contactInfoRef = useRef(null)
+  const mapRef = useRef(null)
 
   // Update page title for Contact page
   useEffect(() => {
@@ -34,6 +48,213 @@ export default function ContactPage() {
 
     document.title = getPageTitle()
   }, [language])
+
+  // GSAP Animations
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Banner parallax effect
+      gsap.to(bannerRef.current, {
+        yPercent: -30,
+        ease: "none",
+        scrollTrigger: {
+          trigger: bannerRef.current,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true,
+        },
+      })
+
+      // Banner content animation
+      gsap.fromTo(
+        titleRef.current,
+        {
+          y: 100,
+          opacity: 0,
+          scale: 0.8,
+          rotationX: 90,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          rotationX: 0,
+          duration: 1.5,
+          ease: "back.out(1.7)",
+          delay: 0.3,
+        },
+      )
+
+      gsap.fromTo(
+        descriptionRef.current,
+        {
+          y: 50,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          delay: 0.8,
+          ease: "power2.out",
+        },
+      )
+
+      // Form animation
+      const formFields = formRef.current?.querySelectorAll("input, textarea, button")
+      if (formFields) {
+        gsap.fromTo(
+          formFields,
+          {
+            y: 50,
+            opacity: 0,
+            scale: 0.9,
+          },
+          {
+            y: 0,
+            opacity: 1,
+            scale: 1,
+            duration: 0.8,
+            stagger: 0.1,
+            ease: "back.out(1.7)",
+            scrollTrigger: {
+              trigger: formRef.current,
+              start: "top 80%",
+              toggleActions: "play none none reverse",
+            },
+          },
+        )
+
+        // Form field focus animations
+        formFields.forEach((field) => {
+          if (field.tagName === "INPUT" || field.tagName === "TEXTAREA") {
+            field.addEventListener("focus", () => {
+              gsap.to(field, {
+                scale: 1.02,
+                boxShadow: "0 0 20px rgba(0, 173, 239, 0.3)",
+                duration: 0.3,
+                ease: "power2.out",
+              })
+            })
+
+            field.addEventListener("blur", () => {
+              gsap.to(field, {
+                scale: 1,
+                boxShadow: "0 0 0px rgba(0, 173, 239, 0)",
+                duration: 0.3,
+                ease: "power2.out",
+              })
+            })
+          }
+        })
+      }
+
+      // Contact info cards animation
+      const contactCards = contactInfoRef.current?.querySelectorAll(".contact-card")
+      if (contactCards) {
+        gsap.fromTo(
+          contactCards,
+          {
+            x: 100,
+            opacity: 0,
+            rotationY: 15,
+          },
+          {
+            x: 0,
+            opacity: 1,
+            rotationY: 0,
+            duration: 1,
+            stagger: 0.2,
+            ease: "back.out(1.7)",
+            scrollTrigger: {
+              trigger: contactInfoRef.current,
+              start: "top 80%",
+              toggleActions: "play none none reverse",
+            },
+          },
+        )
+
+        // Hover animations for contact cards
+        contactCards.forEach((card) => {
+          card.addEventListener("mouseenter", () => {
+            gsap.to(card, {
+              scale: 1.05,
+              y: -5,
+              boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
+              duration: 0.3,
+              ease: "power2.out",
+            })
+          })
+
+          card.addEventListener("mouseleave", () => {
+            gsap.to(card, {
+              scale: 1,
+              y: 0,
+              boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+              duration: 0.3,
+              ease: "power2.out",
+            })
+          })
+        })
+
+        // Floating animation for contact cards
+        contactCards.forEach((card, index) => {
+          gsap.to(card, {
+            y: "+=3",
+            duration: 2 + index * 0.3,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut",
+            delay: index * 0.5,
+          })
+        })
+      }
+
+      // Map animation
+      gsap.fromTo(
+        mapRef.current,
+        {
+          scale: 0.8,
+          opacity: 0,
+          rotationY: -15,
+        },
+        {
+          scale: 1,
+          opacity: 1,
+          rotationY: 0,
+          duration: 1.2,
+          ease: "back.out(1.7)",
+          scrollTrigger: {
+            trigger: mapRef.current,
+            start: "top 80%",
+            toggleActions: "play none none reverse",
+          },
+        },
+      )
+    })
+
+    return () => ctx.revert()
+  }, [])
+
+  // Success animation
+  useEffect(() => {
+    if (state?.success) {
+      gsap.fromTo(
+        ".success-message",
+        {
+          scale: 0,
+          opacity: 0,
+          rotation: -10,
+        },
+        {
+          scale: 1,
+          opacity: 1,
+          rotation: 0,
+          duration: 0.8,
+          ease: "bounce.out",
+        },
+      )
+    }
+  }, [state])
 
   const contactContent = {
     ka: {
@@ -113,6 +334,7 @@ export default function ContactPage() {
     <div className="bg-gradient-to-br from-gray-50 to-white min-h-screen text-black">
       {/* Banner Section */}
       <div
+        ref={bannerRef}
         className="relative h-96 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: "url('/images/contact-banner.jpg')",
@@ -122,8 +344,12 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="relative z-10 flex items-center justify-center h-full">
           <div className="text-center text-white">
-            <h1 className="text-5xl font-bold tracking-tight mb-6">{content.title}</h1>
-            <p className="text-xl opacity-90 max-w-2xl mx-auto">{content.description}</p>
+            <h1 ref={titleRef} className="text-5xl font-bold tracking-tight mb-6">
+              {content.title}
+            </h1>
+            <p ref={descriptionRef} className="text-xl opacity-90 max-w-2xl mx-auto">
+              {content.description}
+            </p>
           </div>
         </div>
       </div>
@@ -140,7 +366,7 @@ export default function ContactPage() {
                     <h2 className="text-3xl font-bold text-black">{content.formTitle}</h2>
                   </div>
 
-                  <form action={formAction} className="space-y-6">
+                  <form ref={formRef} action={formAction} className="space-y-6">
                     <div className="grid gap-6 sm:grid-cols-2">
                       <div className="space-y-2">
                         <label htmlFor="name" className="block text-sm font-semibold text-black">
@@ -199,7 +425,7 @@ export default function ContactPage() {
                     {/* Success/Error Message */}
                     {state && (
                       <div
-                        className={`p-4 rounded-lg ${state.success ? "bg-green-50 text-green-800 border border-green-200" : "bg-red-50 text-red-800 border border-red-200"}`}
+                        className={`success-message p-4 rounded-lg ${state.success ? "bg-green-50 text-green-800 border border-green-200" : "bg-red-50 text-red-800 border border-red-200"}`}
                       >
                         {state.message}
                       </div>
@@ -223,13 +449,13 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Information */}
-            <div className="space-y-6">
+            <div ref={contactInfoRef} className="space-y-6">
               <Card className="shadow-xl border-0 bg-white">
                 <CardContent className="p-6">
                   <h3 className="text-2xl font-bold mb-6 text-black">{content.quickContact}</h3>
                   <div className="space-y-6">
                     {/* Tbilisi Address */}
-                    <div className="flex items-start space-x-4 p-4 rounded-lg bg-gray-50">
+                    <div className="contact-card flex items-start space-x-4 p-4 rounded-lg bg-gray-50">
                       <div className="bg-blue-100 p-3 rounded-full">
                         <MapPin className="h-6 w-6 text-blue-600" />
                       </div>
@@ -240,7 +466,7 @@ export default function ContactPage() {
                     </div>
 
                     {/* Kutaisi Address */}
-                    <div className="flex items-start space-x-4 p-4 rounded-lg bg-gray-50">
+                    <div className="contact-card flex items-start space-x-4 p-4 rounded-lg bg-gray-50">
                       <div className="bg-blue-100 p-3 rounded-full">
                         <MapPin className="h-6 w-6 text-blue-600" />
                       </div>
@@ -250,7 +476,7 @@ export default function ContactPage() {
                       </div>
                     </div>
 
-                    <div className="flex items-start space-x-4 p-4 rounded-lg bg-gray-50">
+                    <div className="contact-card flex items-start space-x-4 p-4 rounded-lg bg-gray-50">
                       <div className="bg-green-100 p-3 rounded-full">
                         <Phone className="h-6 w-6 text-green-600" />
                       </div>
@@ -260,7 +486,7 @@ export default function ContactPage() {
                       </div>
                     </div>
 
-                    <div className="flex items-start space-x-4 p-4 rounded-lg bg-gray-50">
+                    <div className="contact-card flex items-start space-x-4 p-4 rounded-lg bg-gray-50">
                       <div className="bg-purple-100 p-3 rounded-full">
                         <Mail className="h-6 w-6 text-purple-600" />
                       </div>
@@ -270,37 +496,34 @@ export default function ContactPage() {
                       </div>
                     </div>
 
-                    <div className="flex items-start space-x-4 p-4 rounded-lg bg-gray-50">
+                    <div className="contact-card flex items-start space-x-4 p-4 rounded-lg bg-gray-50">
                       <div className="bg-orange-100 p-3 rounded-full">
                         <Clock className="h-6 w-6 text-orange-600" />
                       </div>
                       <div>
                         <h4 className="font-semibold mb-1 text-black">{content.hours}</h4>
-                        <p className="text-gray-700 whitespace-pre-line">{content.hoursText}</p>
+                        <p className="text-gray-700">{content.hoursText}</p>
                       </div>
                     </div>
                   </div>
                 </CardContent>
               </Card>
-
-              {/* Google Map */}
-              <Card className="shadow-xl border-0 bg-white">
-                <CardContent className="p-0">
-                  <div className="h-64 rounded-lg overflow-hidden">
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2977.8234567890123!2d44.7865!3d41.7151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDQyJzU0LjQiTiA0NMKwNDcnMTEuNCJF!5e0!3m2!1sen!2sge!4v1234567890123!5m2!1sen!2sge&q=ლევან+დევდარიანის+მე-3+შესახვევი+12,+თბილისი,+საქართველო"
-                      width="100%"
-                      height="256"
-                      style={{ border: 0 }}
-                      allowFullScreen=""
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                      title="ნიუ მოტორსი - თბილისის ოფისი"
-                    ></iframe>
-                  </div>
-                </CardContent>
-              </Card>
             </div>
+          </div>
+
+          {/* Map Section */}
+          <div ref={mapRef} className="mt-12">
+            <Card className="shadow-xl border-0 bg-white overflow-hidden">
+              <CardContent className="p-0">
+                <div className="h-96 bg-gray-200 flex items-center justify-center">
+                  <div className="text-center text-gray-600">
+                    <MapPin className="h-12 w-12 mx-auto mb-4" />
+                    <p className="text-lg font-semibold">რუკა მალე დაემატება</p>
+                    <p className="text-sm">Map coming soon</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>

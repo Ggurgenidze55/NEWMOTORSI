@@ -2,15 +2,309 @@
 
 import Image from "next/image"
 import { Star, Users, Award, TrendingUp } from "lucide-react"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { useLanguage } from "@/contexts/language-context"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+// Register GSAP plugins
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger)
+}
 
 export default function HomePage() {
   const { t, language } = useLanguage()
   const [isVisible, setIsVisible] = useState(false)
 
+  // Refs for animations
+  const heroRef = useRef(null)
+  const heroTitleRef = useRef(null)
+  const heroDescRef = useRef(null)
+  const heroButtonsRef = useRef(null)
+  const statsRef = useRef(null)
+  const categoriesRef = useRef(null)
+  const ctaRef = useRef(null)
+  const scrollIndicatorRef = useRef(null)
+
   useEffect(() => {
     setIsVisible(true)
+
+    // Hero animations
+    const tl = gsap.timeline()
+
+    // Hero title animation with split text effect
+    tl.fromTo(
+      heroTitleRef.current,
+      {
+        y: 100,
+        opacity: 0,
+        scale: 0.8,
+        rotationX: 45,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        scale: 1,
+        rotationX: 0,
+        duration: 1.2,
+        ease: "power3.out",
+      },
+    )
+
+      // Hero description with typewriter effect
+      .fromTo(
+        heroDescRef.current,
+        {
+          y: 50,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          ease: "power2.out",
+        },
+        "-=0.6",
+      )
+
+      // Hero buttons with bounce effect
+      .fromTo(
+        heroButtonsRef.current?.children || [],
+        {
+          y: 30,
+          opacity: 0,
+          scale: 0.8,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 0.6,
+          stagger: 0.2,
+          ease: "back.out(1.7)",
+        },
+        "-=0.4",
+      )
+
+    // Scroll indicator floating animation
+    gsap.to(scrollIndicatorRef.current, {
+      y: 10,
+      duration: 1.5,
+      repeat: -1,
+      yoyo: true,
+      ease: "power2.inOut",
+    })
+
+    // Stats section animations
+    ScrollTrigger.create({
+      trigger: statsRef.current,
+      start: "top 80%",
+      onEnter: () => {
+        // Animate stat cards
+        gsap.fromTo(
+          statsRef.current?.querySelectorAll(".stat-card") || [],
+          {
+            y: 60,
+            opacity: 0,
+            scale: 0.8,
+            rotation: 5,
+          },
+          {
+            y: 0,
+            opacity: 1,
+            scale: 1,
+            rotation: 0,
+            duration: 0.8,
+            stagger: 0.15,
+            ease: "back.out(1.4)",
+          },
+        )
+
+        // Animate numbers with counter effect
+        statsRef.current?.querySelectorAll(".stat-number").forEach((el: any) => {
+          const finalText = el.textContent
+          const isNumber = finalText.match(/\d+/)
+
+          if (isNumber) {
+            const number = Number.parseInt(isNumber[0])
+            gsap.fromTo(
+              { value: 0 },
+              { value: number },
+              {
+                duration: 2,
+                ease: "power2.out",
+                onUpdate: function () {
+                  el.textContent = finalText.replace(/\d+/, Math.round(this.targets()[0].value))
+                },
+              },
+            )
+          }
+        })
+      },
+    })
+
+    // Categories section animations
+    ScrollTrigger.create({
+      trigger: categoriesRef.current,
+      start: "top 70%",
+      onEnter: () => {
+        // Title animation
+        gsap.fromTo(
+          categoriesRef.current?.querySelector("h2"),
+          {
+            y: 50,
+            opacity: 0,
+            scale: 0.9,
+          },
+          {
+            y: 0,
+            opacity: 1,
+            scale: 1,
+            duration: 0.8,
+            ease: "power3.out",
+          },
+        )
+
+        // Description animation
+        gsap.fromTo(
+          categoriesRef.current?.querySelector("p"),
+          {
+            y: 30,
+            opacity: 0,
+          },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.6,
+            delay: 0.2,
+            ease: "power2.out",
+          },
+        )
+
+        // Category cards with different animations
+        const cards = categoriesRef.current?.querySelectorAll(".category-card") || []
+        cards.forEach((card: any, index: number) => {
+          const animationType = index % 3
+          let fromProps, toProps
+
+          switch (animationType) {
+            case 0: // Slide from left
+              fromProps = { x: -100, opacity: 0, rotationY: -45 }
+              toProps = { x: 0, opacity: 1, rotationY: 0 }
+              break
+            case 1: // Slide from right
+              fromProps = { x: 100, opacity: 0, rotationY: 45 }
+              toProps = { x: 0, opacity: 1, rotationY: 0 }
+              break
+            case 2: // Scale up
+              fromProps = { scale: 0.6, opacity: 0, y: 50 }
+              toProps = { scale: 1, opacity: 1, y: 0 }
+              break
+          }
+
+          gsap.fromTo(card, fromProps, {
+            ...toProps,
+            duration: 0.8,
+            delay: index * 0.1,
+            ease: "back.out(1.2)",
+          })
+
+          // Hover animations
+          card.addEventListener("mouseenter", () => {
+            gsap.to(card, {
+              scale: 1.05,
+              y: -10,
+              duration: 0.3,
+              ease: "power2.out",
+            })
+
+            gsap.to(card.querySelector("img"), {
+              scale: 1.1,
+              rotation: 2,
+              duration: 0.3,
+              ease: "power2.out",
+            })
+          })
+
+          card.addEventListener("mouseleave", () => {
+            gsap.to(card, {
+              scale: 1,
+              y: 0,
+              duration: 0.3,
+              ease: "power2.out",
+            })
+
+            gsap.to(card.querySelector("img"), {
+              scale: 1,
+              rotation: 0,
+              duration: 0.3,
+              ease: "power2.out",
+            })
+          })
+        })
+      },
+    })
+
+    // CTA section animations
+    ScrollTrigger.create({
+      trigger: ctaRef.current,
+      start: "top 80%",
+      onEnter: () => {
+        const tl = gsap.timeline()
+
+        tl.fromTo(
+          ctaRef.current?.querySelector("h2"),
+          {
+            scale: 0.5,
+            opacity: 0,
+            y: 50,
+          },
+          {
+            scale: 1,
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "back.out(1.4)",
+          },
+        )
+          .fromTo(
+            ctaRef.current?.querySelector("p"),
+            {
+              y: 30,
+              opacity: 0,
+            },
+            {
+              y: 0,
+              opacity: 1,
+              duration: 0.6,
+              ease: "power2.out",
+            },
+            "-=0.4",
+          )
+          .fromTo(
+            ctaRef.current?.querySelectorAll("button") || [],
+            {
+              y: 20,
+              opacity: 0,
+              scale: 0.9,
+            },
+            {
+              y: 0,
+              opacity: 1,
+              scale: 1,
+              duration: 0.5,
+              stagger: 0.1,
+              ease: "back.out(1.2)",
+            },
+            "-=0.3",
+          )
+      },
+    })
+
+    // Cleanup
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
+    }
   }, [])
 
   const allCategories = [
@@ -252,7 +546,7 @@ export default function HomePage() {
   return (
     <div className="overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative w-full min-h-screen bg-hero-pattern overflow-hidden">
+      <section ref={heroRef} className="relative w-full min-h-screen bg-hero-pattern overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -267,18 +561,18 @@ export default function HomePage() {
 
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 py-20 flex items-center min-h-screen">
-          <div
-            className={`max-w-3xl text-white transition-all duration-1000 ${isVisible ? "animate-fade-in" : "opacity-0"}`}
-          >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          <div className="max-w-3xl text-white">
+            <h1 ref={heroTitleRef} className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
               {getHeroTitle()}{" "}
               <span className="relative inline-block">
                 <span className="relative z-10"></span>
                 <span className="absolute bottom-2 left-0 w-full h-4 bg-white/30 -skew-x-12"></span>
               </span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-white/90 leading-relaxed">{getHeroDescription()}</p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <p ref={heroDescRef} className="text-xl md:text-2xl mb-8 text-white/90 leading-relaxed">
+              {getHeroDescription()}
+            </p>
+            <div ref={heroButtonsRef} className="flex flex-col sm:flex-row gap-4">
               <button
                 className="bg-white text-primary hover:bg-gray-100 px-8 py-4 text-lg font-semibold group rounded-md transition-colors"
                 onClick={() => (window.location.href = "/products")}
@@ -298,7 +592,7 @@ export default function HomePage() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+        <div ref={scrollIndicatorRef} className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white">
           <div className="h-8 w-8 flex items-center justify-center">
             <span className="text-2xl">↓</span>
           </div>
@@ -306,19 +600,15 @@ export default function HomePage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gray-50">
+      <section ref={statsRef} className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div
-                key={index}
-                className={`text-center group transition-all duration-500 ${isVisible ? "animate-fade-in" : "opacity-0"}`}
-                style={{ animationDelay: `${index * 200}ms` }}
-              >
+              <div key={index} className="stat-card text-center group transition-all duration-500">
                 <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <stat.icon className="h-8 w-8 text-white" />
                 </div>
-                <div className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">{stat.number}</div>
+                <div className="stat-number text-3xl md:text-4xl font-bold text-gray-800 mb-2">{stat.number}</div>
                 <div className="text-gray-600 font-medium">{stat.label}</div>
               </div>
             ))}
@@ -327,7 +617,7 @@ export default function HomePage() {
       </section>
 
       {/* All Categories Section */}
-      <section className="py-20 bg-white">
+      <section ref={categoriesRef} className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">{getSectionTitle("categories")}</h2>
@@ -338,8 +628,8 @@ export default function HomePage() {
             {allCategories.map((category, index) => (
               <div
                 key={category.id}
-                className={`group hover:shadow-2xl transition-all duration-500 border-0 overflow-hidden bg-white rounded-lg border ${isVisible ? "animate-fade-in" : "opacity-0"}`}
-                style={{ animationDelay: `${index * 200}ms` }}
+                className="category-card group hover:shadow-2xl transition-all duration-500 border-0 overflow-hidden bg-white rounded-lg border cursor-pointer"
+                onClick={() => (window.location.href = category.href)}
               >
                 <div className="p-0">
                   <div className="relative overflow-hidden">
@@ -349,7 +639,7 @@ export default function HomePage() {
                         alt={getCategoryTitle(category)}
                         width={600}
                         height={450}
-                        className="h-full w-full object-contain transition-transform group-hover:scale-105"
+                        className="h-full w-full object-contain transition-transform"
                       />
                     </div>
                     <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-all duration-300"></div>
@@ -368,10 +658,7 @@ export default function HomePage() {
                     <p className="text-gray-600 mb-6 leading-relaxed">{getCategoryDescription(category)}</p>
 
                     <div className="mt-auto">
-                      <button
-                        className="w-full bg-primary hover:bg-primary/90 group-hover:shadow-lg transition-all duration-300 text-white px-4 py-2 rounded-md flex items-center justify-center"
-                        onClick={() => (window.location.href = category.href)}
-                      >
+                      <button className="w-full bg-primary hover:bg-primary/90 group-hover:shadow-lg transition-all duration-300 text-white px-4 py-2 rounded-md flex items-center justify-center">
                         {getButtonText("details")}
                         <span className="ml-2 inline-block group-hover:translate-x-1 transition-transform">→</span>
                       </button>
@@ -385,7 +672,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary text-white relative overflow-hidden">
+      <section ref={ctaRef} className="py-20 bg-primary text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-hero-pattern opacity-20"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">{getSectionTitle("readyToStart")}</h2>

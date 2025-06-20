@@ -3,10 +3,21 @@
 import ProductCard from "@/components/product-card"
 import SubcategoryNavigation from "@/components/subcategory-navigation"
 import { useLanguage } from "@/contexts/language-context"
-import { useEffect } from "react"
+import { useEffect, useRef } from "react"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+// Register GSAP plugins
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger)
+}
 
 export default function ProductsPage() {
   const { t, language } = useLanguage()
+  const titleRef = useRef(null)
+  const descriptionRef = useRef(null)
+  const countRef = useRef(null)
+  const gridRef = useRef(null)
 
   // Update page title for Products page
   useEffect(() => {
@@ -28,6 +39,143 @@ export default function ProductsPage() {
 
     document.title = getPageTitle()
   }, [language])
+
+  // GSAP Animations
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Title animation with 3D effect
+      gsap.fromTo(
+        titleRef.current,
+        {
+          y: 100,
+          opacity: 0,
+          rotationX: 90,
+          transformPerspective: 1000,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          rotationX: 0,
+          duration: 1.2,
+          ease: "back.out(1.7)",
+          delay: 0.3,
+        },
+      )
+
+      // Description typewriter effect
+      gsap.fromTo(
+        descriptionRef.current,
+        {
+          opacity: 0,
+          y: 50,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          delay: 0.8,
+          ease: "power2.out",
+        },
+      )
+
+      // Count animation
+      gsap.fromTo(
+        countRef.current,
+        {
+          opacity: 0,
+          scale: 0,
+        },
+        {
+          opacity: 1,
+          scale: 1,
+          duration: 0.6,
+          delay: 1.2,
+          ease: "bounce.out",
+        },
+      )
+
+      // Products grid staggered animation
+      const productCards = gridRef.current?.children
+      if (productCards) {
+        gsap.fromTo(
+          productCards,
+          {
+            y: 100,
+            opacity: 0,
+            scale: 0.8,
+            rotation: 5,
+          },
+          {
+            y: 0,
+            opacity: 1,
+            scale: 1,
+            rotation: 0,
+            duration: 0.8,
+            stagger: {
+              amount: 2,
+              from: "random",
+            },
+            ease: "back.out(1.7)",
+            delay: 1.5,
+            scrollTrigger: {
+              trigger: gridRef.current,
+              start: "top 80%",
+              toggleActions: "play none none reverse",
+            },
+          },
+        )
+
+        // Hover animations for product cards
+        Array.from(productCards).forEach((card) => {
+          const handleMouseEnter = () => {
+            gsap.to(card, {
+              scale: 1.05,
+              y: -10,
+              boxShadow: "0 20px 40px rgba(0,0,0,0.15)",
+              duration: 0.3,
+              ease: "power2.out",
+            })
+          }
+
+          const handleMouseLeave = () => {
+            gsap.to(card, {
+              scale: 1,
+              y: 0,
+              boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+              duration: 0.3,
+              ease: "power2.out",
+            })
+          }
+
+          card.addEventListener("mouseenter", handleMouseEnter)
+          card.addEventListener("mouseleave", handleMouseLeave)
+
+          return () => {
+            card.removeEventListener("mouseenter", handleMouseEnter)
+            card.removeEventListener("mouseleave", handleMouseLeave)
+          }
+        })
+      }
+
+      // Floating animation for random products
+      if (productCards) {
+        Array.from(productCards).forEach((card, index) => {
+          if (index % 3 === 0) {
+            gsap.to(card, {
+              y: "+=10",
+              duration: 2 + Math.random() * 2,
+              repeat: -1,
+              yoyo: true,
+              ease: "sine.inOut",
+              delay: Math.random() * 2,
+            })
+          }
+        })
+      }
+    })
+
+    return () => ctx.revert()
+  }, [])
 
   // This would typically come from an API or database
   const products = [
@@ -523,47 +671,46 @@ export default function ProductsPage() {
       isNew: true,
     },
     {
-  id: "kitchen-stainless-shelf-l120",
-  name: "სამზარეულოს სტელაჟი უჟანგავი ცხაურით",
-  price: 0,
-  image: "/images/kitchen-shelving/stainless-steel-shelf-l120.jpeg",
-  category: t("kitchenShelving"),
-  subcategory: "kitchen-shelving",
-  isNew: true,
+      id: "kitchen-stainless-shelf-l120",
+      name: "სამზარეულოს სტელაჟი უჟანგავი ცხაურით",
+      price: 0,
+      image: "/images/kitchen-shelving/stainless-steel-shelf-l120.jpeg",
+      category: t("kitchenShelving"),
+      subcategory: "kitchen-shelving",
+      isNew: true,
     },
     {
-  id: "kitchen-stainless-shelf-l180",
-  name: "სამზარეულოს სტელაჟი უჟანგავი ცხაურით",
-  price: 0,
-  image: "/images/kitchen-shelving/stainless-steel-shelf-l180.jpeg",
-  category: t("kitchenShelving"),
-  isNew: true,
-},
+      id: "kitchen-stainless-shelf-l180",
+      name: "სამზარეულოს სტელაჟი უჟანგავი ცხაურით",
+      price: 0,
+      image: "/images/kitchen-shelving/stainless-steel-shelf-l180.jpeg",
+      category: t("kitchenShelving"),
+      isNew: true,
+    },
     {
-  id: "kitchen-stainless-trays-600x400",
-  name: "უჟანგავი ჟარონები",
-  price: 0,
-  image: "/images/kitchen-shelving/stainless-steel-trays.png",
-  category: t("kitchenShelving"),
-  isNew: true,
-},
-{
-  id: "kitchen-chrome-wire-shelf-200x151",
-  name: "ბადიანი ქრომირებული სტელაჟები",
-  price: 0,
-  image: "/images/kitchen-shelving/chrome-wire-shelf-200x151.jpeg",
-  category: t("kitchenShelving"),
-  isNew: true,
-},
-{
-  id: "kitchen-chrome-wire-shelf-200x180",
-  name: "ბადიანი ქრომირებული სტელაჟები",
-  price: 0,
-  image: "/images/kitchen-shelving/chrome-wire-shelf-200x180.jpeg",
-  category: t("kitchenShelving"),
-  isNew: true,
-},
-    
+      id: "kitchen-stainless-trays-600x400",
+      name: "უჟანგავი ჟარონები",
+      price: 0,
+      image: "/images/kitchen-shelving/stainless-steel-trays.png",
+      category: t("kitchenShelving"),
+      isNew: true,
+    },
+    {
+      id: "kitchen-chrome-wire-shelf-200x151",
+      name: "ბადიანი ქრომირებული სტელაჟები",
+      price: 0,
+      image: "/images/kitchen-shelving/chrome-wire-shelf-200x151.jpeg",
+      category: t("kitchenShelving"),
+      isNew: true,
+    },
+    {
+      id: "kitchen-chrome-wire-shelf-200x180",
+      name: "ბადიანი ქრომირებული სტელაჟები",
+      price: 0,
+      image: "/images/kitchen-shelving/chrome-wire-shelf-200x180.jpeg",
+      category: t("kitchenShelving"),
+      isNew: true,
+    },
   ]
 
   const getPageTitle = () => {
@@ -596,15 +743,19 @@ export default function ProductsPage() {
           <div className="container px-4 py-8 md:px-6 md:py-12">
             <div className="flex flex-col gap-8">
               <div className="text-center">
-                <h1 className="text-4xl font-bold tracking-tight mb-4 text-black">{getPageTitle()}</h1>
-                <p className="text-xl text-black max-w-2xl mx-auto">{getPageDescription()}</p>
-                <p className="text-sm text-black mt-2">
+                <h1 ref={titleRef} className="text-4xl font-bold tracking-tight mb-4 text-black">
+                  {getPageTitle()}
+                </h1>
+                <p ref={descriptionRef} className="text-xl text-black max-w-2xl mx-auto">
+                  {getPageDescription()}
+                </p>
+                <p ref={countRef} className="text-sm text-black mt-2">
                   {products.length} {t("products")}
                 </p>
               </div>
 
               {/* Products Grid */}
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              <div ref={gridRef} className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {products.map((product) => (
                   <ProductCard key={product.id} {...product} hidePrice={true} />
                 ))}
