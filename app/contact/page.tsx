@@ -100,7 +100,7 @@ export default function ContactPage() {
       )
 
       // Form animation
-      const formFields = formRef.current?.querySelectorAll("input, textarea, button")
+      const formFields = formRef.current?.querySelectorAll("input, textarea, button, label")
       if (formFields) {
         gsap.fromTo(
           formFields,
@@ -125,26 +125,25 @@ export default function ContactPage() {
         )
 
         // Form field focus animations
-        formFields.forEach((field) => {
-          if (field.tagName === "INPUT" || field.tagName === "TEXTAREA") {
-            field.addEventListener("focus", () => {
-              gsap.to(field, {
-                scale: 1.02,
-                boxShadow: "0 0 20px rgba(0, 173, 239, 0.3)",
-                duration: 0.3,
-                ease: "power2.out",
-              })
+        const inputs = formRef.current?.querySelectorAll("input, textarea")
+        inputs?.forEach((field) => {
+          field.addEventListener("focus", () => {
+            gsap.to(field, {
+              scale: 1.02,
+              boxShadow: "0 0 20px rgba(0, 173, 239, 0.3)",
+              duration: 0.3,
+              ease: "power2.out",
             })
+          })
 
-            field.addEventListener("blur", () => {
-              gsap.to(field, {
-                scale: 1,
-                boxShadow: "0 0 0px rgba(0, 173, 239, 0)",
-                duration: 0.3,
-                ease: "power2.out",
-              })
+          field.addEventListener("blur", () => {
+            gsap.to(field, {
+              scale: 1,
+              boxShadow: "0 0 0px rgba(0, 173, 239, 0)",
+              duration: 0.3,
+              ease: "power2.out",
             })
-          }
+          })
         })
       }
 
@@ -157,11 +156,13 @@ export default function ContactPage() {
             x: 100,
             opacity: 0,
             rotationY: 15,
+            scale: 0.9,
           },
           {
             x: 0,
             opacity: 1,
             rotationY: 0,
+            scale: 1,
             duration: 1,
             stagger: 0.2,
             ease: "back.out(1.7)",
@@ -174,7 +175,7 @@ export default function ContactPage() {
         )
 
         // Hover animations for contact cards
-        contactCards.forEach((card) => {
+        contactCards.forEach((card, index) => {
           card.addEventListener("mouseenter", () => {
             gsap.to(card, {
               scale: 1.05,
@@ -194,10 +195,8 @@ export default function ContactPage() {
               ease: "power2.out",
             })
           })
-        })
 
-        // Floating animation for contact cards
-        contactCards.forEach((card, index) => {
+          // Floating animation for contact cards
           gsap.to(card, {
             y: "+=3",
             duration: 2 + index * 0.3,
@@ -273,7 +272,7 @@ export default function ContactPage() {
       addressTextTbilisi: "თბილისი\nლევან დევდარიანის მე-3 შესახვევი #12",
       addressTextKutaisi: "ქუთაისი\nდავით აღმაშენებლის გამზ. #120",
       phone: "ტელეფონი",
-      phoneText: "599 12 03 03 / 591 91 27 90 / 591 74 20 20",
+      phoneText: "599 120303 / 591 912790 / 591 742020",
       emailText: "tk@newmotorsi.ge",
       hours: "სამუშაო საათები",
       hoursText: "ორშაბათი-შაბათი: 09:00-18:00",
@@ -296,7 +295,7 @@ export default function ContactPage() {
       addressTextTbilisi: "Tbilisi\nLevan Devdariani 3rd Lane #12",
       addressTextKutaisi: "Kutaisi\nDavit Aghmashenebeli Ave. #120",
       phone: "Phone",
-      phoneText: "599 12 03 03 / 591 91 27 90 / 591 74 20 20",
+      phoneText: "599 120303 / 591 912790 / 591 742020",
       emailText: "tk@newmotorsi.ge",
       hours: "Business Hours",
       hoursText: "Monday-Saturday: 09:00-18:00",
@@ -319,7 +318,7 @@ export default function ContactPage() {
       addressTextTbilisi: "Тбилиси\nПереулок Левана Девдариани 3 #12",
       addressTextKutaisi: "Кутаиси\nПр. Давида Агмашенебели #120",
       phone: "Телефон",
-      phoneText: "599 12 03 03 / 591 91 27 90 / 591 74 20 20",
+      phoneText: "599 120303 / 591 912790 / 591 742020",
       emailText: "tk@newmotorsi.ge",
       hours: "Рабочие часы",
       hoursText: "Понедельник-Суббота: 09:00-18:00",
@@ -502,7 +501,7 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <h4 className="font-semibold mb-1 text-black">{content.hours}</h4>
-                        <p className="text-gray-700">{content.hoursText}</p>
+                        <p className="text-gray-700 whitespace-pre-line">{content.hoursText}</p>
                       </div>
                     </div>
                   </div>
@@ -511,16 +510,21 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Map Section */}
+          {/* Google Map */}
           <div ref={mapRef} className="mt-12">
-            <Card className="shadow-xl border-0 bg-white overflow-hidden">
+            <Card className="shadow-xl border-0 bg-white">
               <CardContent className="p-0">
-                <div className="h-96 bg-gray-200 flex items-center justify-center">
-                  <div className="text-center text-gray-600">
-                    <MapPin className="h-12 w-12 mx-auto mb-4" />
-                    <p className="text-lg font-semibold">რუკა მალე დაემატება</p>
-                    <p className="text-sm">Map coming soon</p>
-                  </div>
+                <div className="h-64 rounded-lg overflow-hidden">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2977.8234567890123!2d44.7865!3d41.7151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDQyJzU0LjQiTiA0NMKwNDcnMTEuNCJF!5e0!3m2!1sen!2sge!4v1234567890123!5m2!1sen!2sge&q=ლევან+დევდარიანის+მე-3+შესახვევი+12,+თბილისი,+საქართველო"
+                    width="100%"
+                    height="256"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="ნიუ მოტორსი - თბილისის ოფისი"
+                  ></iframe>
                 </div>
               </CardContent>
             </Card>

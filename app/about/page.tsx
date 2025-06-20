@@ -63,11 +63,13 @@ export default function AboutPage() {
           y: 100,
           opacity: 0,
           scale: 0.8,
+          rotationX: 90,
         },
         {
           y: 0,
           opacity: 1,
           scale: 1,
+          rotationX: 0,
           duration: 1.5,
           ease: "back.out(1.7)",
           delay: 0.3,
@@ -97,10 +99,12 @@ export default function AboutPage() {
           {
             y: 80,
             opacity: 0,
+            rotationX: 45,
           },
           {
             y: 0,
             opacity: 1,
+            rotationX: 0,
             duration: 1,
             stagger: 0.3,
             ease: "power2.out",
@@ -120,11 +124,13 @@ export default function AboutPage() {
           x: -100,
           opacity: 0,
           rotationY: -15,
+          scale: 0.9,
         },
         {
           x: 0,
           opacity: 1,
           rotationY: 0,
+          scale: 1,
           duration: 1.2,
           ease: "back.out(1.7)",
           scrollTrigger: {
@@ -144,11 +150,13 @@ export default function AboutPage() {
             x: 100,
             opacity: 0,
             scale: 0.8,
+            rotation: 5,
           },
           {
             x: 0,
             opacity: 1,
             scale: 1,
+            rotation: 0,
             duration: 0.8,
             stagger: 0.2,
             ease: "back.out(1.7)",
@@ -222,10 +230,28 @@ export default function AboutPage() {
           },
         )
       }
+
+      // Mission text typewriter effect
+      const missionText = missionRef.current?.querySelector("p")
+      if (missionText) {
+        const text = missionText.textContent
+        missionText.textContent = ""
+
+        gsap.to(missionText, {
+          duration: 2,
+          text: text,
+          ease: "none",
+          scrollTrigger: {
+            trigger: missionText,
+            start: "top 80%",
+            toggleActions: "play none none reverse",
+          },
+        })
+      }
     })
 
     return () => ctx.revert()
-  }, [])
+  }, [language])
 
   const aboutContent = {
     ka: {

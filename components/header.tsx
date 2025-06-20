@@ -1,8 +1,12 @@
 "use client"
 import Link from "next/link"
+import type React from "react"
+
 import Image from "next/image"
 import { Menu, ChevronDown, ChevronRight, X } from "lucide-react"
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -18,10 +22,119 @@ import LanguageSwitcher from "@/components/language-switcher"
 import LogoFallback from "@/components/logo-fallback"
 import { useLanguage } from "@/contexts/language-context"
 
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger)
+}
+
 export default function Header() {
   const { t } = useLanguage()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [logoError, setLogoError] = useState(false)
+
+  const headerRef = useRef<HTMLElement>(null)
+  const logoRef = useRef<HTMLDivElement>(null)
+  const navRef = useRef<HTMLElement>(null)
+  const socialRef = useRef<HTMLDivElement>(null)
+  const mobileMenuRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Header entrance animation
+      gsap.fromTo(headerRef.current, { y: -100, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "power3.out" })
+
+      // Logo animation
+      gsap.fromTo(
+        logoRef.current,
+        { scale: 0, rotation: -180 },
+        { scale: 1, rotation: 0, duration: 1.2, ease: "back.out(1.7)", delay: 0.3 },
+      )
+
+      // Navigation items staggered animation
+      gsap.fromTo(
+        navRef.current?.children || [],
+        { y: -30, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8, stagger: 0.1, ease: "power2.out", delay: 0.5 },
+      )
+
+      // Social icons animation
+      gsap.fromTo(
+        socialRef.current?.children || [],
+        { scale: 0, rotation: 360 },
+        { scale: 1, rotation: 0, duration: 0.6, stagger: 0.1, ease: "back.out(1.7)", delay: 0.8 },
+      )
+
+      // Header scroll effect
+      ScrollTrigger.create({
+        trigger: "body",
+        start: "top top",
+        end: "bottom bottom",
+        onUpdate: (self) => {
+          const progress = self.progress
+          gsap.to(headerRef.current, {
+            backgroundColor: progress > 0.1 ? "rgba(255, 255, 255, 0.95)" : "rgba(255, 255, 255, 0.95)",
+            backdropFilter: progress > 0.1 ? "blur(10px)" : "blur(2px)",
+            boxShadow: progress > 0.1 ? "0 4px 20px rgba(0, 0, 0, 0.1)" : "0 1px 3px rgba(0, 0, 0, 0.05)",
+            duration: 0.3,
+          })
+        },
+      })
+
+      // Mobile menu animation
+      if (isMobileMenuOpen && mobileMenuRef.current) {
+        gsap.fromTo(
+          mobileMenuRef.current,
+          { height: 0, opacity: 0 },
+          { height: "auto", opacity: 1, duration: 0.5, ease: "power2.out" },
+        )
+
+        gsap.fromTo(
+          mobileMenuRef.current.querySelectorAll("a"),
+          { x: -50, opacity: 0 },
+          { x: 0, opacity: 1, duration: 0.4, stagger: 0.05, delay: 0.2 },
+        )
+      }
+    }, headerRef)
+
+    return () => ctx.revert()
+  }, [isMobileMenuOpen])
+
+  // Add hover animations for navigation items
+  const handleNavHover = (e: React.MouseEvent) => {
+    gsap.to(e.currentTarget, {
+      scale: 1.05,
+      y: -2,
+      duration: 0.3,
+      ease: "power2.out",
+    })
+  }
+
+  const handleNavLeave = (e: React.MouseEvent) => {
+    gsap.to(e.currentTarget, {
+      scale: 1,
+      y: 0,
+      duration: 0.3,
+      ease: "power2.out",
+    })
+  }
+
+  // Add social icon hover animations
+  const handleSocialHover = (e: React.MouseEvent) => {
+    gsap.to(e.currentTarget, {
+      scale: 1.2,
+      rotation: 10,
+      duration: 0.3,
+      ease: "back.out(1.7)",
+    })
+  }
+
+  const handleSocialLeave = (e: React.MouseEvent) => {
+    gsap.to(e.currentTarget, {
+      scale: 1,
+      rotation: 0,
+      duration: 0.3,
+      ease: "back.out(1.7)",
+    })
+  }
 
   const productCategories = [
     {
@@ -80,12 +193,15 @@ export default function Header() {
   ]
 
   return (
-    <header className="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
+    <header
+      ref={headerRef}
+      className="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm"
+    >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           {!logoError ? (
-            <Link href="/" className="flex items-center group">
+            <Link href="/" className="flex items-center group" ref={logoRef}>
               <Image
                 src="/images/new-motorsi-logo.png"
                 alt="New Motorsi Logo"
@@ -101,8 +217,13 @@ export default function Header() {
           )}
 
           {/* Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+          <nav ref={navRef} className="hidden md:flex items-center space-x-8">
+            <Link
+              href="/"
+              className="text-gray-700 hover:text-primary font-medium transition-colors relative group"
+              onMouseEnter={handleNavHover}
+              onMouseLeave={handleNavLeave}
+            >
               {t("home")}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </Link>
@@ -113,6 +234,8 @@ export default function Header() {
                 <Button
                   variant="ghost"
                   className="text-gray-700 hover:text-primary font-medium transition-colors relative group flex items-center gap-1 p-0 h-auto hover:bg-transparent"
+                  onMouseEnter={handleNavHover}
+                  onMouseLeave={handleNavLeave}
                 >
                   {t("products")}
                   <ChevronDown className="h-4 w-4 ml-1" />
@@ -163,6 +286,8 @@ export default function Header() {
             <Link
               href="/about"
               className="text-gray-700 hover:text-primary font-medium transition-colors relative group"
+              onMouseEnter={handleNavHover}
+              onMouseLeave={handleNavLeave}
             >
               {t("about")}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
@@ -170,6 +295,8 @@ export default function Header() {
             <Link
               href="/contact"
               className="text-gray-700 hover:text-primary font-medium transition-colors relative group"
+              onMouseEnter={handleNavHover}
+              onMouseLeave={handleNavLeave}
             >
               {t("contact")}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
@@ -180,22 +307,28 @@ export default function Header() {
           <div className="flex items-center space-x-4">
             <LanguageSwitcher />
 
-            <div className="hidden md:flex items-center space-x-2">
+            <div ref={socialRef} className="hidden md:flex items-center space-x-2">
               <Link
                 href="#"
                 className="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+                onMouseEnter={handleSocialHover}
+                onMouseLeave={handleSocialLeave}
               >
                 <span className="text-white text-sm font-bold">f</span>
               </Link>
               <Link
                 href="#"
                 className="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+                onMouseEnter={handleSocialHover}
+                onMouseLeave={handleSocialLeave}
               >
                 <span className="text-white text-sm font-bold">in</span>
               </Link>
               <Link
                 href="#"
                 className="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+                onMouseEnter={handleSocialHover}
+                onMouseLeave={handleSocialLeave}
               >
                 <span className="text-white text-sm font-bold">@</span>
               </Link>
@@ -215,7 +348,7 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-gray-200">
+          <div ref={mobileMenuRef} className="md:hidden mt-4 pb-4 border-t border-gray-200">
             <div className="bg-[#00adef] rounded-lg mt-4 overflow-hidden">
               <nav className="flex flex-col">
                 <Link
