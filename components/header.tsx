@@ -55,6 +55,13 @@ export default function Header() {
         { y: 0, opacity: 1, duration: 0.8, stagger: 0.1, ease: "power2.out", delay: 0.5 },
       )
 
+      // Social icons animation
+      // gsap.fromTo(
+      //   socialRef.current?.children || [],
+      //   { scale: 0, rotation: 360 },
+      //   { scale: 1, rotation: 0, duration: 0.6, stagger: 0.1, ease: "back.out(1.7)", delay: 0.8 },
+      // )
+
       // Header scroll effect
       ScrollTrigger.create({
         trigger: "body",
@@ -278,7 +285,9 @@ export default function Header() {
 
           {/* Right side */}
           <div className="flex items-center space-x-4">
-            <LanguageSwitcher className="bg-white text-black border border-gray-200 transition-all duration-300 hover:bg-[#00adef] hover:text-white hover:-translate-y-1 hover:shadow-md focus:outline-none" />
+            <LanguageSwitcher
+  className="bg-white text-black border border-gray-200 transition-all duration-300 hover:bg-[#00adef] hover:text-white hover:-translate-y-1 hover:shadow-md"
+/>
 
             {/* Mobile Menu Button */}
             <Button
@@ -351,6 +360,28 @@ export default function Header() {
                 >
                   {t("contact")}
                 </Link>
+
+                {/* Social Links */}
+                <div className="flex justify-center space-x-4 p-4 border-t border-white/20">
+                  <Link
+                    href="#"
+                    className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors"
+                  >
+                    <span className="text-white text-sm font-bold">f</span>
+                  </Link>
+                  <Link
+                    href="#"
+                    className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors"
+                  >
+                    <span className="text-white text-sm font-bold">in</span>
+                  </Link>
+                  <Link
+                    href="#"
+                    className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors"
+                  >
+                    <span className="text-white text-sm font-bold">@</span>
+                  </Link>
+                </div>
               </nav>
             </div>
           </div>
