@@ -81,9 +81,7 @@ Adjustable tier quantity and expandable system possible. Wide color selection av
         },
         images: [
           "/images/blue-warehouse-shelving.png",
-          "/images/blue-orange-warehouse-shelving.jpg",
-          "/images/gray-warehouse-shelving.jpg",
-          "/images/tall-warehouse-shelving.jpg",
+          
         ],
         colors: [t("blue")],
         sizes: ["200x100x60", "250x100x60"],
