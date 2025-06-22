@@ -24,12 +24,12 @@ export default function LanguageSwitcher() {
           <Globe className="h-4 w-4 ml-2" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      <DropdownMenuContent align="end" className="bg-[#00adef] border-[#00adef]">
         {Object.entries(languages).map(([code, { name, flag }]) => (
           <DropdownMenuItem
             key={code}
             onClick={() => setLanguage(code as Language)}
-            className={language === code ? "bg-accent" : ""}
+            className={`text-white hover:bg-white/20 focus:bg-white/20 ${language === code ? "bg-white/30" : ""}`}
           >
             <span className="mr-2">{flag}</span>
             {name}

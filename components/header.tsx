@@ -34,7 +34,6 @@ export default function Header() {
   const headerRef = useRef<HTMLElement>(null)
   const logoRef = useRef<HTMLDivElement>(null)
   const navRef = useRef<HTMLElement>(null)
-  const socialRef = useRef<HTMLDivElement>(null)
   const mobileMenuRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -43,11 +42,11 @@ export default function Header() {
       gsap.fromTo(headerRef.current, { y: -100, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "power3.out" })
 
       // Logo animation
-      gsap.fromTo(
-        logoRef.current,
-        { scale: 0, rotation: -180 },
-        { scale: 1, rotation: 0, duration: 1.2, ease: "back.out(1.7)", delay: 0.3 },
-      )
+      // gsap.fromTo(
+      //   logoRef.current,
+      //   { scale: 0, rotation: -180 },
+      //   { scale: 1, rotation: 0, duration: 1.2, ease: "back.out(1.7)", delay: 0.3 },
+      // )
 
       // Navigation items staggered animation
       gsap.fromTo(
@@ -57,11 +56,11 @@ export default function Header() {
       )
 
       // Social icons animation
-      gsap.fromTo(
-        socialRef.current?.children || [],
-        { scale: 0, rotation: 360 },
-        { scale: 1, rotation: 0, duration: 0.6, stagger: 0.1, ease: "back.out(1.7)", delay: 0.8 },
-      )
+      // gsap.fromTo(
+      //   socialRef.current?.children || [],
+      //   { scale: 0, rotation: 360 },
+      //   { scale: 1, rotation: 0, duration: 0.6, stagger: 0.1, ease: "back.out(1.7)", delay: 0.8 },
+      // )
 
       // Header scroll effect
       ScrollTrigger.create({
@@ -114,25 +113,6 @@ export default function Header() {
       y: 0,
       duration: 0.3,
       ease: "power2.out",
-    })
-  }
-
-  // Add social icon hover animations
-  const handleSocialHover = (e: React.MouseEvent) => {
-    gsap.to(e.currentTarget, {
-      scale: 1.2,
-      rotation: 10,
-      duration: 0.3,
-      ease: "back.out(1.7)",
-    })
-  }
-
-  const handleSocialLeave = (e: React.MouseEvent) => {
-    gsap.to(e.currentTarget, {
-      scale: 1,
-      rotation: 0,
-      duration: 0.3,
-      ease: "back.out(1.7)",
     })
   }
 
@@ -201,7 +181,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           {!logoError ? (
-            <Link href="/" className="flex items-center group" ref={logoRef}>
+            <Link href="/" className="flex items-center group">
               <Image
                 src="/images/new-motorsi-logo.png"
                 alt="New Motorsi Logo"
@@ -306,33 +286,6 @@ export default function Header() {
           {/* Right side */}
           <div className="flex items-center space-x-4">
             <LanguageSwitcher />
-
-            <div ref={socialRef} className="hidden md:flex items-center space-x-2">
-              <Link
-                href="#"
-                className="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform"
-                onMouseEnter={handleSocialHover}
-                onMouseLeave={handleSocialLeave}
-              >
-                <span className="text-white text-sm font-bold">f</span>
-              </Link>
-              <Link
-                href="#"
-                className="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform"
-                onMouseEnter={handleSocialHover}
-                onMouseLeave={handleSocialLeave}
-              >
-                <span className="text-white text-sm font-bold">in</span>
-              </Link>
-              <Link
-                href="#"
-                className="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform"
-                onMouseEnter={handleSocialHover}
-                onMouseLeave={handleSocialLeave}
-              >
-                <span className="text-white text-sm font-bold">@</span>
-              </Link>
-            </div>
 
             {/* Mobile Menu Button */}
             <Button

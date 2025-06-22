@@ -25,21 +25,25 @@ export default function ProductPage({ params }: { params: { id: string } }) {
         •	სავაჭრო ობიექტებისთვის
         •	ოფისებისა და არქივებისთვის
 
-`,
+        შესაძლებელია იარუსების რაოდნობის შეცვლა და სტელაჟების გადაბმა. ფერების ფართო არჩევანი.`,
           en: `Each tier is strong and supports up to 300 kg, ensuring safe and stable storage of heavy items. The 4-tier design offers a practical layout, while the 100 cm width and 60 cm depth shelves are ideal for boxes and various-sized loads.
 
-This model is ideal for:
-	•	Storage spaces
-	•	Factories and production facilities
-	•	Retail environments
-	•	Offices and archives`,
+        This model is ideal for:
+        •	Storage spaces
+        •	Factories and production facilities
+        •	Retail environments
+        •	Offices and archives
+        
+        The number of tiers can be customized, and shelving units can be connected. A wide range of colors is available.`,
           ru: `Каждый ярус прочный и рассчитан на нагрузку до 300 кг, что обеспечивает безопасное и устойчивое хранение тяжёлых предметов. Конструкция с 4 ярусами предлагает практичное расположение, а полки шириной 100 см и глубиной 60 см идеально подходят как для коробок, так и для грузов разных размеров.
 
-Эта модель идеально подходит для:
-	•	Складских помещений
-	•	Заводов и производств
-	•	Торговых объектов
-	•	Офисов и архивов`,
+        Эта модель идеально подходит для:
+        •	Складских помещений
+        •	Заводов и производств
+        •	Торговых объектов
+        •	Офисов и архивов
+        
+        Количество ярусов можно изменить, а стеллажи можно соединить между собой. Доступен широкий выбор цветов.`,
         },
         features: {
           ka: [
@@ -48,9 +52,7 @@ This model is ideal for:
             "სიღრმე: 60 სმ",
             "იარუსების რაოდენობა: 4",
             "დატვირთვა: 300 კგ ერთ იარუსზე",
-            "მაღალი ხარისხის ლითონი",
-            "კოროზიისგან დაცული",
-            "მარტივი მონტაჟი",
+            
           ],
           en: [
             "Height: 200 or 250 cm",
@@ -58,9 +60,7 @@ This model is ideal for:
             "Depth: 60 cm",
             "Number of tiers: 4",
             "Load capacity: 300 kg per tier",
-            "High-quality metal",
-            "Corrosion resistant",
-            "Easy assembly",
+            
           ],
           ru: [
             "Высота: 200 или 250 см",
@@ -68,19 +68,14 @@ This model is ideal for:
             "Глубина: 60 см",
             "Количество ярусов: 4",
             "Нагрузка: 300 кг на ярус",
-            "Высококачественный металл",
-            "Устойчив к коррозии",
-            "Простая сборка",
+            
           ],
         },
         images: [
           "/images/blue-warehouse-shelving.png",
           
         ],
-        colors: [t("blue")],
-        sizes: ["200x100x60", "250x100x60"],
-        category: t("warehouseShelving"),
-        rating: 4.8,
+        
         reviewCount: 24,
       },
       "warehouse-2": {
