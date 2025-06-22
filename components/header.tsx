@@ -3,7 +3,7 @@ import Link from "next/link"
 import type React from "react"
 
 import Image from "next/image"
-import { Menu, ChevronDown, ChevronRight, X } from "lucide-react"
+import { Menu, ChevronDown, X } from "lucide-react"
 import { useState, useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -227,7 +227,7 @@ export default function Header() {
                       <DropdownMenuSub>
                         <DropdownMenuSubTrigger className="text-white hover:bg-white/20 focus:bg-white/20">
                           <span>{category.name}</span>
-                          <ChevronRight className="h-4 w-4 ml-auto" />
+                          <span className="ml-auto">{">"}</span>
                         </DropdownMenuSubTrigger>
                         <DropdownMenuSubContent className="bg-[#00adef] border border-gray-200 shadow-lg z-[60]">
                           <DropdownMenuItem asChild>
