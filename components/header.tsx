@@ -286,7 +286,7 @@ export default function Header() {
           {/* Right side */}
           <div className="flex items-center space-x-4">
             <LanguageSwitcher
-  className="bg-white text-black border-none shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300"
+  className="bg-white text-black border border-gray-200 transition-all duration-300 hover:bg-[#00adef] hover:text-white hover:-translate-y-1 hover:shadow-md"
 />
 
             {/* Mobile Menu Button */}
