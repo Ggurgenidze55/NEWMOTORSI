@@ -3,7 +3,7 @@ import Link from "next/link"
 import type React from "react"
 
 import Image from "next/image"
-import { Menu, ChevronDown, ChevronRight, X } from "lucide-react"
+import { Menu, ChevronDown, X } from "lucide-react"
 import { useState, useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -215,9 +215,9 @@ export default function Header() {
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="start" className="w-64 bg-white border border-gray-200 shadow-lg z-[60]">
+              <DropdownMenuContent align="start" className="w-64 bg-[#00adef] border border-gray-200 shadow-lg z-[60]">
                 <DropdownMenuItem asChild>
-                  <Link href="/products" className="text-gray-700 hover:bg-gray-100 focus:bg-gray-100">
+                  <Link href="/products" className="text-white hover:bg-white/20 focus:bg-white/20">
                     <span>ყველა პროდუქტი</span>
                   </Link>
                 </DropdownMenuItem>
@@ -225,19 +225,19 @@ export default function Header() {
                   <div key={category.id}>
                     {category.hasSubcategories ? (
                       <DropdownMenuSub>
-                        <DropdownMenuSubTrigger className="text-gray-700 hover:bg-gray-100 focus:bg-gray-100">
+                        <DropdownMenuSubTrigger className="text-white hover:bg-white/20 focus:bg-white/20">
                           <span>{category.name}</span>
-                          <ChevronRight className="h-4 w-4 ml-auto" />
+                          <span className="ml-auto">{">"}</span>
                         </DropdownMenuSubTrigger>
-                        <DropdownMenuSubContent className="bg-white border border-gray-200 shadow-lg z-[60]">
+                        <DropdownMenuSubContent className="bg-[#00adef] border border-gray-200 shadow-lg z-[60]">
                           <DropdownMenuItem asChild>
-                            <Link href={category.href} className="text-gray-700 hover:bg-gray-100 focus:bg-gray-100">
+                            <Link href={category.href} className="text-white hover:bg-white/20 focus:bg-white/20">
                               <span>ყველა {category.name}</span>
                             </Link>
                           </DropdownMenuItem>
                           {category.subcategories?.map((sub) => (
                             <DropdownMenuItem key={sub.id} asChild>
-                              <Link href={sub.href} className="text-gray-700 hover:bg-gray-100 focus:bg-gray-100">
+                              <Link href={sub.href} className="text-white hover:bg-white/20 focus:bg-white/20">
                                 <span>{sub.name}</span>
                               </Link>
                             </DropdownMenuItem>
@@ -246,7 +246,7 @@ export default function Header() {
                       </DropdownMenuSub>
                     ) : (
                       <DropdownMenuItem asChild>
-                        <Link href={category.href} className="text-gray-700 hover:bg-gray-100 focus:bg-gray-100">
+                        <Link href={category.href} className="text-white hover:bg-white/20 focus:bg-white/20">
                           <span>{category.name}</span>
                         </Link>
                       </DropdownMenuItem>
