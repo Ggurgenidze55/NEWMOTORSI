@@ -3,19 +3,10 @@
 import ProductCard from "@/components/product-card"
 import SubcategoryNavigation from "@/components/subcategory-navigation"
 import { useLanguage } from "@/contexts/language-context"
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 
 export default function ProductsPage() {
   const { t, language } = useLanguage()
-  const [customProducts, setCustomProducts] = useState([])
-
-  // Load custom products from localStorage
-  useEffect(() => {
-    const stored = localStorage.getItem("customProducts")
-    if (stored) {
-      setCustomProducts(JSON.parse(stored))
-    }
-  }, [])
 
   // Update page title for Products page
   useEffect(() => {
@@ -39,7 +30,7 @@ export default function ProductsPage() {
   }, [language])
 
   // This would typically come from an API or database
-  const defaultProducts = [
+  const products = [
     // Warehouse shelving
     {
       id: "warehouse-1",
@@ -532,50 +523,48 @@ export default function ProductsPage() {
       isNew: true,
     },
     {
-      id: "kitchen-stainless-shelf-l120",
-      name: "სამზარეულოს სტელაჟი უჟანგავი ცხაურით",
-      price: 0,
-      image: "/images/kitchen-shelving/stainless-steel-shelf-l120.jpeg",
-      category: t("kitchenShelving"),
-      subcategory: "kitchen-shelving",
-      isNew: true,
+  id: "kitchen-stainless-shelf-l120",
+  name: "სამზარეულოს სტელაჟი უჟანგავი ცხაურით",
+  price: 0,
+  image: "/images/kitchen-shelving/stainless-steel-shelf-l120.jpeg",
+  category: t("kitchenShelving"),
+  subcategory: "kitchen-shelving",
+  isNew: true,
     },
     {
-      id: "kitchen-stainless-shelf-l180",
-      name: "სამზარეულოს სტელაჟი უჟანგავი ცხაურით",
-      price: 0,
-      image: "/images/kitchen-shelving/stainless-steel-shelf-l180.jpeg",
-      category: t("kitchenShelving"),
-      isNew: true,
-    },
+  id: "kitchen-stainless-shelf-l180",
+  name: "სამზარეულოს სტელაჟი უჟანგავი ცხაურით",
+  price: 0,
+  image: "/images/kitchen-shelving/stainless-steel-shelf-l180.jpeg",
+  category: t("kitchenShelving"),
+  isNew: true,
+},
     {
-      id: "kitchen-stainless-trays-600x400",
-      name: "უჟანგავი ჟარონები",
-      price: 0,
-      image: "/images/kitchen-shelving/stainless-steel-trays.png",
-      category: t("kitchenShelving"),
-      isNew: true,
-    },
-    {
-      id: "kitchen-chrome-wire-shelf-200x151",
-      name: "ბადიანი ქრომირებული სტელაჟები",
-      price: 0,
-      image: "/images/kitchen-shelving/chrome-wire-shelf-200x151.jpeg",
-      category: t("kitchenShelving"),
-      isNew: true,
-    },
-    {
-      id: "kitchen-chrome-wire-shelf-200x180",
-      name: "ბადიანი ქრომირებული სტელაჟები",
-      price: 0,
-      image: "/images/kitchen-shelving/chrome-wire-shelf-200x180.jpeg",
-      category: t("kitchenShelving"),
-      isNew: true,
-    },
+  id: "kitchen-stainless-trays-600x400",
+  name: "უჟანგავი ჟარონები",
+  price: 0,
+  image: "/images/kitchen-shelving/stainless-steel-trays.png",
+  category: t("kitchenShelving"),
+  isNew: true,
+},
+{
+  id: "kitchen-chrome-wire-shelf-200x151",
+  name: "ბადიანი ქრომირებული სტელაჟები",
+  price: 0,
+  image: "/images/kitchen-shelving/chrome-wire-shelf-200x151.jpeg",
+  category: t("kitchenShelving"),
+  isNew: true,
+},
+{
+  id: "kitchen-chrome-wire-shelf-200x180",
+  name: "ბადიანი ქრომირებული სტელაჟები",
+  price: 0,
+  image: "/images/kitchen-shelving/chrome-wire-shelf-200x180.jpeg",
+  category: t("kitchenShelving"),
+  isNew: true,
+},
+    
   ]
-
-  // Combine default products with custom products
-  const allProducts = [...customProducts, ...defaultProducts]
 
   const getPageTitle = () => {
     switch (language) {
@@ -610,13 +599,13 @@ export default function ProductsPage() {
                 <h1 className="text-4xl font-bold tracking-tight mb-4 text-black">{getPageTitle()}</h1>
                 <p className="text-xl text-black max-w-2xl mx-auto">{getPageDescription()}</p>
                 <p className="text-sm text-black mt-2">
-                  {allProducts.length} {t("products")}
+                  {products.length} {t("products")}
                 </p>
               </div>
 
               {/* Products Grid */}
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                {allProducts.map((product) => (
+                {products.map((product) => (
                   <ProductCard key={product.id} {...product} hidePrice={true} />
                 ))}
               </div>
